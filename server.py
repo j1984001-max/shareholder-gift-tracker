@@ -2,8 +2,9 @@
 from __future__ import annotations
 
 import json
-import os
 import re
+import io
+import os
 import time
 import urllib.parse
 import urllib.request
@@ -12,12 +13,16 @@ from html.parser import HTMLParser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
+from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent
 HOST = "0.0.0.0"
 PORT = int(os.environ.get("PORT", "8765"))
 CURRENT_YEAR = date.today().year
 CACHE_TTL_SECONDS = int(os.environ.get("CACHE_TTL_SECONDS", "1800"))
+CACHE_DIR = ROOT / ".cache"
+NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
+NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_YEAR - 1911}"
 IDEAL_URL = "https://souvenir.ideal-labs.com/"
@@ -29,6 +34,10 @@ HEADERS = {
 }
 
 CACHE: dict[str, tuple[float, Any]] = {}
+NOTICE_CACHE_MEMORY: dict[str, Any] | None = None
+
+CACHE_DIR.mkdir(exist_ok=True)
+NOTICE_PDF_DIR.mkdir(exist_ok=True)
 
 
 def normalize_text(value: str) -> str:
@@ -52,6 +61,16 @@ def fetch_text(url: str) -> str:
         return response.read().decode(charset, "ignore")
 
 
+def fetch_bytes(url: str, data: bytes | None = None) -> bytes:
+    request = urllib.request.Request(url, data=data, headers=HEADERS)
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return response.read()
+
+
+def fetch_text_with_encoding(url: str, encoding: str, data: bytes | None = None) -> str:
+    return fetch_bytes(url, data=data).decode(encoding, "ignore")
+
+
 def cached(name: str, loader) -> Any:
     now = time.time()
     item = CACHE.get(name)
@@ -60,6 +79,41 @@ def cached(name: str, loader) -> Any:
     value = loader()
     CACHE[name] = (now, value)
     return value
+
+
+def load_notice_cache() -> dict[str, Any]:
+    global NOTICE_CACHE_MEMORY
+    if NOTICE_CACHE_MEMORY is not None:
+        return NOTICE_CACHE_MEMORY
+    if NOTICE_CACHE_PATH.exists():
+        try:
+            NOTICE_CACHE_MEMORY = json.loads(NOTICE_CACHE_PATH.read_text(encoding="utf-8"))
+            return NOTICE_CACHE_MEMORY
+        except Exception:
+            pass
+    NOTICE_CACHE_MEMORY = {}
+    return NOTICE_CACHE_MEMORY
+
+
+def save_notice_cache(cache: dict[str, Any]) -> None:
+    global NOTICE_CACHE_MEMORY
+    NOTICE_CACHE_MEMORY = cache
+    NOTICE_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def compact_text(value: str) -> str:
+    return re.sub(r"\s+", "", value)
+
+
+def parse_compact_roc_date(value: str, fallback_year: int | None = None) -> str | None:
+    match = re.search(r"(?:(\d{2,3})年)?(\d{1,2})月(\d{1,2})日", value)
+    if not match:
+        return None
+    roc_year = int(match.group(1)) if match.group(1) else fallback_year
+    if roc_year is None:
+        return None
+    western_year = roc_year + 1911
+    return f"{western_year:04d}-{int(match.group(2)):02d}-{int(match.group(3)):02d}"
 
 
 def parse_mmdd_to_iso(value: str) -> str | None:
@@ -296,6 +350,131 @@ def source_bundle() -> dict[str, Any]:
     return {"wespai": wespai, "ideal": ideal, "honsec": honsec}
 
 
+def fetch_notice_listing(code: str) -> dict[str, str] | None:
+    query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
+    html = fetch_text_with_encoding(query_url, "big5")
+    row_pattern = re.compile(
+        rf"<tr>\s*<td align='center'>{code}</td>"
+        r"<td align='center'>([^<]+)</td>\s*"
+        r"<td align='center'>([^<]+)</td>\s*"
+        r"<td align='center'>([^<]*)</td>\s*"
+        r"<td align='center'>([^<]+)</td>\s*"
+        r"<td align='center'>([^<]*)</td>\s*"
+        r"<td align='center'>([^<]*)</td>\s*"
+        rf"<td><a href='javascript:readfile2\(\"F\",\"{code}\",\"([^\"]+)\"\);'>[^<]+</a></td>"
+        r"<td align='right'>[^<]+</td>\s*"
+        r"<td align='cetern'>([^<]+)</td>",
+        re.S,
+    )
+    rows = []
+    for match in row_pattern.finditer(html):
+        rows.append(
+            {
+                "year": normalize_text(match.group(1)),
+                "dataType": normalize_text(match.group(2)),
+                "meetingType": normalize_text(match.group(4)),
+                "detail": normalize_text(match.group(5)),
+                "remark": normalize_text(match.group(6)),
+                "filename": normalize_text(match.group(7)),
+                "uploadedAt": normalize_text(match.group(8)),
+                "queryUrl": query_url,
+            }
+        )
+    exact = next((row for row in rows if row["detail"] == "開會通知"), None)
+    if exact:
+        return exact
+    fallback = next((row for row in rows if "開會通知" in row["detail"] and "英文版" not in row["detail"]), None)
+    return fallback
+
+
+def resolve_notice_pdf_url(code: str, filename: str) -> str:
+    data = urllib.parse.urlencode(
+        {
+            "colorchg": "1",
+            "step": "9",
+            "kind": "F",
+            "co_id": code,
+            "filename": filename,
+        }
+    ).encode()
+    html = fetch_text_with_encoding("https://doc.twse.com.tw/server-java/t57sb01", "big5", data=data)
+    match = re.search(r"href='([^']+\.pdf)'", html)
+    if not match:
+        raise ValueError("找不到公開資訊觀測站通知書 PDF 下載連結")
+    return urllib.parse.urljoin("https://doc.twse.com.tw", match.group(1))
+
+
+def extract_notice_text(pdf_bytes: bytes) -> str:
+    reader = PdfReader(io.BytesIO(pdf_bytes))
+    return "\n".join((page.extract_text() or "") for page in reader.pages)
+
+
+def extract_notice_summary(text: str) -> dict[str, Any]:
+    compact = compact_text(text)
+    summary_match = re.search(r"紀念品領取說明(.*?)(註：|股東常會日期|委託書填表須知)", compact)
+    summary = summary_match.group(1) if summary_match else ""
+    evote_match = re.search(r"採電子投票之股東，?紀念品領取方式：(.{0,800}?)(註：|股東常會日期|委託書填表須知)", compact)
+    evote_rule = evote_match.group(1) if evote_match else ""
+    pretty_summary = (
+        summary.replace("A.", " A. ").replace("B.", " B. ").replace("C.", " C. ").replace("D.", " D. ").strip()
+    )
+    pretty_evote = (
+        evote_rule.replace("A.", "A. ").replace("B.", " B. ").replace("C.", " C. ").replace("D.", " D. ").strip()
+    )
+
+    start_date = None
+    end_date = None
+    period_text = ""
+    if evote_rule:
+        period_match = re.search(r"自((\d{2,3})年\d{1,2}月\d{1,2}日)起至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)止", evote_rule)
+        if period_match:
+            start_date = parse_compact_roc_date(period_match.group(1))
+            end_date = parse_compact_roc_date(period_match.group(3), fallback_year=int(period_match.group(2)))
+            period_text = period_match.group(0)
+
+    return {
+        "giftSummary": pretty_summary,
+        "evotePickupRule": pretty_evote,
+        "evotePickupStartDate": start_date,
+        "evotePickupEndDate": end_date,
+        "evotePickupPeriodText": period_text,
+    }
+
+
+def get_mops_notice_info(code: str) -> dict[str, Any] | None:
+    listing = fetch_notice_listing(code)
+    if not listing:
+        return None
+
+    cache = load_notice_cache()
+    cached_entry = cache.get(code)
+    if cached_entry and cached_entry.get("filename") == listing["filename"]:
+        return cached_entry
+
+    pdf_url = resolve_notice_pdf_url(code, listing["filename"])
+    pdf_path = NOTICE_PDF_DIR / listing["filename"]
+    if pdf_path.exists():
+        pdf_bytes = pdf_path.read_bytes()
+    else:
+        pdf_bytes = fetch_bytes(pdf_url)
+        pdf_path.write_bytes(pdf_bytes)
+
+    text = extract_notice_text(pdf_bytes)
+    summary = extract_notice_summary(text)
+    entry = {
+        "code": code,
+        "filename": listing["filename"],
+        "uploadedAt": listing["uploadedAt"],
+        "queryUrl": listing["queryUrl"],
+        "pdfUrl": pdf_url,
+        "fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        **summary,
+    }
+    cache[code] = entry
+    save_notice_cache(cache)
+    return entry
+
+
 def clean_codes(raw: str) -> list[str]:
     normalized = (
         raw.replace("（", "(")
@@ -324,6 +503,7 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
     honsec = sources["honsec"].get(code)
+    mops_notice = get_mops_notice_info(code) if (wespai or ideal or honsec) else None
 
     company_name = (
         (wespai or {}).get("company_name")
@@ -337,8 +517,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     )
     evote_start = (ideal or {}).get("evote_start_date") or (honsec or {}).get("evote_start_date")
     evote_end = (ideal or {}).get("evote_end_date") or (honsec or {}).get("evote_end_date")
-    pickup_start = (honsec or {}).get("evote_pickup_start_date")
-    pickup_end = (honsec or {}).get("evote_pickup_end_date")
+    pickup_start = (honsec or {}).get("evote_pickup_start_date") or (mops_notice or {}).get("evotePickupStartDate")
+    pickup_end = (honsec or {}).get("evote_pickup_end_date") or (mops_notice or {}).get("evotePickupEndDate")
     souvenir_name = (
         (wespai or {}).get("souvenir_name")
         or (ideal or {}).get("souvenir_name")
@@ -364,6 +544,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         source_links.append(source_link("股東禮簿", IDEAL_URL))
     if honsec:
         source_links.append(source_link("宏遠股代", HONSEC_URL))
+    if mops_notice:
+        source_links.append(source_link("開會通知書", mops_notice["pdfUrl"]))
 
     is_published = bool(wespai or ideal or honsec and honsec.get("souvenir_name"))
     if not is_published and company_name:
@@ -395,10 +577,14 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         "evotePickupStartDate": pickup_start,
         "evotePickupEndDate": pickup_end,
         "evotePickupPlace": (honsec or {}).get("evote_pickup_place", ""),
-        "evotePickupRule": (honsec or {}).get("evote_pickup_rule", ""),
+        "evotePickupRule": (honsec or {}).get("evote_pickup_rule") or (mops_notice or {}).get("evotePickupRule", ""),
         "meetingDistributionRule": (honsec or {}).get("meeting_distribution_rule", ""),
         "proxyPeriodText": (honsec or {}).get("proxy_period_text", ""),
         "agentDistributionPeriodText": (honsec or {}).get("agent_distribution_period_text", ""),
+        "noticeGiftSummary": (mops_notice or {}).get("giftSummary", ""),
+        "noticeFilename": (mops_notice or {}).get("filename", ""),
+        "noticeUploadedAt": (mops_notice or {}).get("uploadedAt", ""),
+        "noticeEvotePickupPeriodText": (mops_notice or {}).get("evotePickupPeriodText", ""),
         "notes": (
             "目前在整合來源中尚未看到今年紀念品公告，建議保留 watchlist 持續追蹤。"
             if status == "unpublished"

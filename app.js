@@ -168,6 +168,7 @@ function renderRows(results) {
           <span><strong>電子投票：</strong>${formatRange(item.evoteStartDate, item.evoteEndDate)}</span>
           <span><strong>電投領取期：</strong>${formatRange(item.evotePickupStartDate, item.evotePickupEndDate)}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
+          <span><strong>通知書摘要：</strong>${item.noticeGiftSummary || "未補到摘要"}</span>
         </div>
       `;
       const agentBlock = `
