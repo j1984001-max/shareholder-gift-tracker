@@ -22,6 +22,7 @@ HOST = "0.0.0.0"
 PORT = int(os.environ.get("PORT", "8765"))
 CURRENT_YEAR = date.today().year
 CACHE_TTL_SECONDS = int(os.environ.get("CACHE_TTL_SECONDS", "1800"))
+APP_VERSION = os.environ.get("RENDER_GIT_COMMIT", "dev")
 CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
@@ -581,6 +582,13 @@ def get_mops_notice_info(code: str) -> dict[str, Any] | None:
     return entry
 
 
+def safe_get_mops_notice_info(code: str) -> tuple[dict[str, Any] | None, str]:
+    try:
+        return get_mops_notice_info(code), ""
+    except Exception as error:
+        return None, str(error)
+
+
 def should_fetch_mops_notice(ideal: dict[str, Any] | None, honsec: dict[str, Any] | None) -> bool:
     has_pickup_range = bool(
         (honsec or {}).get("evote_pickup_start_date")
@@ -705,11 +713,11 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
     honsec = sources["honsec"].get(code)
-    mops_notice = (
-        get_mops_notice_info(code)
-        if (wespai or ideal or honsec) and should_fetch_mops_notice(ideal, honsec)
-        else None
-    )
+    should_try_mops = bool((wespai or ideal or honsec) and should_fetch_mops_notice(ideal, honsec))
+    mops_notice = None
+    mops_error = ""
+    if should_try_mops:
+        mops_notice, mops_error = safe_get_mops_notice_info(code)
 
     company_name = (
         (wespai or {}).get("company_name")
@@ -802,6 +810,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         "noticeUploadedAt": (mops_notice or {}).get("uploadedAt", ""),
         "noticeEvotePickupPeriodText": (mops_notice or {}).get("evotePickupPeriodText", ""),
         "noticeCacheStatus": (mops_notice or {}).get("cacheStatus", ""),
+        "mopsAttempted": should_try_mops,
+        "mopsError": mops_error,
         "evotePickupSource": evote_pickup_source,
         "notes": (
             "目前在整合來源中尚未看到今年紀念品公告，建議保留 watchlist 持續追蹤。"
@@ -829,7 +839,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             self.handle_export(raw_codes)
             return
         if parsed.path == "/api/health":
-            json_response(self, {"ok": True, "generatedAt": date.today().isoformat()})
+            json_response(self, {"ok": True, "generatedAt": date.today().isoformat(), "version": APP_VERSION})
             return
         if parsed.path == "/":
             self.path = "/index.html"
