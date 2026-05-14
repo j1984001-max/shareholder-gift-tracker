@@ -576,9 +576,9 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
         if location:
             return location
 
-    match = re.search(r"至([^。；]+?)領取", rule)
-    if match:
-        location = match.group(1).strip("：:，,。 ")
+    locations = re.findall(r"至([^至。；]+?)領取", rule)
+    if locations:
+        location = locations[-1].strip("：:，,。 ")
         if location:
             return location
 
@@ -838,7 +838,17 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     else:
         status = "unpublished"
 
-    evote_pickup_source = "宏遠股代" if (honsec or {}).get("evote_pickup_rule") else ("開會通知書" if mops_notice else "")
+    mops_has_pickup_info = bool(
+        (mops_notice or {}).get("evotePickupRule")
+        or (mops_notice or {}).get("evotePickupStartDate")
+        or (mops_notice or {}).get("evotePickupEndDate")
+        or (mops_notice or {}).get("evotePickupPeriodText")
+    )
+    evote_pickup_source = (
+        "宏遠股代"
+        if (honsec or {}).get("evote_pickup_rule")
+        else ("開會通知書" if mops_has_pickup_info else "")
+    )
     evote_pickup_rule = (honsec or {}).get("evote_pickup_rule") or (mops_notice or {}).get("evotePickupRule", "")
     evote_pickup_location = extract_pickup_location(
         evote_pickup_source,
