@@ -25,6 +25,7 @@ CACHE_TTL_SECONDS = int(os.environ.get("CACHE_TTL_SECONDS", "1800"))
 CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
+NOTICE_CACHE_VERSION = 2
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_YEAR - 1911}"
 IDEAL_URL = "https://souvenir.ideal-labs.com/"
@@ -116,6 +117,30 @@ def parse_compact_roc_date(value: str, fallback_year: int | None = None) -> str 
         return None
     western_year = roc_year + 1911
     return f"{western_year:04d}-{int(match.group(2)):02d}-{int(match.group(3)):02d}"
+
+
+def parse_compact_roc_range_from_text(value: str) -> tuple[str | None, str | None, str]:
+    compact = compact_text(value)
+    patterns = [
+        r"(自?((\d{2,3})年\d{1,2}月\d{1,2}日)起至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)止)",
+        r"(自?((\d{2,3})年\d{1,2}月\d{1,2}日)至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日))",
+        r"(自?((\d{2,3})年\d{1,2}月\d{1,2}日)起至(\d{1,2}月\d{1,2}日)止)",
+        r"(自?((\d{2,3})年\d{1,2}月\d{1,2}日)至(\d{1,2}月\d{1,2}日))",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, compact)
+        if not match:
+            continue
+        start_date = parse_compact_roc_date(match.group(2))
+        end_date = parse_compact_roc_date(match.group(4), fallback_year=int(match.group(3)))
+        return start_date, end_date, match.group(1)
+
+    single_match = re.search(r"((\d{2,3})年\d{1,2}月\d{1,2}日)", compact)
+    if single_match:
+        single_date = parse_compact_roc_date(single_match.group(1))
+        return single_date, single_date, single_match.group(1)
+
+    return None, None, ""
 
 
 def parse_mmdd_to_iso(value: str) -> str | None:
@@ -411,12 +436,46 @@ def extract_notice_text(pdf_bytes: bytes) -> str:
     return "\n".join((page.extract_text() or "") for page in reader.pages)
 
 
+def extract_notice_evote_block(text: str) -> str:
+    markers = ["採電子投票之股東", "電子投票之股東"]
+    start = -1
+    for marker in markers:
+        start = text.find(marker)
+        if start != -1:
+            break
+    if start == -1:
+        return ""
+
+    snippet = text[start : start + 1500]
+    stop_patterns = [
+        r"註：",
+        r"股東常會日期",
+        r"委託書填表須知",
+        r"背面\d+\.indd",
+        r"背面",
+        r"\n\s*\d+\.",
+        r"\n[一二三四五六七八九十]+、",
+        r"\n[一二三四五六七八九十]+[\.\s]",
+    ]
+    end = len(snippet)
+    for pattern in stop_patterns:
+        match = re.search(pattern, snippet[1:])
+        if match:
+            end = min(end, match.start() + 1)
+    return normalize_text(snippet[:end])
+
+
 def extract_notice_summary(text: str) -> dict[str, Any]:
     compact = compact_text(text)
     summary_match = re.search(r"紀念品領取說明(.*?)(註：|股東常會日期|委託書填表須知)", compact)
     summary = summary_match.group(1) if summary_match else ""
     evote_match = re.search(r"採電子投票之股東，?紀念品領取方式：(.{0,800}?)(註：|股東常會日期|委託書填表須知)", compact)
     evote_rule = evote_match.group(1) if evote_match else ""
+    evote_block = extract_notice_evote_block(text)
+
+    if not evote_rule and evote_block:
+        evote_rule = evote_block
+
     pretty_summary = (
         summary.replace("A.", " A. ").replace("B.", " B. ").replace("C.", " C. ").replace("D.", " D. ").strip()
     )
@@ -428,11 +487,7 @@ def extract_notice_summary(text: str) -> dict[str, Any]:
     end_date = None
     period_text = ""
     if evote_rule:
-        period_match = re.search(r"自((\d{2,3})年\d{1,2}月\d{1,2}日)起至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)止", evote_rule)
-        if period_match:
-            start_date = parse_compact_roc_date(period_match.group(1))
-            end_date = parse_compact_roc_date(period_match.group(3), fallback_year=int(period_match.group(2)))
-            period_text = period_match.group(0)
+        start_date, end_date, period_text = parse_compact_roc_range_from_text(evote_rule)
 
     return {
         "giftSummary": pretty_summary,
@@ -484,7 +539,11 @@ def get_mops_notice_info(code: str) -> dict[str, Any] | None:
 
     cache = load_notice_cache()
     cached_entry = cache.get(code)
-    if cached_entry and cached_entry.get("filename") == listing["filename"]:
+    if (
+        cached_entry
+        and cached_entry.get("filename") == listing["filename"]
+        and cached_entry.get("parserVersion") == NOTICE_CACHE_VERSION
+    ):
         cached_entry["cacheStatus"] = "hit"
         return cached_entry
 
@@ -501,6 +560,7 @@ def get_mops_notice_info(code: str) -> dict[str, Any] | None:
     entry = {
         "code": code,
         "filename": listing["filename"],
+        "parserVersion": NOTICE_CACHE_VERSION,
         "uploadedAt": listing["uploadedAt"],
         "queryUrl": listing["queryUrl"],
         "pdfUrl": pdf_url,
