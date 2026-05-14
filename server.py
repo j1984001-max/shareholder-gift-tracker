@@ -26,6 +26,7 @@ CACHE_TTL_SECONDS = int(os.environ.get("CACHE_TTL_SECONDS", "1800"))
 APP_VERSION = os.environ.get("RENDER_GIT_COMMIT", "dev")
 CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
+NOTICE_SEED_CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 NOTICE_CACHE_VERSION = 2
 
@@ -93,13 +94,20 @@ def load_notice_cache() -> dict[str, Any]:
     global NOTICE_CACHE_MEMORY
     if NOTICE_CACHE_MEMORY is not None:
         return NOTICE_CACHE_MEMORY
+    seed_cache: dict[str, Any] = {}
+    if NOTICE_SEED_CACHE_PATH.exists():
+        try:
+            seed_cache = json.loads(NOTICE_SEED_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            seed_cache = {}
     if NOTICE_CACHE_PATH.exists():
         try:
-            NOTICE_CACHE_MEMORY = json.loads(NOTICE_CACHE_PATH.read_text(encoding="utf-8"))
+            disk_cache = json.loads(NOTICE_CACHE_PATH.read_text(encoding="utf-8"))
+            NOTICE_CACHE_MEMORY = {**seed_cache, **disk_cache}
             return NOTICE_CACHE_MEMORY
         except Exception:
             pass
-    NOTICE_CACHE_MEMORY = {}
+    NOTICE_CACHE_MEMORY = seed_cache
     return NOTICE_CACHE_MEMORY
 
 
