@@ -958,7 +958,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     if honsec:
         source_links.append(source_link("宏遠股代", HONSEC_URL))
     if mops_notice:
-        source_links.append(source_link("開會通知書", mops_notice["pdfUrl"]))
+        notice_label = (mops_notice.get("sourceLabel") or "開會通知書")
+        source_links.append(source_link(notice_label, mops_notice["pdfUrl"]))
 
     is_published = bool(wespai or ideal or honsec and honsec.get("souvenir_name"))
     if not is_published and company_name:
@@ -1024,6 +1025,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         "noticeUploadedAt": (mops_notice or {}).get("uploadedAt", ""),
         "noticeEvotePickupPeriodText": (mops_notice or {}).get("evotePickupPeriodText", ""),
         "noticeCacheStatus": (mops_notice or {}).get("cacheStatus", ""),
+        "noticeSourceLabel": (mops_notice or {}).get("sourceLabel", "公開資訊觀測站通知書" if mops_notice else ""),
+        "noticeSourceType": (mops_notice or {}).get("sourceType", "mops" if mops_notice else ""),
         "mopsAttempted": should_try_mops,
         "mopsError": mops_error,
         "evotePickupSource": evote_pickup_source,

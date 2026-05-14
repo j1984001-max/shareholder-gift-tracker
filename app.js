@@ -120,6 +120,10 @@ function renderSummary(results) {
   const unpublished = results.filter((item) => item.status === "unpublished").length;
   const changed = results.filter((item) => item.changed).length;
   const withVote = results.filter((item) => item.evoteStartDate || item.evoteEndDate).length;
+  const withPickupDate = results.filter(
+    (item) => item.evotePickupStartDate || item.evotePickupEndDate || item.noticeEvotePickupPeriodText,
+  ).length;
+  const withNotice = results.filter((item) => item.noticeFilename || item.noticeSourceLabel).length;
 
   const cards = [
     ["追蹤代號", results.length, "這次查詢的股票代號數量"],
@@ -127,6 +131,8 @@ function renderSummary(results) {
     ["未公告", unpublished, "目前仍建議留在 watchlist 持續追蹤"],
     ["有新變化", changed, "和你上次查詢相比有欄位變動"],
     ["含電子投票", withVote, "已補到電子投票起訖資訊"],
+    ["已抓通知書", withNotice, "已從 MOPS 或官方 PDF 補到通知書"],
+    ["有電投領取日期", withPickupDate, "已抓到紀念品電投領取日期的家數"],
   ];
 
   cards.forEach(([label, value, note]) => {
@@ -189,6 +195,7 @@ function renderRows(results) {
           <span><strong>領取地點：</strong>${item.evotePickupLocation || item.evotePickupPlace || "未補到地點"}</span>
           <span><strong>攜帶資料：</strong>${item.evotePickupDocuments || "未補到攜帶資料"}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
+          <span><strong>通知書來源：</strong>${item.noticeSourceLabel || "未抓到通知書"}</span>
           <span><strong>通知書摘要：</strong>${item.noticeGiftSummary || "未補到摘要"}</span>
           <span><strong>通知書快取：</strong>${
             item.noticeCacheStatus === "hit"
@@ -294,6 +301,8 @@ async function lookup(codes) {
           noticeGiftSummary: "",
           noticeEvotePickupPeriodText: "",
           noticeCacheStatus: "",
+          noticeSourceLabel: "",
+          noticeSourceType: "",
           notes: `抓取失敗：${error.message || "未知錯誤"}`,
           sources: [],
         });
