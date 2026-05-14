@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,22 +27,45 @@ def save_seed(seed: dict[str, dict]) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Update deployable MOPS notice seed cache for selected stocks.")
     parser.add_argument("codes", nargs="*", help="Stock codes or mixed text, e.g. 1101 2317 or '台泥（1101）'.")
+    parser.add_argument("--all", action="store_true", help="Update all candidate stocks from the current source bundle.")
+    parser.add_argument("--limit", type=int, default=0, help="Maximum number of codes to process. 0 means no limit.")
+    parser.add_argument("--skip-existing", action="store_true", help="Skip codes that already exist in the seed cache.")
+    parser.add_argument("--force", action="store_true", help="Refresh selected codes even if they already exist.")
+    parser.add_argument("--sleep", type=float, default=0.3, help="Seconds to sleep between MOPS requests.")
     args = parser.parse_args()
-
-    raw_codes = " ".join(args.codes)
-    codes = server.clean_codes(raw_codes)
-    if not codes:
-        print("No stock codes found.", file=sys.stderr)
-        return 2
 
     sources = server.source_bundle()
     seed = load_seed()
+    if args.all:
+        source_codes = set(sources["wespai"]) | set(sources["ideal"]) | set(sources["honsec"])
+        codes = sorted(
+            code
+            for code in source_codes
+            if server.should_fetch_mops_notice(sources["ideal"].get(code), sources["honsec"].get(code))
+        )
+    else:
+        raw_codes = " ".join(args.codes)
+        codes = server.clean_codes(raw_codes)
+
+    if args.skip_existing:
+        codes = [code for code in codes if code not in seed]
+
+    if args.limit > 0:
+        codes = codes[: args.limit]
+
+    if not codes:
+        print("No stock codes found.")
+        return 0
 
     for index, code in enumerate(codes, 1):
         wespai = sources["wespai"].get(code)
         ideal = sources["ideal"].get(code)
         meeting_date = (ideal or {}).get("meeting_date") or (wespai or {}).get("meeting_date")
         print(f"[{index}/{len(codes)}] {code} meeting_date={meeting_date or '-'}")
+
+        if args.force:
+            seed.pop(code, None)
+            server.NOTICE_CACHE_MEMORY = dict(seed)
 
         info, error = server.safe_get_mops_notice_info(code, meeting_date)
         if not info:
@@ -52,6 +76,8 @@ def main() -> int:
         start_date = info.get("evotePickupStartDate") or "-"
         end_date = info.get("evotePickupEndDate") or "-"
         print(f"  cached: {info.get('filename')} pickup={start_date}~{end_date}")
+        if args.sleep > 0 and index < len(codes):
+            time.sleep(args.sleep)
 
     save_seed(seed)
     print(f"Updated {server.NOTICE_SEED_CACHE_PATH}")
