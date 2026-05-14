@@ -449,6 +449,7 @@ def get_mops_notice_info(code: str) -> dict[str, Any] | None:
     cache = load_notice_cache()
     cached_entry = cache.get(code)
     if cached_entry and cached_entry.get("filename") == listing["filename"]:
+        cached_entry["cacheStatus"] = "hit"
         return cached_entry
 
     pdf_url = resolve_notice_pdf_url(code, listing["filename"])
@@ -468,11 +469,27 @@ def get_mops_notice_info(code: str) -> dict[str, Any] | None:
         "queryUrl": listing["queryUrl"],
         "pdfUrl": pdf_url,
         "fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "cacheStatus": "miss",
         **summary,
     }
     cache[code] = entry
     save_notice_cache(cache)
     return entry
+
+
+def should_fetch_mops_notice(ideal: dict[str, Any] | None, honsec: dict[str, Any] | None) -> bool:
+    has_pickup_range = bool(
+        (honsec or {}).get("evote_pickup_start_date")
+        or (honsec or {}).get("evote_pickup_end_date")
+    )
+    has_pickup_rule = bool((honsec or {}).get("evote_pickup_rule"))
+    has_full_honsec = has_pickup_range and has_pickup_rule
+    if has_full_honsec:
+        return False
+
+    # If ideal has no evote info at all and honsec also has nothing, MOPS is useful.
+    has_any_evote = bool((ideal or {}).get("evote_start_date") or (honsec or {}).get("evote_period_text"))
+    return has_any_evote or not has_full_honsec
 
 
 def clean_codes(raw: str) -> list[str]:
@@ -503,7 +520,11 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
     honsec = sources["honsec"].get(code)
-    mops_notice = get_mops_notice_info(code) if (wespai or ideal or honsec) else None
+    mops_notice = (
+        get_mops_notice_info(code)
+        if (wespai or ideal or honsec) and should_fetch_mops_notice(ideal, honsec)
+        else None
+    )
 
     company_name = (
         (wespai or {}).get("company_name")
@@ -555,6 +576,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     else:
         status = "unpublished"
 
+    evote_pickup_source = "宏遠股代" if (honsec or {}).get("evote_pickup_rule") else ("開會通知書" if mops_notice else "")
+
     return {
         "code": code,
         "companyName": company_name,
@@ -585,6 +608,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         "noticeFilename": (mops_notice or {}).get("filename", ""),
         "noticeUploadedAt": (mops_notice or {}).get("uploadedAt", ""),
         "noticeEvotePickupPeriodText": (mops_notice or {}).get("evotePickupPeriodText", ""),
+        "noticeCacheStatus": (mops_notice or {}).get("cacheStatus", ""),
+        "evotePickupSource": evote_pickup_source,
         "notes": (
             "目前在整合來源中尚未看到今年紀念品公告，建議保留 watchlist 持續追蹤。"
             if status == "unpublished"

@@ -167,8 +167,16 @@ function renderRows(results) {
         <div class="cell-stack">
           <span><strong>電子投票：</strong>${formatRange(item.evoteStartDate, item.evoteEndDate)}</span>
           <span><strong>電投領取期：</strong>${formatRange(item.evotePickupStartDate, item.evotePickupEndDate)}</span>
+          <span><strong>領取來源：</strong>${item.evotePickupSource || "未標示"}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
           <span><strong>通知書摘要：</strong>${item.noticeGiftSummary || "未補到摘要"}</span>
+          <span><strong>通知書快取：</strong>${
+            item.noticeCacheStatus === "hit"
+              ? "已快取"
+              : item.noticeCacheStatus === "miss"
+                ? "本次新抓"
+                : "未使用"
+          }</span>
         </div>
       `;
       const agentBlock = `
