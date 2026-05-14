@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 import io
+import html
 import os
 import time
 import urllib.parse
@@ -380,13 +381,13 @@ def source_bundle() -> dict[str, Any]:
 
 def fetch_notice_listing(code: str) -> dict[str, str] | None:
     query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
-    html = fetch_text_with_encoding(query_url, "big5")
+    html_text = html.unescape(fetch_text_with_encoding(query_url, "big5"))
 
     def strip_tags(fragment: str) -> str:
         return normalize_text(re.sub(r"<[^>]+>", " ", fragment))
 
     rows = []
-    for row_html in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.S | re.I):
+    for row_html in re.findall(r"<tr[^>]*>(.*?)</tr>", html_text, re.S | re.I):
         filename_match = re.search(
             rf"readfile2\(\s*['\"]F['\"]\s*,\s*['\"]{code}['\"]\s*,\s*['\"]([^'\"]+)['\"]\s*\)",
             row_html,
@@ -425,7 +426,7 @@ def fetch_notice_listing(code: str) -> dict[str, str] | None:
 
     filename_matches = re.findall(
         rf"readfile2\(\s*['\"]F['\"]\s*,\s*['\"]{code}['\"]\s*,\s*['\"]([^'\"]+\.pdf)['\"]\s*\)",
-        html,
+        html_text,
         re.I,
     )
     if not filename_matches:
