@@ -460,16 +460,27 @@ def fetch_notice_listing(code: str) -> dict[str, str] | None:
 
 
 def resolve_notice_pdf_url(code: str, filename: str) -> str:
-    data = urllib.parse.urlencode(
-        {
-            "colorchg": "1",
-            "step": "9",
-            "kind": "F",
-            "co_id": code,
-            "filename": filename,
-        }
-    ).encode()
-    html_text = html.unescape(fetch_text_with_encoding("https://doc.twse.com.tw/server-java/t57sb01", "big5", data=data))
+    params = {
+        "colorchg": "1",
+        "step": "9",
+        "kind": "F",
+        "co_id": code,
+        "filename": filename,
+    }
+    encoded_params = urllib.parse.urlencode(params)
+    try:
+        html_text = fetch_text_with_encoding(
+            f"https://doc.twse.com.tw/server-java/t57sb01?{encoded_params}",
+            "big5",
+        )
+    except Exception:
+        html_text = fetch_text_with_encoding(
+            "https://doc.twse.com.tw/server-java/t57sb01",
+            "big5",
+            data=encoded_params.encode(),
+        )
+
+    html_text = html.unescape(html_text)
     match = re.search(r"href=[\"']([^\"']+\.pdf)[\"']", html_text, re.I)
     if not match:
         match = re.search(r"(/pdf/[^\"'<> ]+\.pdf)", html_text, re.I)
