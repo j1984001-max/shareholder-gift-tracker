@@ -69,6 +69,12 @@ function formatRange(start, end) {
   return formatDate(start || end);
 }
 
+function formatPickupPeriod(item) {
+  const range = formatRange(item.evotePickupStartDate, item.evotePickupEndDate);
+  if (range !== "未提供") return range;
+  return item.noticeEvotePickupPeriodText || "未提供";
+}
+
 function toSignature(item) {
   return [
     item.status,
@@ -178,7 +184,7 @@ function renderRows(results) {
       const evoteBlock = `
         <div class="cell-stack">
           <span><strong>電子投票：</strong>${formatRange(item.evoteStartDate, item.evoteEndDate)}</span>
-          <span><strong>電投領取期：</strong>${formatRange(item.evotePickupStartDate, item.evotePickupEndDate)}</span>
+          <span><strong>電投領取期：</strong>${formatPickupPeriod(item)}</span>
           <span><strong>領取來源：</strong>${item.evotePickupSource || "未標示"}</span>
           <span><strong>領取地點：</strong>${item.evotePickupLocation || item.evotePickupPlace || "未補到地點"}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
@@ -284,6 +290,7 @@ async function lookup(codes) {
           evotePickupRule: "",
           evotePickupSource: "",
           noticeGiftSummary: "",
+          noticeEvotePickupPeriodText: "",
           noticeCacheStatus: "",
           notes: `抓取失敗：${error.message || "未知錯誤"}`,
           sources: [],

@@ -625,6 +625,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
         "電子投票結束",
         "電投領取開始",
         "電投領取結束",
+        "電投領取期間原文",
         "電投領取來源",
         "電投領取地點",
         "電投領取資訊",
@@ -648,6 +649,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
             item.get("evoteEndDate", "") or "",
             item.get("evotePickupStartDate", "") or "",
             item.get("evotePickupEndDate", "") or "",
+            item.get("noticeEvotePickupPeriodText", ""),
             item.get("evotePickupSource", ""),
             item.get("evotePickupLocation", ""),
             item.get("evotePickupRule", ""),
@@ -673,11 +675,11 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
         cell.font = Font(bold=True)
         cell.alignment = Alignment(horizontal="center", vertical="center")
 
-    wrap_columns = {"D", "M", "N", "S"}
+    wrap_columns = {"D", "L", "N", "O", "T", "U"}
     widths = {
         "A": 12, "B": 18, "C": 10, "D": 28, "E": 14, "F": 14, "G": 12,
-        "H": 14, "I": 14, "J": 14, "K": 14, "L": 12, "M": 24, "N": 48,
-        "O": 56, "P": 12, "Q": 22, "R": 18, "S": 10, "T": 24,
+        "H": 14, "I": 14, "J": 14, "K": 14, "L": 24, "M": 12, "N": 24,
+        "O": 48, "P": 56, "Q": 12, "R": 22, "S": 18, "T": 10, "U": 24,
     }
     for column, width in widths.items():
         worksheet.column_dimensions[column].width = width
