@@ -29,7 +29,7 @@ NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_SEED_CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
-NOTICE_CACHE_VERSION = 2
+NOTICE_CACHE_VERSION = 3
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_YEAR - 1911}"
 IDEAL_URL = "https://souvenir.ideal-labs.com/"
@@ -177,6 +177,29 @@ def parse_compact_roc_range_from_text(value: str) -> tuple[str | None, str | Non
         single_date = parse_compact_roc_date(single_match.group(1))
         return single_date, single_date, single_match.group(1)
 
+    return None, None, ""
+
+
+def parse_pickup_roc_range_from_text(value: str) -> tuple[str | None, str | None, str]:
+    compact = compact_text(value)
+    candidates: list[tuple[int, re.Match[str]]] = []
+    patterns = [
+        (0, r"(請於((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
+        (0, r"(請?自((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
+        (1, r"(領取期間及地點：自?((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
+        (2, r"(於((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
+    ]
+    for priority, pattern in patterns:
+        for match in re.finditer(pattern, compact):
+            following = compact[match.end() : match.end() + 140]
+            if priority == 2 and not re.search(r"(領取|換領|發放|股務|紀念品)", following):
+                continue
+            candidates.append((priority, match))
+    if candidates:
+        priority, match = sorted(candidates, key=lambda item: (item[0], item[1].start()))[0]
+        start_date = parse_compact_roc_date(match.group(2))
+        end_date = parse_compact_roc_date(match.group(4), fallback_year=int(match.group(3)))
+        return start_date, end_date, match.group(1)
     return None, None, ""
 
 
@@ -520,7 +543,14 @@ def extract_notice_text(pdf_bytes: bytes) -> str:
 
 
 def extract_notice_evote_block(text: str) -> str:
-    markers = ["採電子投票之股東", "電子投票之股東"]
+    markers = [
+        "採電子投票之股東",
+        "電子投票之股東",
+        "電子投票領取紀念品方式",
+        "電子方式行使表決權且投票成功者",
+        "電子投票成功且未以其他方式",
+        "以電子方式行使表決權者",
+    ]
     start = -1
     for marker in markers:
         start = text.find(marker)
@@ -550,14 +580,32 @@ def extract_notice_evote_block(text: str) -> str:
 
 def extract_notice_summary(text: str) -> dict[str, Any]:
     compact = compact_text(text)
-    summary_match = re.search(r"紀念品領取說明(.*?)(註：|股東常會日期|委託書填表須知)", compact)
+    summary_match = re.search(r"(?:紀念品領取說明|洽領紀念品領取須知|洽領紀念品須知|紀念品領取須知)(.*?)(註：|股東常會日期|委託書填表須知|第[一二三四五六七八九十]聯)", compact)
     summary = summary_match.group(1) if summary_match else ""
-    evote_match = re.search(r"採電子投票之股東，?紀念品領取方式：(.{0,800}?)(註：|股東常會日期|委託書填表須知)", compact)
+    evote_match = re.search(
+        r"(?:採電子投票之股東，?紀念品領取方式：|電子投票領取紀念品方式：|電子方式行使表決權且投票成功者：?|電子投票成功且未以其他方式出席股東會之股東，?請依下列方式領取紀念品。?|以電子方式行使表決權者。?)"
+        r"(.{0,1000}?)(註：|股東常會日期|委託書填表須知|第[一二三四五六七八九十]聯|股東戶號)",
+        compact,
+    )
     evote_rule = evote_match.group(1) if evote_match else ""
     evote_block = extract_notice_evote_block(text)
 
+    block_has_specific_evote = any(
+        marker in evote_block
+        for marker in (
+            "電子投票領取紀念品方式",
+            "電子方式行使表決權且投票成功者",
+            "電子投票成功且未以其他方式",
+            "以電子方式行使表決權者",
+        )
+    )
     if not evote_rule and evote_block:
         evote_rule = evote_block
+    elif evote_block:
+        block_start, _, _ = parse_pickup_roc_range_from_text(evote_block)
+        rule_start, _, _ = parse_pickup_roc_range_from_text(evote_rule)
+        if block_start and (block_has_specific_evote or not rule_start):
+            evote_rule = evote_block
 
     pretty_summary = (
         summary.replace("A.", " A. ").replace("B.", " B. ").replace("C.", " C. ").replace("D.", " D. ").strip()
@@ -570,7 +618,7 @@ def extract_notice_summary(text: str) -> dict[str, Any]:
     end_date = None
     period_text = ""
     if evote_rule:
-        start_date, end_date, period_text = parse_compact_roc_range_from_text(evote_rule)
+        start_date, end_date, period_text = parse_pickup_roc_range_from_text(evote_rule)
 
     return {
         "giftSummary": pretty_summary,
@@ -588,7 +636,19 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
     if place == "不發":
         return "不發"
 
-    match = re.search(r"止(?:\(.*?\))?至([^。；]+?)領取", rule)
+    match = re.search(r"(?:請於|於)\d{2,3}年\d{1,2}月\d{1,2}日(?:起)?至(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:止)?[^。；]{0,220}?至([^，。；]+?)(?:領取|換領)", rule)
+    if match:
+        location = match.group(1).strip("：:，,。 ")
+        if location:
+            return location
+
+    match = re.search(r"領取地點如下[:：](.+?)(?:※|紀念品領取時間|逾期|$)", rule)
+    if match:
+        location = match.group(1).strip("：:，,。 ")
+        if location:
+            return location
+
+    match = re.search(r"止(?:\(.*?\))?(?:[^至。；]{0,80})至([^。；]+?)(?:領取|換領)", rule)
     if match:
         location = match.group(1).strip("：:，,。 ")
         if location:
@@ -600,7 +660,7 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
         if location:
             return location
 
-    locations = re.findall(r"至([^至。；]+?)領取", rule)
+    locations = re.findall(r"至([^至。；]+?)(?:領取|換領)", rule)
     if locations:
         location = locations[-1].strip("：:，,。 ")
         if location:
@@ -621,7 +681,11 @@ def extract_pickup_documents(rule_text: str) -> str:
     if not rule:
         return ""
 
-    match = re.search(r"(?:攜帶文件|攜帶資料)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
+    match = re.search(r"(?:攜帶文件|攜帶資料|攜帶下列文件)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
+    if match:
+        return match.group(1).strip("：:，,。 ")
+
+    match = re.search(r"(?:憑|限持)(.{2,160}?)(?:至[^。；]+?(?:領取|換領)|，?於\d{2,3}年|$)", compact)
     if match:
         return match.group(1).strip("：:，,。 ")
 

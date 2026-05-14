@@ -10,7 +10,7 @@ on:
       limit:
         description: "Maximum records to update when codes is empty."
         required: false
-        default: "30"
+        default: "80"
       skip_existing:
         description: "Skip stocks that are already in the seed cache."
         required: false
@@ -20,7 +20,7 @@ on:
           - "true"
           - "false"
   schedule:
-    - cron: "20 18 * * *"
+    - cron: "20 0,6,12,18 * * *"
 
 permissions:
   contents: write
@@ -56,6 +56,7 @@ jobs:
               --official-pdf-sources data/official_notice_sources.json
               --remote-requested-url https://shareholder-gift-tracker.onrender.com/api/requested-codes
               --limit "$LIMIT"
+              --retry-empty
               --sleep 3
             )
             if [[ "$SKIP_EXISTING" == "true" ]]; then

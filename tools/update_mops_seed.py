@@ -94,6 +94,20 @@ def unique_codes(codes: list[str]) -> list[str]:
     return out
 
 
+def has_pickup_details(item: dict | None) -> bool:
+    if not item:
+        return False
+    return any(
+        item.get(field)
+        for field in (
+            "evotePickupStartDate",
+            "evotePickupEndDate",
+            "evotePickupLocation",
+            "evotePickupDocuments",
+        )
+    )
+
+
 def filename_from_url(url: str, code: str) -> str:
     path = urllib.parse.urlparse(url).path
     name = urllib.parse.unquote(Path(path).name)
@@ -158,6 +172,11 @@ def main() -> int:
     parser.add_argument("--all", action="store_true", help="Update all candidate stocks from the current source bundle.")
     parser.add_argument("--limit", type=int, default=0, help="Maximum number of codes to process. 0 means no limit.")
     parser.add_argument("--skip-existing", action="store_true", help="Skip codes that already exist in the seed cache.")
+    parser.add_argument(
+        "--retry-empty",
+        action="store_true",
+        help="When skipping existing records, retry records that exist but still have no pickup details.",
+    )
     parser.add_argument("--force", action="store_true", help="Refresh selected codes even if they already exist.")
     parser.add_argument("--watchlist-file", default="", help="Text file containing stock codes to include.")
     parser.add_argument("--official-pdf-sources", default="", help="JSON file mapping stock codes to official PDF URLs.")
@@ -193,7 +212,13 @@ def main() -> int:
     codes = unique_codes(codes)
 
     if args.skip_existing:
-        codes = [code for code in codes if code not in seed or code in official_sources]
+        codes = [
+            code
+            for code in codes
+            if code not in seed
+            or code in official_sources
+            or (args.retry_empty and not has_pickup_details(seed.get(code)))
+        ]
 
     if args.limit > 0:
         codes = codes[: args.limit]
