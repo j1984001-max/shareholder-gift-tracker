@@ -443,6 +443,40 @@ def extract_notice_summary(text: str) -> dict[str, Any]:
     }
 
 
+def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, transfer_agent_name: str) -> str:
+    rule = compact_text(rule_text or "")
+    place = normalize_text(place_text or "")
+
+    if place == "不發":
+        return "不發"
+
+    match = re.search(r"止(?:\(.*?\))?至([^。；]+?)領取", rule)
+    if match:
+        location = match.group(1).strip("：:，,。 ")
+        if location:
+            return location
+
+    match = re.search(r"發放地點：([^。；]+?)(?:持|發放時間|領取|$)", rule)
+    if match:
+        location = match.group(1).strip("：:，,。 ")
+        if location:
+            return location
+
+    match = re.search(r"至([^。；]+?)領取", rule)
+    if match:
+        location = match.group(1).strip("：:，,。 ")
+        if location:
+            return location
+
+    if place and place not in {"公司", "股代", "代理部"}:
+        return place
+
+    if source_hint in {"宏遠股代", "開會通知書"} and transfer_agent_name:
+        return transfer_agent_name
+
+    return place or transfer_agent_name
+
+
 def get_mops_notice_info(code: str) -> dict[str, Any] | None:
     listing = fetch_notice_listing(code)
     if not listing:
@@ -532,6 +566,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
         "電投領取開始",
         "電投領取結束",
         "電投領取來源",
+        "電投領取地點",
         "電投領取資訊",
         "通知書摘要",
         "通知書快取",
@@ -554,6 +589,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
             item.get("evotePickupStartDate", "") or "",
             item.get("evotePickupEndDate", "") or "",
             item.get("evotePickupSource", ""),
+            item.get("evotePickupLocation", ""),
             item.get("evotePickupRule", ""),
             item.get("noticeGiftSummary", ""),
             item.get("noticeCacheStatus", ""),
@@ -580,8 +616,8 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     wrap_columns = {"D", "M", "N", "S"}
     widths = {
         "A": 12, "B": 18, "C": 10, "D": 28, "E": 14, "F": 14, "G": 12,
-        "H": 14, "I": 14, "J": 14, "K": 14, "L": 12, "M": 48, "N": 56,
-        "O": 12, "P": 22, "Q": 18, "R": 10, "S": 24,
+        "H": 14, "I": 14, "J": 14, "K": 14, "L": 12, "M": 24, "N": 48,
+        "O": 56, "P": 12, "Q": 22, "R": 18, "S": 10, "T": 24,
     }
     for column, width in widths.items():
         worksheet.column_dimensions[column].width = width
@@ -656,6 +692,13 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         status = "unpublished"
 
     evote_pickup_source = "宏遠股代" if (honsec or {}).get("evote_pickup_rule") else ("開會通知書" if mops_notice else "")
+    evote_pickup_rule = (honsec or {}).get("evote_pickup_rule") or (mops_notice or {}).get("evotePickupRule", "")
+    evote_pickup_location = extract_pickup_location(
+        evote_pickup_source,
+        (honsec or {}).get("evote_pickup_place", ""),
+        evote_pickup_rule,
+        transfer_agent_name,
+    )
 
     return {
         "code": code,
@@ -679,7 +722,8 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         "evotePickupStartDate": pickup_start,
         "evotePickupEndDate": pickup_end,
         "evotePickupPlace": (honsec or {}).get("evote_pickup_place", ""),
-        "evotePickupRule": (honsec or {}).get("evote_pickup_rule") or (mops_notice or {}).get("evotePickupRule", ""),
+        "evotePickupLocation": evote_pickup_location,
+        "evotePickupRule": evote_pickup_rule,
         "meetingDistributionRule": (honsec or {}).get("meeting_distribution_rule", ""),
         "proxyPeriodText": (honsec or {}).get("proxy_period_text", ""),
         "agentDistributionPeriodText": (honsec or {}).get("agent_distribution_period_text", ""),

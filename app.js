@@ -98,6 +98,16 @@ function computeDiffs(results) {
   return enriched;
 }
 
+
+function previewDiffs(results) {
+  const previous = loadSnapshots();
+  return results.map((item) => {
+    const signature = toSignature(item);
+    const changed = previous[item.code] && previous[item.code] !== signature;
+    return { ...item, changed };
+  });
+}
+
 function renderSummary(results) {
   summaryStrip.innerHTML = "";
   const published = results.filter((item) => item.status === "published").length;
@@ -170,6 +180,7 @@ function renderRows(results) {
           <span><strong>電子投票：</strong>${formatRange(item.evoteStartDate, item.evoteEndDate)}</span>
           <span><strong>電投領取期：</strong>${formatRange(item.evotePickupStartDate, item.evotePickupEndDate)}</span>
           <span><strong>領取來源：</strong>${item.evotePickupSource || "未標示"}</span>
+          <span><strong>領取地點：</strong>${item.evotePickupLocation || item.evotePickupPlace || "未補到地點"}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
           <span><strong>通知書摘要：</strong>${item.noticeGiftSummary || "未補到摘要"}</span>
           <span><strong>通知書快取：</strong>${
@@ -226,20 +237,70 @@ async function lookup(codes) {
   activeCodes = codes;
   lookupBtn.disabled = true;
   refreshBtn.disabled = true;
+  exportBtn.disabled = true;
   statusText.textContent = "正在抓取最新資料...";
+  resultsBody.innerHTML = '<tr><td colspan="7" class="empty-cell">準備開始逐筆查詢...</td></tr>';
 
   try {
-    const response = await fetch(`/api/lookup?codes=${encodeURIComponent(codes.join(","))}`);
-    const payload = await response.json();
-    if (!response.ok || !payload.ok) {
-      throw new Error(payload.error || "查詢失敗");
+    const collected = [];
+
+    for (let index = 0; index < codes.length; index += 1) {
+      const code = codes[index];
+      statusText.textContent = `正在查詢 ${index + 1} / ${codes.length}：${code}`;
+
+      try {
+        const response = await fetch(`/api/lookup?codes=${encodeURIComponent(code)}`);
+        const payload = await response.json();
+        if (!response.ok || !payload.ok) {
+          throw new Error(payload.error || "查詢失敗");
+        }
+        if (payload.results?.[0]) {
+          collected.push(payload.results[0]);
+        }
+      } catch (error) {
+        collected.push({
+          code,
+          companyName: "",
+          status: "partial",
+          isPublished: false,
+          souvenirName: "",
+          meetingDate: "",
+          lastBuyDate: "",
+          meetingCity: "",
+          priceText: "",
+          transferAgentName: "",
+          transferAgentPhone: "",
+          transferAgentShort: "",
+          oddLotMail: "",
+          reelection: "",
+          needVote: null,
+          fractionalOk: null,
+          evoteStartDate: "",
+          evoteEndDate: "",
+          evotePickupStartDate: "",
+          evotePickupEndDate: "",
+          evotePickupPlace: "",
+          evotePickupLocation: "",
+          evotePickupRule: "",
+          evotePickupSource: "",
+          noticeGiftSummary: "",
+          noticeCacheStatus: "",
+          notes: `抓取失敗：${error.message || "未知錯誤"}`,
+          sources: [],
+        });
+      }
+
+      const preview = previewDiffs(collected);
+      lastResponse = { requestedCodes: codes, results: preview };
+      renderSummary(preview);
+      renderRows(preview);
     }
 
-    const enriched = computeDiffs(payload.results);
-    lastResponse = { ...payload, results: enriched };
+    const enriched = computeDiffs(collected);
+    lastResponse = { requestedCodes: codes, results: enriched };
     exportBtn.disabled = !enriched.length;
     updatedAtText.textContent = new Date().toLocaleString("zh-TW");
-    statusText.textContent = `共查詢 ${enriched.length} 檔，資料來自 ${payload.sourceStats.wespai} 筆撿股讚、${payload.sourceStats.idealLabs} 筆股東禮簿、${payload.sourceStats.honsec} 筆宏遠股代資料。`;
+    statusText.textContent = `已完成 ${enriched.length} 檔查詢，資料已逐筆載入。`;
     renderSummary(enriched);
     renderRows(enriched);
   } catch (error) {
