@@ -566,8 +566,27 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
     return place or transfer_agent_name
 
 
-def get_mops_notice_info(code: str) -> dict[str, Any] | None:
+def build_notice_listing_from_meeting_date(code: str, meeting_date: str | None) -> dict[str, str] | None:
+    if not meeting_date or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meeting_date):
+        return None
+    compact_meeting_date = meeting_date.replace("-", "")
+    query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
+    return {
+        "year": "",
+        "dataType": "",
+        "meetingType": "",
+        "detail": "開會通知",
+        "remark": "",
+        "filename": f"{CURRENT_YEAR}_{code}_{compact_meeting_date}F01.pdf",
+        "uploadedAt": "",
+        "queryUrl": query_url,
+    }
+
+
+def get_mops_notice_info(code: str, meeting_date: str | None = None) -> dict[str, Any] | None:
     listing = fetch_notice_listing(code)
+    if not listing:
+        listing = build_notice_listing_from_meeting_date(code, meeting_date)
     if not listing:
         return None
 
@@ -607,9 +626,9 @@ def get_mops_notice_info(code: str) -> dict[str, Any] | None:
     return entry
 
 
-def safe_get_mops_notice_info(code: str) -> tuple[dict[str, Any] | None, str]:
+def safe_get_mops_notice_info(code: str, meeting_date: str | None = None) -> tuple[dict[str, Any] | None, str]:
     try:
-        return get_mops_notice_info(code), ""
+        return get_mops_notice_info(code, meeting_date), ""
     except Exception as error:
         return None, str(error)
 
@@ -738,12 +757,6 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
     honsec = sources["honsec"].get(code)
-    should_try_mops = bool((wespai or ideal or honsec) and should_fetch_mops_notice(ideal, honsec))
-    mops_notice = None
-    mops_error = ""
-    if should_try_mops:
-        mops_notice, mops_error = safe_get_mops_notice_info(code)
-
     company_name = (
         (wespai or {}).get("company_name")
         or (ideal or {}).get("stock", {}).get("stock_name")
@@ -754,6 +767,12 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     last_buy_date = (ideal or {}).get("last_buy_date") or (wespai or {}).get("last_buy_date") or (honsec or {}).get(
         "last_buy_date"
     )
+    should_try_mops = bool((wespai or ideal or honsec) and should_fetch_mops_notice(ideal, honsec))
+    mops_notice = None
+    mops_error = ""
+    if should_try_mops:
+        mops_notice, mops_error = safe_get_mops_notice_info(code, meeting_date)
+
     evote_start = (ideal or {}).get("evote_start_date") or (honsec or {}).get("evote_start_date")
     evote_end = (ideal or {}).get("evote_end_date") or (honsec or {}).get("evote_end_date")
     pickup_start = (honsec or {}).get("evote_pickup_start_date") or (mops_notice or {}).get("evotePickupStartDate")
