@@ -420,7 +420,31 @@ def fetch_notice_listing(code: str) -> dict[str, str] | None:
     if exact:
         return exact
     fallback = next((row for row in rows if "開會通知" in row["detail"] and "英文版" not in row["detail"]), None)
-    return fallback
+    if fallback:
+        return fallback
+
+    filename_matches = re.findall(
+        rf"readfile2\(\s*['\"]F['\"]\s*,\s*['\"]{code}['\"]\s*,\s*['\"]([^'\"]+\.pdf)['\"]\s*\)",
+        html,
+        re.I,
+    )
+    if not filename_matches:
+        return None
+
+    preferred_filename = next(
+        (name for name in filename_matches if re.search(r"F01\.pdf$", name, re.I)),
+        filename_matches[0],
+    )
+    return {
+        "year": "",
+        "dataType": "",
+        "meetingType": "",
+        "detail": "開會通知",
+        "remark": "",
+        "filename": normalize_text(preferred_filename),
+        "uploadedAt": "",
+        "queryUrl": query_url,
+    }
 
 
 def resolve_notice_pdf_url(code: str, filename: str) -> str:
