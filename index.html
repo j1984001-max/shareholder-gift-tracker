@@ -39,12 +39,12 @@
       <aside class="control-card">
         <div class="panel-head">
           <h2>批次匯入</h2>
-          <p>支援逗號、空白或換行分隔</p>
+          <p>支援逗號、空白、換行，或混合文字自動抓代號</p>
         </div>
 
         <label class="field-block">
           <span>股票代號</span>
-          <textarea id="codesInput" rows="12" placeholder="例如：2317, 2409, 3037&#10;9938&#10;2006"></textarea>
+          <textarea id="codesInput" rows="12" placeholder="例如：2317, 2409, 3037&#10;9938&#10;2006&#10;或：台泥（1101）嘉泥（1103）"></textarea>
         </label>
 
         <div class="button-row">
@@ -65,6 +65,7 @@
             <li>已公告：直接顯示紀念品、最後買進日與電子投票資訊。</li>
             <li>未公告：保留在 watchlist，之後重查就能看到新資料。</li>
             <li>有變更：若和你上次查詢結果不同，會標示「NEW」。</li>
+            <li>輸入可直接貼上像 `台泥（1101）嘉泥（1103）` 這種連續內容，系統會自動抓出代號。</li>
           </ul>
         </section>
       </aside>

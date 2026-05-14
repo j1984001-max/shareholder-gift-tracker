@@ -297,9 +297,19 @@ def source_bundle() -> dict[str, Any]:
 
 
 def clean_codes(raw: str) -> list[str]:
+    normalized = (
+        raw.replace("（", "(")
+        .replace("）", ")")
+        .replace("［", "(")
+        .replace("］", ")")
+        .replace("【", "(")
+        .replace("】", ")")
+    )
     seen: set[str] = set()
     out: list[str] = []
-    for code in re.findall(r"\d{3,6}", raw):
+    bracket_matches = re.findall(r"\((\d{3,6})\)", normalized)
+    plain_matches = re.findall(r"\d{3,6}", normalized)
+    for code in [*bracket_matches, *plain_matches]:
         if code not in seen:
             seen.add(code)
             out.append(code)

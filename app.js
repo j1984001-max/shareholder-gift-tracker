@@ -19,9 +19,15 @@ const summaryCardTemplate = document.getElementById("summaryCardTemplate");
 let activeCodes = [];
 let lastResponse = null;
 
-function normalizeCodes(raw) {
-  const matches = raw.match(/\d{3,6}/g) || [];
-  return [...new Set(matches)];
+function extractCodes(raw) {
+  const normalized = raw
+    .replace(/[（［【「『]/g, "(")
+    .replace(/[）］】」』]/g, ")")
+    .replace(/[\u3000,，、；;]/g, " ");
+
+  const bracketMatches = [...normalized.matchAll(/\((\d{3,6})\)/g)].map((match) => match[1]);
+  const plainMatches = [...normalized.matchAll(/\d{3,6}/g)].map((match) => match[0]);
+  return [...new Set([...bracketMatches, ...plainMatches])];
 }
 
 function saveWatchlist(codes) {
@@ -202,7 +208,7 @@ function renderRows(results) {
 
 async function lookup(codes) {
   if (!codes.length) {
-    statusText.textContent = "請先輸入至少一筆股票代號";
+    statusText.textContent = "請先輸入至少一筆可辨識的股票代號";
     return;
   }
 
@@ -234,17 +240,17 @@ async function lookup(codes) {
 }
 
 lookupBtn.addEventListener("click", () => {
-  const codes = normalizeCodes(codesInput.value);
+  const codes = extractCodes(codesInput.value);
   lookup(codes);
 });
 
 refreshBtn.addEventListener("click", () => {
-  const codes = activeCodes.length ? activeCodes : normalizeCodes(codesInput.value);
+  const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
   lookup(codes);
 });
 
 saveWatchlistBtn.addEventListener("click", () => {
-  const codes = normalizeCodes(codesInput.value);
+  const codes = extractCodes(codesInput.value);
   saveWatchlist(codes);
   statusText.textContent = `已儲存 ${codes.length} 筆 watchlist。`;
 });
@@ -269,7 +275,7 @@ function bootstrap() {
   const saved = loadWatchlist();
   if (saved) {
     codesInput.value = saved;
-    const codes = normalizeCodes(saved);
+    const codes = extractCodes(saved);
     if (codes.length) {
       lookup(codes);
     }
