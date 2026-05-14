@@ -10,7 +10,7 @@ on:
       limit:
         description: "Maximum records to update when codes is empty."
         required: false
-        default: "80"
+        default: "60"
       skip_existing:
         description: "Skip stocks that are already in the seed cache."
         required: false
@@ -20,7 +20,7 @@ on:
           - "true"
           - "false"
   schedule:
-    - cron: "20 0,6,12,18 * * *"
+    - cron: "20 0,3,6,9,12,15,18,21 * * *"
 
 permissions:
   contents: write
@@ -45,7 +45,7 @@ jobs:
         run: |
           set -euo pipefail
           CODES="${{ github.event.inputs.codes || '' }}"
-          LIMIT="${{ github.event.inputs.limit || '120' }}"
+          LIMIT="${{ github.event.inputs.limit || '60' }}"
           SKIP_EXISTING="${{ github.event.inputs.skip_existing || 'true' }}"
 
           if [[ -n "$CODES" ]]; then

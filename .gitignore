@@ -1,3 +1,4 @@
 .cache/
 .vendor/
 cache_test_*.pdf
+.DS_Store

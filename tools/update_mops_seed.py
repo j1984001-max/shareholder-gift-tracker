@@ -108,6 +108,37 @@ def has_pickup_details(item: dict | None) -> bool:
     )
 
 
+def rate_limited(error: str) -> bool:
+    return any(
+        phrase in (error or "")
+        for phrase in (
+            "查詢過量",
+            "THE PAGE CANNOT BE ACCESSED",
+            "FOR SECURITY REASONS",
+            "Too Many Requests",
+            "HTTP Error 429",
+        )
+    )
+
+
+def prioritize_codes(codes: list[str], seed: dict[str, dict], official_sources: dict[str, list[dict[str, str]]], retry_empty: bool) -> list[str]:
+    official = [
+        code
+        for code in codes
+        if code in official_sources and (code not in seed or not has_pickup_details(seed.get(code)))
+    ]
+    missing = [code for code in codes if code not in seed and code not in official_sources]
+    retryable_empty = [
+        code
+        for code in codes
+        if retry_empty
+        and code in seed
+        and code not in official_sources
+        and not has_pickup_details(seed.get(code))
+    ]
+    return unique_codes([*official, *missing, *retryable_empty])
+
+
 def filename_from_url(url: str, code: str) -> str:
     path = urllib.parse.urlparse(url).path
     name = urllib.parse.unquote(Path(path).name)
@@ -212,13 +243,7 @@ def main() -> int:
     codes = unique_codes(codes)
 
     if args.skip_existing:
-        codes = [
-            code
-            for code in codes
-            if code not in seed
-            or code in official_sources
-            or (args.retry_empty and not has_pickup_details(seed.get(code)))
-        ]
+        codes = prioritize_codes(codes, seed, official_sources, args.retry_empty)
 
     if args.limit > 0:
         codes = codes[: args.limit]
@@ -250,6 +275,9 @@ def main() -> int:
             info, error = server.safe_get_mops_notice_info(code, meeting_date)
         if not info:
             print(f"  skipped: {error or 'no notice info'}")
+            if rate_limited(error):
+                print("  MOPS appears rate-limited; stopping this run to avoid wasting requests.")
+                break
             continue
 
         seed[code] = info
