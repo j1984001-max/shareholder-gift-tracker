@@ -104,7 +104,9 @@ def load_notice_cache() -> dict[str, Any]:
     if NOTICE_CACHE_PATH.exists():
         try:
             disk_cache = json.loads(NOTICE_CACHE_PATH.read_text(encoding="utf-8"))
-            NOTICE_CACHE_MEMORY = {**seed_cache, **disk_cache}
+            # The deployed seed cache is curated and versioned, so it must win over
+            # stale runtime cache entries that may have been created before a fix.
+            NOTICE_CACHE_MEMORY = {**disk_cache, **seed_cache}
             return NOTICE_CACHE_MEMORY
         except Exception:
             pass
@@ -651,18 +653,26 @@ def build_notice_listing_from_meeting_date(code: str, meeting_date: str | None) 
 
 
 def get_mops_notice_info(code: str, meeting_date: str | None = None) -> dict[str, Any] | None:
+    cache = load_notice_cache()
+    cached_entry = cache.get(code)
+    cached_source_type = (cached_entry or {}).get("sourceType", "")
+    cached_is_current = bool(cached_entry and cached_entry.get("parserVersion") == NOTICE_CACHE_VERSION)
+    cached_is_official_pdf = cached_source_type in {"official_pdf", "company_pdf", "transfer_agent_pdf"}
+    if cached_entry and cached_is_current and cached_is_official_pdf:
+        cached_entry["cacheStatus"] = "hit"
+        return cached_entry
+
     listing = fetch_notice_listing(code)
     if not listing:
         listing = build_notice_listing_from_meeting_date(code, meeting_date)
     if not listing:
         return None
 
-    cache = load_notice_cache()
-    cached_entry = cache.get(code)
+    cached_matches_listing = bool(cached_entry and cached_entry.get("filename") == listing["filename"])
     if (
         cached_entry
-        and cached_entry.get("filename") == listing["filename"]
-        and cached_entry.get("parserVersion") == NOTICE_CACHE_VERSION
+        and cached_is_current
+        and cached_matches_listing
     ):
         cached_entry["cacheStatus"] = "hit"
         return cached_entry
@@ -901,7 +911,10 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         evote_pickup_rule,
         transfer_agent_name,
     )
-    evote_pickup_documents = extract_pickup_documents(evote_pickup_rule)
+    evote_pickup_location = (mops_notice or {}).get("evotePickupLocation") or evote_pickup_location
+    evote_pickup_documents = (mops_notice or {}).get("evotePickupDocuments") or extract_pickup_documents(
+        evote_pickup_rule
+    )
 
     return {
         "code": code,

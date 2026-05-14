@@ -49,10 +49,11 @@ jobs:
           SKIP_EXISTING="${{ github.event.inputs.skip_existing || 'true' }}"
 
           if [[ -n "$CODES" ]]; then
-            python tools/update_mops_seed.py "$CODES" --force --sleep 3
+            python tools/update_mops_seed.py "$CODES" --official-pdf-sources data/official_notice_sources.json --force --sleep 3
           else
             EXTRA_ARGS=(
               --watchlist-file data/mops_seed_watchlist.txt
+              --official-pdf-sources data/official_notice_sources.json
               --remote-requested-url https://shareholder-gift-tracker.onrender.com/api/requested-codes
               --limit "$LIMIT"
               --sleep 3

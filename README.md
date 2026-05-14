@@ -25,6 +25,7 @@ http://127.0.0.1:8765
 - 撿股讚：紀念品、開會日期、最後買進日、股代、零股寄單
 - 股東禮簿：電子投票起訖、零股可否領取、股代名稱
 - 宏遠股代：部分個股的電投領取期間與發放條件
+- 公開資訊觀測站／官方 PDF 快取：開會通知書內的電投領取日期、地點、攜帶資料
 
 ## 這版可以做什麼
 
@@ -33,6 +34,24 @@ http://127.0.0.1:8765
 - 每次查詢都抓最新頁面資料
 - 和上次查詢結果比對，欄位有異動時標示 `NEW`
 - 對於尚未公告的股票，保留在 watchlist 方便持續追蹤
+
+## 後台補資料
+
+GitHub Actions 會定期執行 [tools/update_mops_seed.py](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/tools/update_mops_seed.py)，把開會通知書解析結果寫進 [data/mops_notice_seed_cache.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/mops_notice_seed_cache.json)，網站查詢時會優先讀這份快取。
+
+如果公開資訊觀測站查詢過量，可以把公司官網或股代公告的官方 PDF 放到 [data/official_notice_sources.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/official_notice_sources.json)，排程會優先解析這些 PDF，例如：
+
+```json
+{
+  "1101": [
+    {
+      "label": "公司官網開會通知書",
+      "url": "https://example.com/1101_notice.pdf",
+      "sourceType": "company_pdf"
+    }
+  ]
+}
+```
 
 ## 限制
 
