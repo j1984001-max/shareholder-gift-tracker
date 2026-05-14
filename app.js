@@ -10,6 +10,7 @@ const saveWatchlistBtn = document.getElementById("saveWatchlistBtn");
 const loadSampleBtn = document.getElementById("loadSampleBtn");
 const clearBtn = document.getElementById("clearBtn");
 const refreshBtn = document.getElementById("refreshBtn");
+const exportBtn = document.getElementById("exportBtn");
 const updatedAtText = document.getElementById("updatedAtText");
 const statusText = document.getElementById("statusText");
 const resultsBody = document.getElementById("resultsBody");
@@ -18,6 +19,7 @@ const summaryCardTemplate = document.getElementById("summaryCardTemplate");
 
 let activeCodes = [];
 let lastResponse = null;
+exportBtn.disabled = true;
 
 function extractCodes(raw) {
   const normalized = raw
@@ -235,11 +237,13 @@ async function lookup(codes) {
 
     const enriched = computeDiffs(payload.results);
     lastResponse = { ...payload, results: enriched };
+    exportBtn.disabled = !enriched.length;
     updatedAtText.textContent = new Date().toLocaleString("zh-TW");
     statusText.textContent = `共查詢 ${enriched.length} 檔，資料來自 ${payload.sourceStats.wespai} 筆撿股讚、${payload.sourceStats.idealLabs} 筆股東禮簿、${payload.sourceStats.honsec} 筆宏遠股代資料。`;
     renderSummary(enriched);
     renderRows(enriched);
   } catch (error) {
+    exportBtn.disabled = true;
     statusText.textContent = error.message || "查詢失敗";
     resultsBody.innerHTML = `<tr><td colspan="7" class="empty-cell">${statusText.textContent}</td></tr>`;
   } finally {
@@ -258,6 +262,15 @@ refreshBtn.addEventListener("click", () => {
   lookup(codes);
 });
 
+exportBtn.addEventListener("click", () => {
+  const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
+  if (!codes.length) {
+    statusText.textContent = "請先查詢資料後再下載 Excel";
+    return;
+  }
+  window.location.href = `/api/export.xlsx?codes=${encodeURIComponent(codes.join(","))}`;
+});
+
 saveWatchlistBtn.addEventListener("click", () => {
   const codes = extractCodes(codesInput.value);
   saveWatchlist(codes);
@@ -271,6 +284,7 @@ loadSampleBtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   codesInput.value = "";
   activeCodes = [];
+  exportBtn.disabled = true;
   statusText.textContent = "已清空輸入";
 });
 

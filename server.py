@@ -13,6 +13,8 @@ from html.parser import HTMLParser
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
+from openpyxl import Workbook
+from openpyxl.styles import Alignment, Font
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parent
@@ -516,6 +518,83 @@ def source_link(label: str, url: str) -> dict[str, str]:
     return {"label": label, "url": url}
 
 
+def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
+    rows = [[
+        "股票代號",
+        "公司名稱",
+        "狀態",
+        "紀念品",
+        "最後買進日",
+        "股東會日期",
+        "股東會地點",
+        "電子投票開始",
+        "電子投票結束",
+        "電投領取開始",
+        "電投領取結束",
+        "電投領取來源",
+        "電投領取資訊",
+        "通知書摘要",
+        "通知書快取",
+        "股代名稱",
+        "股代電話",
+        "零股寄單",
+        "資料來源",
+    ]]
+    for item in results:
+        rows.append([
+            item.get("code", ""),
+            item.get("companyName", ""),
+            item.get("status", ""),
+            item.get("souvenirName", ""),
+            item.get("lastBuyDate", "") or "",
+            item.get("meetingDate", "") or "",
+            item.get("meetingCity", ""),
+            item.get("evoteStartDate", "") or "",
+            item.get("evoteEndDate", "") or "",
+            item.get("evotePickupStartDate", "") or "",
+            item.get("evotePickupEndDate", "") or "",
+            item.get("evotePickupSource", ""),
+            item.get("evotePickupRule", ""),
+            item.get("noticeGiftSummary", ""),
+            item.get("noticeCacheStatus", ""),
+            item.get("transferAgentName", "") or item.get("transferAgentShort", ""),
+            item.get("transferAgentPhone", ""),
+            item.get("oddLotMail", ""),
+            " | ".join(source.get("label", "") for source in item.get("sources", [])),
+        ])
+    return rows
+
+
+def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.title = "股東會紀念品"
+
+    for row in build_export_rows(results):
+        worksheet.append(row)
+
+    for cell in worksheet[1]:
+        cell.font = Font(bold=True)
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+
+    wrap_columns = {"D", "M", "N", "S"}
+    widths = {
+        "A": 12, "B": 18, "C": 10, "D": 28, "E": 14, "F": 14, "G": 12,
+        "H": 14, "I": 14, "J": 14, "K": 14, "L": 12, "M": 48, "N": 56,
+        "O": 12, "P": 22, "Q": 18, "R": 10, "S": 24,
+    }
+    for column, width in widths.items():
+        worksheet.column_dimensions[column].width = width
+
+    for row in worksheet.iter_rows(min_row=2):
+        for cell in row:
+            cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in wrap_columns)
+
+    output = io.BytesIO()
+    workbook.save(output)
+    return output.getvalue()
+
+
 def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
@@ -630,6 +709,11 @@ class AppHandler(SimpleHTTPRequestHandler):
             raw_codes = query.get("codes", [""])[0]
             self.handle_lookup(raw_codes)
             return
+        if parsed.path == "/api/export.xlsx":
+            query = urllib.parse.parse_qs(parsed.query)
+            raw_codes = query.get("codes", [""])[0]
+            self.handle_export(raw_codes)
+            return
         if parsed.path == "/api/health":
             json_response(self, {"ok": True, "generatedAt": date.today().isoformat()})
             return
@@ -676,6 +760,34 @@ class AppHandler(SimpleHTTPRequestHandler):
                     "error": f"資料抓取失敗：{error}",
                     "results": [],
                 },
+                status=502,
+            )
+
+    def handle_export(self, raw_codes: str) -> None:
+        codes = clean_codes(raw_codes)
+        if not codes:
+            json_response(
+                self,
+                {"ok": False, "error": "請輸入至少一筆股票代號。"},
+                status=400,
+            )
+            return
+        try:
+            sources = source_bundle()
+            results = [build_record(code, sources) for code in codes]
+            body = build_export_xlsx(results)
+            filename = f"shareholder-gifts-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
+            self.send_response(200)
+            self.send_header("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+            self.send_header("Content-Disposition", f'attachment; filename="{filename}"')
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            self.wfile.write(body)
+        except Exception as error:  # pragma: no cover
+            json_response(
+                self,
+                {"ok": False, "error": f"Excel 匯出失敗：{error}"},
                 status=502,
             )
 
