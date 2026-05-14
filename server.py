@@ -636,33 +636,44 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
     if place == "不發":
         return "不發"
 
+    def clean_location(value: str) -> str:
+        cleaned = value.strip("：:，,。 ")
+        cleaned = re.sub(r"（前往.*$", "", cleaned)
+        cleaned = re.sub(r"\(前往.*$", "", cleaned)
+        return cleaned.strip("：:，,。 ")
+
     match = re.search(r"(?:請於|於)\d{2,3}年\d{1,2}月\d{1,2}日(?:起)?至(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:止)?[^。；]{0,220}?至([^，。；]+?)(?:領取|換領)", rule)
     if match:
-        location = match.group(1).strip("：:，,。 ")
+        location = clean_location(match.group(1))
+        address_match = re.search(r"領取地點如下[:：](.+?)(?:※|紀念品領取時間|逾期|$)", rule)
+        if address_match:
+            address_text = clean_location(address_match.group(1))
+            if address_text and address_text not in location:
+                location = f"{location}；{address_text}"
         if location:
             return location
 
     match = re.search(r"領取地點如下[:：](.+?)(?:※|紀念品領取時間|逾期|$)", rule)
     if match:
-        location = match.group(1).strip("：:，,。 ")
+        location = clean_location(match.group(1))
         if location:
             return location
 
     match = re.search(r"止(?:\(.*?\))?(?:[^至。；]{0,80})至([^。；]+?)(?:領取|換領)", rule)
     if match:
-        location = match.group(1).strip("：:，,。 ")
+        location = clean_location(match.group(1))
         if location:
             return location
 
     match = re.search(r"發放地點：([^。；]+?)(?:持|發放時間|領取|$)", rule)
     if match:
-        location = match.group(1).strip("：:，,。 ")
+        location = clean_location(match.group(1))
         if location:
             return location
 
     locations = re.findall(r"至([^至。；]+?)(?:領取|換領)", rule)
     if locations:
-        location = locations[-1].strip("：:，,。 ")
+        location = clean_location(locations[-1])
         if location:
             return location
 
