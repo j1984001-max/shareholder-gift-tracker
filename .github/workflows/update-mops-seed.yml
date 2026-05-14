@@ -10,7 +10,7 @@ on:
       limit:
         description: "Maximum records to update when codes is empty."
         required: false
-        default: "80"
+        default: "30"
       skip_existing:
         description: "Skip stocks that are already in the seed cache."
         required: false
@@ -49,13 +49,13 @@ jobs:
           SKIP_EXISTING="${{ github.event.inputs.skip_existing || 'true' }}"
 
           if [[ -n "$CODES" ]]; then
-            python tools/update_mops_seed.py "$CODES" --force --sleep 0.5
+            python tools/update_mops_seed.py "$CODES" --force --sleep 3
           else
             EXTRA_ARGS=(
               --watchlist-file data/mops_seed_watchlist.txt
               --remote-requested-url https://shareholder-gift-tracker.onrender.com/api/requested-codes
               --limit "$LIMIT"
-              --sleep 0.5
+              --sleep 3
             )
             if [[ "$SKIP_EXISTING" == "true" ]]; then
               EXTRA_ARGS+=(--skip-existing)
