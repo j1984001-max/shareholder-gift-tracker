@@ -67,7 +67,10 @@ def fetch_text(url: str) -> str:
 
 
 def fetch_bytes(url: str, data: bytes | None = None) -> bytes:
-    request = urllib.request.Request(url, data=data, headers=HEADERS)
+    headers = dict(HEADERS)
+    if data is not None:
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
+    request = urllib.request.Request(url, data=data, headers=headers)
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read()
 
@@ -458,10 +461,13 @@ def resolve_notice_pdf_url(code: str, filename: str) -> str:
             "filename": filename,
         }
     ).encode()
-    html = fetch_text_with_encoding("https://doc.twse.com.tw/server-java/t57sb01", "big5", data=data)
-    match = re.search(r"href='([^']+\.pdf)'", html)
+    html_text = html.unescape(fetch_text_with_encoding("https://doc.twse.com.tw/server-java/t57sb01", "big5", data=data))
+    match = re.search(r"href=[\"']([^\"']+\.pdf)[\"']", html_text, re.I)
     if not match:
-        raise ValueError("找不到公開資訊觀測站通知書 PDF 下載連結")
+        match = re.search(r"(/pdf/[^\"'<> ]+\.pdf)", html_text, re.I)
+    if not match:
+        summary = normalize_text(re.sub(r"<[^>]+>", " ", html_text))[:180]
+        raise ValueError(f"找不到公開資訊觀測站通知書 PDF 下載連結：{summary}")
     return urllib.parse.urljoin("https://doc.twse.com.tw", match.group(1))
 
 
