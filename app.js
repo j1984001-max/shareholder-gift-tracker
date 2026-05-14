@@ -187,6 +187,7 @@ function renderRows(results) {
           <span><strong>電投領取期：</strong>${formatPickupPeriod(item)}</span>
           <span><strong>領取來源：</strong>${item.evotePickupSource || "未標示"}</span>
           <span><strong>領取地點：</strong>${item.evotePickupLocation || item.evotePickupPlace || "未補到地點"}</span>
+          <span><strong>攜帶資料：</strong>${item.evotePickupDocuments || "未補到攜帶資料"}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
           <span><strong>通知書摘要：</strong>${item.noticeGiftSummary || "未補到摘要"}</span>
           <span><strong>通知書快取：</strong>${
@@ -287,6 +288,7 @@ async function lookup(codes) {
           evotePickupEndDate: "",
           evotePickupPlace: "",
           evotePickupLocation: "",
+          evotePickupDocuments: "",
           evotePickupRule: "",
           evotePickupSource: "",
           noticeGiftSummary: "",

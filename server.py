@@ -613,6 +613,26 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
     return place or transfer_agent_name
 
 
+def extract_pickup_documents(rule_text: str) -> str:
+    rule = normalize_text(rule_text or "")
+    compact = compact_text(rule_text or "")
+    if not rule:
+        return ""
+
+    match = re.search(r"(?:攜帶文件|攜帶資料)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
+    if match:
+        return match.group(1).strip("：:，,。 ")
+
+    match = re.search(r"攜帶(.{2,160}?)(?:至[^。；]+?領取|等擇一皆可|領取)", compact)
+    if match:
+        return match.group(1).strip("：:，,。 ")
+
+    if "身分證明文件" in compact and "股東會出席通知書" in compact:
+        return "股東會出席通知書或身分證明文件"
+
+    return ""
+
+
 def build_notice_listing_from_meeting_date(code: str, meeting_date: str | None) -> dict[str, str] | None:
     if not meeting_date or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meeting_date):
         return None
@@ -735,6 +755,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
         "電投領取期間原文",
         "電投領取來源",
         "電投領取地點",
+        "電投攜帶資料",
         "電投領取資訊",
         "通知書摘要",
         "通知書快取",
@@ -759,6 +780,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
             item.get("noticeEvotePickupPeriodText", ""),
             item.get("evotePickupSource", ""),
             item.get("evotePickupLocation", ""),
+            item.get("evotePickupDocuments", ""),
             item.get("evotePickupRule", ""),
             item.get("noticeGiftSummary", ""),
             item.get("noticeCacheStatus", ""),
@@ -782,11 +804,12 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
         cell.font = Font(bold=True)
         cell.alignment = Alignment(horizontal="center", vertical="center")
 
-    wrap_columns = {"D", "L", "N", "O", "T", "U"}
+    wrap_columns = {"D", "L", "N", "O", "P", "U", "V"}
     widths = {
         "A": 12, "B": 18, "C": 10, "D": 28, "E": 14, "F": 14, "G": 12,
         "H": 14, "I": 14, "J": 14, "K": 14, "L": 24, "M": 12, "N": 24,
-        "O": 48, "P": 56, "Q": 12, "R": 22, "S": 18, "T": 10, "U": 24,
+        "O": 36, "P": 48, "Q": 56, "R": 12, "S": 22, "T": 18, "U": 10,
+        "V": 24,
     }
     for column, width in widths.items():
         worksheet.column_dimensions[column].width = width
@@ -878,6 +901,7 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         evote_pickup_rule,
         transfer_agent_name,
     )
+    evote_pickup_documents = extract_pickup_documents(evote_pickup_rule)
 
     return {
         "code": code,
@@ -902,6 +926,7 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
         "evotePickupEndDate": pickup_end,
         "evotePickupPlace": (honsec or {}).get("evote_pickup_place", ""),
         "evotePickupLocation": evote_pickup_location,
+        "evotePickupDocuments": evote_pickup_documents,
         "evotePickupRule": evote_pickup_rule,
         "meetingDistributionRule": (honsec or {}).get("meeting_distribution_rule", ""),
         "proxyPeriodText": (honsec or {}).get("proxy_period_text", ""),
