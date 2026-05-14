@@ -5,6 +5,7 @@ import argparse
 import json
 import sys
 import time
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,30 @@ def save_seed(seed: dict[str, dict]) -> None:
     server.NOTICE_SEED_CACHE_PATH.write_text(json.dumps(seed, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def read_codes_file(path: Path) -> list[str]:
+    if not path.exists():
+        return []
+    return server.clean_codes(path.read_text(encoding="utf-8"))
+
+
+def fetch_remote_requested_codes(url: str) -> list[str]:
+    if not url:
+        return []
+    with urllib.request.urlopen(url, timeout=30) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    return [code for code in payload.get("codes", []) if isinstance(code, str)]
+
+
+def unique_codes(codes: list[str]) -> list[str]:
+    seen: set[str] = set()
+    out: list[str] = []
+    for code in codes:
+        if code not in seen:
+            seen.add(code)
+            out.append(code)
+    return out
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Update deployable MOPS notice seed cache for selected stocks.")
     parser.add_argument("codes", nargs="*", help="Stock codes or mixed text, e.g. 1101 2317 or '台泥（1101）'.")
@@ -31,6 +56,8 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=0, help="Maximum number of codes to process. 0 means no limit.")
     parser.add_argument("--skip-existing", action="store_true", help="Skip codes that already exist in the seed cache.")
     parser.add_argument("--force", action="store_true", help="Refresh selected codes even if they already exist.")
+    parser.add_argument("--watchlist-file", default="", help="Text file containing stock codes to include.")
+    parser.add_argument("--remote-requested-url", default="", help="URL of /api/requested-codes to include searched codes.")
     parser.add_argument("--sleep", type=float, default=0.3, help="Seconds to sleep between MOPS requests.")
     args = parser.parse_args()
 
@@ -46,6 +73,17 @@ def main() -> int:
     else:
         raw_codes = " ".join(args.codes)
         codes = server.clean_codes(raw_codes)
+
+    if args.watchlist_file:
+        codes.extend(read_codes_file(Path(args.watchlist_file)))
+
+    if args.remote_requested_url:
+        try:
+            codes.extend(fetch_remote_requested_codes(args.remote_requested_url))
+        except Exception as error:
+            print(f"Could not fetch remote requested codes: {error}", file=sys.stderr)
+
+    codes = unique_codes(codes)
 
     if args.skip_existing:
         codes = [code for code in codes if code not in seed]

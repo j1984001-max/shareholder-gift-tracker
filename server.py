@@ -27,6 +27,7 @@ APP_VERSION = os.environ.get("RENDER_GIT_COMMIT", "dev")
 CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_SEED_CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
+REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 NOTICE_CACHE_VERSION = 2
 
@@ -115,6 +116,27 @@ def save_notice_cache(cache: dict[str, Any]) -> None:
     global NOTICE_CACHE_MEMORY
     NOTICE_CACHE_MEMORY = cache
     NOTICE_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def load_requested_codes() -> dict[str, str]:
+    if REQUESTED_CODES_PATH.exists():
+        try:
+            return json.loads(REQUESTED_CODES_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {}
+
+
+def record_requested_codes(codes: list[str]) -> None:
+    requested = load_requested_codes()
+    now = time.strftime("%Y-%m-%dT%H:%M:%S%z")
+    changed = False
+    for code in codes:
+        if re.fullmatch(r"\d{3,6}", code):
+            requested[code] = now
+            changed = True
+    if changed:
+        REQUESTED_CODES_PATH.write_text(json.dumps(requested, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def compact_text(value: str) -> str:
@@ -920,6 +942,18 @@ class AppHandler(SimpleHTTPRequestHandler):
         if parsed.path == "/api/health":
             json_response(self, {"ok": True, "generatedAt": date.today().isoformat(), "version": APP_VERSION})
             return
+        if parsed.path == "/api/requested-codes":
+            requested = load_requested_codes()
+            json_response(
+                self,
+                {
+                    "ok": True,
+                    "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                    "codes": sorted(requested),
+                    "requested": requested,
+                },
+            )
+            return
         if parsed.path == "/":
             self.path = "/index.html"
         super().do_GET()
@@ -939,6 +973,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             return
 
         try:
+            record_requested_codes(codes)
             sources = source_bundle()
             results = [build_record(code, sources) for code in codes]
             json_response(

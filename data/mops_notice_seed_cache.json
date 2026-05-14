@@ -58,5 +58,35 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": ""
+  },
+  "1215": {
+    "code": "1215",
+    "filename": "2026_1215_20260527F01.pdf",
+    "parserVersion": 2,
+    "uploadedAt": "無",
+    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1215&year=115&mtype=F&",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1215_20260527F01_20260514_225117.pdf",
+    "fetchedAt": "2026-05-14T22:51:17+0800",
+    "cacheStatus": "miss",
+    "giftSummary": "",
+    "evotePickupRule": "A. 對象：限已於115年4月25日至5月24日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年6月1日起至6月3日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。一、委託書應依公開發行公司出席股東會使用委託書規則及公司法第一百七十七條規定辦理。二、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。三、股東應使用本公司印發之委託書用紙，委託書與親自出席通知書均簽名或蓋章者，視為親自出席；但委託書由股東交付徵求人或受託代理人者視為委託出席。四、委託書應由委託人親自簽名或蓋章，並應由委託人親自填具徵求人或受託代理人姓名。但信託事業或股務代理機構受委託擔任徵求人，及股務代理機構受委任擔任委託書之受託代理人者，得以當場蓋章方式代替之。五、徵求人或受託代理人應於委託書上簽名或蓋章，並詳填戶號、姓名或名稱、身分證字號或統一編號、住址。受託代理人如非股東，請於股東戶號欄內填寫身分證字號或統一編號；徵求人如為信託事業、股務代理機構，請於股東戶號欄內填寫統一編號。六、委託書應於開會五日前送達本公司股務代理人中國信託商業銀行代理部；委託書送達股務代理人後，股東欲親自出席股東會或欲以書面或電子方式行使表決權者，應於股東會開會二日前，以書面向股務代理人為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。",
+    "evotePickupStartDate": "2026-06-01",
+    "evotePickupEndDate": "2026-06-03",
+    "evotePickupPeriodText": "自115年6月1日起至6月3日止"
+  },
+  "1259": {
+    "code": "1259",
+    "filename": "2026_1259_20260522F01.pdf",
+    "parserVersion": 2,
+    "uploadedAt": "無",
+    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1259&year=115&mtype=F&",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1259_20260522F01_20260514_225118.pdf",
+    "fetchedAt": "2026-05-14T22:51:18+0800",
+    "cacheStatus": "miss",
+    "giftSummary": "",
+    "evotePickupRule": "",
+    "evotePickupStartDate": null,
+    "evotePickupEndDate": null,
+    "evotePickupPeriodText": ""
   }
 }
