@@ -380,30 +380,38 @@ def source_bundle() -> dict[str, Any]:
 def fetch_notice_listing(code: str) -> dict[str, str] | None:
     query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
     html = fetch_text_with_encoding(query_url, "big5")
-    row_pattern = re.compile(
-        rf"<tr>\s*<td align='center'>{code}</td>"
-        r"<td align='center'>([^<]+)</td>\s*"
-        r"<td align='center'>([^<]+)</td>\s*"
-        r"<td align='center'>([^<]*)</td>\s*"
-        r"<td align='center'>([^<]+)</td>\s*"
-        r"<td align='center'>([^<]*)</td>\s*"
-        r"<td align='center'>([^<]*)</td>\s*"
-        rf"<td><a href='javascript:readfile2\(\"F\",\"{code}\",\"([^\"]+)\"\);'>[^<]+</a></td>"
-        r"<td align='right'>[^<]+</td>\s*"
-        r"<td align='cetern'>([^<]+)</td>",
-        re.S,
-    )
+
+    def strip_tags(fragment: str) -> str:
+        return normalize_text(re.sub(r"<[^>]+>", " ", fragment))
+
     rows = []
-    for match in row_pattern.finditer(html):
+    for row_html in re.findall(r"<tr[^>]*>(.*?)</tr>", html, re.S | re.I):
+        filename_match = re.search(
+            rf"readfile2\(\s*['\"]F['\"]\s*,\s*['\"]{code}['\"]\s*,\s*['\"]([^'\"]+)['\"]\s*\)",
+            row_html,
+            re.I,
+        )
+        if not filename_match:
+            continue
+
+        cell_fragments = re.findall(r"<td[^>]*>(.*?)</td>", row_html, re.S | re.I)
+        cells = [strip_tags(cell) for cell in cell_fragments]
+        if not cells or cells[0] != code:
+            continue
+
+        detail = next((cell for cell in cells if "開會通知" in cell), "")
+        if not detail:
+            continue
+
         rows.append(
             {
-                "year": normalize_text(match.group(1)),
-                "dataType": normalize_text(match.group(2)),
-                "meetingType": normalize_text(match.group(4)),
-                "detail": normalize_text(match.group(5)),
-                "remark": normalize_text(match.group(6)),
-                "filename": normalize_text(match.group(7)),
-                "uploadedAt": normalize_text(match.group(8)),
+                "year": cells[1] if len(cells) > 1 else "",
+                "dataType": cells[2] if len(cells) > 2 else "",
+                "meetingType": cells[4] if len(cells) > 4 else "",
+                "detail": detail,
+                "remark": cells[6] if len(cells) > 6 else "",
+                "filename": normalize_text(filename_match.group(1)),
+                "uploadedAt": cells[-1] if cells else "",
                 "queryUrl": query_url,
             }
         )
