@@ -662,6 +662,12 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
         if location:
             return location
 
+    match = re.search(r"領取紀念品地點[:：](.+?)(?:。|；|$)", rule)
+    if match:
+        location = clean_location(match.group(1))
+        if location:
+            return location
+
     match = re.search(r"止(?:\(.*?\))?(?:[^至。；]{0,80})至([^。；]+?)(?:領取|換領)", rule)
     if match:
         location = clean_location(match.group(1))
@@ -694,6 +700,10 @@ def extract_pickup_documents(rule_text: str) -> str:
     compact = compact_text(rule_text or "")
     if not rule:
         return ""
+
+    match = re.search(r"攜帶下列文件之一[:：](.+?)至下列地點", rule)
+    if match:
+        return match.group(1).strip("：:，,。 ")
 
     match = re.search(r"(?:攜帶文件|攜帶資料|攜帶下列文件)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
     if match:
