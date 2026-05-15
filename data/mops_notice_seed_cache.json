@@ -59,21 +59,6 @@
     "evotePickupEndDate": null,
     "evotePickupPeriodText": ""
   },
-  "1215": {
-    "code": "1215",
-    "filename": "2026_1215_20260527F01.pdf",
-    "parserVersion": 3,
-    "uploadedAt": "無",
-    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1215&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1215_20260527F01_20260514_225117.pdf",
-    "fetchedAt": "2026-05-15T07:56:33+0800",
-    "cacheStatus": "miss",
-    "giftSummary": "",
-    "evotePickupRule": "A. 對象：限已於115年4月25日至5月24日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年6月1日起至6月3日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。一、委託書應依公開發行公司出席股東會使用委託書規則及公司法第一百七十七條規定辦理。二、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。三、股東應使用本公司印發之委託書用紙，委託書與親自出席通知書均簽名或蓋章者，視為親自出席；但委託書由股東交付徵求人或受託代理人者視為委託出席。四、委託書應由委託人親自簽名或蓋章，並應由委託人親自填具徵求人或受託代理人姓名。但信託事業或股務代理機構受委託擔任徵求人，及股務代理機構受委任擔任委託書之受託代理人者，得以當場蓋章方式代替之。五、徵求人或受託代理人應於委託書上簽名或蓋章，並詳填戶號、姓名或名稱、身分證字號或統一編號、住址。受託代理人如非股東，請於",
-    "evotePickupStartDate": "2026-06-01",
-    "evotePickupEndDate": "2026-06-03",
-    "evotePickupPeriodText": "自115年6月1日起至6月3日止"
-  },
   "1259": {
     "code": "1259",
     "filename": "2026_1259_20260522F01.pdf",
@@ -163,25 +148,6 @@
     "evotePickupStartDate": "2026-06-09",
     "evotePickupEndDate": "2026-06-11",
     "evotePickupPeriodText": "於115年6月9日至115年6月11日止"
-  },
-  "2002": {
-    "code": "2002",
-    "filename": "stock115_01.pdf",
-    "parserVersion": 3,
-    "uploadedAt": "",
-    "queryUrl": "https://www.csc.com.tw/csc/ss/bd/pdf/stock115_01.pdf",
-    "pdfUrl": "https://www.csc.com.tw/csc/ss/bd/pdf/stock115_01.pdf",
-    "fetchedAt": "2026-05-15T07:55:14+0800",
-    "cacheStatus": "miss",
-    "sourceType": "company_pdf",
-    "sourceLabel": "中鋼官網115年股東會開會通知書",
-    "giftSummary": "統一超商50元商品卡",
-    "evotePickupRule": "持股未滿1,000股且採電子投票之股東，請於115年7月8日至115年7月10日(例假日除外)於營業時間內，攜帶出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)，至凱基證券股務代理部領取實體紀念品。持股1,000股(含)以上請於115年7月8日至116年6月30日於臺灣集中保管結算所股東會電子投票平台 eGift 服務查詢領取。",
-    "evotePickupStartDate": "2026-07-08",
-    "evotePickupEndDate": "2026-07-10",
-    "evotePickupPeriodText": "115年7月8日至115年7月10日",
-    "evotePickupLocation": "凱基證券股務代理部：台北市重慶南路一段2號5樓；高雄市苓雅區中正二路74號12樓之1",
-    "evotePickupDocuments": "出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)"
   },
   "1314": {
     "code": "1314",
@@ -767,5 +733,41 @@
     "evotePickupStartDate": "2026-07-01",
     "evotePickupEndDate": "2026-07-03",
     "evotePickupPeriodText": "領取紀念品期間：115年7月1日起至115年7月3日止"
+  },
+  "1215": {
+    "code": "1215",
+    "filename": "開會通知書115.pdf",
+    "parserVersion": 3,
+    "uploadedAt": "",
+    "queryUrl": "https://www.cptwn.com.tw/rwd1785/store/F4/%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8115.pdf",
+    "pdfUrl": "https://www.cptwn.com.tw/rwd1785/store/F4/%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8115.pdf",
+    "fetchedAt": "2026-05-15T08:26:27+0800",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "卜蜂官網115年股東會開會通知書",
+    "giftSummary": "",
+    "evotePickupRule": "A. 對象：限已於115年4月25日至5月24日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年6月1日起至6月3日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。一、委託書應依公開發行公司出席股東會使用委託書規則及公司法第一百七十七條規定辦理。二、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。三、股東應使用本公司印發之委託書用紙，委託書與親自出席通知書均簽名或蓋章者，視為親自出席；但委託書由股東交付徵求人或受託代理人者視為委託出席。四、委託書應由委託人親自簽名或蓋章，並應由委託人親自填具徵求人或受託代理人姓名。但信託事業或股務代理機構受委託擔任徵求人，及股務代理機構受委任擔任委託書之受託代理人者，得以當場蓋章方式代替之。五、徵求人或受託代理人應於委託書上簽名或蓋章，並詳填戶號、姓名或名稱、身分證字號或統一編號、住址。受託代理人如非股東，請於",
+    "evotePickupStartDate": "2026-06-01",
+    "evotePickupEndDate": "2026-06-03",
+    "evotePickupPeriodText": "自115年6月1日起至6月3日止"
+  },
+  "2002": {
+    "code": "2002",
+    "filename": "stock115_01.pdf",
+    "parserVersion": 3,
+    "uploadedAt": "",
+    "queryUrl": "https://www.csc.com.tw/csc/ss/bd/pdf/stock115_01.pdf",
+    "pdfUrl": "https://www.csc.com.tw/csc/ss/bd/pdf/stock115_01.pdf",
+    "fetchedAt": "2026-05-15T08:26:28+0800",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "中鋼官網115年股東會開會通知書",
+    "giftSummary": "統一超商50元商品卡",
+    "evotePickupRule": "持股未滿1,000股且採電子投票之股東，請於115年7月8日至115年7月10日(例假日除外)於營業時間內，攜帶出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)，至凱基證券股務代理部領取實體紀念品。持股1,000股(含)以上請於115年7月8日至116年6月30日於臺灣集中保管結算所股東會電子投票平台 eGift 服務查詢領取。",
+    "evotePickupStartDate": "2026-07-08",
+    "evotePickupEndDate": "2026-07-10",
+    "evotePickupPeriodText": "115年7月8日至115年7月10日",
+    "evotePickupLocation": "凱基證券股務代理部：台北市重慶南路一段2號5樓；高雄市苓雅區中正二路74號12樓之1",
+    "evotePickupDocuments": "出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)"
   }
 }
