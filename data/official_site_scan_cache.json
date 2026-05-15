@@ -2428,5 +2428,605 @@
     "candidateCount": 0,
     "foundUseful": false,
     "error": ""
+  },
+  "3702": {
+    "code": "3702",
+    "companyName": "大聯大",
+    "companyUrl": "https://www.WPGholdings.com/",
+    "attemptedAt": "2026-05-15T22:15:38+0000",
+    "attemptedAtEpoch": 1778883338.0283287,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "3704": {
+    "code": "3704",
+    "companyName": "合勤控",
+    "companyUrl": "http://www.zyxelgroup.com/",
+    "attemptedAt": "2026-05-15T22:15:43+0000",
+    "attemptedAtEpoch": 1778883343.3335779,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "3708": {
+    "code": "3708",
+    "companyName": "上緯投控",
+    "companyUrl": "http://www.swancor.com/tw/",
+    "attemptedAt": "2026-05-15T22:16:48+0000",
+    "attemptedAtEpoch": 1778883408.4211593,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "3710": {
+    "code": "3710",
+    "companyName": "連展投控",
+    "companyUrl": "https://www.acon-holding.com/",
+    "attemptedAt": "2026-05-15T22:17:55+0000",
+    "attemptedAtEpoch": 1778883475.8351152,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "3715": {
+    "code": "3715",
+    "companyName": "定穎投控",
+    "companyUrl": "https://www.dynaholding.com/",
+    "attemptedAt": "2026-05-15T22:18:54+0000",
+    "attemptedAtEpoch": 1778883534.2410414,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4102": {
+    "code": "4102",
+    "companyName": "永日",
+    "companyUrl": "http://www.yungzip.com/",
+    "attemptedAt": "2026-05-15T22:19:28+0000",
+    "attemptedAtEpoch": 1778883568.5555787,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4105": {
+    "code": "4105",
+    "companyName": "東洋",
+    "companyUrl": "https://www.tty.com.tw/",
+    "attemptedAt": "2026-05-15T22:20:46+0000",
+    "attemptedAtEpoch": 1778883646.1008902,
+    "candidateCount": 1,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4109": {
+    "code": "4109",
+    "companyName": "加捷生醫",
+    "companyUrl": "https://www.jiajiebio.com/",
+    "attemptedAt": "2026-05-15T22:21:38+0000",
+    "attemptedAtEpoch": 1778883698.1386693,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4113": {
+    "code": "4113",
+    "companyName": "聯上",
+    "companyUrl": "http://kh.vvvvv.com.tw/",
+    "attemptedAt": "2026-05-15T22:21:46+0000",
+    "attemptedAtEpoch": 1778883706.1802056,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4119": {
+    "code": "4119",
+    "companyName": "旭富",
+    "companyUrl": "https://www.sci-pharmtech.com.tw/",
+    "attemptedAt": "2026-05-15T22:23:00+0000",
+    "attemptedAtEpoch": 1778883780.6666155,
+    "candidateCount": 2,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4121": {
+    "code": "4121",
+    "companyName": "優盛",
+    "companyUrl": "https://www.rossmax.com/",
+    "attemptedAt": "2026-05-15T22:23:53+0000",
+    "attemptedAtEpoch": 1778883833.6062884,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4126": {
+    "code": "4126",
+    "companyName": "太醫",
+    "companyUrl": "http://www.pahsco.com.tw/",
+    "attemptedAt": "2026-05-15T22:24:48+0000",
+    "attemptedAtEpoch": 1778883888.2095323,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4129": {
+    "code": "4129",
+    "companyName": "聯合",
+    "companyUrl": "https://tw.unitedorthopedic.com/",
+    "attemptedAt": "2026-05-15T22:26:02+0000",
+    "attemptedAtEpoch": 1778883962.924119,
+    "candidateCount": 1,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4133": {
+    "code": "4133",
+    "companyName": "亞諾法",
+    "companyUrl": "http://www.abnova.com/",
+    "attemptedAt": "2026-05-15T22:27:00+0000",
+    "attemptedAtEpoch": 1778884020.8318913,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4142": {
+    "code": "4142",
+    "companyName": "國光生",
+    "companyUrl": "http://www.adimmune.com.tw/",
+    "attemptedAt": "2026-05-15T22:27:16+0000",
+    "attemptedAtEpoch": 1778884036.8061507,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4147": {
+    "code": "4147",
+    "companyName": "中裕",
+    "companyUrl": "https://www.taimedbiologics.com/",
+    "attemptedAt": "2026-05-15T22:27:59+0000",
+    "attemptedAtEpoch": 1778884079.6916661,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4162": {
+    "code": "4162",
+    "companyName": "智擎",
+    "companyUrl": "https://www.pharmaengine.com/",
+    "attemptedAt": "2026-05-15T22:28:53+0000",
+    "attemptedAtEpoch": 1778884133.148106,
+    "candidateCount": 1,
+    "foundUseful": true,
+    "error": ""
+  },
+  "4168": {
+    "code": "4168",
+    "companyName": "醣聯",
+    "companyUrl": "http://www.glyconex.com.tw/",
+    "attemptedAt": "2026-05-15T22:29:48+0000",
+    "attemptedAtEpoch": 1778884188.2545495,
+    "candidateCount": 1,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4303": {
+    "code": "4303",
+    "companyName": "信立",
+    "companyUrl": "http://www.hsinli.com.tw/",
+    "attemptedAt": "2026-05-15T22:30:44+0000",
+    "attemptedAtEpoch": 1778884244.339785,
+    "candidateCount": 5,
+    "foundUseful": true,
+    "error": ""
+  },
+  "4304": {
+    "code": "4304",
+    "companyName": "勝昱",
+    "companyUrl": "https://www.sunvic.com.tw/",
+    "attemptedAt": "2026-05-15T22:31:08+0000",
+    "attemptedAtEpoch": 1778884268.9133115,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4306": {
+    "code": "4306",
+    "companyName": "炎洲",
+    "companyUrl": "https://www.ycgroup.tw/",
+    "attemptedAt": "2026-05-15T22:31:56+0000",
+    "attemptedAtEpoch": 1778884316.558635,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4419": {
+    "code": "4419",
+    "companyName": "皇家美食",
+    "companyUrl": "https://www.tsgkh.com.tw/",
+    "attemptedAt": "2026-05-15T22:33:29+0000",
+    "attemptedAtEpoch": 1778884409.3164332,
+    "candidateCount": 3,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4510": {
+    "code": "4510",
+    "companyName": "高鋒",
+    "companyUrl": "https://www.kafo.com.tw/",
+    "attemptedAt": "2026-05-15T22:34:18+0000",
+    "attemptedAtEpoch": 1778884458.8000777,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4513": {
+    "code": "4513",
+    "companyName": "福裕",
+    "companyUrl": "https://www.chevaliertw.com/",
+    "attemptedAt": "2026-05-15T22:35:22+0000",
+    "attemptedAtEpoch": 1778884522.2152889,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4526": {
+    "code": "4526",
+    "companyName": "東台",
+    "companyUrl": "http://www.tongtai.com.tw/",
+    "attemptedAt": "2026-05-15T22:35:29+0000",
+    "attemptedAtEpoch": 1778884529.7772932,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4533": {
+    "code": "4533",
+    "companyName": "協易機",
+    "companyUrl": "https://www.seyi.com/",
+    "attemptedAt": "2026-05-15T22:36:59+0000",
+    "attemptedAtEpoch": 1778884619.4398842,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4716": {
+    "code": "4716",
+    "companyName": "大立",
+    "companyUrl": "https://www.daily-polymer.com/",
+    "attemptedAt": "2026-05-15T22:38:01+0000",
+    "attemptedAtEpoch": 1778884681.1452603,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4721": {
+    "code": "4721",
+    "companyName": "美琪瑪",
+    "companyUrl": "https://www.mechema.com/",
+    "attemptedAt": "2026-05-15T22:38:10+0000",
+    "attemptedAtEpoch": 1778884690.0338871,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4735": {
+    "code": "4735",
+    "companyName": "豪展",
+    "companyUrl": "http://www.avita.com.tw/",
+    "attemptedAt": "2026-05-15T22:38:26+0000",
+    "attemptedAtEpoch": 1778884706.6024203,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4760": {
+    "code": "4760",
+    "companyName": "勤凱科技",
+    "companyUrl": "http://www.ampletec.com.tw/",
+    "attemptedAt": "2026-05-15T22:39:28+0000",
+    "attemptedAtEpoch": 1778884768.2799156,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4807": {
+    "code": "4807",
+    "companyName": "日成-KY",
+    "companyUrl": "http://www.regaljewelrygroup.com/",
+    "attemptedAt": "2026-05-15T22:39:35+0000",
+    "attemptedAtEpoch": 1778884775.5346208,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4903": {
+    "code": "4903",
+    "companyName": "聯光通",
+    "companyUrl": "https://www.ufoc.com.tw/",
+    "attemptedAt": "2026-05-15T22:40:49+0000",
+    "attemptedAtEpoch": 1778884849.2194135,
+    "candidateCount": 1,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4906": {
+    "code": "4906",
+    "companyName": "正文",
+    "companyUrl": "https://www.gemteks.com/",
+    "attemptedAt": "2026-05-15T22:41:43+0000",
+    "attemptedAtEpoch": 1778884903.4584427,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4908": {
+    "code": "4908",
+    "companyName": "前鼎",
+    "companyUrl": "https://www.apacoe.com.tw/",
+    "attemptedAt": "2026-05-15T22:43:06+0000",
+    "attemptedAtEpoch": 1778884986.312713,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4909": {
+    "code": "4909",
+    "companyName": "新復興",
+    "companyUrl": "https://www.nee.com.tw/",
+    "attemptedAt": "2026-05-15T22:43:12+0000",
+    "attemptedAtEpoch": 1778884992.3256576,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4927": {
+    "code": "4927",
+    "companyName": "泰鼎-KY",
+    "companyUrl": "http://www.apex-intl.com.tw/",
+    "attemptedAt": "2026-05-15T22:44:06+0000",
+    "attemptedAtEpoch": 1778885046.362627,
+    "candidateCount": 3,
+    "foundUseful": true,
+    "error": ""
+  },
+  "4934": {
+    "code": "4934",
+    "companyName": "太極",
+    "companyUrl": "https://http//www.tainergy.com",
+    "attemptedAt": "2026-05-15T22:44:13+0000",
+    "attemptedAtEpoch": 1778885053.64852,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4939": {
+    "code": "4939",
+    "companyName": "亞電",
+    "companyUrl": "http://www.aemg.com.tw/",
+    "attemptedAt": "2026-05-15T22:44:53+0000",
+    "attemptedAtEpoch": 1778885093.7135224,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4953": {
+    "code": "4953",
+    "companyName": "緯軟",
+    "companyUrl": "https://www.wits.com/tw/",
+    "attemptedAt": "2026-05-15T22:44:59+0000",
+    "attemptedAtEpoch": 1778885099.9918153,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4956": {
+    "code": "4956",
+    "companyName": "光鋐",
+    "companyUrl": "https://www.epileds.com.tw/",
+    "attemptedAt": "2026-05-15T22:45:29+0000",
+    "attemptedAtEpoch": 1778885129.5624802,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4960": {
+    "code": "4960",
+    "companyName": "誠美材",
+    "companyUrl": "https://www.cmmt.com.tw/",
+    "attemptedAt": "2026-05-15T22:45:37+0000",
+    "attemptedAtEpoch": 1778885137.0330386,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4968": {
+    "code": "4968",
+    "companyName": "立積",
+    "companyUrl": "https://www.richwave.com.tw/",
+    "attemptedAt": "2026-05-15T22:46:59+0000",
+    "attemptedAtEpoch": 1778885219.9218273,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4971": {
+    "code": "4971",
+    "companyName": "IET-KY",
+    "companyUrl": "https://www.intelliepi.com.tw/",
+    "attemptedAt": "2026-05-15T22:47:41+0000",
+    "attemptedAtEpoch": 1778885261.9100964,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4973": {
+    "code": "4973",
+    "companyName": "廣穎電通",
+    "companyUrl": "https://www.silicon-power.com/",
+    "attemptedAt": "2026-05-15T22:47:46+0000",
+    "attemptedAtEpoch": 1778885266.0387695,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4974": {
+    "code": "4974",
+    "companyName": "亞泰",
+    "companyUrl": "https://www.atii.com.tw/",
+    "attemptedAt": "2026-05-15T22:48:32+0000",
+    "attemptedAtEpoch": 1778885312.7949646,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4979": {
+    "code": "4979",
+    "companyName": "華星光",
+    "companyUrl": "https://www.luxnetcorp.com.tw/",
+    "attemptedAt": "2026-05-15T22:49:35+0000",
+    "attemptedAtEpoch": 1778885375.2774415,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4991": {
+    "code": "4991",
+    "companyName": "環宇-KY",
+    "companyUrl": "http://gcsincorp.com/",
+    "attemptedAt": "2026-05-15T22:50:34+0000",
+    "attemptedAtEpoch": 1778885434.2770953,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4995": {
+    "code": "4995",
+    "companyName": "晶達",
+    "companyUrl": "https://www.litemax.com.tw/",
+    "attemptedAt": "2026-05-15T22:50:40+0000",
+    "attemptedAtEpoch": 1778885440.240381,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "4999": {
+    "code": "4999",
+    "companyName": "鑫禾",
+    "companyUrl": "https://www.sinher.com.tw/",
+    "attemptedAt": "2026-05-15T22:51:22+0000",
+    "attemptedAtEpoch": 1778885482.337603,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5009": {
+    "code": "5009",
+    "companyName": "榮剛",
+    "companyUrl": "https://www.gmtc.com.tw/",
+    "attemptedAt": "2026-05-15T22:52:27+0000",
+    "attemptedAtEpoch": 1778885547.40006,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5013": {
+    "code": "5013",
+    "companyName": "強新",
+    "companyUrl": "https://www.newbest.com.tw/",
+    "attemptedAt": "2026-05-15T22:52:36+0000",
+    "attemptedAtEpoch": 1778885556.3473797,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5014": {
+    "code": "5014",
+    "companyName": "建錩",
+    "companyUrl": "https://www.chainchon.com/",
+    "attemptedAt": "2026-05-15T22:53:32+0000",
+    "attemptedAtEpoch": 1778885612.3745723,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5201": {
+    "code": "5201",
+    "companyName": "凱衛",
+    "companyUrl": "https://WWW.KWAY.COM.TW/",
+    "attemptedAt": "2026-05-15T22:54:56+0000",
+    "attemptedAtEpoch": 1778885696.6647122,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5202": {
+    "code": "5202",
+    "companyName": "力新",
+    "companyUrl": "https://www.newsoft.com.tw/",
+    "attemptedAt": "2026-05-15T22:55:03+0000",
+    "attemptedAtEpoch": 1778885703.1714027,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5203": {
+    "code": "5203",
+    "companyName": "訊連",
+    "companyUrl": "https://www.cyberlink.com/",
+    "attemptedAt": "2026-05-15T22:55:46+0000",
+    "attemptedAtEpoch": 1778885746.4839904,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5251": {
+    "code": "5251",
+    "companyName": "天鉞電",
+    "companyUrl": "https://www.secufirst.com.tw/",
+    "attemptedAt": "2026-05-15T22:56:42+0000",
+    "attemptedAtEpoch": 1778885802.198163,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5263": {
+    "code": "5263",
+    "companyName": "智崴",
+    "companyUrl": "https://www.brogent.com/",
+    "attemptedAt": "2026-05-15T22:57:54+0000",
+    "attemptedAtEpoch": 1778885874.9954977,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5272": {
+    "code": "5272",
+    "companyName": "笙科",
+    "companyUrl": "https://www.amiccom.com.tw/",
+    "attemptedAt": "2026-05-15T22:58:05+0000",
+    "attemptedAtEpoch": 1778885885.2392051,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5289": {
+    "code": "5289",
+    "companyName": "宜鼎",
+    "companyUrl": "https://www.innodisk.com/",
+    "attemptedAt": "2026-05-15T22:58:43+0000",
+    "attemptedAtEpoch": 1778885923.6568897,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "5309": {
+    "code": "5309",
+    "companyName": "系統電",
+    "companyUrl": "https://www.sysgration.com/",
+    "attemptedAt": "2026-05-15T22:59:27+0000",
+    "attemptedAtEpoch": 1778885967.2655993,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
   }
 }

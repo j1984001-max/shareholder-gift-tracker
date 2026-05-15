@@ -68,5 +68,26 @@
       "label": "單井官網開會通知書",
       "sourceType": "company_pdf"
     }
+  ],
+  "4162": [
+    {
+      "url": "https://www.pharmaengine.com/./uploads/tw/Investors_4/20260505847.pdf",
+      "label": "智擎官網開會通知書",
+      "sourceType": "company_pdf"
+    }
+  ],
+  "4303": [
+    {
+      "url": "https://www.hsinli.com.tw/public/uploads/pdf/20260418_141823_VibqT.pdf",
+      "label": "信立官網開會通知書",
+      "sourceType": "company_pdf"
+    }
+  ],
+  "4927": [
+    {
+      "url": "https://www.apex-intl.com.tw/files/shareholders_meeting/2026_4927_20260429F01_20260420_165845.pdf",
+      "label": "泰鼎-KY官網開會通知書",
+      "sourceType": "company_pdf"
+    }
   ]
 }
