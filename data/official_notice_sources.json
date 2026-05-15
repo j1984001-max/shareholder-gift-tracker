@@ -47,5 +47,12 @@
       "label": "台新新光金官網開會通知書",
       "sourceType": "company_pdf"
     }
+  ],
+  "3019": [
+    {
+      "url": "https://www.asia-optical.com/backstage/fnews/cmp_file/2026MeetingNotice_tc.pdf",
+      "label": "亞光官網開會通知書",
+      "sourceType": "company_pdf"
+    }
   ]
 }
