@@ -59,8 +59,8 @@ async function refreshNoticeProgress() {
     const response = await fetch("/api/notice-progress");
     const progress = await response.json();
     if (!progress.ok) throw new Error(progress.error || "progress unavailable");
-    noticeProgressText.textContent = `通知書 ${progress.noticeCached}/${progress.watchlistTotal}，電投日期 ${progress.pickupDateCached}/${progress.watchlistTotal}`;
-    noticeProgressText.title = `官網/官方 PDF：${progress.officialPdfCached}；尚缺通知書：${progress.missingNotice}；尚缺電投日期：${progress.missingPickupDate}`;
+    noticeProgressText.textContent = `通知書 ${progress.noticeCached}/${progress.watchlistTotal}，電投日期 ${progress.pickupDateCached}/${progress.watchlistTotal}，官網掃描 ${progress.officialSiteScanned || 0}/${progress.watchlistTotal}`;
+    noticeProgressText.title = `官網/官方 PDF：${progress.officialPdfCached}；官網找到：${progress.officialSiteFound || 0}；尚缺通知書：${progress.missingNotice}；尚缺電投日期：${progress.missingPickupDate}`;
   } catch {
     noticeProgressText.textContent = "暫時無法讀取";
   }

@@ -27,6 +27,7 @@ APP_VERSION = os.environ.get("RENDER_GIT_COMMIT", "dev")
 CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_SEED_CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
+OFFICIAL_SITE_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 NOTICE_CACHE_VERSION = 3
@@ -124,6 +125,12 @@ def build_notice_progress() -> dict[str, Any]:
     watchlist_path = ROOT / "data" / "mops_seed_watchlist.txt"
     watchlist_codes = clean_codes(watchlist_path.read_text(encoding="utf-8")) if watchlist_path.exists() else []
     cache = load_notice_cache()
+    official_scan_cache: dict[str, Any] = {}
+    if OFFICIAL_SITE_SCAN_CACHE_PATH.exists():
+        try:
+            official_scan_cache = json.loads(OFFICIAL_SITE_SCAN_CACHE_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            official_scan_cache = {}
     watched_cache = {code: cache.get(code) for code in watchlist_codes if cache.get(code)}
     with_notice = [code for code, item in watched_cache.items() if item.get("filename") or item.get("pdfUrl")]
     with_pickup_date = [
@@ -137,14 +144,20 @@ def build_notice_progress() -> dict[str, Any]:
         if item.get("sourceType") in {"company_pdf", "official_pdf", "transfer_agent_pdf"}
     ]
     latest_fetched = max((item.get("fetchedAt", "") for item in watched_cache.values()), default="")
+    official_scanned = [code for code in watchlist_codes if (official_scan_cache.get(code) or {}).get("attemptedAt")]
+    official_found = [code for code in watchlist_codes if (official_scan_cache.get(code) or {}).get("foundUseful")]
+    latest_official_scan = max(((official_scan_cache.get(code) or {}).get("attemptedAt", "") for code in watchlist_codes), default="")
     return {
         "watchlistTotal": len(watchlist_codes),
         "noticeCached": len(with_notice),
         "pickupDateCached": len(with_pickup_date),
         "officialPdfCached": len(company_pdf),
+        "officialSiteScanned": len(official_scanned),
+        "officialSiteFound": len(official_found),
         "missingNotice": max(0, len(watchlist_codes) - len(with_notice)),
         "missingPickupDate": max(0, len(watchlist_codes) - len(with_pickup_date)),
         "latestFetchedAt": latest_fetched,
+        "latestOfficialSiteScan": latest_official_scan,
     }
 
 

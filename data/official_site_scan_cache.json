@@ -1,0 +1,32 @@
+{
+  "1217": {
+    "code": "1217",
+    "companyName": "愛之味",
+    "companyUrl": "https://www.agv.com.tw/",
+    "attemptedAt": "2026-05-15T09:13:46+0800",
+    "attemptedAtEpoch": 1778807626.221855,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "1259": {
+    "code": "1259",
+    "companyName": "安心",
+    "companyUrl": "http://www.mos.com.tw/",
+    "attemptedAt": "2026-05-15T09:13:46+0800",
+    "attemptedAtEpoch": 1778807626.460396,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "1304": {
+    "code": "1304",
+    "companyName": "台聚",
+    "companyUrl": "https://www.usife.com.tw/",
+    "attemptedAt": "2026-05-15T09:13:57+0800",
+    "attemptedAtEpoch": 1778807637.07645,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  }
+}

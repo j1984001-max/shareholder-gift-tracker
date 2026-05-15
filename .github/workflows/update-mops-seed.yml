@@ -49,8 +49,24 @@ jobs:
           SKIP_EXISTING="${{ github.event.inputs.skip_existing || 'true' }}"
 
           if [[ -n "$CODES" ]]; then
+            python tools/discover_official_notices.py "$CODES" \
+              --sources-file data/official_notice_sources.json \
+              --scan-cache-file data/official_site_scan_cache.json \
+              --max-pages-per-company 12 \
+              --update-seed \
+              --sleep 0.6
             python tools/update_mops_seed.py "$CODES" --official-pdf-sources data/official_notice_sources.json --force --sleep 3
           else
+            python tools/discover_official_notices.py \
+              --watchlist-file data/mops_seed_watchlist.txt \
+              --sources-file data/official_notice_sources.json \
+              --scan-cache-file data/official_site_scan_cache.json \
+              --limit "$LIMIT" \
+              --max-pages-per-company 10 \
+              --skip-cached-pickup \
+              --skip-recent-attempt-hours 168 \
+              --update-seed \
+              --sleep 0.6
             EXTRA_ARGS=(
               --watchlist-file data/mops_seed_watchlist.txt
               --official-pdf-sources data/official_notice_sources.json
@@ -70,5 +86,5 @@ jobs:
       - name: Commit seed updates
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update MOPS notice seed cache"
-          file_pattern: data/mops_notice_seed_cache.json
+          commit_message: "Update official notice seed cache"
+          file_pattern: data/mops_notice_seed_cache.json data/official_notice_sources.json data/official_site_scan_cache.json
