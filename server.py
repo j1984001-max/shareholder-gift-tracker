@@ -6,6 +6,7 @@ import re
 import io
 import html
 import os
+import random
 import time
 import urllib.parse
 import urllib.request
@@ -37,9 +38,19 @@ IDEAL_URL = "https://souvenir.ideal-labs.com/"
 HONSEC_URL = "https://srd.honsec.com.tw/stock/souvenir.aspx"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; Codex shareholder gift tracker)",
-    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8",
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/pdf;q=0.8,*/*;q=0.7",
+    "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
+    "Upgrade-Insecure-Requests": "1",
 }
+REQUEST_DELAY_MIN_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MIN_MS", "0"))
+REQUEST_DELAY_MAX_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MAX_MS", "0"))
 
 CACHE: dict[str, tuple[float, Any]] = {}
 NOTICE_CACHE_MEMORY: dict[str, Any] | None = None
@@ -62,24 +73,46 @@ def json_response(handler: SimpleHTTPRequestHandler, payload: dict[str, Any], st
     handler.wfile.write(body)
 
 
-def fetch_text(url: str) -> str:
-    request = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(request, timeout=30) as response:
+def polite_request_delay() -> None:
+    delay_min = max(0, REQUEST_DELAY_MIN_MS)
+    delay_max = max(delay_min, REQUEST_DELAY_MAX_MS)
+    if delay_max <= 0:
+        return
+    time.sleep(random.uniform(delay_min, delay_max) / 1000)
+
+
+def request_headers(extra_headers: dict[str, str] | None = None) -> dict[str, str]:
+    headers = dict(HEADERS)
+    if extra_headers:
+        headers.update(extra_headers)
+    return headers
+
+
+def fetch_text(url: str, timeout: int = 30, extra_headers: dict[str, str] | None = None) -> str:
+    polite_request_delay()
+    request = urllib.request.Request(url, headers=request_headers(extra_headers))
+    with urllib.request.urlopen(request, timeout=timeout) as response:
         charset = response.headers.get_content_charset() or "utf-8"
         return response.read().decode(charset, "ignore")
 
 
-def fetch_bytes(url: str, data: bytes | None = None) -> bytes:
-    headers = dict(HEADERS)
+def fetch_bytes(
+    url: str,
+    data: bytes | None = None,
+    timeout: int = 30,
+    extra_headers: dict[str, str] | None = None,
+) -> bytes:
+    headers = request_headers(extra_headers)
     if data is not None:
         headers["Content-Type"] = "application/x-www-form-urlencoded"
+    polite_request_delay()
     request = urllib.request.Request(url, data=data, headers=headers)
-    with urllib.request.urlopen(request, timeout=30) as response:
+    with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read()
 
 
-def fetch_text_with_encoding(url: str, encoding: str, data: bytes | None = None) -> str:
-    return fetch_bytes(url, data=data).decode(encoding, "ignore")
+def fetch_text_with_encoding(url: str, encoding: str, data: bytes | None = None, timeout: int = 30) -> str:
+    return fetch_bytes(url, data=data, timeout=timeout).decode(encoding, "ignore")
 
 
 def cached(name: str, loader) -> Any:

@@ -42,6 +42,9 @@ jobs:
 
       - name: Update seed cache
         shell: bash
+        env:
+          HTTP_REQUEST_DELAY_MIN_MS: "3000"
+          HTTP_REQUEST_DELAY_MAX_MS: "7000"
         run: |
           set -euo pipefail
           CODES="${{ github.event.inputs.codes || '' }}"

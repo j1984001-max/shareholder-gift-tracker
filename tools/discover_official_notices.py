@@ -8,7 +8,6 @@ import sys
 import time
 import urllib.error
 import urllib.parse
-import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -94,9 +93,7 @@ class LinkParser(HTMLParser):
 
 
 def fetch_json(url: str) -> list[dict[str, Any]]:
-    request = urllib.request.Request(url, headers=server.HEADERS)
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return json.loads(response.read().decode("utf-8", "ignore"))
+    return json.loads(server.fetch_bytes(url).decode("utf-8", "ignore"))
 
 
 def normalize_company_url(value: str) -> str:
@@ -177,13 +174,7 @@ def score_pdf_candidate(link: dict[str, str], url: str, code: str) -> int:
 
 
 def fetch_page(url: str) -> str:
-    request = urllib.request.Request(url, headers=server.HEADERS)
-    with urllib.request.urlopen(request, timeout=PAGE_TIMEOUT_SECONDS) as response:
-        content_type = response.headers.get("Content-Type", "")
-        if "text/html" not in content_type and "application/xhtml" not in content_type and not content_type.startswith("text/"):
-            return ""
-        charset = response.headers.get_content_charset() or "utf-8"
-        return response.read().decode(charset, "ignore")
+    return server.fetch_text(url, timeout=PAGE_TIMEOUT_SECONDS)
 
 
 def parse_links(html_text: str, page_url: str) -> list[dict[str, str]]:

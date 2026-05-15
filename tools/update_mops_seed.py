@@ -6,7 +6,6 @@ import json
 import sys
 import time
 import urllib.parse
-import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -79,8 +78,7 @@ def read_codes_file(path: Path) -> list[str]:
 def fetch_remote_requested_codes(url: str) -> list[str]:
     if not url:
         return []
-    with urllib.request.urlopen(url, timeout=30) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+    payload = json.loads(server.fetch_bytes(url).decode("utf-8"))
     return [code for code in payload.get("codes", []) if isinstance(code, str)]
 
 
