@@ -12,6 +12,7 @@ const clearBtn = document.getElementById("clearBtn");
 const refreshBtn = document.getElementById("refreshBtn");
 const exportBtn = document.getElementById("exportBtn");
 const updatedAtText = document.getElementById("updatedAtText");
+const noticeProgressText = document.getElementById("noticeProgressText");
 const statusText = document.getElementById("statusText");
 const resultsBody = document.getElementById("resultsBody");
 const summaryStrip = document.getElementById("summaryStrip");
@@ -50,6 +51,19 @@ function loadSnapshots() {
 
 function saveSnapshots(snapshot) {
   localStorage.setItem(SNAPSHOT_KEY, JSON.stringify(snapshot));
+}
+
+async function refreshNoticeProgress() {
+  if (!noticeProgressText) return;
+  try {
+    const response = await fetch("/api/notice-progress");
+    const progress = await response.json();
+    if (!progress.ok) throw new Error(progress.error || "progress unavailable");
+    noticeProgressText.textContent = `通知書 ${progress.noticeCached}/${progress.watchlistTotal}，電投日期 ${progress.pickupDateCached}/${progress.watchlistTotal}`;
+    noticeProgressText.title = `官網/官方 PDF：${progress.officialPdfCached}；尚缺通知書：${progress.missingNotice}；尚缺電投日期：${progress.missingPickupDate}`;
+  } catch {
+    noticeProgressText.textContent = "暫時無法讀取";
+  }
 }
 
 function formatDate(value) {
@@ -374,6 +388,7 @@ setInterval(() => {
 }, AUTO_REFRESH_MS);
 
 function bootstrap() {
+  refreshNoticeProgress();
   const saved = loadWatchlist();
   if (saved) {
     codesInput.value = saved;

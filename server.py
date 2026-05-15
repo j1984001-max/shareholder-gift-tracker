@@ -120,6 +120,34 @@ def save_notice_cache(cache: dict[str, Any]) -> None:
     NOTICE_CACHE_PATH.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def build_notice_progress() -> dict[str, Any]:
+    watchlist_path = ROOT / "data" / "mops_seed_watchlist.txt"
+    watchlist_codes = clean_codes(watchlist_path.read_text(encoding="utf-8")) if watchlist_path.exists() else []
+    cache = load_notice_cache()
+    watched_cache = {code: cache.get(code) for code in watchlist_codes if cache.get(code)}
+    with_notice = [code for code, item in watched_cache.items() if item.get("filename") or item.get("pdfUrl")]
+    with_pickup_date = [
+        code
+        for code, item in watched_cache.items()
+        if item.get("evotePickupStartDate") or item.get("evotePickupEndDate") or item.get("evotePickupPeriodText")
+    ]
+    company_pdf = [
+        code
+        for code, item in watched_cache.items()
+        if item.get("sourceType") in {"company_pdf", "official_pdf", "transfer_agent_pdf"}
+    ]
+    latest_fetched = max((item.get("fetchedAt", "") for item in watched_cache.values()), default="")
+    return {
+        "watchlistTotal": len(watchlist_codes),
+        "noticeCached": len(with_notice),
+        "pickupDateCached": len(with_pickup_date),
+        "officialPdfCached": len(company_pdf),
+        "missingNotice": max(0, len(watchlist_codes) - len(with_notice)),
+        "missingPickupDate": max(0, len(watchlist_codes) - len(with_pickup_date)),
+        "latestFetchedAt": latest_fetched,
+    }
+
+
 def load_requested_codes() -> dict[str, str]:
     if REQUESTED_CODES_PATH.exists():
         try:
@@ -1070,6 +1098,16 @@ class AppHandler(SimpleHTTPRequestHandler):
             return
         if parsed.path == "/api/health":
             json_response(self, {"ok": True, "generatedAt": date.today().isoformat(), "version": APP_VERSION})
+            return
+        if parsed.path == "/api/notice-progress":
+            json_response(
+                self,
+                {
+                    "ok": True,
+                    "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                    **build_notice_progress(),
+                },
+            )
             return
         if parsed.path == "/api/requested-codes":
             requested = load_requested_codes()
