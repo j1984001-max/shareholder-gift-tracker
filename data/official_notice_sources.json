@@ -89,5 +89,19 @@
       "label": "泰鼎-KY官網開會通知書",
       "sourceType": "company_pdf"
     }
+  ],
+  "6104": [
+    {
+      "url": "https://www.genesyslogic.com/upload/Shareholder/Meeting_20260510104947_1.pdf",
+      "label": "創惟官網開會通知書",
+      "sourceType": "company_pdf"
+    }
+  ],
+  "6187": [
+    {
+      "url": "https://www.allring-tech.com.tw/Upload/202604/investor_2026042422370407.pdf",
+      "label": "萬潤官網開會通知書",
+      "sourceType": "company_pdf"
+    }
   ]
 }
