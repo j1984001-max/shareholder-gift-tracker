@@ -103,5 +103,19 @@
       "label": "萬潤官網開會通知書",
       "sourceType": "company_pdf"
     }
+  ],
+  "6213": [
+    {
+      "url": "https://s3.ap-northeast-1.wasabisys.com/cdn.iteqcorp.com/2026/04/115%E5%B9%B4%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8-%E4%B8%AD%E6%96%87%E7%89%88-%E5%AE%9A%E7%A8%BF-0414.pdf",
+      "label": "聯茂官網開會通知書",
+      "sourceType": "company_pdf"
+    }
+  ],
+  "6233": [
+    {
+      "url": "https://www.prolific.com.tw/wp-content/uploads/2026/05/%E6%97%BA%E7%8E%96%E7%A7%91%E6%8A%80115%E5%B8%B8%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8-%E4%B8%8A%E5%82%B3%E6%AA%94.pdf",
+      "label": "旺玖官網開會通知書",
+      "sourceType": "company_pdf"
+    }
   ]
 }
