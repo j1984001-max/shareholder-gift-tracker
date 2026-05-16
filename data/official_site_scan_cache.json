@@ -4228,5 +4228,335 @@
     "candidateCount": 0,
     "foundUseful": false,
     "error": ""
+  },
+  "8091": {
+    "code": "8091",
+    "companyName": "翔名",
+    "companyUrl": "http://www.feedback.com.tw/",
+    "attemptedAt": "2026-05-16T10:41:58+0000",
+    "attemptedAtEpoch": 1778928118.6582096,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8096": {
+    "code": "8096",
+    "companyName": "擎亞",
+    "companyUrl": "https://www.coasiaelec.com/",
+    "attemptedAt": "2026-05-16T10:43:15+0000",
+    "attemptedAtEpoch": 1778928195.9034686,
+    "candidateCount": 1,
+    "foundUseful": true,
+    "error": ""
+  },
+  "8105": {
+    "code": "8105",
+    "companyName": "凌巨",
+    "companyUrl": "https://www.giantplus.com/",
+    "attemptedAt": "2026-05-16T10:44:11+0000",
+    "attemptedAtEpoch": 1778928251.1251342,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8107": {
+    "code": "8107",
+    "companyName": "大億金茂",
+    "companyUrl": "https://www.kenmos.com/",
+    "attemptedAt": "2026-05-16T10:44:58+0000",
+    "attemptedAtEpoch": 1778928298.5892234,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8111": {
+    "code": "8111",
+    "companyName": "立碁",
+    "companyUrl": "http://www.ligitek.com/",
+    "attemptedAt": "2026-05-16T10:45:07+0000",
+    "attemptedAtEpoch": 1778928307.722981,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8112": {
+    "code": "8112",
+    "companyName": "至上",
+    "companyUrl": "https://www.supreme.com.tw/",
+    "attemptedAt": "2026-05-16T10:45:15+0000",
+    "attemptedAtEpoch": 1778928315.2454891,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8163": {
+    "code": "8163",
+    "companyName": "達方",
+    "companyUrl": "https://WWW.DARFON.COM.TW/",
+    "attemptedAt": "2026-05-16T10:46:14+0000",
+    "attemptedAtEpoch": 1778928374.2029963,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8171": {
+    "code": "8171",
+    "companyName": "天宇",
+    "companyUrl": "http://www.feii.com.tw/",
+    "attemptedAt": "2026-05-16T10:47:17+0000",
+    "attemptedAtEpoch": 1778928437.3253067,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8176": {
+    "code": "8176",
+    "companyName": "智捷",
+    "companyUrl": "https://www.zcom.com.tw/",
+    "attemptedAt": "2026-05-16T10:48:12+0000",
+    "attemptedAtEpoch": 1778928492.1829915,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8213": {
+    "code": "8213",
+    "companyName": "志超",
+    "companyUrl": "https://tpt-pcb.com.tw/",
+    "attemptedAt": "2026-05-16T10:48:17+0000",
+    "attemptedAtEpoch": 1778928497.4991431,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8222": {
+    "code": "8222",
+    "companyName": "寶一",
+    "companyUrl": "https://www.aerowin.com/",
+    "attemptedAt": "2026-05-16T10:48:45+0000",
+    "attemptedAtEpoch": 1778928525.6843736,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8240": {
+    "code": "8240",
+    "companyName": "華宏",
+    "companyUrl": "https://www.wahhong.com/",
+    "attemptedAt": "2026-05-16T10:49:37+0000",
+    "attemptedAtEpoch": 1778928577.751248,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8255": {
+    "code": "8255",
+    "companyName": "朋程",
+    "companyUrl": "https://www.actron.com.tw/",
+    "attemptedAt": "2026-05-16T10:50:38+0000",
+    "attemptedAtEpoch": 1778928638.2834008,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8261": {
+    "code": "8261",
+    "companyName": "富鼎",
+    "companyUrl": "https://www.a-power.com.tw/",
+    "attemptedAt": "2026-05-16T10:51:33+0000",
+    "attemptedAtEpoch": 1778928693.7031386,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8271": {
+    "code": "8271",
+    "companyName": "宇瞻",
+    "companyUrl": "https://www.apacer.com/",
+    "attemptedAt": "2026-05-16T10:52:27+0000",
+    "attemptedAtEpoch": 1778928747.6512942,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8277": {
+    "code": "8277",
+    "companyName": "商丞",
+    "companyUrl": "https://www.unifosa.com.tw/",
+    "attemptedAt": "2026-05-16T10:53:12+0000",
+    "attemptedAtEpoch": 1778928792.4666924,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8299": {
+    "code": "8299",
+    "companyName": "群聯",
+    "companyUrl": "https://www.phison.com/",
+    "attemptedAt": "2026-05-16T10:53:55+0000",
+    "attemptedAtEpoch": 1778928835.4411042,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8358": {
+    "code": "8358",
+    "companyName": "金居",
+    "companyUrl": "http://www.co-tech.com/",
+    "attemptedAt": "2026-05-16T10:54:58+0000",
+    "attemptedAtEpoch": 1778928898.0540988,
+    "candidateCount": 1,
+    "foundUseful": true,
+    "error": ""
+  },
+  "8383": {
+    "code": "8383",
+    "companyName": "千附",
+    "companyUrl": "https://WWW.CHENFULL.COM.TW/",
+    "attemptedAt": "2026-05-16T10:55:40+0000",
+    "attemptedAtEpoch": 1778928940.3336053,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8401": {
+    "code": "8401",
+    "companyName": "白紗科",
+    "companyUrl": "https://www.bsbs.com.tw/",
+    "attemptedAt": "2026-05-16T10:55:44+0000",
+    "attemptedAtEpoch": 1778928944.3682234,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8409": {
+    "code": "8409",
+    "companyName": "商之器",
+    "companyUrl": "https://www.ebmtech.com/tw",
+    "attemptedAt": "2026-05-16T10:55:53+0000",
+    "attemptedAtEpoch": 1778928953.488338,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8437": {
+    "code": "8437",
+    "companyName": "大地-KY",
+    "companyUrl": "http://www.edudadi.com/",
+    "attemptedAt": "2026-05-16T10:56:53+0000",
+    "attemptedAtEpoch": 1778929013.8869512,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8443": {
+    "code": "8443",
+    "companyName": "阿瘦",
+    "companyUrl": "https://www.asogroup.com.tw/",
+    "attemptedAt": "2026-05-16T10:57:27+0000",
+    "attemptedAtEpoch": 1778929047.6265883,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8927": {
+    "code": "8927",
+    "companyName": "北基",
+    "companyUrl": "http://www.nspco.com.tw/",
+    "attemptedAt": "2026-05-16T10:58:36+0000",
+    "attemptedAtEpoch": 1778929116.3799608,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8933": {
+    "code": "8933",
+    "companyName": "愛地雅",
+    "companyUrl": "https://www.idealbike.com.tw/",
+    "attemptedAt": "2026-05-16T10:59:38+0000",
+    "attemptedAtEpoch": 1778929178.3256876,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8936": {
+    "code": "8936",
+    "companyName": "國統",
+    "companyUrl": "http://www.kti.com.tw/",
+    "attemptedAt": "2026-05-16T11:00:18+0000",
+    "attemptedAtEpoch": 1778929218.1473627,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "8996": {
+    "code": "8996",
+    "companyName": "高力",
+    "companyUrl": "https://www.kaori.com.tw/",
+    "attemptedAt": "2026-05-16T11:00:26+0000",
+    "attemptedAtEpoch": 1778929226.691026,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "9912": {
+    "code": "9912",
+    "companyName": "偉聯",
+    "companyUrl": "http://www.agneovo.com/",
+    "attemptedAt": "2026-05-16T11:01:16+0000",
+    "attemptedAtEpoch": 1778929276.236149,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "9914": {
+    "code": "9914",
+    "companyName": "美利達",
+    "companyUrl": "https://www.merida-bikes.com/zh-tw/",
+    "attemptedAt": "2026-05-16T11:02:16+0000",
+    "attemptedAtEpoch": 1778929336.4503367,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "9917": {
+    "code": "9917",
+    "companyName": "中保科",
+    "companyUrl": "https://WWW.SECOM.COM.TW/",
+    "attemptedAt": "2026-05-16T11:02:20+0000",
+    "attemptedAtEpoch": 1778929340.82682,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "9918": {
+    "code": "9918",
+    "companyName": "欣天然",
+    "companyUrl": "http://www.shinshingas.com.tw/",
+    "attemptedAt": "2026-05-16T11:02:59+0000",
+    "attemptedAtEpoch": 1778929379.2301037,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "9929": {
+    "code": "9929",
+    "companyName": "秋雨",
+    "companyUrl": "http://www.choiceprintgroup.com/",
+    "attemptedAt": "2026-05-16T11:03:04+0000",
+    "attemptedAtEpoch": 1778929384.4805553,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
+  },
+  "9960": {
+    "code": "9960",
+    "companyName": "邁達康",
+    "companyUrl": "https://www.golfshop.com.tw/",
+    "attemptedAt": "2026-05-16T11:03:57+0000",
+    "attemptedAtEpoch": 1778929437.724704,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": ""
   }
 }
