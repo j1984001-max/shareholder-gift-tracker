@@ -277,6 +277,24 @@ def parse_compact_roc_date(value: str, fallback_year: int | None = None) -> str 
     return f"{western_year:04d}-{int(match.group(2)):02d}-{int(match.group(3)):02d}"
 
 
+def parse_flexible_roc_date(value: str, fallback_year: int | None = None) -> str | None:
+    compact = compact_text(value).replace("民國", "")
+    match = re.search(r"(?:(\d{2,3})年)?(\d{1,2})月(\d{1,2})日", compact)
+    if match:
+        roc_year = int(match.group(1)) if match.group(1) else fallback_year
+        if roc_year is None:
+            return None
+        return f"{roc_year + 1911:04d}-{int(match.group(2)):02d}-{int(match.group(3)):02d}"
+
+    slash_match = re.search(r"(?:(\d{2,3})/)?(\d{1,2})/(\d{1,2})", compact)
+    if slash_match:
+        roc_year = int(slash_match.group(1)) if slash_match.group(1) else fallback_year
+        if roc_year is None:
+            return None
+        return f"{roc_year + 1911:04d}-{int(slash_match.group(2)):02d}-{int(slash_match.group(3)):02d}"
+    return None
+
+
 def parse_compact_roc_range_from_text(value: str) -> tuple[str | None, str | None, str]:
     compact = compact_text(value)
     patterns = [
@@ -303,25 +321,34 @@ def parse_compact_roc_range_from_text(value: str) -> tuple[str | None, str | Non
 
 def parse_pickup_roc_range_from_text(value: str) -> tuple[str | None, str | None, str]:
     compact = compact_text(value)
+    normalized = compact.replace("民國", "")
+    separator = r"(?:至|[-~～—]+)"
     candidates: list[tuple[int, re.Match[str]]] = []
     patterns = [
-        (0, r"(請於((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
-        (0, r"(請?自((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
-        (0, r"(領取紀念品期間：((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
-        (1, r"(領取期間及地點：自?((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
-        (2, r"(於((\d{2,3})年\d{1,2}月\d{1,2}日)(?:起)?至((?:\d{2,3}年)?\d{1,2}月\d{1,2}日)(?:止)?)"),
+        (0, rf"(請於((\d{{2,3}})年\d{{1,2}}月\d{{1,2}}日)(?:起)?{separator}((?:\d{{2,3}}年)?\d{{1,2}}月\d{{1,2}}日)(?:止)?)"),
+        (0, rf"(請?自((\d{{2,3}})年\d{{1,2}}月\d{{1,2}}日)(?:起)?{separator}((?:\d{{2,3}}年)?\d{{1,2}}月\d{{1,2}}日)(?:止)?)"),
+        (0, rf"(領取紀念品期間[:：]?((\d{{2,3}})年\d{{1,2}}月\d{{1,2}}日)(?:起)?{separator}((?:\d{{2,3}}年)?\d{{1,2}}月\d{{1,2}}日)(?:止)?)"),
+        (1, rf"(領取期間及地點[:：]?自?((\d{{2,3}})年\d{{1,2}}月\d{{1,2}}日)(?:起)?{separator}((?:\d{{2,3}}年)?\d{{1,2}}月\d{{1,2}}日)(?:止)?)"),
+        (2, rf"(於((\d{{2,3}})年\d{{1,2}}月\d{{1,2}}日)(?:起)?{separator}((?:\d{{2,3}}年)?\d{{1,2}}月\d{{1,2}}日)(?:止)?)"),
+        (0, rf"(((\d{{2,3}})/\d{{1,2}}/\d{{1,2}})\s*{separator}\s*((?:\d{{2,3}}/)?\d{{1,2}}/\d{{1,2}}))"),
     ]
     for priority, pattern in patterns:
-        for match in re.finditer(pattern, compact):
-            following = compact[match.end() : match.end() + 140]
+        for match in re.finditer(pattern, normalized):
+            following = normalized[match.end() : match.end() + 140]
             if priority == 2 and not re.search(r"(領取|換領|發放|股務|紀念品)", following):
                 continue
             candidates.append((priority, match))
     if candidates:
         priority, match = sorted(candidates, key=lambda item: (item[0], item[1].start()))[0]
-        start_date = parse_compact_roc_date(match.group(2))
-        end_date = parse_compact_roc_date(match.group(4), fallback_year=int(match.group(3)))
+        start_date = parse_flexible_roc_date(match.group(2))
+        end_date = parse_flexible_roc_date(match.group(4), fallback_year=int(match.group(3)))
         return start_date, end_date, match.group(1)
+
+    slash_match = re.search(r"((\d{2,3})/\d{1,2}/\d{1,2})\s*(?:至|[-~～—]+)\s*((?:\d{2,3}/)?\d{1,2}/\d{1,2})", normalized)
+    if slash_match:
+        start_date = parse_flexible_roc_date(slash_match.group(1))
+        end_date = parse_flexible_roc_date(slash_match.group(3), fallback_year=int(slash_match.group(2)))
+        return start_date, end_date, slash_match.group(0)
     return None, None, ""
 
 
@@ -336,23 +363,28 @@ def parse_mmdd_to_iso(value: str) -> str | None:
 
 def parse_roc_date(value: str) -> str | None:
     cleaned = normalize_text(value)
-    match = re.fullmatch(r"(\d{2,3})/(\d{2})/(\d{2})", cleaned)
+    match = re.fullmatch(r"(\d{2,3})/(\d{1,2})/(\d{1,2})", cleaned)
     if not match:
         return None
     roc_year, month, day = match.groups()
     western_year = int(roc_year) + 1911
-    return f"{western_year:04d}-{month}-{day}"
+    return f"{western_year:04d}-{int(month):02d}-{int(day):02d}"
 
 
 def parse_roc_range(value: str) -> tuple[str | None, str | None]:
     cleaned = normalize_text(value)
     if cleaned in {"", "-"}:
         return None, None
-    match = re.fullmatch(r"(\d{2,3}/\d{2}/\d{2})\s*[-~]\s*(\d{2,3}/\d{2}/\d{2})", cleaned)
+    normalized = cleaned.replace("～", "~").replace("—", "-")
+    match = re.fullmatch(r"(\d{2,3}/\d{1,2}/\d{1,2})\s*[-~]\s*((?:\d{2,3}/)?\d{1,2}/\d{1,2})", normalized)
     if not match:
         single = parse_roc_date(cleaned)
         return single, single
-    return parse_roc_date(match.group(1)), parse_roc_date(match.group(2))
+    start = parse_roc_date(match.group(1))
+    second = match.group(2)
+    if re.fullmatch(r"\d{1,2}/\d{1,2}", second):
+        second = f"{match.group(1).split('/')[0]}/{second}"
+    return start, parse_roc_date(second)
 
 
 class TableCell:
