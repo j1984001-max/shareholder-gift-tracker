@@ -43,7 +43,7 @@ http://127.0.0.1:8765
 
 ```bash
 cd "/Users/wujohnson/Documents/New project/shareholder-gift-tracker"
-PYTHONPATH=.vendor python3 tools/local_refresh_pipeline.py --official-limit 120 --mops-limit 6
+PYTHONPATH=.vendor python3 tools/local_refresh_pipeline.py --official-limit 120 --mops-limit 5
 ```
 
 這支腳本會依序做三件事：
@@ -51,6 +51,37 @@ PYTHONPATH=.vendor python3 tools/local_refresh_pipeline.py --official-limit 120 
 - 掃公司官網 / 官方 PDF
 - 小批次補公開資訊觀測站或官方通知書快取
 - 重建部署用的 [data/lookup_snapshot.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshot.json)
+
+如果你想讓本機每 5 分鐘自動補一次，而且已經有完整資料的股票不要重複查 MOPS，可以直接用這支單次 worker：
+
+```bash
+cd "/Users/wujohnson/Documents/New project/shareholder-gift-tracker"
+PYTHONPATH=.vendor python3 tools/run_local_mops_cycle.py
+```
+
+這支 worker 會：
+
+- 只跑 MOPS / 官方通知書補資料
+- 每次最多抓 `5` 檔
+- 用 `--skip-existing --retry-empty`，已有完整領取資料的不會重抓
+- 補完後自動重建 `lookup_snapshot.json`
+- 內建 lock，避免上一輪還沒跑完又重複啟動
+
+如果要讓 Mac 自動每 5 分鐘跑一次：
+
+```bash
+cp "/Users/wujohnson/Documents/New project/shareholder-gift-tracker/ops/shareholder-gift-tracker.local-mops.plist" ~/Library/LaunchAgents/
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/shareholder-gift-tracker.local-mops.plist
+launchctl kickstart -k gui/$(id -u)/com.wujohnson.shareholder-gift-tracker.local-mops
+```
+
+查看 log：
+
+```bash
+tail -f "/Users/wujohnson/Documents/New project/shareholder-gift-tracker/.cache/local-mops-cycle.log"
+```
+
+如果專案放在 `Documents` 下面，macOS 可能會擋掉背景 `launchd` 行程直接讀這個資料夾。遇到這種情況，最穩的做法是把 repo 移到像 `~/workspace/shareholder-gift-tracker` 這類非受保護路徑，再啟用 `launchd`。不搬資料夾的話，就改成在已授權的 Terminal 裡手動或常駐執行這支 worker。
 
 跑完後再推上去：
 

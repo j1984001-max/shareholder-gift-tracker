@@ -128,6 +128,16 @@ def cached(name: str, loader) -> Any:
     return value
 
 
+def safe_cached_source(name: str, loader) -> dict[str, Any]:
+    try:
+        value = cached(name, loader)
+        return value if isinstance(value, dict) else {}
+    except Exception as error:
+        print(f"[source:{name}] load failed: {error}")
+        CACHE[name] = (time.time(), {})
+        return {}
+
+
 def load_notice_cache() -> dict[str, Any]:
     global NOTICE_CACHE_MEMORY
     if NOTICE_CACHE_MEMORY is not None:
@@ -543,9 +553,9 @@ def load_honsec() -> dict[str, dict[str, Any]]:
 
 
 def source_bundle() -> dict[str, Any]:
-    wespai = cached("wespai", load_wespai)
-    ideal = cached("ideal", load_ideal)
-    honsec = cached("honsec", load_honsec)
+    wespai = safe_cached_source("wespai", load_wespai)
+    ideal = safe_cached_source("ideal", load_ideal)
+    honsec = safe_cached_source("honsec", load_honsec)
     return {"wespai": wespai, "ideal": ideal, "honsec": honsec}
 
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.wujohnson.shareholder-gift-tracker.local-mops</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/python3</string>
+      <string>/Users/wujohnson/Documents/New project/shareholder-gift-tracker/tools/run_local_mops_cycle.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/wujohnson/Documents/New project/shareholder-gift-tracker</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PYTHONPATH</key>
+      <string>/Users/wujohnson/Documents/New project/shareholder-gift-tracker/.vendor</string>
+      <key>HTTP_REQUEST_DELAY_MIN_MS</key>
+      <string>3000</string>
+      <key>HTTP_REQUEST_DELAY_MAX_MS</key>
+      <string>7000</string>
+    </dict>
+
+    <key>StartInterval</key>
+    <integer>300</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/wujohnson/Documents/New project/shareholder-gift-tracker/.cache/local-mops-cycle.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/wujohnson/Documents/New project/shareholder-gift-tracker/.cache/local-mops-cycle.log</string>
+  </dict>
+</plist>
