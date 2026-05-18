@@ -31,13 +31,38 @@ http://127.0.0.1:8765
 
 - 批次貼上多筆股票代號
 - 儲存 watchlist 到瀏覽器 localStorage
-- 每次查詢都抓最新頁面資料
+- 網站優先讀取本機預先建好的查詢快照，不把 Render 當成臨時爬蟲
 - 和上次查詢結果比對，欄位有異動時標示 `NEW`
 - 對於尚未公告的股票，保留在 watchlist 方便持續追蹤
 
+## 本機優先架構
+
+通知書下載與解析建議都在你的本機跑完，再把結果推到 GitHub 讓 Render 自動部署。部署後網站查詢會優先讀 [data/lookup_snapshot.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshot.json) 與 [data/mops_notice_seed_cache.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/mops_notice_seed_cache.json)，避免 Render 線上臨時打外部網站。
+
+推薦的本機更新流程：
+
+```bash
+cd "/Users/wujohnson/Documents/New project/shareholder-gift-tracker"
+PYTHONPATH=.vendor python3 tools/local_refresh_pipeline.py --official-limit 120 --mops-limit 6
+```
+
+這支腳本會依序做三件事：
+
+- 掃公司官網 / 官方 PDF
+- 小批次補公開資訊觀測站或官方通知書快取
+- 重建部署用的 [data/lookup_snapshot.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshot.json)
+
+跑完後再推上去：
+
+```bash
+git add data/mops_notice_seed_cache.json data/official_notice_sources.json data/official_site_scan_cache.json data/lookup_snapshot.json
+git commit -m "Refresh shareholder lookup snapshot"
+git push origin main
+```
+
 ## 後台補資料
 
-GitHub Actions 會定期執行 [tools/update_mops_seed.py](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/tools/update_mops_seed.py)，把開會通知書解析結果寫進 [data/mops_notice_seed_cache.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/mops_notice_seed_cache.json)，網站查詢時會優先讀這份快取。
+GitHub Actions 仍會定期執行 [tools/update_mops_seed.py](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/tools/update_mops_seed.py) 與 [tools/build_lookup_snapshot.py](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/tools/build_lookup_snapshot.py)，把通知書解析結果與部署用快照一起更新。網站查詢時會優先讀這些已建好的資料檔。
 
 如果公開資訊觀測站查詢過量，可以把公司官網或股代公告的官方 PDF 放到 [data/official_notice_sources.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/official_notice_sources.json)，排程會優先解析這些 PDF，例如：
 

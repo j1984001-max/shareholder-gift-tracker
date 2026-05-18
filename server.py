@@ -29,6 +29,7 @@ CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_SEED_CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
 OFFICIAL_SITE_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
+LOOKUP_SNAPSHOT_PATH = ROOT / "data" / "lookup_snapshot.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 NOTICE_CACHE_VERSION = 3
@@ -51,9 +52,11 @@ HEADERS = {
 }
 REQUEST_DELAY_MIN_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MIN_MS", "0"))
 REQUEST_DELAY_MAX_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MAX_MS", "0"))
+ALLOW_LIVE_LOOKUP = os.environ.get("ALLOW_LIVE_LOOKUP", "").lower() in {"1", "true", "yes", "on"}
 
 CACHE: dict[str, tuple[float, Any]] = {}
 NOTICE_CACHE_MEMORY: dict[str, Any] | None = None
+LOOKUP_SNAPSHOT_MEMORY: dict[str, Any] | None = None
 
 CACHE_DIR.mkdir(exist_ok=True)
 NOTICE_PDF_DIR.mkdir(exist_ok=True)
@@ -148,6 +151,22 @@ def load_notice_cache() -> dict[str, Any]:
     return NOTICE_CACHE_MEMORY
 
 
+def load_lookup_snapshot() -> dict[str, Any]:
+    global LOOKUP_SNAPSHOT_MEMORY
+    if LOOKUP_SNAPSHOT_MEMORY is not None:
+        return LOOKUP_SNAPSHOT_MEMORY
+    if LOOKUP_SNAPSHOT_PATH.exists():
+        try:
+            payload = json.loads(LOOKUP_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+            if isinstance(payload, dict):
+                LOOKUP_SNAPSHOT_MEMORY = payload
+                return LOOKUP_SNAPSHOT_MEMORY
+        except Exception:
+            pass
+    LOOKUP_SNAPSHOT_MEMORY = {}
+    return LOOKUP_SNAPSHOT_MEMORY
+
+
 def save_notice_cache(cache: dict[str, Any]) -> None:
     global NOTICE_CACHE_MEMORY
     NOTICE_CACHE_MEMORY = cache
@@ -191,6 +210,24 @@ def build_notice_progress() -> dict[str, Any]:
         "missingPickupDate": max(0, len(watchlist_codes) - len(with_pickup_date)),
         "latestFetchedAt": latest_fetched,
         "latestOfficialSiteScan": latest_official_scan,
+    }
+
+
+def build_source_stats(sources: dict[str, Any]) -> dict[str, int]:
+    return {
+        "wespai": len(sources["wespai"]),
+        "idealLabs": len(sources["ideal"]),
+        "honsec": len(sources["honsec"]),
+    }
+
+
+def snapshot_metadata() -> dict[str, Any]:
+    snapshot = load_lookup_snapshot()
+    records = snapshot.get("records") if isinstance(snapshot.get("records"), dict) else {}
+    return {
+        "dataMode": "snapshot" if records else "live",
+        "snapshotGeneratedAt": snapshot.get("generatedAt", "") if records else "",
+        "snapshotRecordCount": len(records),
     }
 
 
@@ -995,7 +1032,98 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     return output.getvalue()
 
 
-def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
+def empty_record(code: str, note: str = "") -> dict[str, Any]:
+    return {
+        "code": code,
+        "companyName": "",
+        "status": "unpublished",
+        "isPublished": False,
+        "souvenirName": "",
+        "meetingDate": "",
+        "lastBuyDate": "",
+        "meetingCity": "",
+        "priceText": "",
+        "transferAgentName": "",
+        "transferAgentPhone": "",
+        "transferAgentShort": "",
+        "oddLotMail": "",
+        "reelection": "",
+        "needVote": None,
+        "fractionalOk": None,
+        "evoteStartDate": None,
+        "evoteEndDate": None,
+        "evotePickupStartDate": None,
+        "evotePickupEndDate": None,
+        "evotePickupPlace": "",
+        "evotePickupLocation": "",
+        "evotePickupDocuments": "",
+        "evotePickupRule": "",
+        "meetingDistributionRule": "",
+        "proxyPeriodText": "",
+        "agentDistributionPeriodText": "",
+        "noticeGiftSummary": "",
+        "noticeFilename": "",
+        "noticeUploadedAt": "",
+        "noticeEvotePickupPeriodText": "",
+        "noticeCacheStatus": "",
+        "noticeSourceLabel": "",
+        "noticeSourceType": "",
+        "mopsAttempted": False,
+        "mopsError": "",
+        "evotePickupSource": "",
+        "notes": note,
+        "sources": [],
+    }
+
+
+def build_lookup_results(
+    codes: list[str],
+    *,
+    allow_live_lookup: bool | None = None,
+    allow_live_notice_fetch: bool | None = None,
+) -> tuple[list[dict[str, Any]], dict[str, int], dict[str, Any]]:
+    snapshot = load_lookup_snapshot()
+    snapshot_records = snapshot.get("records") if isinstance(snapshot.get("records"), dict) else {}
+    use_snapshot = bool(snapshot_records)
+    effective_live_lookup = ALLOW_LIVE_LOOKUP if allow_live_lookup is None else allow_live_lookup
+    if allow_live_notice_fetch is None:
+        effective_notice_fetch = effective_live_lookup or not use_snapshot
+    else:
+        effective_notice_fetch = allow_live_notice_fetch
+
+    results_map: dict[str, dict[str, Any]] = {}
+    missing_codes: list[str] = []
+    for code in codes:
+        record = snapshot_records.get(code) if use_snapshot else None
+        if isinstance(record, dict):
+            results_map[code] = record
+        else:
+            missing_codes.append(code)
+
+    source_stats = snapshot.get("sourceStats", {}) if use_snapshot else {}
+    if missing_codes and (effective_live_lookup or not use_snapshot):
+        sources = source_bundle()
+        for code in missing_codes:
+            results_map[code] = build_record(code, sources, allow_live_notice_fetch=effective_notice_fetch)
+        if not source_stats:
+            source_stats = build_source_stats(sources)
+    else:
+        for code in missing_codes:
+            results_map[code] = empty_record(code, "這檔資料尚未由本機同步流程補齊，請先更新本機資料後再部署。")
+
+    if not isinstance(source_stats, dict):
+        source_stats = {}
+    normalized_source_stats = {
+        "wespai": int(source_stats.get("wespai", 0)),
+        "idealLabs": int(source_stats.get("idealLabs", 0)),
+        "honsec": int(source_stats.get("honsec", 0)),
+    }
+    metadata = snapshot_metadata()
+    results = [results_map.get(code, empty_record(code)) for code in codes]
+    return results, normalized_source_stats, metadata
+
+
+def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bool = True) -> dict[str, Any]:
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
     honsec = sources["honsec"].get(code)
@@ -1013,7 +1141,12 @@ def build_record(code: str, sources: dict[str, Any]) -> dict[str, Any]:
     mops_notice = None
     mops_error = ""
     if should_try_mops:
-        mops_notice, mops_error = safe_get_mops_notice_info(code, meeting_date)
+        if allow_live_notice_fetch:
+            mops_notice, mops_error = safe_get_mops_notice_info(code, meeting_date)
+        else:
+            cached_notice = load_notice_cache().get(code)
+            if isinstance(cached_notice, dict):
+                mops_notice = cached_notice
 
     evote_start = (ideal or {}).get("evote_start_date") or (honsec or {}).get("evote_start_date")
     evote_end = (ideal or {}).get("evote_end_date") or (honsec or {}).get("evote_end_date")
@@ -1143,7 +1276,15 @@ class AppHandler(SimpleHTTPRequestHandler):
             self.handle_export(raw_codes)
             return
         if parsed.path == "/api/health":
-            json_response(self, {"ok": True, "generatedAt": date.today().isoformat(), "version": APP_VERSION})
+            json_response(
+                self,
+                {
+                    "ok": True,
+                    "generatedAt": date.today().isoformat(),
+                    "version": APP_VERSION,
+                    **snapshot_metadata(),
+                },
+            )
             return
         if parsed.path == "/api/notice-progress":
             json_response(
@@ -1187,19 +1328,15 @@ class AppHandler(SimpleHTTPRequestHandler):
 
         try:
             record_requested_codes(codes)
-            sources = source_bundle()
-            results = [build_record(code, sources) for code in codes]
+            results, source_stats, metadata = build_lookup_results(codes)
             json_response(
                 self,
                 {
                     "ok": True,
                     "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
                     "requestedCodes": codes,
-                    "sourceStats": {
-                        "wespai": len(sources["wespai"]),
-                        "idealLabs": len(sources["ideal"]),
-                        "honsec": len(sources["honsec"]),
-                    },
+                    "sourceStats": source_stats,
+                    **metadata,
                     "results": results,
                 },
             )
@@ -1224,8 +1361,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             )
             return
         try:
-            sources = source_bundle()
-            results = [build_record(code, sources) for code in codes]
+            results, _, _ = build_lookup_results(codes)
             body = build_export_xlsx(results)
             filename = f"shareholder-gifts-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
             self.send_response(200)

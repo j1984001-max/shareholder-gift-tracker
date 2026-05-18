@@ -85,9 +85,10 @@ jobs:
             fi
             python tools/update_mops_seed.py "${EXTRA_ARGS[@]}"
           fi
+          python tools/build_lookup_snapshot.py --watchlist-file data/mops_seed_watchlist.txt
 
       - name: Commit seed updates
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update official notice seed cache"
-          file_pattern: data/mops_notice_seed_cache.json data/official_notice_sources.json data/official_site_scan_cache.json
+          file_pattern: data/mops_notice_seed_cache.json data/official_notice_sources.json data/official_site_scan_cache.json data/lookup_snapshot.json
