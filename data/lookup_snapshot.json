@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T04:58:08+0000",
+  "generatedAt": "2026-05-19T10:28:31+0000",
   "sourceStats": {
     "wespai": 741,
     "idealLabs": 0,
@@ -14964,20 +14964,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "統一",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。＊紀念品領取方式：1.股東如欲委任徵求人代理出席股東常會並領取紀念品【徵求股數限1000股(含)以上】，自即日起洽徵求人之徵求場所辦理【各徵求場所得視徵求狀況提早結束徵求】，徵求人彙總名單請參閱",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_4716_20260611F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -14987,6 +14987,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4716&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_4716_20260611F01_20260519_182212.pdf"
         }
       ]
     },
@@ -15361,25 +15365,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-01",
+      "evotePickupEndDate": "2026-07-03",
       "evotePickupPlace": "",
-      "evotePickupLocation": "中信",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "採電子投票之股東，紀念品領取方式： A. 對象：限已於115年5月24日至6月20日完成電 子投票之股東。  B.  攜帶文件：股東會出席通知書或身分證明文件。  C.  領取期間及地點：自115年7月1日起至7月3日止 (每日9:00至17:00)至中國信託商業銀行代理部 (台北市中正區懷寧街70號)領取，恕不郵寄及 補發。 ה 台北市中正區武昌街一段16巷10號1樓&2樓之1 台北市中正區武昌街一段8號 台北市大同區承德路三段206之2號（承三208巷口） 台北市中山區龍江路155巷6號1樓（長春路口） 台北市大安區延吉街135之2號7樓（忠孝東路口） 台北市大安區敦化南路二段11巷22號（敦南信義路口） 台北市信義區虎林街100巷17號1樓 台北市士林區承德路四段10巷57號 台北市南港區福德街311號（伊美自助洗衣店） 新北市板橋區東門街30之2號1樓之2（府中1號出口） 新北市新店區中正路247巷4弄2號（合康藥局巷內） 新北市永和區得和路373巷31弄11號1樓（原永元路） 新北市三重區文化北路226巷46號1樓（正義北路八方雲集後/三安里站牌） 新北市新莊區公園一路70巷2號（阿耀的店旁巷） 基隆市仁愛區愛三路87號4樓之15（仁愛眼鏡4樓） 桃園市中壢區中台路15號1樓（近中壢監理站、圖書館、夏慕尼、路易莎） 新竹市北大路305巷8號（國泰世華旁巷） 苗栗縣頭份市維新路35號（竹南南地下道全家福鞋店正對面） 台中市南區正義街133巷2之1號 台中市西區金山路49之5號 台中市清水區光華路43巷2號 彰化市中正路二段560巷22號（彰安國中旁巷內） 雲林縣西螺鎮平和路162號（新德記-野爵客） 嘉義市忠義街68號（蘭井街與光彩街中間） 台南市中西區友愛東街15號（萬川餅店旁） 台南市北區公園路128號（好鄰居藥局） 台南市中西區西門路二段407號1樓（舊大舞台對面） 高雄市苓雅區青年一路48號（四維國小正對面） 高雄市岡山區公園東路124號 屏東市中正路131號（秀波股務） （02）2311-1376 （02）8972-5568 （02）2595-6189 （02）2718-0952 （02）2778-3412 （02）2706-3889 （02）2753-5992 0932-135-683 （02）2786-7680 （02）2956-2019 （02）2916-0308 （02）2920-8426 （02）2982-4608 （02）2993-1020 （02）2425-7224 （03）426-0715 （03）523-7681 （037）627-163 （04）2287-2837 （04）2372-4785 （04）2622-0217 （04）722-4669 0912-303-353 （05）222-3203 （06）228-6026 （06）221-9015 （06）221-8925 （07）222-8877 （07）623-6250 （08）765-7277 地 址 電 話",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "一、股東會紀念品-統一超商35元商品卡(紀念品數量如有不足時，得以價值相當者替代)。二、股東如欲委託代理出席領取紀念品時，։ৄў˸ɪ自115年5月22日起至6月16日止洽徵求人之徵求場所辦理(股東辦理股東會委託書及領取紀念品事宜，請依各徵求場所之營業時間內前往洽辦，例假日除外，各徵求場所得視徵求狀況提早結束徵求)，恕不郵寄及補發。徵求場所自115年5月22日起詳見證基會網站(https://free.sfi.org.tw)、中國信託商業銀行代理部網站(https://ecorp.ctbcbank.com/cts/index.jsp)或ਖ਼ᇞ༔f三、紀念品發放原則：持股未滿1,000股之股東，將不予發放紀念品【親自出席股東會或採電子投票之股東除外】。(1)紀念品於開會當天會議結束前會場發放。(2)採電子投票之股東，紀念品領取方式： A. 對象：限已於115年5月24日至6月20日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年7月1日起至7月3日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。ה台北市中正區武昌街一段16巷10號1樓&2樓之1台北市中正區武昌街一段8號台北市大同區承德路三段206之2號（承三208巷口）台北市中山區龍江路155巷6號1樓（長春路口）台北市大安區延吉街135之2號7樓（忠孝東路口）台北市大安區敦化南路二段11巷22號（敦南信義路口）台北市信義區虎林街100巷17號1樓台北市士林區承德路四段10巷57號台北市南港區福德街311號（伊美自助洗衣店）新北市板橋區東門街30之2號1樓之2（府中1號出口）新北市新店區中正路247巷4弄2號（合康藥局巷內）新北市永和區得和路373巷31弄11號1樓（原永元路）新北市三重區文化北路226巷46號1樓（正義北路八方雲集後/三安里站牌）新北市新莊區公園一路70巷2號（阿耀的店旁巷）基隆市仁愛區愛三路87號4樓之15（仁愛眼鏡4樓）桃園市中壢區中台路15號1樓（近中壢監理站、圖書館、夏慕尼、路易莎）新竹市北大路305巷8號（國泰世華旁巷）苗栗縣頭份市維新路35號（竹南南地下道全家福鞋店正對面）台中市南區正義街133巷2之1號台中市西區金山路49之5號台中市清水區光華路43巷2號彰化市中正路二段560巷22號（彰安國中旁巷內）雲林縣西螺鎮平和路162號（新德記-野爵客）嘉義市忠義街68號（蘭井街與光彩街中間）台南市中西區友愛東街15號（萬川餅店旁）台南市北區公園路128號（好鄰居藥局）台南市中西區西門路二段407號1樓（舊大舞台對面）高雄市苓雅區青年一路48號（四維國小正對面）高雄市岡山區公園東路124號屏東市中正路131號（秀波股務）（02）2311-1376（02）8972-5568（02）2595-6189（02）2718-0952（02）2778-3412（02）2706-3889（02）2753-59920932-135-683（02）2786-7680（02）2956-2019（02）2916-0308（02）2920-8426（02）2982-4608（02）2993-1020（02）2425-7224（03）426-0715（03）523-7681（037）627-163（04）2287-2837（04）2372-4785（04）2622-0217（04）722-46690912-303-353（05）222-3203（06）228-6026（06）221-9015（06）221-8925（07）222-8877（07）623-6250（08）765-7277地址電話",
+      "noticeFilename": "2026_4909_20260623F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年7月1日起至7月3日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -15389,6 +15393,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4909&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_4909_20260623F01_20260519_182353.pdf"
         }
       ]
     },
@@ -15578,20 +15586,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "凱基",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "以電子方式行使表決權者得領取外，本公司將不予發放紀念品。 領取方式：",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_4953_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -15601,6 +15609,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4953&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_4953_20260527F01_20260519_182428.pdf"
         }
       ]
     },
@@ -15723,25 +15735,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-04-27",
+      "evotePickupEndDate": "2026-05-20",
       "evotePickupPlace": "",
       "evotePickupLocation": "台新",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品；其數量如有不足時，得以等值商品替代之；紀念品恕不郵寄，逾期亦不再發放。二、紀念品領取方式如下：洽領紀念品須知115/04/27~115/05/20洽徵求人領取※徵求人得視徵求狀況提前結束徵求115/06/09~115/06/11電子投票股東領取※例假日除外※每日08:30~16:30115/05/28於股東會會場領取請持",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "115/04/27~115/05/20洽徵求人領取※徵求人得視徵求狀況提前結束徵求115/06/09~115/06/11電子投票股東領取※例假日除外※每日08:30~16:30115/05/28於股東會會場領取請持",
+      "noticeFilename": "2026_4968_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "115/04/27~115/05/20",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -15751,6 +15763,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4968&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_4968_20260528F01_20260519_182604.pdf"
         }
       ]
     },
@@ -15973,25 +15989,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-08",
+      "evotePickupEndDate": "2026-06-10",
       "evotePickupPlace": "",
-      "evotePickupLocation": "中信",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "A. 對象：限已於115年5月4日至5月31日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年6月8日起至6月10日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。徵求人委任股東擬支持董事被選舉人名單董事被選舉人之經營理念徵求場所名稱或所委託代為處理徵求事務者名稱宏遠證券股份有限公司余有崇魏詩郁皮孟梅亮采投資股份有限公司董事：黃大倫安寶信晶成半導體股份有限公司代表人：李存忠晶成半導體股份有限公司代表人：蔡長達獨立董事：曾宗琳汪林麗珠方頌仁一、\u0007堅持誠信正直，適當授權經營團隊。二、\u0007協助公司規劃未來經營發展方向與策略，以提升技術發展，強化競爭優勢。三、\u0007審核公司營運計畫及重大決策。四、\u0007監督公司營運績效及公司獲利，為股東創造利益。五、\u0007健全公司治理，注意風險管理。宏遠證券股份有限公司地址：台北市大安區信義路四段236號3樓電話：(02)7719-8899全通事務處理股份有限公司及全台處理徵求事務場所地址：台北市大安區敦化南路二段11巷22號電話：(02)2521-2335長龍會議顧問股份有限公司及全台處理徵求事務場所地址：台北市中正區博愛路80號B1電話：(02)2388-8750\u0007\u0007\u0007【徵求股數限1,000股(含)以上】環宇通訊半導體控股股份有限公司115年股東常會委託書徵求人彙總名單",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "一、股東會紀念品：統一超商(7-11)35元商品卡。二、股東如欲委託代理出席領取紀念品時，請於委託書簽名或蓋章【徵求股數限壹仟股(含)以上】自115年5月4日起至5月27日止洽徵求人之徵求場所辦理(股東辦理股東會委託書及領取紀念品事宜，請依各徵求場所之營業時間內前往洽辦，例假日除外，各徵求場所得視徵求狀況提早結束徵求)，恕不郵寄及補發。徵求場所自115年4月30日起詳見證基會網站(https://free.sfi.org.tw)、中國信託商業銀行代理部網站(https://ecorp.ctbcbank.com/cts/index.jsp)或利用客服語音專線(02)6636-5566按股票代號：4991查詢。三、紀念品發放原則：持股未滿1,000股之股東，將不予發放紀念品【親自出席股東會或採電子投票之股東除外】。(1)紀念品於開會當天會議結束前會場發放。(2)採電子投票之股東，紀念品領取方式： A. 對象：限已於115年5月4日至5月31日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年6月8日起至6月10日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。徵求人委任股東擬支持董事被選舉人名單董事被選舉人之經營理念徵求場所名稱或所委託代為處理徵求事務者名稱宏遠證券股份有限公司余有崇魏詩郁皮孟梅亮采投資股份有限公司董事：黃大倫安寶信晶成半導體股份有限公司代表人：李存忠晶成半導體股份有限公司代表人：蔡長達獨立董事：曾宗琳汪林麗珠方頌仁一、\u0007堅持誠信正直，適當授權經營團隊。二、\u0007協助公司規劃未來經營發展方向與策略，以提升技術發展，強化競爭優勢。三、\u0007審核公司營運計畫及重大決策。四、\u0007監督公司營運績效及公司獲利，為股東創造利益。五、\u0007健全公司治理，注意風險管理。宏遠證券股份有限公司地址：台北市大安區信義路四段236號3樓電話：(02)7719-8899全通事務處理股份有限公司及全台處理徵求事務場所地址：台北市大安區敦化南路二段11巷22號電話：(02)2521-2335長龍會議顧問股份有限公司及全台處理徵求事務場所地址：台北市中正區博愛路80號B1電話：(02)2388-8750\u0007\u0007\u0007【徵求股數限1,000股(含)以上】環宇通訊半導體控股股份有限公司115年股東常會委託書徵求人彙總名單",
+      "noticeFilename": "2026_4991_20260603F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年6月8日起至6月10日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -16001,6 +16017,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4991&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_4991_20260603F01_20260519_182801.pdf"
         }
       ]
     },
