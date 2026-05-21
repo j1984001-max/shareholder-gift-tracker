@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T20:28:28+0000",
+  "generatedAt": "2026-05-21T23:00:17+0000",
   "sourceStats": {
     "wespai": 742,
     "idealLabs": 0,
@@ -17885,13 +17885,13 @@
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "一、紀念品名稱：【Savlon沙威隆經典抗菌香皂】持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權、視訊出席者得領取外，本公司將不予發放紀念品；其數量如有不足時，得以等值商品替代之；紀念品恕不郵寄，逾期亦不再發放。二、紀念品領取方式如下：115/04/21~115/05/11洽徵求人領取※徵求人得視徵求狀況提前結束徵求請持",
+      "noticeFilename": "2026_5521_20260522F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -17904,6 +17904,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=5521&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_5521_20260522F01_20260522_065336.pdf"
         }
       ]
     },
@@ -18746,13 +18750,13 @@
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "富爾特科技股份有限公司一一五年股東常會委託書徵求人彙總名單",
+      "noticeFilename": "2026_6136_20260616F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -18765,6 +18769,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6136&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6136_20260616F01_20260522_065544.pdf"
         }
       ]
     },
@@ -18840,22 +18848,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "葉財記世貿大樓後方停車場）",
+      "evotePickupDocuments": "出席簽到卡，或印出ཥcccɿҳୃ̨̻網頁之「議案表決情形」頁面全頁，於\u0012\u0012\u0016ϋ\u0016˜\u0013\u0018ʱ˟d",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出ཥ cccɿҳୃ̨̻網頁之「議案表決情形」頁面全頁，於\u0012\u0012\u0016ϋ\u0016˜\u0013\u0018 ʱ˟d至元大證券股務 代理部：台北市大安區敦化南路二段67號B1或1樓（前往1樓紀念 品發放處領取時，股東請往敦化南路二段73巷進入至葉財記世貿 大樓後方停車場）換領紀念品，此期間非以電子方式行使表決權 之股東，恕不發放紀念品。 ٝ 頎邦科技股份有限公司115年股東常會開會通知書",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6147_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -18865,6 +18873,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6147&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6147_20260527F01_20260522_065720.pdf"
         }
       ]
     },
