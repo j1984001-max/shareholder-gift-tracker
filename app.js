@@ -17,9 +17,13 @@ const statusText = document.getElementById("statusText");
 const resultsBody = document.getElementById("resultsBody");
 const summaryStrip = document.getElementById("summaryStrip");
 const summaryCardTemplate = document.getElementById("summaryCardTemplate");
+const codeCounter = document.getElementById("codeCounter");
+const resultSearchInput = document.getElementById("resultSearchInput");
+const filterTabs = [...document.querySelectorAll(".filter-tab")];
 
 let activeCodes = [];
 let lastResponse = null;
+let activeFilter = "all";
 exportBtn.disabled = true;
 
 function extractCodes(raw) {
@@ -89,6 +93,19 @@ function formatPickupPeriod(item) {
   return item.noticeEvotePickupPeriodText || "未提供";
 }
 
+function hasPickupPeriod(item) {
+  return Boolean(item.evotePickupStartDate || item.evotePickupEndDate || item.noticeEvotePickupPeriodText);
+}
+
+function hasNotice(item) {
+  return Boolean(item.noticeFilename || item.noticeSourceLabel);
+}
+
+function updateCodeCounter() {
+  const count = extractCodes(codesInput.value).length;
+  codeCounter.textContent = `${count} 檔`;
+}
+
 function toSignature(item) {
   return [
     item.status,
@@ -128,6 +145,37 @@ function previewDiffs(results) {
   });
 }
 
+function filterResults(results) {
+  const keyword = (resultSearchInput?.value || "").trim().toLowerCase();
+  return results.filter((item) => {
+    if (activeFilter === "pickup" && !hasPickupPeriod(item)) return false;
+    if (activeFilter === "missingPickup" && hasPickupPeriod(item)) return false;
+    if (activeFilter === "notice" && !hasNotice(item)) return false;
+    if (activeFilter === "changed" && !item.changed) return false;
+    if (!keyword) return true;
+
+    return [
+      item.code,
+      item.companyName,
+      item.souvenirName,
+      item.transferAgentName,
+      item.transferAgentShort,
+      item.evotePickupLocation,
+      item.evotePickupDocuments,
+      item.noticeSummary,
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase()
+      .includes(keyword);
+  });
+}
+
+function renderResultSet(results) {
+  renderSummary(results);
+  renderRows(filterResults(results));
+}
+
 function renderSummary(results) {
   summaryStrip.innerHTML = "";
   const published = results.filter((item) => item.status === "published").length;
@@ -135,18 +183,19 @@ function renderSummary(results) {
   const changed = results.filter((item) => item.changed).length;
   const withVote = results.filter((item) => item.evoteStartDate || item.evoteEndDate).length;
   const withPickupDate = results.filter(
-    (item) => item.evotePickupStartDate || item.evotePickupEndDate || item.noticeEvotePickupPeriodText,
+    (item) => hasPickupPeriod(item),
   ).length;
-  const withNotice = results.filter((item) => item.noticeFilename || item.noticeSourceLabel).length;
+  const withNotice = results.filter((item) => hasNotice(item)).length;
+  const missingPickupDate = Math.max(0, results.length - withPickupDate);
 
   const cards = [
     ["追蹤代號", results.length, "這次查詢的股票代號數量"],
     ["已公告", published, "已抓到紀念品或會議資料"],
-    ["未公告", unpublished, "目前仍建議留在 watchlist 持續追蹤"],
-    ["有新變化", changed, "和你上次查詢相比有欄位變動"],
-    ["含電子投票", withVote, "已補到電子投票起訖資訊"],
+    ["有電投日期", withPickupDate, "已抓到電子投票紀念品領取日期"],
+    ["缺電投日期", missingPickupDate, "優先追蹤這些標的"],
     ["已抓通知書", withNotice, "已從 MOPS 或官方 PDF 補到通知書"],
-    ["有電投領取日期", withPickupDate, "已抓到紀念品電投領取日期的家數"],
+    ["有新變化", changed, "和上次查詢相比有欄位變動"],
+    ["含電子投票", withVote, "已補到電子投票起訖資訊"],
   ];
 
   cards.forEach(([label, value, note]) => {
@@ -194,6 +243,10 @@ function renderRows(results) {
   resultsBody.innerHTML = results
     .map((item) => {
       const souvenirText = item.souvenirName || "尚未公布";
+      const pickupPeriod = formatPickupPeriod(item);
+      const pickupLocation = item.evotePickupLocation || item.evotePickupPlace || "未補到地點";
+      const pickupDocuments = item.evotePickupDocuments || "未補到攜帶資料";
+      const pickupRule = item.evotePickupRule || item.noticeSummary || item.meetingDistributionRule || "未補到更細資訊";
       const dateBlock = `
         <div class="cell-stack">
           <span><strong>最後買進：</strong>${formatDate(item.lastBuyDate)}</span>
@@ -204,11 +257,13 @@ function renderRows(results) {
       const evoteBlock = `
         <div class="cell-stack">
           <span><strong>電子投票：</strong>${formatRange(item.evoteStartDate, item.evoteEndDate)}</span>
-          <span><strong>電投領取期：</strong>${formatPickupPeriod(item)}</span>
+          <div class="pickup-focus ${hasPickupPeriod(item) ? "ready" : "missing"}">
+            <span><strong>電投領取期</strong>${pickupPeriod}</span>
+            <span><strong>領取地點</strong>${pickupLocation}</span>
+            <span><strong>攜帶資料</strong>${pickupDocuments}</span>
+          </div>
+          <span><strong>領取資訊：</strong>${pickupRule}</span>
           <span><strong>領取來源：</strong>${item.evotePickupSource || "未標示"}</span>
-          <span><strong>領取地點：</strong>${item.evotePickupLocation || item.evotePickupPlace || "未補到地點"}</span>
-          <span><strong>攜帶資料：</strong>${item.evotePickupDocuments || "未補到攜帶資料"}</span>
-          <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
           <span><strong>通知書來源：</strong>${item.noticeSourceLabel || "未抓到通知書"}</span>
           <span><strong>通知書摘要：</strong>${item.noticeSummary || item.noticeGiftSummary || "未補到摘要"}</span>
           <span><strong>通知書快取：</strong>${
@@ -230,7 +285,7 @@ function renderRows(results) {
       `;
 
       return `
-        <tr class="${item.changed ? "row-changed" : ""}">
+        <tr class="${item.changed ? "row-changed" : ""} ${hasPickupPeriod(item) ? "" : "row-missing-pickup"}">
           <td>
             <div class="stock-block">
               <strong>${item.code}</strong>
@@ -325,8 +380,7 @@ async function lookup(codes) {
 
       const preview = previewDiffs(collected);
       lastResponse = { requestedCodes: codes, results: preview };
-      renderSummary(preview);
-      renderRows(preview);
+      renderResultSet(preview);
     }
 
     const enriched = computeDiffs(collected);
@@ -334,8 +388,7 @@ async function lookup(codes) {
     exportBtn.disabled = !enriched.length;
     updatedAtText.textContent = new Date().toLocaleString("zh-TW");
     statusText.textContent = `已完成 ${enriched.length} 檔查詢，資料已逐筆載入。`;
-    renderSummary(enriched);
-    renderRows(enriched);
+    renderResultSet(enriched);
   } catch (error) {
     exportBtn.disabled = true;
     statusText.textContent = error.message || "查詢失敗";
@@ -349,6 +402,24 @@ async function lookup(codes) {
 lookupBtn.addEventListener("click", () => {
   const codes = extractCodes(codesInput.value);
   lookup(codes);
+});
+
+codesInput.addEventListener("input", updateCodeCounter);
+
+filterTabs.forEach((button) => {
+  button.addEventListener("click", () => {
+    activeFilter = button.dataset.filter || "all";
+    filterTabs.forEach((tab) => tab.classList.toggle("active", tab === button));
+    if (lastResponse?.results) {
+      renderResultSet(lastResponse.results);
+    }
+  });
+});
+
+resultSearchInput?.addEventListener("input", () => {
+  if (lastResponse?.results) {
+    renderResultSet(lastResponse.results);
+  }
 });
 
 refreshBtn.addEventListener("click", () => {
@@ -401,6 +472,7 @@ clearBtn.addEventListener("click", () => {
   codesInput.value = "";
   activeCodes = [];
   exportBtn.disabled = true;
+  updateCodeCounter();
   statusText.textContent = "已清空輸入";
 });
 
@@ -415,11 +487,13 @@ function bootstrap() {
   const saved = loadWatchlist();
   if (saved) {
     codesInput.value = saved;
+    updateCodeCounter();
     const codes = extractCodes(saved);
     if (codes.length) {
       lookup(codes);
     }
   }
+  updateCodeCounter();
 }
 
 bootstrap();

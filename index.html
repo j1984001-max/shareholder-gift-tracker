@@ -11,28 +11,18 @@
 </head>
 <body>
   <div class="page-shell">
-    <header class="hero-card">
-      <div class="hero-copy">
+    <header class="app-header">
+      <div>
         <p class="eyebrow">Shareholder Gift Desk</p>
         <h1>股東會紀念品追蹤器</h1>
-        <p class="lead">
-          批次貼上股票代號，快速整理今年的股東會紀念品、最後買進日、電子投票期間與可補到的領取線索。
-        </p>
+        <p class="lead">批次查詢紀念品、股東會日期、電子投票領取時間、地點與攜帶文件。</p>
       </div>
-      <div class="hero-meta">
-        <div class="meta-block">
-          <span>資料來源</span>
-          <strong>撿股讚 / 股東禮簿 / 宏遠股代</strong>
-        </div>
-        <div class="meta-block">
+      <div class="header-actions">
+        <div class="meta-pill">
           <span>本次更新</span>
           <strong id="updatedAtText">尚未查詢</strong>
         </div>
-        <div class="meta-block">
-          <span>自動刷新</span>
-          <strong>頁面開啟時每 15 分鐘</strong>
-        </div>
-        <div class="meta-block">
+        <div class="meta-pill wide">
           <span>補資料進度</span>
           <strong id="noticeProgressText">讀取中...</strong>
         </div>
@@ -42,13 +32,16 @@
     <main class="dashboard-grid">
       <aside class="control-card">
         <div class="panel-head">
-          <h2>批次匯入</h2>
-          <p>支援逗號、空白、換行，或混合文字自動抓代號</p>
+          <div>
+            <h2>批次匯入</h2>
+            <p>可貼上 `台泥（1101）嘉泥（1103）` 這類連續文字。</p>
+          </div>
+          <span class="code-counter" id="codeCounter">0 檔</span>
         </div>
 
         <label class="field-block">
           <span>股票代號</span>
-          <textarea id="codesInput" rows="12" placeholder="例如：2317, 2409, 3037&#10;9938&#10;2006&#10;或：台泥（1101）嘉泥（1103）"></textarea>
+          <textarea id="codesInput" rows="10" placeholder="例如：2317, 2409, 3037&#10;9938&#10;2006&#10;或：台泥（1101）嘉泥（1103）"></textarea>
         </label>
 
         <div class="button-row">
@@ -62,15 +55,8 @@
         </div>
 
         <section class="watch-card">
-          <div class="panel-head mini">
-            <h3>追蹤規則</h3>
-          </div>
-          <ul class="hint-list">
-            <li>已公告：直接顯示紀念品、最後買進日與電子投票資訊。</li>
-            <li>未公告：保留在 watchlist，之後重查就能看到新資料。</li>
-            <li>有變更：若和你上次查詢結果不同，會標示「NEW」。</li>
-            <li>輸入可直接貼上像 `台泥（1101）嘉泥（1103）` 這種連續內容，系統會自動抓出代號。</li>
-          </ul>
+          <h3>工作流</h3>
+          <p>先查詢，再用上方摘要抓出缺電投日期的標的；下載 Excel 可接著編輯。</p>
         </section>
       </aside>
 
@@ -87,6 +73,20 @@
               <button id="exportBtn" class="ghost-btn" type="button">下載 Excel</button>
               <button id="refreshBtn" class="ghost-btn" type="button">重新整理</button>
             </div>
+          </div>
+
+          <div class="result-tools">
+            <div class="filter-tabs" role="tablist" aria-label="結果篩選">
+              <button class="filter-tab active" type="button" data-filter="all">全部</button>
+              <button class="filter-tab" type="button" data-filter="pickup">有電投日期</button>
+              <button class="filter-tab" type="button" data-filter="missingPickup">缺電投日期</button>
+              <button class="filter-tab" type="button" data-filter="notice">有通知書</button>
+              <button class="filter-tab" type="button" data-filter="changed">有變更</button>
+            </div>
+            <label class="result-search">
+              <span>搜尋</span>
+              <input id="resultSearchInput" type="search" placeholder="代號、公司、股代、地點">
+            </label>
           </div>
 
           <div class="table-wrap">
