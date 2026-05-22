@@ -33,6 +33,7 @@ LOOKUP_SNAPSHOT_PATH = ROOT / "data" / "lookup_snapshot.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 NOTICE_CACHE_VERSION = 3
+EXCEL_ILLEGAL_CHAR_RE = re.compile(r"[\x00-\x08\x0b-\x0c\x0e-\x1f]")
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_YEAR - 1911}"
 IDEAL_URL = "https://souvenir.ideal-labs.com/"
@@ -1355,7 +1356,7 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     worksheet.title = "股東會紀念品"
 
     for row in build_export_rows(results):
-        worksheet.append(row)
+        worksheet.append([excel_safe_value(value) for value in row])
 
     for cell in worksheet[1]:
         cell.font = Font(bold=True)
@@ -1378,6 +1379,12 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     output = io.BytesIO()
     workbook.save(output)
     return output.getvalue()
+
+
+def excel_safe_value(value: Any) -> Any:
+    if not isinstance(value, str):
+        return value
+    return EXCEL_ILLEGAL_CHAR_RE.sub("", value)[:32767]
 
 
 def empty_record(code: str, note: str = "") -> dict[str, Any]:
