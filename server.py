@@ -66,6 +66,67 @@ def normalize_text(value: str) -> str:
     return " ".join(value.replace("\xa0", " ").split())
 
 
+def strip_notice_noise(text: str) -> str:
+    cleaned = compact_text(text or "")
+    if not cleaned:
+        return ""
+
+    stop_patterns = [
+        r"window\.focus\(\)",
+        r"股東戶號[:：]",
+        r"股東或代\s*理人姓名",
+        r"持有股數[:：]",
+        r"親自出席簽名或蓋章",
+        r"委任股東",
+        r"徵求人",
+        r"受託代理人",
+        r"第\s*[一二三四五六七八九十0-9]+\s*聯",
+        r"出席簽到卡",
+        r"委託書填表須知",
+        r"※股東、徵求人、受託代理人",
+        r"﹏+",
+    ]
+    end = len(cleaned)
+    for pattern in stop_patterns:
+        match = re.search(pattern, cleaned, re.I)
+        if match:
+            end = min(end, match.start())
+    cleaned = cleaned[:end]
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    return cleaned.strip("：:，,。 ;；")
+
+
+def trim_notice_summary(text: str) -> str:
+    cleaned = strip_notice_noise(text)
+    if not cleaned:
+        return ""
+
+    cut_markers = [
+        "股東如欲委託代理出席領取紀念品時",
+        "貴股東如不克親自出席欲委託徵求人出席股東會",
+        "貴股東如欲委託徵求人出席並領取紀念品",
+        "紀念品領取方式如下",
+        "採電子投票之股東",
+        "電子投票領取紀念品方式",
+        "電子方式行使表決權且投票成功者",
+        "電子投票成功且未以其他方式出席股東會之股東",
+        "採電子方式行使表決權之股東",
+        "以電子方式行使表決權者",
+        "本次股東會如有公開徵求委託書之情事",
+        "委託書用紙填發須知",
+        "※洽領紀念品須知※",
+    ]
+    for marker in cut_markers:
+        idx = cleaned.find(marker)
+        if idx > 0:
+            cleaned = cleaned[:idx]
+            break
+
+    cleaned = re.sub(r"[（(]持股1,000股以上[）)][:：]?", "", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned)
+    return cleaned.strip("：:，,。 ;；")
+
+
 def json_response(handler: SimpleHTTPRequestHandler, payload: dict[str, Any], status: int = 200) -> None:
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     handler.send_response(status)
@@ -769,12 +830,27 @@ def extract_notice_summary(text: str) -> dict[str, Any]:
     pretty_evote = (
         evote_rule.replace("A.", "A. ").replace("B.", " B. ").replace("C.", " C. ").replace("D.", " D. ").strip()
     )
+    pretty_summary = trim_notice_summary(pretty_summary)
+    pretty_evote = strip_notice_noise(pretty_evote)
+
+    # Summary should focus on gift/distribution notes; if OCR or regex picked
+    # the electronic-vote block or proxy boilerplate, drop it from summary.
+    if any(
+        marker in pretty_summary
+        for marker in (
+            "電子投票領取紀念品方式",
+            "電子方式行使表決權",
+            "採電子投票之股東",
+            "以電子方式行使表決權者",
+        )
+    ):
+        pretty_summary = ""
 
     start_date = None
     end_date = None
     period_text = ""
-    if evote_rule:
-        start_date, end_date, period_text = parse_pickup_roc_range_from_text(evote_rule)
+    if pretty_evote:
+        start_date, end_date, period_text = parse_pickup_roc_range_from_text(pretty_evote)
 
     return {
         "giftSummary": pretty_summary,
@@ -854,26 +930,133 @@ def extract_pickup_documents(rule_text: str) -> str:
     if not rule:
         return ""
 
+    def clean_documents(value: str) -> str:
+        cleaned = value.strip("：:，,。 ")
+        cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
+        cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
+        return cleaned.strip("：:，,。 ")
+
     match = re.search(r"攜帶下列文件之一[:：](.+?)至下列地點", rule)
     if match:
-        return match.group(1).strip("：:，,。 ")
+        return clean_documents(match.group(1))
 
     match = re.search(r"(?:攜帶文件|攜帶資料|攜帶下列文件)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
     if match:
-        return match.group(1).strip("：:，,。 ")
+        return clean_documents(match.group(1))
 
     match = re.search(r"(?:憑|限持)(.{2,160}?)(?:至[^。；]+?(?:領取|換領)|，?於\d{2,3}年|$)", compact)
     if match:
-        return match.group(1).strip("：:，,。 ")
+        return clean_documents(match.group(1))
 
     match = re.search(r"攜帶(.{2,160}?)(?:至[^。；]+?領取|等擇一皆可|領取)", compact)
     if match:
-        return match.group(1).strip("：:，,。 ")
+        return clean_documents(match.group(1))
 
     if "身分證明文件" in compact and "股東會出席通知書" in compact:
         return "股東會出席通知書或身分證明文件"
 
     return ""
+
+
+def compose_notice_summary(
+    period_text: str,
+    location: str,
+    documents: str,
+    rule_text: str,
+    fallback_summary: str,
+) -> str:
+    evote_markers = (
+        "電子投票",
+        "電子方式行使表決權",
+        "採電子投票",
+        "投票成功",
+    )
+    has_evote_signal = any(marker in rule_text for marker in evote_markers)
+    if not period_text and not documents:
+        return ""
+
+    parts: list[str] = []
+    if period_text:
+        parts.append(f"領取時間：{period_text}")
+    if location:
+        parts.append(f"領取地點：{location}")
+    if documents:
+        parts.append(f"攜帶文件：{documents}")
+
+    cleaned_rule = strip_notice_noise(rule_text)
+    if cleaned_rule:
+        cleaned_rule = re.sub(r"\s+", " ", cleaned_rule).strip("：:，,。 ;；")
+        if period_text:
+            cleaned_rule = cleaned_rule.replace(period_text, "").strip("：:，,。 ;；")
+        if location:
+            cleaned_rule = cleaned_rule.replace(location, "").strip("：:，,。 ;；")
+        if documents:
+            cleaned_rule = cleaned_rule.replace(documents, "").strip("：:，,。 ;；")
+        notices: list[str] = []
+        for pattern in (
+            r"限[^。；]{0,60}",
+            r"僅限[^。；]{0,60}",
+            r"本人[^。；]{0,60}",
+            r"恕不[^。；]{0,60}",
+        ):
+            notices.extend(match.strip("：:，,。 ;；") for match in re.findall(pattern, cleaned_rule))
+        if notices:
+            deduped = []
+            seen = set()
+            for notice in notices:
+                if (
+                    notice not in seen
+                    and len(notice) >= 5
+                    and "至領取" not in notice
+                    and "紀念品兌換券" not in notice
+                ):
+                    deduped.append(notice)
+                    seen.add(notice)
+            if deduped:
+                parts.append(f"補充：{'；'.join(deduped)}")
+
+    if parts:
+        return "；".join(part for part in parts if part)
+    return trim_notice_summary(fallback_summary)
+
+
+def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
+    evote_pickup_rule = strip_notice_noise(record.get("evotePickupRule", ""))
+    evote_pickup_place = record.get("evotePickupPlace", "")
+    transfer_agent_name = record.get("transferAgentName", "") or record.get("transferAgentShort", "")
+    evote_pickup_source = record.get("evotePickupSource", "")
+    evote_pickup_location = record.get("evotePickupLocation", "") or extract_pickup_location(
+        evote_pickup_source,
+        evote_pickup_place,
+        evote_pickup_rule,
+        transfer_agent_name,
+    )
+    evote_pickup_documents = record.get("evotePickupDocuments", "") or extract_pickup_documents(evote_pickup_rule)
+    period_text = record.get("noticeEvotePickupPeriodText", "")
+    if not period_text:
+        start = record.get("evotePickupStartDate")
+        end = record.get("evotePickupEndDate")
+        if start and end:
+            period_text = f"{start} 至 {end}"
+        else:
+            period_text = start or end or ""
+
+    gift_summary = trim_notice_summary(record.get("noticeGiftSummary", ""))
+    notice_summary = compose_notice_summary(
+        period_text,
+        evote_pickup_location,
+        evote_pickup_documents,
+        evote_pickup_rule,
+        gift_summary,
+    )
+
+    record["evotePickupRule"] = evote_pickup_rule
+    record["evotePickupLocation"] = evote_pickup_location
+    record["evotePickupDocuments"] = evote_pickup_documents
+    record["noticeEvotePickupPeriodText"] = period_text
+    record["noticeGiftSummary"] = gift_summary
+    record["noticeSummary"] = notice_summary
+    return record
 
 
 def build_notice_listing_from_meeting_date(code: str, meeting_date: str | None) -> dict[str, str] | None:
@@ -1008,7 +1191,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
         "電投領取地點",
         "電投攜帶資料",
         "電投領取資訊",
-        "通知書摘要",
+        "通知書摘要(電投重點)",
         "通知書快取",
         "股代名稱",
         "股代電話",
@@ -1033,7 +1216,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
             item.get("evotePickupLocation", ""),
             item.get("evotePickupDocuments", ""),
             item.get("evotePickupRule", ""),
-            item.get("noticeGiftSummary", ""),
+            item.get("noticeSummary", "") or item.get("noticeGiftSummary", ""),
             item.get("noticeCacheStatus", ""),
             item.get("transferAgentName", "") or item.get("transferAgentShort", ""),
             item.get("transferAgentPhone", ""),
@@ -1103,6 +1286,7 @@ def empty_record(code: str, note: str = "") -> dict[str, Any]:
         "meetingDistributionRule": "",
         "proxyPeriodText": "",
         "agentDistributionPeriodText": "",
+        "noticeSummary": "",
         "noticeGiftSummary": "",
         "noticeFilename": "",
         "noticeUploadedAt": "",
@@ -1138,7 +1322,7 @@ def build_lookup_results(
     for code in codes:
         record = snapshot_records.get(code) if use_snapshot else None
         if isinstance(record, dict):
-            results_map[code] = record
+            results_map[code] = enrich_record_notice_fields(dict(record))
         else:
             missing_codes.append(code)
 
@@ -1253,6 +1437,13 @@ def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bo
     evote_pickup_documents = (mops_notice or {}).get("evotePickupDocuments") or extract_pickup_documents(
         evote_pickup_rule
     )
+    notice_summary = compose_notice_summary(
+        (mops_notice or {}).get("evotePickupPeriodText", ""),
+        evote_pickup_location,
+        evote_pickup_documents,
+        evote_pickup_rule,
+        (mops_notice or {}).get("giftSummary", ""),
+    )
 
     return {
         "code": code,
@@ -1282,6 +1473,7 @@ def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bo
         "meetingDistributionRule": (honsec or {}).get("meeting_distribution_rule", ""),
         "proxyPeriodText": (honsec or {}).get("proxy_period_text", ""),
         "agentDistributionPeriodText": (honsec or {}).get("agent_distribution_period_text", ""),
+        "noticeSummary": notice_summary,
         "noticeGiftSummary": (mops_notice or {}).get("giftSummary", ""),
         "noticeFilename": (mops_notice or {}).get("filename", ""),
         "noticeUploadedAt": (mops_notice or {}).get("uploadedAt", ""),
@@ -1304,6 +1496,13 @@ def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bo
 class AppHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, directory=str(ROOT), **kwargs)
+
+    def do_POST(self) -> None:
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path == "/api/export.xlsx":
+            self.handle_export_post()
+            return
+        json_response(self, {"ok": False, "error": "Not found"}, status=404)
 
     def do_GET(self) -> None:
         parsed = urllib.parse.urlparse(self.path)
@@ -1419,6 +1618,20 @@ class AppHandler(SimpleHTTPRequestHandler):
                 {"ok": False, "error": f"Excel 匯出失敗：{error}"},
                 status=502,
             )
+
+    def handle_export_post(self) -> None:
+        try:
+            length = int(self.headers.get("Content-Length", "0"))
+        except ValueError:
+            length = 0
+        try:
+            raw_body = self.rfile.read(max(0, length))
+            payload = json.loads(raw_body.decode("utf-8")) if raw_body else {}
+        except Exception:
+            json_response(self, {"ok": False, "error": "匯出參數格式錯誤。"}, status=400)
+            return
+        codes = clean_codes(" ".join(str(code) for code in payload.get("codes", [])))
+        self.handle_export(",".join(codes))
 
 
 def main() -> None:

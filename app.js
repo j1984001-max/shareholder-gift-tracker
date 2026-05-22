@@ -210,7 +210,7 @@ function renderRows(results) {
           <span><strong>攜帶資料：</strong>${item.evotePickupDocuments || "未補到攜帶資料"}</span>
           <span><strong>領取資訊：</strong>${item.evotePickupRule || item.meetingDistributionRule || item.evotePickupPlace || "未補到更細資訊"}</span>
           <span><strong>通知書來源：</strong>${item.noticeSourceLabel || "未抓到通知書"}</span>
-          <span><strong>通知書摘要：</strong>${item.noticeGiftSummary || "未補到摘要"}</span>
+          <span><strong>通知書摘要：</strong>${item.noticeSummary || item.noticeGiftSummary || "未補到摘要"}</span>
           <span><strong>通知書快取：</strong>${
             item.noticeCacheStatus === "hit"
               ? "已快取"
@@ -312,6 +312,7 @@ async function lookup(codes) {
           evotePickupDocuments: "",
           evotePickupRule: "",
           evotePickupSource: "",
+          noticeSummary: "",
           noticeGiftSummary: "",
           noticeEvotePickupPeriodText: "",
           noticeCacheStatus: "",
@@ -355,13 +356,48 @@ refreshBtn.addEventListener("click", () => {
   lookup(codes);
 });
 
-exportBtn.addEventListener("click", () => {
+exportBtn.addEventListener("click", async () => {
   const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
   if (!codes.length) {
     statusText.textContent = "請先查詢資料後再下載 Excel";
     return;
   }
-  window.location.href = `/api/export.xlsx?codes=${encodeURIComponent(codes.join(","))}`;
+  exportBtn.disabled = true;
+  statusText.textContent = "正在產生 Excel...";
+  try {
+    const response = await fetch("/api/export.xlsx", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ codes }),
+    });
+    if (!response.ok) {
+      let message = "Excel 匯出失敗";
+      try {
+        const payload = await response.json();
+        message = payload.error || message;
+      } catch {}
+      throw new Error(message);
+    }
+    const blob = await response.blob();
+    const disposition = response.headers.get("Content-Disposition") || "";
+    const filenameMatch = disposition.match(/filename=\"?([^"]+)\"?/i);
+    const filename = filenameMatch ? filenameMatch[1] : "shareholder-gifts.xlsx";
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+    statusText.textContent = "Excel 已開始下載";
+  } catch (error) {
+    statusText.textContent = error.message || "Excel 匯出失敗";
+  } finally {
+    exportBtn.disabled = !lastResponse?.results?.length;
+  }
 });
 
 saveWatchlistBtn.addEventListener("click", () => {
