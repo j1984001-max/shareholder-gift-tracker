@@ -439,6 +439,7 @@ exportBtn.addEventListener("click", async () => {
     const form = document.createElement("form");
     form.method = "POST";
     form.action = "/api/export.xlsx";
+    form.target = "excelDownloadFrame";
     form.style.display = "none";
 
     const input = document.createElement("input");
@@ -446,6 +447,14 @@ exportBtn.addEventListener("click", async () => {
     input.name = "codes";
     input.value = codes.join(" ");
     form.appendChild(input);
+
+    let frame = document.querySelector('iframe[name="excelDownloadFrame"]');
+    if (!frame) {
+      frame = document.createElement("iframe");
+      frame.name = "excelDownloadFrame";
+      frame.style.display = "none";
+      document.body.appendChild(frame);
+    }
 
     document.body.appendChild(form);
     form.submit();
