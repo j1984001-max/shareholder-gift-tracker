@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import signal
+import socket
 import re
 import sys
 import time
@@ -28,13 +30,27 @@ TWSE_COMPANY_API = "https://openapi.twse.com.tw/v1/opendata/t187ap03_L"
 TPEX_COMPANY_API = "https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O"
 OFFICIAL_SOURCES_PATH = ROOT / "data" / "official_notice_sources.json"
 OFFICIAL_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
+COMPANY_SITES_CACHE_PATH = ROOT / "data" / "company_sites_cache.json"
 PAGE_TIMEOUT_SECONDS = 10
+COMPANY_SCAN_TIMEOUT_SECONDS = 25
+COMPANY_SITES_CACHE_TTL_SECONDS = 24 * 3600
+FETCH_ENGINE_AUTO = "auto"
+FETCH_ENGINE_URLLIB = "urllib"
+FETCH_ENGINE_SCRAPLING = "scrapling"
 
 PAGE_KEYWORDS = (
     "投資人",
     "股東",
     "股東會",
     "公司治理",
+    "下載",
+    "檔案",
+    "公告",
+    "專區",
+    "relations",
+    "download",
+    "files",
+    "reports",
     "財務",
     "ir",
     "investor",
@@ -60,6 +76,26 @@ NEGATIVE_PDF_KEYWORDS = (
     "財報",
     "financial",
 )
+PRIORITY_PAGE_KEYWORDS = (
+    "投資人專區",
+    "股東專區",
+    "股東會",
+    "公司治理",
+    "檔案下載",
+    "下載專區",
+    "投資人關係",
+    "investor relations",
+    "shareholder meeting",
+    "corporate governance",
+    "download",
+    "ir",
+)
+PDF_URL_RE = re.compile(r"""(?P<url>https?://[^\s"'<>]+?\.pdf(?:\?[^\s"'<>]*)?)""", re.I)
+
+try:
+    from scrapling.fetchers import Fetcher as ScraplingFetcher
+except Exception:  # pragma: no cover - optional dependency
+    ScraplingFetcher = None
 
 
 class LinkParser(HTMLParser):
@@ -92,8 +128,40 @@ class LinkParser(HTMLParser):
             self._current_text = []
 
 
+class CompanyScanTimeoutError(TimeoutError):
+    pass
+
+
+def _company_scan_timeout_handler(signum: int, frame: object) -> None:
+    raise CompanyScanTimeoutError("company site scan timed out")
+
+
 def fetch_json(url: str) -> list[dict[str, Any]]:
     return json.loads(server.fetch_bytes(url).decode("utf-8", "ignore"))
+
+
+def classify_error(error: Exception | str) -> str:
+    message = str(error or "").strip()
+    lowered = message.lower()
+    if isinstance(error, socket.gaierror) or "nodename nor servname provided" in lowered or "name or service not known" in lowered:
+        return "dns"
+    if isinstance(error, TimeoutError) or "timed out" in lowered or "timeout" in lowered:
+        return "timeout"
+    if isinstance(error, urllib.error.HTTPError):
+        return f"http_{error.code}"
+    if "http error 403" in lowered or "forbidden" in lowered:
+        return "http_403"
+    if "http error 404" in lowered or "not found" in lowered:
+        return "http_404"
+    if "ssl" in lowered or "certificate" in lowered or "tls" in lowered:
+        return "ssl"
+    if "connection refused" in lowered:
+        return "connection_refused"
+    if "connection reset" in lowered:
+        return "connection_reset"
+    if "scrapling is not installed" in lowered:
+        return "scrapling_missing"
+    return "fetch_error"
 
 
 def normalize_company_url(value: str) -> str:
@@ -151,6 +219,24 @@ def looks_like_page_candidate(link: dict[str, str], url: str, base_url: str) -> 
     return any(keyword.lower() in haystack for keyword in PAGE_KEYWORDS)
 
 
+def score_page_candidate(link: dict[str, str], url: str, base_url: str) -> int:
+    if not same_site(base_url, url):
+        return 0
+    if re.search(r"\.(?:pdf|doc|docx|xls|xlsx|zip|jpg|png)(?:$|\?)", url, re.I):
+        return 0
+    haystack = compact_for_match(f"{link.get('text', '')} {url}")
+    score = 0
+    for keyword in PAGE_KEYWORDS:
+        if keyword.lower() in haystack:
+            score += 2
+    for keyword in PRIORITY_PAGE_KEYWORDS:
+        if keyword.lower() in haystack:
+            score += 4
+    if re.search(r"investor|shareholder|governance|download|ir|pdf|meeting|notice|股東|治理|下載|公告", haystack, re.I):
+        score += 2
+    return score
+
+
 def score_pdf_candidate(link: dict[str, str], url: str, code: str) -> int:
     haystack = compact_for_match(f"{link.get('text', '')} {url}")
     if CURRENT_ROC_YEAR not in haystack and CURRENT_AD_YEAR not in haystack:
@@ -173,7 +259,33 @@ def score_pdf_candidate(link: dict[str, str], url: str, code: str) -> int:
     return score
 
 
-def fetch_page(url: str) -> str:
+def extract_pdf_candidates_from_html(html_text: str, page_url: str, code: str, company_name: str) -> list[dict[str, str]]:
+    candidates: dict[str, dict[str, str | int]] = {}
+    for match in PDF_URL_RE.finditer(html_text):
+        raw_url = match.group("url")
+        url = absolute_url(page_url, raw_url) or quote_url(raw_url)
+        if not url:
+            continue
+        score = score_pdf_candidate({"text": ""}, url, code)
+        if score < 5:
+            continue
+        candidates[url] = {
+            "url": url,
+            "label": f"{company_name or code}官網開會通知書",
+            "sourceType": "company_pdf",
+            "score": score,
+        }
+    ranked = sorted(candidates.values(), key=lambda item: int(item["score"]), reverse=True)
+    return [{key: str(value) for key, value in item.items() if key != "score"} for item in ranked]
+
+
+def fetch_page(url: str, fetch_engine: str) -> str:
+    if fetch_engine in (FETCH_ENGINE_AUTO, FETCH_ENGINE_SCRAPLING) and ScraplingFetcher is not None:
+        try:
+            return fetch_page_with_scrapling(url)
+        except Exception:
+            if fetch_engine == FETCH_ENGINE_SCRAPLING:
+                raise
     return server.fetch_text(url, timeout=PAGE_TIMEOUT_SECONDS)
 
 
@@ -189,23 +301,59 @@ def parse_links(html_text: str, page_url: str) -> list[dict[str, str]]:
     return links
 
 
-def load_company_sites() -> dict[str, dict[str, str]]:
+def load_company_sites_cache(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def save_company_sites_cache(path: Path, companies: dict[str, dict[str, str]]) -> None:
+    path.parent.mkdir(exist_ok=True)
+    payload = {
+        "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "generatedAtEpoch": time.time(),
+        "companies": {code: companies[code] for code in sorted(companies)},
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def load_company_sites(use_cache: bool = True, cache_ttl_seconds: int = COMPANY_SITES_CACHE_TTL_SECONDS) -> dict[str, dict[str, str]]:
+    stale_companies: dict[str, dict[str, str]] = {}
+    if use_cache:
+        cache_payload = load_company_sites_cache(COMPANY_SITES_CACHE_PATH)
+        cached_companies = cache_payload.get("companies")
+        generated_at = float(cache_payload.get("generatedAtEpoch") or 0)
+        if isinstance(cached_companies, dict):
+            stale_companies = {str(code): item for code, item in cached_companies.items() if isinstance(item, dict)}
+        if stale_companies and generated_at and time.time() - generated_at < cache_ttl_seconds:
+            return stale_companies
+
     companies: dict[str, dict[str, str]] = {}
-    for row in fetch_json(TWSE_COMPANY_API):
-        code = str(row.get("公司代號", "")).strip()
-        url = normalize_company_url(str(row.get("網址", "")))
-        if code and url:
-            companies[code] = {"code": code, "name": str(row.get("公司簡稱") or row.get("公司名稱") or ""), "url": url, "market": "TWSE"}
-    for row in fetch_json(TPEX_COMPANY_API):
-        code = str(row.get("SecuritiesCompanyCode", "")).strip()
-        url = normalize_company_url(str(row.get("WebAddress", "")))
-        if code and url:
-            companies[code] = {
-                "code": code,
-                "name": str(row.get("CompanyAbbreviation") or row.get("CompanyName") or ""),
-                "url": url,
-                "market": "TPEx",
-            }
+    try:
+        for row in fetch_json(TWSE_COMPANY_API):
+            code = str(row.get("公司代號", "")).strip()
+            url = normalize_company_url(str(row.get("網址", "")))
+            if code and url:
+                companies[code] = {"code": code, "name": str(row.get("公司簡稱") or row.get("公司名稱") or ""), "url": url, "market": "TWSE"}
+        for row in fetch_json(TPEX_COMPANY_API):
+            code = str(row.get("SecuritiesCompanyCode", "")).strip()
+            url = normalize_company_url(str(row.get("WebAddress", "")))
+            if code and url:
+                companies[code] = {
+                    "code": code,
+                    "name": str(row.get("CompanyAbbreviation") or row.get("CompanyName") or ""),
+                    "url": url,
+                    "market": "TPEx",
+                }
+    except Exception:
+        if stale_companies:
+            return stale_companies
+        raise
+    save_company_sites_cache(COMPANY_SITES_CACHE_PATH, companies)
     return companies
 
 
@@ -225,21 +373,70 @@ def unique_preserve(values: list[str]) -> list[str]:
     return out
 
 
-def discover_company_pdfs(code: str, company: dict[str, str], max_pages: int) -> list[dict[str, str]]:
+def rotate_codes(codes: list[str], offset: int) -> list[str]:
+    if not codes:
+        return []
+    real_offset = offset % len(codes)
+    return [*codes[real_offset:], *codes[:real_offset]]
+
+
+def fetch_page_with_scrapling(url: str) -> str:
+    if ScraplingFetcher is None:
+        raise RuntimeError("Scrapling is not installed")
+
+    attempts = (
+        {"timeout": PAGE_TIMEOUT_SECONDS, "follow_redirects": True, "stealthy_headers": True},
+        {"timeout": PAGE_TIMEOUT_SECONDS, "follow_redirects": True},
+    )
+    last_error: Exception | None = None
+    for kwargs in attempts:
+        try:
+            page = ScraplingFetcher.get(url, **kwargs)
+            text = getattr(page, "text", "")
+            if callable(text):
+                text = text()
+            if isinstance(text, str) and text.strip():
+                return text
+            html = getattr(page, "html_content", "") or getattr(page, "html", "")
+            if callable(html):
+                html = html()
+            if isinstance(html, str) and html.strip():
+                return html
+            rendered = str(page)
+            if rendered.strip():
+                return rendered
+        except TypeError as error:
+            last_error = error
+            continue
+        except Exception as error:
+            last_error = error
+            continue
+    raise RuntimeError(str(last_error or "Scrapling could not fetch page"))
+
+
+def discover_company_pdfs(code: str, company: dict[str, str], max_pages: int, fetch_engine: str) -> list[dict[str, str]]:
     base_url = company["url"]
-    queue = [base_url]
+    queue: list[tuple[int, str]] = [(100, base_url)]
     visited: set[str] = set()
     candidates: dict[str, dict[str, str | int]] = {}
 
     while queue and len(visited) < max_pages:
-        page_url = queue.pop(0)
+        queue.sort(key=lambda item: item[0], reverse=True)
+        _, page_url = queue.pop(0)
         if page_url in visited:
             continue
         visited.add(page_url)
         try:
-            links = parse_links(fetch_page(page_url), page_url)
+            html_text = fetch_page(page_url, fetch_engine)
+            links = parse_links(html_text, page_url)
         except Exception:
             continue
+
+        for candidate in extract_pdf_candidates_from_html(html_text, page_url, code, company.get("name", "")):
+            existing = candidates.get(candidate["url"])
+            if existing:
+                continue
+            candidates[candidate["url"]] = {**candidate, "score": int(score_pdf_candidate({"text": ""}, candidate["url"], code))}
 
         for link in links:
             url = link["url"]
@@ -254,8 +451,9 @@ def discover_company_pdfs(code: str, company: dict[str, str], max_pages: int) ->
                     }
                 continue
 
-            if len(queue) + len(visited) < max_pages and looks_like_page_candidate(link, url, base_url):
-                queue.append(url)
+            page_score = score_page_candidate(link, url, base_url)
+            if len(queue) + len(visited) < max_pages and page_score > 0:
+                queue.append((page_score, url))
 
     ranked = sorted(candidates.values(), key=lambda item: int(item["score"]), reverse=True)
     return [{key: str(value) for key, value in item.items() if key != "score"} for item in ranked]
@@ -337,11 +535,20 @@ def main() -> int:
     parser.add_argument("--scan-cache-file", default=str(OFFICIAL_SCAN_CACHE_PATH), help="JSON file recording official website scan attempts.")
     parser.add_argument("--limit", type=int, default=0, help="Maximum company websites to scan. 0 means all selected codes.")
     parser.add_argument("--max-pages-per-company", type=int, default=10, help="Maximum pages to crawl per company site.")
+    parser.add_argument("--company-timeout-seconds", type=int, default=COMPANY_SCAN_TIMEOUT_SECONDS, help="Maximum seconds to spend on a single company website before skipping it.")
     parser.add_argument("--sleep", type=float, default=0.7, help="Seconds to sleep between company sites.")
     parser.add_argument("--skip-existing-source", action="store_true", help="Skip codes already listed in official sources.")
     parser.add_argument("--skip-cached-pickup", action="store_true", help="Skip codes already cached with pickup details.")
     parser.add_argument("--skip-recent-attempt-hours", type=float, default=0, help="Skip company sites already scanned within this many hours.")
     parser.add_argument("--update-seed", action="store_true", help="Parse useful PDFs and update the deployable seed cache.")
+    parser.add_argument("--refresh-company-sites", action="store_true", help="Refresh company site list from TWSE/TPEx instead of using local cache.")
+    parser.add_argument(
+        "--fetch-engine",
+        choices=(FETCH_ENGINE_AUTO, FETCH_ENGINE_URLLIB, FETCH_ENGINE_SCRAPLING),
+        default=FETCH_ENGINE_AUTO,
+        help="Fetcher to use for company pages. auto prefers Scrapling when installed, else urllib.",
+    )
+    parser.add_argument("--rotate-offset", type=int, default=0, help="Rotate selected company codes before applying limit.")
     args = parser.parse_args()
 
     codes = server.clean_codes(" ".join(args.codes))
@@ -352,7 +559,7 @@ def main() -> int:
         print("No stock codes found.")
         return 0
 
-    company_sites = load_company_sites()
+    company_sites = load_company_sites(use_cache=not args.refresh_company_sites)
     sources_path = Path(args.sources_file)
     scan_cache_path = Path(args.scan_cache_file)
     sources_payload = load_sources_payload(sources_path)
@@ -374,16 +581,26 @@ def main() -> int:
             continue
         selected.append(code)
 
+    if args.rotate_offset:
+        selected = rotate_codes(selected, args.rotate_offset)
     if args.limit > 0:
         selected = selected[: args.limit]
+
+    selected_engine = args.fetch_engine
+    if selected_engine == FETCH_ENGINE_AUTO:
+        selected_engine = FETCH_ENGINE_SCRAPLING if ScraplingFetcher is not None else FETCH_ENGINE_URLLIB
+    print(f"Using fetch engine: {selected_engine}", flush=True)
 
     added = 0
     parsed = 0
     for index, code in enumerate(selected, 1):
         company = company_sites[code]
         print(f"[{index}/{len(selected)}] {code} {company.get('name', '')} {company['url']}", flush=True)
+        previous_handler = signal.getsignal(signal.SIGALRM)
+        signal.signal(signal.SIGALRM, _company_scan_timeout_handler)
+        signal.alarm(max(1, int(args.company_timeout_seconds)))
         try:
-            candidates = discover_company_pdfs(code, company, args.max_pages_per_company)
+            candidates = discover_company_pdfs(code, company, args.max_pages_per_company, selected_engine)
         except urllib.error.URLError as error:
             print(f"  skipped website: {error}", flush=True)
             scan_cache[code] = {
@@ -395,8 +612,43 @@ def main() -> int:
                 "candidateCount": 0,
                 "foundUseful": False,
                 "error": str(error),
+                "errorType": classify_error(error),
+                "fetchEngine": selected_engine,
             }
             continue
+        except CompanyScanTimeoutError as error:
+            print(f"  skipped website: {error}", flush=True)
+            scan_cache[code] = {
+                "code": code,
+                "companyName": company.get("name", ""),
+                "companyUrl": company["url"],
+                "attemptedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                "attemptedAtEpoch": time.time(),
+                "candidateCount": 0,
+                "foundUseful": False,
+                "error": str(error),
+                "errorType": "company_timeout",
+                "fetchEngine": selected_engine,
+            }
+            continue
+        except RuntimeError as error:
+            print(f"  skipped website: {error}", flush=True)
+            scan_cache[code] = {
+                "code": code,
+                "companyName": company.get("name", ""),
+                "companyUrl": company["url"],
+                "attemptedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                "attemptedAtEpoch": time.time(),
+                "candidateCount": 0,
+                "foundUseful": False,
+                "error": str(error),
+                "errorType": classify_error(error),
+                "fetchEngine": selected_engine,
+            }
+            continue
+        finally:
+            signal.alarm(0)
+            signal.signal(signal.SIGALRM, previous_handler)
 
         if not candidates:
             print("  no likely official notice PDF found", flush=True)
@@ -426,7 +678,9 @@ def main() -> int:
             "attemptedAtEpoch": time.time(),
             "candidateCount": len(candidates),
             "foundUseful": found_useful,
-            "error": "",
+            "error": "" if found_useful or candidates else "no likely official notice PDF found",
+            "errorType": "" if found_useful else ("no_candidate" if not candidates else "no_useful_candidate"),
+            "fetchEngine": selected_engine,
         }
 
         if args.sleep > 0 and index < len(selected):

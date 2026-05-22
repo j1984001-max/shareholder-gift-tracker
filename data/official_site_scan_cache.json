@@ -3,61 +3,73 @@
     "code": "1217",
     "companyName": "愛之味",
     "companyUrl": "https://www.agv.com.tw/",
-    "attemptedAt": "2026-05-15T09:13:46+0800",
-    "attemptedAtEpoch": 1778807626.221855,
+    "attemptedAt": "2026-05-21T00:47:17+0800",
+    "attemptedAtEpoch": 1779295637.624352,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1259": {
     "code": "1259",
     "companyName": "安心",
     "companyUrl": "http://www.mos.com.tw/",
-    "attemptedAt": "2026-05-15T09:13:46+0800",
-    "attemptedAtEpoch": 1778807626.460396,
+    "attemptedAt": "2026-05-21T00:47:18+0800",
+    "attemptedAtEpoch": 1779295638.329802,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1304": {
     "code": "1304",
     "companyName": "台聚",
     "companyUrl": "https://www.usife.com.tw/",
-    "attemptedAt": "2026-05-15T09:13:57+0800",
-    "attemptedAtEpoch": 1778807637.07645,
+    "attemptedAt": "2026-05-21T00:47:19+0800",
+    "attemptedAtEpoch": 1779295639.7786639,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1305": {
     "code": "1305",
     "companyName": "華夏",
     "companyUrl": "https://www.cgpc.com.tw/",
-    "attemptedAt": "2026-05-15T14:53:45+0800",
-    "attemptedAtEpoch": 1778828025.30822,
+    "attemptedAt": "2026-05-21T00:47:21+0800",
+    "attemptedAtEpoch": 1779295641.229491,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1308": {
     "code": "1308",
     "companyName": "亞聚",
     "companyUrl": "https://www.apc.com.tw/",
-    "attemptedAt": "2026-05-15T14:54:43+0800",
-    "attemptedAtEpoch": 1778828083.50366,
+    "attemptedAt": "2026-05-21T00:47:22+0800",
+    "attemptedAtEpoch": 1779295642.676335,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1309": {
     "code": "1309",
     "companyName": "台達化",
     "companyUrl": "http://www.ttc.com.tw/",
-    "attemptedAt": "2026-05-15T14:54:58+0800",
-    "attemptedAtEpoch": 1778828098.129332,
+    "attemptedAt": "2026-05-21T00:48:40+0800",
+    "attemptedAtEpoch": 1779295720.831497,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1338": {
     "code": "1338",
@@ -73,11 +85,13 @@
     "code": "1410",
     "companyName": "南染",
     "companyUrl": "https://www.nydf.com.tw/",
-    "attemptedAt": "2026-05-15T14:56:06+0800",
-    "attemptedAtEpoch": 1778828166.964737,
+    "attemptedAt": "2026-05-21T00:49:59+0800",
+    "attemptedAtEpoch": 1779295799.066647,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1414": {
     "code": "1414",
@@ -93,11 +107,13 @@
     "code": "1417",
     "companyName": "嘉裕",
     "companyUrl": "https://www.carnival.com.tw/index.php",
-    "attemptedAt": "2026-05-15T14:57:22+0800",
-    "attemptedAtEpoch": 1778828242.647443,
+    "attemptedAt": "2026-05-21T00:50:00+0800",
+    "attemptedAtEpoch": 1779295800.118415,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1418": {
     "code": "1418",
@@ -113,41 +129,49 @@
     "code": "1432",
     "companyName": "大魯閣",
     "companyUrl": "https://www.taroko.com.tw/",
-    "attemptedAt": "2026-05-15T14:58:29+0800",
-    "attemptedAtEpoch": 1778828309.463997,
+    "attemptedAt": "2026-05-21T00:50:01+0800",
+    "attemptedAtEpoch": 1779295801.995202,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1435": {
     "code": "1435",
     "companyName": "中福",
     "companyUrl": "https://www.chungfutex.com.tw/",
-    "attemptedAt": "2026-05-15T14:59:06+0800",
-    "attemptedAtEpoch": 1778828346.5785851,
+    "attemptedAt": "2026-05-21T00:50:02+0800",
+    "attemptedAtEpoch": 1779295802.8230278,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1471": {
     "code": "1471",
     "companyName": "首利",
     "companyUrl": "https://www.soly-tech.com/",
-    "attemptedAt": "2026-05-15T04:40:17+0000",
-    "attemptedAtEpoch": 1778820017.2628872,
+    "attemptedAt": "2026-05-21T00:50:04+0800",
+    "attemptedAtEpoch": 1779295804.645034,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1474": {
     "code": "1474",
     "companyName": "弘裕",
     "companyUrl": "http://www.textile-hy.com.tw/",
-    "attemptedAt": "2026-05-15T04:41:45+0000",
-    "attemptedAtEpoch": 1778820105.5808206,
+    "attemptedAt": "2026-05-21T00:50:06+0800",
+    "attemptedAtEpoch": 1779295806.7625642,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1503": {
     "code": "1503",
@@ -163,31 +187,37 @@
     "code": "1504",
     "companyName": "東元",
     "companyUrl": "http://www.teco.com.tw/",
-    "attemptedAt": "2026-05-15T04:43:08+0000",
-    "attemptedAtEpoch": 1778820188.5653532,
+    "attemptedAt": "2026-05-21T00:50:10+0800",
+    "attemptedAtEpoch": 1779295810.033777,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1506": {
     "code": "1506",
     "companyName": "正道",
     "companyUrl": "http://www.rightway.com.tw/",
-    "attemptedAt": "2026-05-15T04:43:35+0000",
-    "attemptedAtEpoch": 1778820215.8591623,
+    "attemptedAt": "2026-05-21T00:50:10+0800",
+    "attemptedAtEpoch": 1779295810.846794,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1512": {
     "code": "1512",
     "companyName": "瑞利",
     "companyUrl": "http://www.juili.com.tw/",
-    "attemptedAt": "2026-05-15T04:44:31+0000",
-    "attemptedAtEpoch": 1778820271.1340685,
+    "attemptedAt": "2026-05-21T00:50:12+0800",
+    "attemptedAtEpoch": 1779295812.1336389,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1514": {
     "code": "1514",
@@ -203,11 +233,13 @@
     "code": "1517",
     "companyName": "利奇",
     "companyUrl": "https://www.leechi.com.tw/",
-    "attemptedAt": "2026-05-15T04:46:38+0000",
-    "attemptedAtEpoch": 1778820398.2471414,
+    "attemptedAt": "2026-05-21T00:50:13+0800",
+    "attemptedAtEpoch": 1779295813.1746671,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1527": {
     "code": "1527",
@@ -223,31 +255,37 @@
     "code": "1529",
     "companyName": "樂事綠能",
     "companyUrl": "http://www.luxe.com.tw/",
-    "attemptedAt": "2026-05-15T04:48:55+0000",
-    "attemptedAtEpoch": 1778820535.298958,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:50:14+0800",
+    "attemptedAtEpoch": 1779295814.011334,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1537": {
     "code": "1537",
     "companyName": "廣隆",
     "companyUrl": "https://www.klb.com.tw/",
-    "attemptedAt": "2026-05-15T04:50:30+0000",
-    "attemptedAtEpoch": 1778820630.2671268,
+    "attemptedAt": "2026-05-21T00:50:15+0800",
+    "attemptedAtEpoch": 1779295815.991733,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1558": {
     "code": "1558",
     "companyName": "伸興",
     "companyUrl": "https://www.zenghsing.com.tw/",
-    "attemptedAt": "2026-05-15T04:52:23+0000",
-    "attemptedAtEpoch": 1778820743.1934679,
-    "candidateCount": 3,
+    "attemptedAt": "2026-05-21T00:50:19+0800",
+    "attemptedAtEpoch": 1779295819.062405,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1582": {
     "code": "1582",
@@ -263,11 +301,13 @@
     "code": "1584",
     "companyName": "精剛",
     "companyUrl": "http://www.s-tech.com.tw/",
-    "attemptedAt": "2026-05-15T04:54:14+0000",
-    "attemptedAtEpoch": 1778820854.2903934,
+    "attemptedAt": "2026-05-21T00:50:20+0800",
+    "attemptedAtEpoch": 1779295820.191424,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1604": {
     "code": "1604",
@@ -283,11 +323,13 @@
     "code": "1605",
     "companyName": "華新",
     "companyUrl": "https://www.walsin.com/",
-    "attemptedAt": "2026-05-15T04:55:52+0000",
-    "attemptedAtEpoch": 1778820952.9214997,
+    "attemptedAt": "2026-05-21T00:50:22+0800",
+    "attemptedAtEpoch": 1779295822.20173,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1609": {
     "code": "1609",
@@ -313,21 +355,25 @@
     "code": "1612",
     "companyName": "宏泰",
     "companyUrl": "https://www.hong-tai.com.tw/",
-    "attemptedAt": "2026-05-15T04:59:03+0000",
-    "attemptedAtEpoch": 1778821143.3533547,
+    "attemptedAt": "2026-05-21T00:50:23+0800",
+    "attemptedAtEpoch": 1779295823.002402,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1721": {
     "code": "1721",
     "companyName": "三晃",
     "companyUrl": "http://www.sunko.com.tw/",
-    "attemptedAt": "2026-05-15T04:59:09+0000",
-    "attemptedAtEpoch": 1778821149.7291381,
+    "attemptedAt": "2026-05-21T00:50:23+0800",
+    "attemptedAtEpoch": 1779295823.749435,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1723": {
     "code": "1723",
@@ -353,21 +399,25 @@
     "code": "1742",
     "companyName": "台蠟",
     "companyUrl": "http://www.wax.com.tw/",
-    "attemptedAt": "2026-05-15T05:01:41+0000",
-    "attemptedAtEpoch": 1778821301.7426143,
+    "attemptedAt": "2026-05-21T00:50:25+0800",
+    "attemptedAtEpoch": 1779295825.401214,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1781": {
     "code": "1781",
     "companyName": "合世",
     "companyUrl": "https://www.healthandlife.com.tw/",
-    "attemptedAt": "2026-05-15T05:02:46+0000",
-    "attemptedAtEpoch": 1778821366.229787,
+    "attemptedAt": "2026-05-21T00:21:23+0800",
+    "attemptedAtEpoch": 1779294083.0195708,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1785": {
     "code": "1785",
@@ -383,121 +433,145 @@
     "code": "1806",
     "companyName": "冠軍",
     "companyUrl": "http://group.champion.com.tw/",
-    "attemptedAt": "2026-05-15T05:04:41+0000",
-    "attemptedAtEpoch": 1778821481.3882532,
+    "attemptedAt": "2026-05-21T00:21:23+0800",
+    "attemptedAtEpoch": 1779294083.918265,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1815": {
     "code": "1815",
     "companyName": "富喬",
     "companyUrl": "http://www.ffg.com.tw/",
-    "attemptedAt": "2026-05-15T05:05:43+0000",
-    "attemptedAtEpoch": 1778821543.3181987,
+    "attemptedAt": "2026-05-21T00:21:24+0800",
+    "attemptedAtEpoch": 1779294084.650142,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "1904": {
     "code": "1904",
     "companyName": "正隆",
     "companyUrl": "https://www.clc.com.tw/",
-    "attemptedAt": "2026-05-15T05:06:56+0000",
-    "attemptedAtEpoch": 1778821616.0348887,
+    "attemptedAt": "2026-05-21T00:21:25+0800",
+    "attemptedAtEpoch": 1779294085.351818,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2017": {
     "code": "2017",
     "companyName": "官田鋼",
     "companyUrl": "https://www.quintain.com.tw/",
-    "attemptedAt": "2026-05-15T05:08:03+0000",
-    "attemptedAtEpoch": 1778821683.6750214,
+    "attemptedAt": "2026-05-21T00:21:26+0800",
+    "attemptedAtEpoch": 1779294086.830066,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2020": {
     "code": "2020",
     "companyName": "美亞",
     "companyUrl": "http://www.mayer.com.tw/",
-    "attemptedAt": "2026-05-15T05:09:06+0000",
-    "attemptedAtEpoch": 1778821746.2074795,
+    "attemptedAt": "2026-05-21T00:21:28+0800",
+    "attemptedAtEpoch": 1779294088.258373,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2022": {
     "code": "2022",
     "companyName": "聚亨",
     "companyUrl": "https://www.tycons.com.tw/",
-    "attemptedAt": "2026-05-15T05:09:48+0000",
-    "attemptedAtEpoch": 1778821788.5806572,
+    "attemptedAt": "2026-05-21T00:21:29+0800",
+    "attemptedAtEpoch": 1779294089.1986299,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2023": {
     "code": "2023",
     "companyName": "燁輝",
     "companyUrl": "http://www.yiehphui.com.tw/",
-    "attemptedAt": "2026-05-15T05:11:00+0000",
-    "attemptedAtEpoch": 1778821860.285242,
+    "attemptedAt": "2026-05-21T00:21:30+0800",
+    "attemptedAtEpoch": 1779294090.370271,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2024": {
     "code": "2024",
     "companyName": "志聯",
     "companyUrl": "http://www.chihlien.com.tw/",
-    "attemptedAt": "2026-05-15T05:11:08+0000",
-    "attemptedAtEpoch": 1778821868.9834294,
+    "attemptedAt": "2026-05-21T00:21:31+0800",
+    "attemptedAtEpoch": 1779294091.0987022,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2025": {
     "code": "2025",
     "companyName": "千興",
     "companyUrl": "https://www.csssc.com.tw/",
-    "attemptedAt": "2026-05-15T05:11:13+0000",
-    "attemptedAtEpoch": 1778821873.6820552,
+    "attemptedAt": "2026-05-21T00:21:32+0800",
+    "attemptedAtEpoch": 1779294092.214199,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2035": {
     "code": "2035",
     "companyName": "唐榮公司",
     "companyUrl": "http://www.tangeng.com.tw/",
-    "attemptedAt": "2026-05-15T05:12:05+0000",
-    "attemptedAtEpoch": 1778821925.448101,
+    "attemptedAt": "2026-05-21T00:21:33+0800",
+    "attemptedAtEpoch": 1779294093.597908,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2049": {
     "code": "2049",
     "companyName": "上銀",
     "companyUrl": "http://www.hiwin.tw/",
-    "attemptedAt": "2026-05-15T05:13:19+0000",
-    "attemptedAtEpoch": 1778821999.254743,
+    "attemptedAt": "2026-05-21T00:21:35+0800",
+    "attemptedAtEpoch": 1779294095.256688,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2061": {
     "code": "2061",
     "companyName": "風青",
     "companyUrl": "http://www.fcm.com.tw/",
-    "attemptedAt": "2026-05-15T05:13:49+0000",
-    "attemptedAtEpoch": 1778822029.4161172,
+    "attemptedAt": "2026-05-21T00:21:35+0800",
+    "attemptedAtEpoch": 1779294095.8985002,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2102": {
     "code": "2102",
@@ -513,11 +587,13 @@
     "code": "2103",
     "companyName": "台橡",
     "companyUrl": "https://www.tsrc.com.tw/",
-    "attemptedAt": "2026-05-15T05:16:11+0000",
-    "attemptedAtEpoch": 1778822171.2522225,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:21:37+0800",
+    "attemptedAtEpoch": 1779294097.304063,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2107": {
     "code": "2107",
@@ -533,61 +609,73 @@
     "code": "2109",
     "companyName": "華豐",
     "companyUrl": "https://www.duro.com.tw/",
-    "attemptedAt": "2026-05-15T05:16:21+0000",
-    "attemptedAtEpoch": 1778822181.825318,
+    "attemptedAt": "2026-05-21T00:21:38+0800",
+    "attemptedAtEpoch": 1779294098.60597,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2206": {
     "code": "2206",
     "companyName": "三陽工業",
     "companyUrl": "https://www.sanyang.com.tw/",
-    "attemptedAt": "2026-05-15T05:17:38+0000",
-    "attemptedAtEpoch": 1778822258.1018896,
+    "attemptedAt": "2026-05-21T00:21:39+0800",
+    "attemptedAtEpoch": 1779294099.892904,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2233": {
     "code": "2233",
     "companyName": "宇隆",
     "companyUrl": "http://www.turvo.com.tw/",
-    "attemptedAt": "2026-05-15T05:18:26+0000",
-    "attemptedAtEpoch": 1778822306.595677,
+    "attemptedAt": "2026-05-21T00:21:40+0800",
+    "attemptedAtEpoch": 1779294100.844975,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2303": {
     "code": "2303",
     "companyName": "聯電",
     "companyUrl": "https://WWW.UMC.COM/",
-    "attemptedAt": "2026-05-15T05:19:16+0000",
-    "attemptedAtEpoch": 1778822356.0734518,
+    "attemptedAt": "2026-05-21T00:21:41+0800",
+    "attemptedAtEpoch": 1779294101.5141718,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2328": {
     "code": "2328",
     "companyName": "廣宇",
     "companyUrl": "https://www.panpi.com.tw/",
-    "attemptedAt": "2026-05-15T05:19:44+0000",
-    "attemptedAtEpoch": 1778822384.8346965,
+    "attemptedAt": "2026-05-21T00:21:42+0800",
+    "attemptedAtEpoch": 1779294102.500944,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2340": {
     "code": "2340",
     "companyName": "台亞",
     "companyUrl": "https://www.tascsemi.com/",
-    "attemptedAt": "2026-05-15T05:20:55+0000",
-    "attemptedAtEpoch": 1778822455.1897159,
+    "attemptedAt": "2026-05-21T00:21:44+0800",
+    "attemptedAtEpoch": 1779294104.644486,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2349": {
     "code": "2349",
@@ -613,41 +701,49 @@
     "code": "2363",
     "companyName": "矽統",
     "companyUrl": "https://www.sis.com/",
-    "attemptedAt": "2026-05-15T05:22:25+0000",
-    "attemptedAtEpoch": 1778822545.0015452,
-    "candidateCount": 3,
+    "attemptedAt": "2026-05-21T00:21:45+0800",
+    "attemptedAtEpoch": 1779294105.562253,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2364": {
     "code": "2364",
     "companyName": "倫飛",
     "companyUrl": "https://www.twinhead.com.tw/",
-    "attemptedAt": "2026-05-15T05:23:09+0000",
-    "attemptedAtEpoch": 1778822589.119528,
+    "attemptedAt": "2026-05-21T00:21:47+0800",
+    "attemptedAtEpoch": 1779294107.0039942,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2365": {
     "code": "2365",
     "companyName": "昆盈",
     "companyUrl": "https://www.geniusnet.com/",
-    "attemptedAt": "2026-05-15T14:44:06+0000",
-    "attemptedAtEpoch": 1778856246.34966,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:21:48+0800",
+    "attemptedAtEpoch": 1779294108.9364212,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2368": {
     "code": "2368",
     "companyName": "金像電",
     "companyUrl": "http://www.gce.com.tw/",
-    "attemptedAt": "2026-05-15T14:44:31+0000",
-    "attemptedAtEpoch": 1778856271.46284,
+    "attemptedAt": "2026-05-21T00:24:27+0800",
+    "attemptedAtEpoch": 1779294267.649517,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2369": {
     "code": "2369",
@@ -663,11 +759,13 @@
     "code": "2371",
     "companyName": "大同",
     "companyUrl": "https://www.tatung.com/",
-    "attemptedAt": "2026-05-15T14:46:30+0000",
-    "attemptedAtEpoch": 1778856390.5718892,
+    "attemptedAt": "2026-05-21T00:24:28+0800",
+    "attemptedAtEpoch": 1779294268.727409,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2402": {
     "code": "2402",
@@ -683,11 +781,13 @@
     "code": "2404",
     "companyName": "漢唐",
     "companyUrl": "http://www.uisco.com.tw/",
-    "attemptedAt": "2026-05-15T14:47:13+0000",
-    "attemptedAtEpoch": 1778856433.615218,
+    "attemptedAt": "2026-05-21T00:24:32+0800",
+    "attemptedAtEpoch": 1779294272.4517078,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2405": {
     "code": "2405",
@@ -703,41 +803,49 @@
     "code": "2406",
     "companyName": "國碩",
     "companyUrl": "http://www.gigastorage.com.tw/index.aspx",
-    "attemptedAt": "2026-05-15T14:47:40+0000",
-    "attemptedAtEpoch": 1778856460.2898812,
+    "attemptedAt": "2026-05-21T00:25:50+0800",
+    "attemptedAtEpoch": 1779294350.601334,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2413": {
     "code": "2413",
     "companyName": "環科",
     "companyUrl": "http://www.umec.com.tw/",
-    "attemptedAt": "2026-05-15T14:48:17+0000",
-    "attemptedAtEpoch": 1778856497.2186663,
+    "attemptedAt": "2026-05-21T00:25:51+0800",
+    "attemptedAtEpoch": 1779294351.325808,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2417": {
     "code": "2417",
     "companyName": "圓剛",
     "companyUrl": "https://www.avermedia.com/",
-    "attemptedAt": "2026-05-15T14:48:38+0000",
-    "attemptedAtEpoch": 1778856518.6942995,
+    "attemptedAt": "2026-05-21T00:25:53+0800",
+    "attemptedAtEpoch": 1779294353.377252,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2419": {
     "code": "2419",
     "companyName": "仲琦",
     "companyUrl": "http://www.hitrontech.com/",
-    "attemptedAt": "2026-05-15T14:49:30+0000",
-    "attemptedAtEpoch": 1778856570.7995415,
+    "attemptedAt": "2026-05-21T00:25:56+0800",
+    "attemptedAtEpoch": 1779294356.4769049,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2420": {
     "code": "2420",
@@ -753,11 +861,13 @@
     "code": "2439",
     "companyName": "美律",
     "companyUrl": "https://www.merry.com.tw/",
-    "attemptedAt": "2026-05-15T14:50:25+0000",
-    "attemptedAtEpoch": 1778856625.8427074,
+    "attemptedAt": "2026-05-21T00:25:57+0800",
+    "attemptedAtEpoch": 1779294357.422013,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2444": {
     "code": "2444",
@@ -773,11 +883,13 @@
     "code": "2449",
     "companyName": "京元電子",
     "companyUrl": "https://www.kyec.com.tw/",
-    "attemptedAt": "2026-05-15T14:51:36+0000",
-    "attemptedAtEpoch": 1778856696.9806688,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:26:01+0800",
+    "attemptedAtEpoch": 1779294361.245339,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2455": {
     "code": "2455",
@@ -803,51 +915,61 @@
     "code": "2459",
     "companyName": "敦吉",
     "companyUrl": "https://www.audix.com/",
-    "attemptedAt": "2026-05-15T14:53:17+0000",
-    "attemptedAtEpoch": 1778856797.4856036,
+    "attemptedAt": "2026-05-21T00:28:39+0800",
+    "attemptedAtEpoch": 1779294519.9168158,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2460": {
     "code": "2460",
     "companyName": "建通",
     "companyUrl": "http://www.gem.com.tw/",
-    "attemptedAt": "2026-05-15T14:53:42+0000",
-    "attemptedAtEpoch": 1778856822.6167254,
+    "attemptedAt": "2026-05-21T00:28:41+0800",
+    "attemptedAtEpoch": 1779294521.659499,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2461": {
     "code": "2461",
     "companyName": "光群雷",
     "companyUrl": "https://www.klasergroup.com/",
-    "attemptedAt": "2026-05-15T14:54:23+0000",
-    "attemptedAtEpoch": 1778856863.4733005,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:28:43+0800",
+    "attemptedAtEpoch": 1779294523.477518,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2462": {
     "code": "2462",
     "companyName": "良得電",
     "companyUrl": "https://www.linetek.com.tw/zh-TW",
-    "attemptedAt": "2026-05-15T14:55:33+0000",
-    "attemptedAtEpoch": 1778856933.707278,
+    "attemptedAt": "2026-05-21T00:28:44+0800",
+    "attemptedAtEpoch": 1779294524.670113,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2464": {
     "code": "2464",
     "companyName": "盟立",
     "companyUrl": "http://www.mirle.com.tw/",
-    "attemptedAt": "2026-05-15T14:55:41+0000",
-    "attemptedAtEpoch": 1778856941.406147,
+    "attemptedAt": "2026-05-21T00:28:45+0800",
+    "attemptedAtEpoch": 1779294525.949994,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2465": {
     "code": "2465",
@@ -873,11 +995,13 @@
     "code": "2478",
     "companyName": "大毅",
     "companyUrl": "http://www.tai.com.tw/",
-    "attemptedAt": "2026-05-15T14:57:49+0000",
-    "attemptedAtEpoch": 1778857069.9239254,
+    "attemptedAt": "2026-05-21T00:28:47+0800",
+    "attemptedAtEpoch": 1779294527.0959601,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2480": {
     "code": "2480",
@@ -893,11 +1017,13 @@
     "code": "2481",
     "companyName": "強茂",
     "companyUrl": "https://www.panjit.com.tw/",
-    "attemptedAt": "2026-05-15T14:59:47+0000",
-    "attemptedAtEpoch": 1778857187.2645547,
+    "attemptedAt": "2026-05-21T00:28:48+0800",
+    "attemptedAtEpoch": 1779294528.310325,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2485": {
     "code": "2485",
@@ -923,21 +1049,25 @@
     "code": "2488",
     "companyName": "漢平",
     "companyUrl": "https://www.hanpin.com.tw/",
-    "attemptedAt": "2026-05-15T15:02:10+0000",
-    "attemptedAtEpoch": 1778857330.1491244,
+    "attemptedAt": "2026-05-21T00:30:06+0800",
+    "attemptedAtEpoch": 1779294606.460704,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2492": {
     "code": "2492",
     "companyName": "華新科",
     "companyUrl": "https://www.passivecomponent.com/",
-    "attemptedAt": "2026-05-15T15:02:17+0000",
-    "attemptedAtEpoch": 1778857337.9995341,
+    "attemptedAt": "2026-05-21T00:30:08+0800",
+    "attemptedAtEpoch": 1779294608.2417731,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2498": {
     "code": "2498",
@@ -953,81 +1083,97 @@
     "code": "2505",
     "companyName": "國揚",
     "companyUrl": "https://www.kycc.com.tw/",
-    "attemptedAt": "2026-05-15T15:04:07+0000",
-    "attemptedAtEpoch": 1778857447.8532357,
+    "attemptedAt": "2026-05-21T00:30:09+0800",
+    "attemptedAtEpoch": 1779294609.946732,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2506": {
     "code": "2506",
     "companyName": "太設",
     "companyUrl": "https://www.pacific-group.com.tw/",
-    "attemptedAt": "2026-05-15T15:05:17+0000",
-    "attemptedAtEpoch": 1778857517.9267561,
+    "attemptedAt": "2026-05-21T00:30:12+0800",
+    "attemptedAtEpoch": 1779294612.0632372,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2514": {
     "code": "2514",
     "companyName": "龍邦",
     "companyUrl": "http://www.longbon.com.tw/",
-    "attemptedAt": "2026-05-15T15:05:27+0000",
-    "attemptedAtEpoch": 1778857527.4507995,
+    "attemptedAt": "2026-05-21T00:30:14+0800",
+    "attemptedAtEpoch": 1779294614.472369,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2515": {
     "code": "2515",
     "companyName": "中工",
     "companyUrl": "https://www.bes.com.tw/",
-    "attemptedAt": "2026-05-15T15:05:33+0000",
-    "attemptedAtEpoch": 1778857533.374796,
+    "attemptedAt": "2026-05-21T00:30:15+0800",
+    "attemptedAtEpoch": 1779294615.329215,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2516": {
     "code": "2516",
     "companyName": "新建",
     "companyUrl": "http://www.newasia.com.tw/",
-    "attemptedAt": "2026-05-15T15:06:14+0000",
-    "attemptedAtEpoch": 1778857574.591369,
+    "attemptedAt": "2026-05-21T00:30:16+0800",
+    "attemptedAtEpoch": 1779294616.9349911,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2530": {
     "code": "2530",
     "companyName": "華建",
     "companyUrl": "https://www.delpha.com.tw/",
-    "attemptedAt": "2026-05-15T15:07:23+0000",
-    "attemptedAtEpoch": 1778857643.6470244,
+    "attemptedAt": "2026-05-21T00:30:17+0800",
+    "attemptedAtEpoch": 1779294617.63511,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2543": {
     "code": "2543",
     "companyName": "皇昌",
     "companyUrl": "https://www.hcgc.com.tw/",
-    "attemptedAt": "2026-05-15T15:08:03+0000",
-    "attemptedAtEpoch": 1778857683.575471,
+    "attemptedAt": "2026-05-21T00:30:18+0800",
+    "attemptedAtEpoch": 1779294618.4657862,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2601": {
     "code": "2601",
     "companyName": "益航",
     "companyUrl": "https://www.firsteam.com.tw/",
-    "attemptedAt": "2026-05-15T15:08:11+0000",
-    "attemptedAtEpoch": 1778857691.467904,
+    "attemptedAt": "2026-05-21T00:30:19+0800",
+    "attemptedAtEpoch": 1779294619.1459599,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2605": {
     "code": "2605",
@@ -1043,51 +1189,61 @@
     "code": "2608",
     "companyName": "嘉里大榮",
     "companyUrl": "http://www.kerrytj.com/",
-    "attemptedAt": "2026-05-15T15:10:00+0000",
-    "attemptedAtEpoch": 1778857800.7431276,
+    "attemptedAt": "2026-05-21T00:30:20+0800",
+    "attemptedAtEpoch": 1779294620.024363,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2612": {
     "code": "2612",
     "companyName": "中航",
     "companyUrl": "http://www.cmt.tw/",
-    "attemptedAt": "2026-05-15T15:10:47+0000",
-    "attemptedAtEpoch": 1778857847.3237429,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:30:21+0800",
+    "attemptedAtEpoch": 1779294621.987565,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2613": {
     "code": "2613",
     "companyName": "中櫃",
     "companyUrl": "http://www.cctcorp.com.tw/",
-    "attemptedAt": "2026-05-15T15:10:54+0000",
-    "attemptedAtEpoch": 1778857854.9025676,
+    "attemptedAt": "2026-05-21T00:30:23+0800",
+    "attemptedAtEpoch": 1779294623.7483468,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2616": {
     "code": "2616",
     "companyName": "山隆",
     "companyUrl": "https://www.slc.com.tw/",
-    "attemptedAt": "2026-05-15T15:11:52+0000",
-    "attemptedAtEpoch": 1778857912.6075902,
+    "attemptedAt": "2026-05-21T00:30:24+0800",
+    "attemptedAtEpoch": 1779294624.874964,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2633": {
     "code": "2633",
     "companyName": "台灣高鐵",
     "companyUrl": "https://www.thsrc.com.tw/",
-    "attemptedAt": "2026-05-15T15:13:05+0000",
-    "attemptedAtEpoch": 1778857985.3981655,
+    "attemptedAt": "2026-05-21T00:30:25+0800",
+    "attemptedAtEpoch": 1779294625.705676,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2636": {
     "code": "2636",
@@ -1103,41 +1259,49 @@
     "code": "2704",
     "companyName": "國賓",
     "companyUrl": "https://www.ambassador-hotels.com/",
-    "attemptedAt": "2026-05-15T15:14:06+0000",
-    "attemptedAtEpoch": 1778858046.471874,
+    "attemptedAt": "2026-05-21T00:30:26+0800",
+    "attemptedAtEpoch": 1779294626.416262,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2705": {
     "code": "2705",
     "companyName": "六福",
     "companyUrl": "http://www.leofoo.com.tw/",
-    "attemptedAt": "2026-05-15T15:14:23+0000",
-    "attemptedAtEpoch": 1778858063.5931804,
+    "attemptedAt": "2026-05-21T00:30:27+0800",
+    "attemptedAtEpoch": 1779294627.3964102,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2727": {
     "code": "2727",
     "companyName": "王品",
     "companyUrl": "http://www.wowprime.com/",
-    "attemptedAt": "2026-05-15T15:14:31+0000",
-    "attemptedAtEpoch": 1778858071.3918848,
+    "attemptedAt": "2026-05-21T00:30:28+0800",
+    "attemptedAtEpoch": 1779294628.062231,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2820": {
     "code": "2820",
     "companyName": "華票",
     "companyUrl": "http://www.cbf.com.tw/",
-    "attemptedAt": "2026-05-15T15:14:37+0000",
-    "attemptedAtEpoch": 1778858077.238079,
+    "attemptedAt": "2026-05-21T00:30:28+0800",
+    "attemptedAtEpoch": 1779294628.8952801,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2834": {
     "code": "2834",
@@ -1163,31 +1327,37 @@
     "code": "2883",
     "companyName": "凱基金",
     "companyUrl": "https://www.kgi.com/",
-    "attemptedAt": "2026-05-15T15:16:27+0000",
-    "attemptedAtEpoch": 1778858187.102543,
+    "attemptedAt": "2026-05-21T00:30:30+0800",
+    "attemptedAtEpoch": 1779294630.111568,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2884": {
     "code": "2884",
     "companyName": "玉山金",
     "companyUrl": "https://www.esunfhc.com/",
-    "attemptedAt": "2026-05-15T15:17:34+0000",
-    "attemptedAtEpoch": 1778858254.049272,
+    "attemptedAt": "2026-05-21T00:30:30+0800",
+    "attemptedAtEpoch": 1779294630.908082,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2885": {
     "code": "2885",
     "companyName": "元大金",
     "companyUrl": "http://www.yuanta.com/",
-    "attemptedAt": "2026-05-15T15:18:35+0000",
-    "attemptedAtEpoch": 1778858315.7793694,
+    "attemptedAt": "2026-05-21T00:30:32+0800",
+    "attemptedAtEpoch": 1779294632.271304,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2887": {
     "code": "2887",
@@ -1203,21 +1373,25 @@
     "code": "2889",
     "companyName": "國票金",
     "companyUrl": "https://www.ibf.com.tw/",
-    "attemptedAt": "2026-05-15T15:20:38+0000",
-    "attemptedAtEpoch": 1778858438.546295,
+    "attemptedAt": "2026-05-21T00:30:33+0800",
+    "attemptedAtEpoch": 1779294633.783241,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2890": {
     "code": "2890",
     "companyName": "永豐金",
     "companyUrl": "https://www.sinopac.com/index.html",
-    "attemptedAt": "2026-05-15T15:21:45+0000",
-    "attemptedAtEpoch": 1778858505.361947,
+    "attemptedAt": "2026-05-21T00:30:34+0800",
+    "attemptedAtEpoch": 1779294634.456931,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2891": {
     "code": "2891",
@@ -1233,41 +1407,49 @@
     "code": "2901",
     "companyName": "欣欣",
     "companyUrl": "https://www.shinshinltd.com.tw/",
-    "attemptedAt": "2026-05-15T17:04:17+0000",
-    "attemptedAtEpoch": 1778864657.5152333,
+    "attemptedAt": "2026-05-21T00:30:35+0800",
+    "attemptedAtEpoch": 1779294635.331889,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2904": {
     "code": "2904",
     "companyName": "匯僑",
     "companyUrl": "http://www.pocs.com.tw/",
-    "attemptedAt": "2026-05-15T17:05:07+0000",
-    "attemptedAtEpoch": 1778864707.3114862,
+    "attemptedAt": "2026-05-21T00:30:36+0800",
+    "attemptedAtEpoch": 1779294636.556671,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2913": {
     "code": "2913",
     "companyName": "農林",
     "companyUrl": "http://www.ttch.com.tw/",
-    "attemptedAt": "2026-05-15T17:05:43+0000",
-    "attemptedAtEpoch": 1778864743.4968483,
+    "attemptedAt": "2026-05-21T00:30:37+0800",
+    "attemptedAtEpoch": 1779294637.539979,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "2929": {
     "code": "2929",
     "companyName": "淘帝-KY",
     "companyUrl": "http://www.topbi.com.tw/",
-    "attemptedAt": "2026-05-15T17:06:44+0000",
-    "attemptedAtEpoch": 1778864804.5767584,
+    "attemptedAt": "2026-05-21T00:30:39+0800",
+    "attemptedAtEpoch": 1779294639.1378539,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3010": {
     "code": "3010",
@@ -1283,11 +1465,13 @@
     "code": "3016",
     "companyName": "嘉晶",
     "companyUrl": "https://www.epi.episil.com/",
-    "attemptedAt": "2026-05-15T17:08:47+0000",
-    "attemptedAtEpoch": 1778864927.5590432,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:30:39+0800",
+    "attemptedAtEpoch": 1779294639.881966,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3019": {
     "code": "3019",
@@ -1333,11 +1517,13 @@
     "code": "3029",
     "companyName": "零壹",
     "companyUrl": "https://www.zerone.com.tw/",
-    "attemptedAt": "2026-05-15T17:12:52+0000",
-    "attemptedAtEpoch": 1778865172.5994575,
+    "attemptedAt": "2026-05-21T00:30:41+0800",
+    "attemptedAtEpoch": 1779294641.109249,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3033": {
     "code": "3033",
@@ -1353,61 +1539,73 @@
     "code": "3034",
     "companyName": "聯詠",
     "companyUrl": "https://www.novatek.com.tw/",
-    "attemptedAt": "2026-05-15T17:15:12+0000",
-    "attemptedAtEpoch": 1778865312.4908473,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:30:42+0800",
+    "attemptedAtEpoch": 1779294642.153856,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3035": {
     "code": "3035",
     "companyName": "智原",
     "companyUrl": "https://www.faraday-tech.com/",
-    "attemptedAt": "2026-05-15T17:15:20+0000",
-    "attemptedAtEpoch": 1778865320.5968964,
+    "attemptedAt": "2026-05-21T00:30:42+0800",
+    "attemptedAtEpoch": 1779294642.838866,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3036": {
     "code": "3036",
     "companyName": "文曄",
     "companyUrl": "http://www.wtmec.com/",
-    "attemptedAt": "2026-05-15T17:15:38+0000",
-    "attemptedAtEpoch": 1778865338.2948036,
+    "attemptedAt": "2026-05-21T00:30:47+0800",
+    "attemptedAtEpoch": 1779294647.165225,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3037": {
     "code": "3037",
     "companyName": "欣興",
     "companyUrl": "https://www.unimicron.com/",
-    "attemptedAt": "2026-05-15T17:15:45+0000",
-    "attemptedAtEpoch": 1778865345.029279,
+    "attemptedAt": "2026-05-21T00:30:48+0800",
+    "attemptedAtEpoch": 1779294648.220295,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3038": {
     "code": "3038",
     "companyName": "全台",
     "companyUrl": "https://www.edtc.com/edtcweb/",
-    "attemptedAt": "2026-05-15T17:16:58+0000",
-    "attemptedAtEpoch": 1778865418.2024996,
+    "attemptedAt": "2026-05-21T00:30:49+0800",
+    "attemptedAtEpoch": 1779294649.39747,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3041": {
     "code": "3041",
     "companyName": "揚智",
     "companyUrl": "https://www.alitech.com/",
-    "attemptedAt": "2026-05-15T17:18:20+0000",
-    "attemptedAtEpoch": 1778865500.448491,
+    "attemptedAt": "2026-05-21T00:30:53+0800",
+    "attemptedAtEpoch": 1779294653.49692,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3042": {
     "code": "3042",
@@ -1423,21 +1621,25 @@
     "code": "3043",
     "companyName": "科風",
     "companyUrl": "https://www.upspowercom.com/TW/",
-    "attemptedAt": "2026-05-15T17:18:38+0000",
-    "attemptedAtEpoch": 1778865518.1570077,
+    "attemptedAt": "2026-05-21T00:30:54+0800",
+    "attemptedAtEpoch": 1779294654.342984,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3046": {
     "code": "3046",
     "companyName": "建碁",
     "companyUrl": "https://www.aopen.com/",
-    "attemptedAt": "2026-05-15T17:18:45+0000",
-    "attemptedAtEpoch": 1778865525.8058658,
+    "attemptedAt": "2026-05-21T00:30:56+0800",
+    "attemptedAtEpoch": 1779294656.802353,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3047": {
     "code": "3047",
@@ -1463,31 +1665,37 @@
     "code": "3049",
     "companyName": "精金",
     "companyUrl": "https://www.hannstouch.com/tw",
-    "attemptedAt": "2026-05-15T17:20:19+0000",
-    "attemptedAtEpoch": 1778865619.8409872,
+    "attemptedAt": "2026-05-21T00:30:57+0800",
+    "attemptedAtEpoch": 1779294657.631659,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3050": {
     "code": "3050",
     "companyName": "鈺德",
     "companyUrl": "http://www.utechmedia.com.tw/",
-    "attemptedAt": "2026-05-15T17:21:53+0000",
-    "attemptedAtEpoch": 1778865713.22766,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:31:00+0800",
+    "attemptedAtEpoch": 1779294660.824853,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3051": {
     "code": "3051",
     "companyName": "力特",
     "companyUrl": "http://www.optimax.com.tw/",
-    "attemptedAt": "2026-05-15T17:22:00+0000",
-    "attemptedAtEpoch": 1778865720.9797716,
+    "attemptedAt": "2026-05-21T00:31:01+0800",
+    "attemptedAtEpoch": 1779294661.494603,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3052": {
     "code": "3052",
@@ -1503,21 +1711,25 @@
     "code": "3055",
     "companyName": "蔚華科",
     "companyUrl": "https://www.spirox.com.tw/",
-    "attemptedAt": "2026-05-15T17:24:00+0000",
-    "attemptedAtEpoch": 1778865840.531337,
+    "attemptedAt": "2026-05-21T00:31:02+0800",
+    "attemptedAtEpoch": 1779294662.88448,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3059": {
     "code": "3059",
     "companyName": "華晶科",
     "companyUrl": "https://www.altek.com.tw/",
-    "attemptedAt": "2026-05-15T17:24:36+0000",
-    "attemptedAtEpoch": 1778865876.9782684,
+    "attemptedAt": "2026-05-21T00:31:06+0800",
+    "attemptedAtEpoch": 1779294666.2881799,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3060": {
     "code": "3060",
@@ -1533,91 +1745,109 @@
     "code": "3062",
     "companyName": "建漢",
     "companyUrl": "https://www.cybertan.com.tw/",
-    "attemptedAt": "2026-05-15T17:26:07+0000",
-    "attemptedAtEpoch": 1778865967.5060153,
-    "candidateCount": 3,
+    "attemptedAt": "2026-05-21T00:31:07+0800",
+    "attemptedAtEpoch": 1779294667.1347651,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3078": {
     "code": "3078",
     "companyName": "僑威",
     "companyUrl": "https://www.cwt.com.tw/",
-    "attemptedAt": "2026-05-15T17:26:23+0000",
-    "attemptedAtEpoch": 1778865983.1716762,
+    "attemptedAt": "2026-05-21T00:31:09+0800",
+    "attemptedAtEpoch": 1779294669.447937,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3086": {
     "code": "3086",
     "companyName": "華義*",
     "companyUrl": "https://www.wayi.net/",
-    "attemptedAt": "2026-05-15T17:26:28+0000",
-    "attemptedAtEpoch": 1778865988.0088162,
+    "attemptedAt": "2026-05-21T00:31:10+0800",
+    "attemptedAtEpoch": 1779294670.27682,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3090": {
     "code": "3090",
     "companyName": "日電貿",
     "companyUrl": "https://www.ndb.com.tw/",
-    "attemptedAt": "2026-05-15T17:29:54+0000",
-    "attemptedAtEpoch": 1778866194.1032484,
+    "attemptedAt": "2026-05-21T00:31:11+0800",
+    "attemptedAtEpoch": 1779294671.8857138,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3094": {
     "code": "3094",
     "companyName": "聯傑",
     "companyUrl": "http://www.davicom.com.tw/",
-    "attemptedAt": "2026-05-15T17:31:33+0000",
-    "attemptedAtEpoch": 1778866293.384918,
+    "attemptedAt": "2026-05-21T00:31:12+0800",
+    "attemptedAtEpoch": 1779294672.87198,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3118": {
     "code": "3118",
     "companyName": "進階",
     "companyUrl": "https://www.level.com.tw/",
-    "attemptedAt": "2026-05-15T17:32:26+0000",
-    "attemptedAtEpoch": 1778866346.0355685,
+    "attemptedAt": "2026-05-21T00:31:13+0800",
+    "attemptedAtEpoch": 1779294673.888735,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3122": {
     "code": "3122",
     "companyName": "笙泉",
     "companyUrl": "https://www.megawin.com.tw/",
-    "attemptedAt": "2026-05-15T17:33:03+0000",
-    "attemptedAtEpoch": 1778866383.5375412,
+    "attemptedAt": "2026-05-21T00:31:15+0800",
+    "attemptedAtEpoch": 1779294675.107108,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3128": {
     "code": "3128",
     "companyName": "昇銳",
     "companyUrl": "https://www.hisharp.com/",
-    "attemptedAt": "2026-05-15T17:33:42+0000",
-    "attemptedAtEpoch": 1778866422.5083883,
+    "attemptedAt": "2026-05-21T00:31:16+0800",
+    "attemptedAtEpoch": 1779294676.879488,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3131": {
     "code": "3131",
     "companyName": "弘塑",
     "companyUrl": "https://www.gptc.com.tw/",
-    "attemptedAt": "2026-05-15T17:33:50+0000",
-    "attemptedAtEpoch": 1778866430.68421,
+    "attemptedAt": "2026-05-21T00:31:18+0800",
+    "attemptedAtEpoch": 1779294678.3293388,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3141": {
     "code": "3141",
@@ -1633,21 +1863,25 @@
     "code": "3149",
     "companyName": "正達",
     "companyUrl": "https://www.gtoc.com.tw/",
-    "attemptedAt": "2026-05-15T17:35:47+0000",
-    "attemptedAtEpoch": 1778866547.7431145,
+    "attemptedAt": "2026-05-21T00:31:19+0800",
+    "attemptedAtEpoch": 1779294679.7480488,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3163": {
     "code": "3163",
     "companyName": "波若威",
     "companyUrl": "http://www.browave.com/",
-    "attemptedAt": "2026-05-15T17:36:52+0000",
-    "attemptedAtEpoch": 1778866612.484519,
+    "attemptedAt": "2026-05-21T00:31:20+0800",
+    "attemptedAtEpoch": 1779294680.940625,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3176": {
     "code": "3176",
@@ -1663,21 +1897,25 @@
     "code": "3206",
     "companyName": "志豐",
     "companyUrl": "https://www.kingstate.com.tw/",
-    "attemptedAt": "2026-05-15T17:39:28+0000",
-    "attemptedAtEpoch": 1778866768.0976348,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:31:21+0800",
+    "attemptedAtEpoch": 1779294681.7559779,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3207": {
     "code": "3207",
     "companyName": "耀勝",
     "companyUrl": "https://www.top-nation.com/",
-    "attemptedAt": "2026-05-15T17:39:46+0000",
-    "attemptedAtEpoch": 1778866786.3360798,
+    "attemptedAt": "2026-05-21T00:31:23+0800",
+    "attemptedAtEpoch": 1779294683.34904,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3211": {
     "code": "3211",
@@ -1713,31 +1951,37 @@
     "code": "3221",
     "companyName": "台嘉碩",
     "companyUrl": "http://www.taisaw.com/",
-    "attemptedAt": "2026-05-15T17:41:44+0000",
-    "attemptedAtEpoch": 1778866904.9113731,
+    "attemptedAt": "2026-05-21T00:31:24+0800",
+    "attemptedAtEpoch": 1779294684.0411289,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3227": {
     "code": "3227",
     "companyName": "原相",
     "companyUrl": "http://www.pixart.com/",
-    "attemptedAt": "2026-05-15T17:42:38+0000",
-    "attemptedAtEpoch": 1778866958.5598915,
+    "attemptedAt": "2026-05-21T00:31:25+0800",
+    "attemptedAtEpoch": 1779294685.068361,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3232": {
     "code": "3232",
     "companyName": "昱捷",
     "companyUrl": "http://www.sentronic.com.tw/",
-    "attemptedAt": "2026-05-15T17:43:07+0000",
-    "attemptedAtEpoch": 1778866987.1566157,
+    "attemptedAt": "2026-05-21T00:31:25+0800",
+    "attemptedAtEpoch": 1779294685.778524,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3234": {
     "code": "3234",
@@ -1763,11 +2007,13 @@
     "code": "3257",
     "companyName": "虹冠電",
     "companyUrl": "http://www.championmicro.com.tw/",
-    "attemptedAt": "2026-05-15T17:45:58+0000",
-    "attemptedAtEpoch": 1778867158.5074866,
+    "attemptedAt": "2026-05-21T00:31:26+0800",
+    "attemptedAtEpoch": 1779294686.631331,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3260": {
     "code": "3260",
@@ -1793,61 +2039,73 @@
     "code": "3268",
     "companyName": "海德威",
     "companyUrl": "https://www.higherway.com.tw/",
-    "attemptedAt": "2026-05-15T17:47:32+0000",
-    "attemptedAtEpoch": 1778867252.512708,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:31:27+0800",
+    "attemptedAtEpoch": 1779294687.898077,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3284": {
     "code": "3284",
     "companyName": "太普高",
     "companyUrl": "https://www.ctptop.com.tw/",
-    "attemptedAt": "2026-05-15T17:48:34+0000",
-    "attemptedAtEpoch": 1778867314.7574868,
+    "attemptedAt": "2026-05-21T00:31:29+0800",
+    "attemptedAtEpoch": 1779294689.474699,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3285": {
     "code": "3285",
     "companyName": "微端",
     "companyUrl": "https://www.microtips.com.tw/",
-    "attemptedAt": "2026-05-15T17:50:27+0000",
-    "attemptedAtEpoch": 1778867427.0972733,
+    "attemptedAt": "2026-05-21T00:31:30+0800",
+    "attemptedAtEpoch": 1779294690.35551,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3288": {
     "code": "3288",
     "companyName": "點晶",
     "companyUrl": "https://www.siti.com.tw/",
-    "attemptedAt": "2026-05-15T17:50:33+0000",
-    "attemptedAtEpoch": 1778867433.1949117,
+    "attemptedAt": "2026-05-21T00:31:35+0800",
+    "attemptedAtEpoch": 1779294695.2118661,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3289": {
     "code": "3289",
     "companyName": "宜特",
     "companyUrl": "https://www.istgroup.com/",
-    "attemptedAt": "2026-05-15T19:58:16+0000",
-    "attemptedAtEpoch": 1778875096.536807,
+    "attemptedAt": "2026-05-21T00:31:36+0800",
+    "attemptedAtEpoch": 1779294696.263447,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3303": {
     "code": "3303",
     "companyName": "岱稜",
     "companyUrl": "https://www.univacco.com.tw/",
-    "attemptedAt": "2026-05-15T19:59:35+0000",
-    "attemptedAtEpoch": 1778875175.24074,
-    "candidateCount": 3,
-    "foundUseful": true,
-    "error": ""
+    "attemptedAt": "2026-05-21T00:31:37+0800",
+    "attemptedAtEpoch": 1779294697.488418,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3305": {
     "code": "3305",
@@ -1883,11 +2141,13 @@
     "code": "3313",
     "companyName": "斐成",
     "companyUrl": "https://www.fce.com.tw/",
-    "attemptedAt": "2026-05-15T20:03:06+0000",
-    "attemptedAtEpoch": 1778875386.048442,
-    "candidateCount": 6,
+    "attemptedAt": "2026-05-21T00:31:39+0800",
+    "attemptedAtEpoch": 1779294699.054243,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3317": {
     "code": "3317",
@@ -1903,11 +2163,13 @@
     "code": "3322",
     "companyName": "建舜電",
     "companyUrl": "http://www.jem.com.tw/",
-    "attemptedAt": "2026-05-15T20:04:13+0000",
-    "attemptedAtEpoch": 1778875453.3334136,
+    "attemptedAt": "2026-05-21T00:31:40+0800",
+    "attemptedAtEpoch": 1779294700.1979861,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3323": {
     "code": "3323",
@@ -1933,11 +2195,13 @@
     "code": "3325",
     "companyName": "旭品",
     "companyUrl": "https://www.casing.com.tw/index.php",
-    "attemptedAt": "2026-05-15T20:06:10+0000",
-    "attemptedAtEpoch": 1778875570.0272574,
+    "attemptedAt": "2026-05-21T00:31:41+0800",
+    "attemptedAtEpoch": 1779294701.015455,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3338": {
     "code": "3338",
@@ -1983,11 +2247,13 @@
     "code": "3373",
     "companyName": "熱映",
     "companyUrl": "http://www.radiantek.com.tw/",
-    "attemptedAt": "2026-05-15T20:09:57+0000",
-    "attemptedAtEpoch": 1778875797.5284014,
+    "attemptedAt": "2026-05-21T00:31:42+0800",
+    "attemptedAtEpoch": 1779294702.732434,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3379": {
     "code": "3379",
@@ -2003,11 +2269,13 @@
     "code": "3390",
     "companyName": "旭軟",
     "companyUrl": "http://www.sunflex.com.tw/",
-    "attemptedAt": "2026-05-15T20:11:12+0000",
-    "attemptedAtEpoch": 1778875872.989468,
+    "attemptedAt": "2026-05-21T00:31:43+0800",
+    "attemptedAtEpoch": 1779294703.536373,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3402": {
     "code": "3402",
@@ -2023,11 +2291,13 @@
     "code": "3441",
     "companyName": "聯一光電",
     "companyUrl": "https://www.t-unique.com/",
-    "attemptedAt": "2026-05-15T20:12:09+0000",
-    "attemptedAtEpoch": 1778875929.0268526,
+    "attemptedAt": "2026-05-21T00:31:44+0800",
+    "attemptedAtEpoch": 1779294704.82552,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3450": {
     "code": "3450",
@@ -2043,21 +2313,25 @@
     "code": "3455",
     "companyName": "由田",
     "companyUrl": "http://www.utechzone.com.tw/",
-    "attemptedAt": "2026-05-15T20:13:19+0000",
-    "attemptedAtEpoch": 1778875999.775135,
+    "attemptedAt": "2026-05-21T00:31:48+0800",
+    "attemptedAtEpoch": 1779294708.278625,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3465": {
     "code": "3465",
     "companyName": "進泰電子",
     "companyUrl": "https://www.naeaudio.com/",
-    "attemptedAt": "2026-05-15T20:14:58+0000",
-    "attemptedAtEpoch": 1778876098.1153932,
+    "attemptedAt": "2026-05-21T00:31:51+0800",
+    "attemptedAtEpoch": 1779294711.7693062,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3479": {
     "code": "3479",
@@ -2083,11 +2357,13 @@
     "code": "3484",
     "companyName": "崧騰",
     "companyUrl": "https://www.solteam.com.tw/",
-    "attemptedAt": "2026-05-15T20:17:07+0000",
-    "attemptedAtEpoch": 1778876227.294071,
+    "attemptedAt": "2026-05-21T00:31:52+0800",
+    "attemptedAtEpoch": 1779294712.5066319,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3490": {
     "code": "3490",
@@ -2103,11 +2379,13 @@
     "code": "3498",
     "companyName": "陽程",
     "companyUrl": "https://www.usuntek.com/",
-    "attemptedAt": "2026-05-15T20:19:01+0000",
-    "attemptedAtEpoch": 1778876341.0825093,
+    "attemptedAt": "2026-05-21T00:31:53+0800",
+    "attemptedAtEpoch": 1779294713.454477,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3508": {
     "code": "3508",
@@ -2123,31 +2401,37 @@
     "code": "3518",
     "companyName": "柏騰",
     "companyUrl": "https://www.pttech.com.tw/",
-    "attemptedAt": "2026-05-15T20:20:26+0000",
-    "attemptedAtEpoch": 1778876426.1188364,
+    "attemptedAt": "2026-05-21T00:33:11+0800",
+    "attemptedAtEpoch": 1779294791.592258,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3523": {
     "code": "3523",
     "companyName": "迎輝",
     "companyUrl": "https://www.efun.com.tw/",
-    "attemptedAt": "2026-05-15T20:20:54+0000",
-    "attemptedAtEpoch": 1778876454.6381164,
+    "attemptedAt": "2026-05-21T00:33:12+0800",
+    "attemptedAtEpoch": 1779294792.744407,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3527": {
     "code": "3527",
     "companyName": "聚積",
     "companyUrl": "https://www.mblock.com.tw/zh-tw",
-    "attemptedAt": "2026-05-15T20:21:39+0000",
-    "attemptedAtEpoch": 1778876499.8801281,
+    "attemptedAt": "2026-05-21T00:33:13+0800",
+    "attemptedAtEpoch": 1779294793.615932,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3535": {
     "code": "3535",
@@ -2193,21 +2477,25 @@
     "code": "3550",
     "companyName": "聯穎",
     "companyUrl": "http://www.copartner.com.tw/",
-    "attemptedAt": "2026-05-15T20:25:18+0000",
-    "attemptedAtEpoch": 1778876718.7708178,
+    "attemptedAt": "2026-05-21T00:33:14+0800",
+    "attemptedAtEpoch": 1779294794.4733,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3552": {
     "code": "3552",
     "companyName": "同致",
     "companyUrl": "https://www.tungthih.com.tw/",
-    "attemptedAt": "2026-05-15T20:25:25+0000",
-    "attemptedAtEpoch": 1778876725.7692297,
+    "attemptedAt": "2026-05-21T00:33:15+0800",
+    "attemptedAtEpoch": 1779294795.626096,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3556": {
     "code": "3556",
@@ -2223,11 +2511,13 @@
     "code": "3557",
     "companyName": "嘉威",
     "companyUrl": "https://www.jiaweils.com/",
-    "attemptedAt": "2026-05-15T20:26:58+0000",
-    "attemptedAtEpoch": 1778876818.0663266,
+    "attemptedAt": "2026-05-21T00:33:16+0800",
+    "attemptedAtEpoch": 1779294796.7132642,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3567": {
     "code": "3567",
@@ -2293,51 +2583,61 @@
     "code": "3596",
     "companyName": "智易",
     "companyUrl": "https://www.arcadyan.com/",
-    "attemptedAt": "2026-05-15T20:33:45+0000",
-    "attemptedAtEpoch": 1778877225.5706034,
+    "attemptedAt": "2026-05-21T00:33:18+0800",
+    "attemptedAtEpoch": 1779294798.257951,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3607": {
     "code": "3607",
     "companyName": "谷崧",
     "companyUrl": "https://www.coxongroup.com/",
-    "attemptedAt": "2026-05-15T20:34:02+0000",
-    "attemptedAtEpoch": 1778877242.5220048,
+    "attemptedAt": "2026-05-21T00:34:36+0800",
+    "attemptedAtEpoch": 1779294876.410104,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3615": {
     "code": "3615",
     "companyName": "安可",
     "companyUrl": "https://www.aimcore.com.tw/",
-    "attemptedAt": "2026-05-15T20:35:20+0000",
-    "attemptedAtEpoch": 1778877320.1850133,
+    "attemptedAt": "2026-05-21T00:34:42+0800",
+    "attemptedAtEpoch": 1779294882.753817,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3622": {
     "code": "3622",
     "companyName": "洋華",
     "companyUrl": "https://www.yfo.com.tw/",
-    "attemptedAt": "2026-05-15T20:36:09+0000",
-    "attemptedAtEpoch": 1778877369.4586585,
+    "attemptedAt": "2026-05-21T00:34:44+0800",
+    "attemptedAtEpoch": 1779294884.341629,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3624": {
     "code": "3624",
     "companyName": "光頡",
     "companyUrl": "http://www.viking.com.tw/",
-    "attemptedAt": "2026-05-15T20:36:57+0000",
-    "attemptedAtEpoch": 1778877417.4432592,
+    "attemptedAt": "2026-05-21T00:34:45+0800",
+    "attemptedAtEpoch": 1779294885.305839,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3625": {
     "code": "3625",
@@ -2353,21 +2653,25 @@
     "code": "3630",
     "companyName": "新鉅科",
     "companyUrl": "http://www.newmax.com.tw/",
-    "attemptedAt": "2026-05-15T20:38:10+0000",
-    "attemptedAtEpoch": 1778877490.981439,
+    "attemptedAt": "2026-05-21T00:34:46+0800",
+    "attemptedAtEpoch": 1779294886.7532349,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3645": {
     "code": "3645",
     "companyName": "達邁",
     "companyUrl": "https://www.taimide.com.tw/",
-    "attemptedAt": "2026-05-15T20:38:30+0000",
-    "attemptedAtEpoch": 1778877510.7564223,
+    "attemptedAt": "2026-05-21T00:34:47+0800",
+    "attemptedAtEpoch": 1779294887.47947,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3646": {
     "code": "3646",
@@ -2383,21 +2687,25 @@
     "code": "3661",
     "companyName": "世芯-KY",
     "companyUrl": "https://www.alchip.com/",
-    "attemptedAt": "2026-05-15T20:40:06+0000",
-    "attemptedAtEpoch": 1778877606.5346794,
+    "attemptedAt": "2026-05-21T00:34:48+0800",
+    "attemptedAtEpoch": 1779294888.5280268,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3672": {
     "code": "3672",
     "companyName": "康聯訊",
     "companyUrl": "https://www.ctsystem.com/en/",
-    "attemptedAt": "2026-05-15T20:40:56+0000",
-    "attemptedAtEpoch": 1778877656.5239494,
+    "attemptedAt": "2026-05-21T00:34:51+0800",
+    "attemptedAtEpoch": 1779294891.299484,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3686": {
     "code": "3686",
@@ -2423,31 +2731,37 @@
     "code": "3691",
     "companyName": "碩禾",
     "companyUrl": "https://www.gigasolar.com.tw/",
-    "attemptedAt": "2026-05-15T20:43:24+0000",
-    "attemptedAtEpoch": 1778877804.7385235,
+    "attemptedAt": "2026-05-21T00:34:54+0800",
+    "attemptedAtEpoch": 1779294894.16578,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3702": {
     "code": "3702",
     "companyName": "大聯大",
     "companyUrl": "https://www.WPGholdings.com/",
-    "attemptedAt": "2026-05-15T22:15:38+0000",
-    "attemptedAtEpoch": 1778883338.0283287,
+    "attemptedAt": "2026-05-21T00:34:54+0800",
+    "attemptedAtEpoch": 1779294894.9792829,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3704": {
     "code": "3704",
     "companyName": "合勤控",
     "companyUrl": "http://www.zyxelgroup.com/",
-    "attemptedAt": "2026-05-15T22:15:43+0000",
-    "attemptedAtEpoch": 1778883343.3335779,
+    "attemptedAt": "2026-05-21T00:34:55+0800",
+    "attemptedAtEpoch": 1779294895.812788,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3708": {
     "code": "3708",
@@ -2463,11 +2777,13 @@
     "code": "3710",
     "companyName": "連展投控",
     "companyUrl": "https://www.acon-holding.com/",
-    "attemptedAt": "2026-05-15T22:17:55+0000",
-    "attemptedAtEpoch": 1778883475.8351152,
+    "attemptedAt": "2026-05-21T00:34:56+0800",
+    "attemptedAtEpoch": 1779294896.934102,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "3715": {
     "code": "3715",
@@ -2483,21 +2799,25 @@
     "code": "4102",
     "companyName": "永日",
     "companyUrl": "http://www.yungzip.com/",
-    "attemptedAt": "2026-05-15T22:19:28+0000",
-    "attemptedAtEpoch": 1778883568.5555787,
+    "attemptedAt": "2026-05-21T00:34:58+0800",
+    "attemptedAtEpoch": 1779294898.286703,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4105": {
     "code": "4105",
     "companyName": "東洋",
     "companyUrl": "https://www.tty.com.tw/",
-    "attemptedAt": "2026-05-15T22:20:46+0000",
-    "attemptedAtEpoch": 1778883646.1008902,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:34:59+0800",
+    "attemptedAtEpoch": 1779294899.1458712,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4109": {
     "code": "4109",
@@ -2513,21 +2833,25 @@
     "code": "4113",
     "companyName": "聯上",
     "companyUrl": "http://kh.vvvvv.com.tw/",
-    "attemptedAt": "2026-05-15T22:21:46+0000",
-    "attemptedAtEpoch": 1778883706.1802056,
+    "attemptedAt": "2026-05-21T00:35:00+0800",
+    "attemptedAtEpoch": 1779294900.932283,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4119": {
     "code": "4119",
     "companyName": "旭富",
     "companyUrl": "https://www.sci-pharmtech.com.tw/",
-    "attemptedAt": "2026-05-15T22:23:00+0000",
-    "attemptedAtEpoch": 1778883780.6666155,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:35:02+0800",
+    "attemptedAtEpoch": 1779294902.192935,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4121": {
     "code": "4121",
@@ -2543,31 +2867,37 @@
     "code": "4126",
     "companyName": "太醫",
     "companyUrl": "http://www.pahsco.com.tw/",
-    "attemptedAt": "2026-05-15T22:24:48+0000",
-    "attemptedAtEpoch": 1778883888.2095323,
+    "attemptedAt": "2026-05-21T00:35:03+0800",
+    "attemptedAtEpoch": 1779294903.0478919,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4129": {
     "code": "4129",
     "companyName": "聯合",
     "companyUrl": "https://tw.unitedorthopedic.com/",
-    "attemptedAt": "2026-05-15T22:26:02+0000",
-    "attemptedAtEpoch": 1778883962.924119,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:35:03+0800",
+    "attemptedAtEpoch": 1779294903.942098,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4133": {
     "code": "4133",
     "companyName": "亞諾法",
     "companyUrl": "http://www.abnova.com/",
-    "attemptedAt": "2026-05-15T22:27:00+0000",
-    "attemptedAtEpoch": 1778884020.8318913,
+    "attemptedAt": "2026-05-21T00:35:06+0800",
+    "attemptedAtEpoch": 1779294906.015241,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4142": {
     "code": "4142",
@@ -2583,11 +2913,13 @@
     "code": "4147",
     "companyName": "中裕",
     "companyUrl": "https://www.taimedbiologics.com/",
-    "attemptedAt": "2026-05-15T22:27:59+0000",
-    "attemptedAtEpoch": 1778884079.6916661,
+    "attemptedAt": "2026-05-21T00:35:07+0800",
+    "attemptedAtEpoch": 1779294907.9002082,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4162": {
     "code": "4162",
@@ -2603,11 +2935,13 @@
     "code": "4168",
     "companyName": "醣聯",
     "companyUrl": "http://www.glyconex.com.tw/",
-    "attemptedAt": "2026-05-15T22:29:48+0000",
-    "attemptedAtEpoch": 1778884188.2545495,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:35:09+0800",
+    "attemptedAtEpoch": 1779294909.1877959,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4303": {
     "code": "4303",
@@ -2623,31 +2957,37 @@
     "code": "4304",
     "companyName": "勝昱",
     "companyUrl": "https://www.sunvic.com.tw/",
-    "attemptedAt": "2026-05-15T22:31:08+0000",
-    "attemptedAtEpoch": 1778884268.9133115,
+    "attemptedAt": "2026-05-21T00:35:21+0800",
+    "attemptedAtEpoch": 1779294921.00772,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4306": {
     "code": "4306",
     "companyName": "炎洲",
     "companyUrl": "https://www.ycgroup.tw/",
-    "attemptedAt": "2026-05-15T22:31:56+0000",
-    "attemptedAtEpoch": 1778884316.558635,
+    "attemptedAt": "2026-05-21T00:35:21+0800",
+    "attemptedAtEpoch": 1779294921.7231538,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4419": {
     "code": "4419",
     "companyName": "皇家美食",
     "companyUrl": "https://www.tsgkh.com.tw/",
-    "attemptedAt": "2026-05-15T22:33:29+0000",
-    "attemptedAtEpoch": 1778884409.3164332,
-    "candidateCount": 3,
+    "attemptedAt": "2026-05-21T00:35:22+0800",
+    "attemptedAtEpoch": 1779294922.6713321,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4510": {
     "code": "4510",
@@ -2663,11 +3003,13 @@
     "code": "4513",
     "companyName": "福裕",
     "companyUrl": "https://www.chevaliertw.com/",
-    "attemptedAt": "2026-05-15T22:35:22+0000",
-    "attemptedAtEpoch": 1778884522.2152889,
+    "attemptedAt": "2026-05-21T00:35:24+0800",
+    "attemptedAtEpoch": 1779294924.003746,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4526": {
     "code": "4526",
@@ -2683,101 +3025,121 @@
     "code": "4533",
     "companyName": "協易機",
     "companyUrl": "https://www.seyi.com/",
-    "attemptedAt": "2026-05-15T22:36:59+0000",
-    "attemptedAtEpoch": 1778884619.4398842,
+    "attemptedAt": "2026-05-21T00:35:45+0800",
+    "attemptedAtEpoch": 1779294945.179163,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4716": {
     "code": "4716",
     "companyName": "大立",
     "companyUrl": "https://www.daily-polymer.com/",
-    "attemptedAt": "2026-05-15T22:38:01+0000",
-    "attemptedAtEpoch": 1778884681.1452603,
+    "attemptedAt": "2026-05-21T00:35:46+0800",
+    "attemptedAtEpoch": 1779294946.428252,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4721": {
     "code": "4721",
     "companyName": "美琪瑪",
     "companyUrl": "https://www.mechema.com/",
-    "attemptedAt": "2026-05-15T22:38:10+0000",
-    "attemptedAtEpoch": 1778884690.0338871,
+    "attemptedAt": "2026-05-21T00:35:47+0800",
+    "attemptedAtEpoch": 1779294947.378934,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4735": {
     "code": "4735",
     "companyName": "豪展",
     "companyUrl": "http://www.avita.com.tw/",
-    "attemptedAt": "2026-05-15T22:38:26+0000",
-    "attemptedAtEpoch": 1778884706.6024203,
+    "attemptedAt": "2026-05-21T00:35:49+0800",
+    "attemptedAtEpoch": 1779294949.562475,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4760": {
     "code": "4760",
     "companyName": "勤凱科技",
     "companyUrl": "http://www.ampletec.com.tw/",
-    "attemptedAt": "2026-05-15T22:39:28+0000",
-    "attemptedAtEpoch": 1778884768.2799156,
+    "attemptedAt": "2026-05-21T00:35:53+0800",
+    "attemptedAtEpoch": 1779294953.6809611,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4807": {
     "code": "4807",
     "companyName": "日成-KY",
     "companyUrl": "http://www.regaljewelrygroup.com/",
-    "attemptedAt": "2026-05-15T22:39:35+0000",
-    "attemptedAtEpoch": 1778884775.5346208,
+    "attemptedAt": "2026-05-21T00:35:54+0800",
+    "attemptedAtEpoch": 1779294954.49324,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4903": {
     "code": "4903",
     "companyName": "聯光通",
     "companyUrl": "https://www.ufoc.com.tw/",
-    "attemptedAt": "2026-05-15T22:40:49+0000",
-    "attemptedAtEpoch": 1778884849.2194135,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:35:55+0800",
+    "attemptedAtEpoch": 1779294955.283304,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4906": {
     "code": "4906",
     "companyName": "正文",
     "companyUrl": "https://www.gemteks.com/",
-    "attemptedAt": "2026-05-15T22:41:43+0000",
-    "attemptedAtEpoch": 1778884903.4584427,
+    "attemptedAt": "2026-05-21T00:35:56+0800",
+    "attemptedAtEpoch": 1779294956.482971,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4908": {
     "code": "4908",
     "companyName": "前鼎",
     "companyUrl": "https://www.apacoe.com.tw/",
-    "attemptedAt": "2026-05-15T22:43:06+0000",
-    "attemptedAtEpoch": 1778884986.312713,
+    "attemptedAt": "2026-05-21T00:35:57+0800",
+    "attemptedAtEpoch": 1779294957.5804842,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4909": {
     "code": "4909",
     "companyName": "新復興",
     "companyUrl": "https://www.nee.com.tw/",
-    "attemptedAt": "2026-05-15T22:43:12+0000",
-    "attemptedAtEpoch": 1778884992.3256576,
+    "attemptedAt": "2026-05-21T00:36:02+0800",
+    "attemptedAtEpoch": 1779294962.433716,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4927": {
     "code": "4927",
@@ -2793,541 +3155,649 @@
     "code": "4934",
     "companyName": "太極",
     "companyUrl": "https://http//www.tainergy.com",
-    "attemptedAt": "2026-05-15T22:44:13+0000",
-    "attemptedAtEpoch": 1778885053.64852,
+    "attemptedAt": "2026-05-21T00:36:06+0800",
+    "attemptedAtEpoch": 1779294966.113291,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4939": {
     "code": "4939",
     "companyName": "亞電",
     "companyUrl": "http://www.aemg.com.tw/",
-    "attemptedAt": "2026-05-15T22:44:53+0000",
-    "attemptedAtEpoch": 1778885093.7135224,
+    "attemptedAt": "2026-05-21T00:36:06+0800",
+    "attemptedAtEpoch": 1779294966.825361,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4953": {
     "code": "4953",
     "companyName": "緯軟",
     "companyUrl": "https://www.wits.com/tw/",
-    "attemptedAt": "2026-05-15T22:44:59+0000",
-    "attemptedAtEpoch": 1778885099.9918153,
+    "attemptedAt": "2026-05-21T00:36:09+0800",
+    "attemptedAtEpoch": 1779294969.133287,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4956": {
     "code": "4956",
     "companyName": "光鋐",
     "companyUrl": "https://www.epileds.com.tw/",
-    "attemptedAt": "2026-05-15T22:45:29+0000",
-    "attemptedAtEpoch": 1778885129.5624802,
+    "attemptedAt": "2026-05-21T00:36:09+0800",
+    "attemptedAtEpoch": 1779294969.889874,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4960": {
     "code": "4960",
     "companyName": "誠美材",
     "companyUrl": "https://www.cmmt.com.tw/",
-    "attemptedAt": "2026-05-15T22:45:37+0000",
-    "attemptedAtEpoch": 1778885137.0330386,
+    "attemptedAt": "2026-05-21T00:36:10+0800",
+    "attemptedAtEpoch": 1779294970.776982,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4968": {
     "code": "4968",
     "companyName": "立積",
     "companyUrl": "https://www.richwave.com.tw/",
-    "attemptedAt": "2026-05-15T22:46:59+0000",
-    "attemptedAtEpoch": 1778885219.9218273,
+    "attemptedAt": "2026-05-21T00:36:11+0800",
+    "attemptedAtEpoch": 1779294971.733949,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4971": {
     "code": "4971",
     "companyName": "IET-KY",
     "companyUrl": "https://www.intelliepi.com.tw/",
-    "attemptedAt": "2026-05-15T22:47:41+0000",
-    "attemptedAtEpoch": 1778885261.9100964,
+    "attemptedAt": "2026-05-21T00:36:13+0800",
+    "attemptedAtEpoch": 1779294973.842288,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4973": {
     "code": "4973",
     "companyName": "廣穎電通",
     "companyUrl": "https://www.silicon-power.com/",
-    "attemptedAt": "2026-05-15T22:47:46+0000",
-    "attemptedAtEpoch": 1778885266.0387695,
+    "attemptedAt": "2026-05-21T00:36:17+0800",
+    "attemptedAtEpoch": 1779294977.204272,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4974": {
     "code": "4974",
     "companyName": "亞泰",
     "companyUrl": "https://www.atii.com.tw/",
-    "attemptedAt": "2026-05-15T22:48:32+0000",
-    "attemptedAtEpoch": 1778885312.7949646,
+    "attemptedAt": "2026-05-21T00:36:20+0800",
+    "attemptedAtEpoch": 1779294980.596967,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4979": {
     "code": "4979",
     "companyName": "華星光",
     "companyUrl": "https://www.luxnetcorp.com.tw/",
-    "attemptedAt": "2026-05-15T22:49:35+0000",
-    "attemptedAtEpoch": 1778885375.2774415,
+    "attemptedAt": "2026-05-21T00:36:22+0800",
+    "attemptedAtEpoch": 1779294982.526209,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4991": {
     "code": "4991",
     "companyName": "環宇-KY",
     "companyUrl": "http://gcsincorp.com/",
-    "attemptedAt": "2026-05-15T22:50:34+0000",
-    "attemptedAtEpoch": 1778885434.2770953,
+    "attemptedAt": "2026-05-21T00:36:24+0800",
+    "attemptedAtEpoch": 1779294984.601789,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4995": {
     "code": "4995",
     "companyName": "晶達",
     "companyUrl": "https://www.litemax.com.tw/",
-    "attemptedAt": "2026-05-15T22:50:40+0000",
-    "attemptedAtEpoch": 1778885440.240381,
+    "attemptedAt": "2026-05-21T00:36:28+0800",
+    "attemptedAtEpoch": 1779294988.5171561,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "4999": {
     "code": "4999",
     "companyName": "鑫禾",
     "companyUrl": "https://www.sinher.com.tw/",
-    "attemptedAt": "2026-05-15T22:51:22+0000",
-    "attemptedAtEpoch": 1778885482.337603,
+    "attemptedAt": "2026-05-21T00:36:29+0800",
+    "attemptedAtEpoch": 1779294989.277835,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5009": {
     "code": "5009",
     "companyName": "榮剛",
     "companyUrl": "https://www.gmtc.com.tw/",
-    "attemptedAt": "2026-05-15T22:52:27+0000",
-    "attemptedAtEpoch": 1778885547.40006,
+    "attemptedAt": "2026-05-21T00:36:30+0800",
+    "attemptedAtEpoch": 1779294990.457428,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5013": {
     "code": "5013",
     "companyName": "強新",
     "companyUrl": "https://www.newbest.com.tw/",
-    "attemptedAt": "2026-05-15T22:52:36+0000",
-    "attemptedAtEpoch": 1778885556.3473797,
+    "attemptedAt": "2026-05-21T00:36:31+0800",
+    "attemptedAtEpoch": 1779294991.461729,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5014": {
     "code": "5014",
     "companyName": "建錩",
     "companyUrl": "https://www.chainchon.com/",
-    "attemptedAt": "2026-05-15T22:53:32+0000",
-    "attemptedAtEpoch": 1778885612.3745723,
+    "attemptedAt": "2026-05-21T00:36:32+0800",
+    "attemptedAtEpoch": 1779294992.945581,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5201": {
     "code": "5201",
     "companyName": "凱衛",
     "companyUrl": "https://WWW.KWAY.COM.TW/",
-    "attemptedAt": "2026-05-15T22:54:56+0000",
-    "attemptedAtEpoch": 1778885696.6647122,
+    "attemptedAt": "2026-05-21T00:36:36+0800",
+    "attemptedAtEpoch": 1779294996.952519,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5202": {
     "code": "5202",
     "companyName": "力新",
     "companyUrl": "https://www.newsoft.com.tw/",
-    "attemptedAt": "2026-05-15T22:55:03+0000",
-    "attemptedAtEpoch": 1778885703.1714027,
+    "attemptedAt": "2026-05-21T00:36:37+0800",
+    "attemptedAtEpoch": 1779294997.980315,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5203": {
     "code": "5203",
     "companyName": "訊連",
     "companyUrl": "https://www.cyberlink.com/",
-    "attemptedAt": "2026-05-15T22:55:46+0000",
-    "attemptedAtEpoch": 1778885746.4839904,
+    "attemptedAt": "2026-05-21T00:36:39+0800",
+    "attemptedAtEpoch": 1779294999.541704,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5251": {
     "code": "5251",
     "companyName": "天鉞電",
     "companyUrl": "https://www.secufirst.com.tw/",
-    "attemptedAt": "2026-05-15T22:56:42+0000",
-    "attemptedAtEpoch": 1778885802.198163,
+    "attemptedAt": "2026-05-21T00:36:41+0800",
+    "attemptedAtEpoch": 1779295001.324713,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5263": {
     "code": "5263",
     "companyName": "智崴",
     "companyUrl": "https://www.brogent.com/",
-    "attemptedAt": "2026-05-15T22:57:54+0000",
-    "attemptedAtEpoch": 1778885874.9954977,
+    "attemptedAt": "2026-05-21T00:36:42+0800",
+    "attemptedAtEpoch": 1779295002.426379,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5272": {
     "code": "5272",
     "companyName": "笙科",
     "companyUrl": "https://www.amiccom.com.tw/",
-    "attemptedAt": "2026-05-15T22:58:05+0000",
-    "attemptedAtEpoch": 1778885885.2392051,
+    "attemptedAt": "2026-05-21T00:36:43+0800",
+    "attemptedAtEpoch": 1779295003.2114758,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5289": {
     "code": "5289",
     "companyName": "宜鼎",
     "companyUrl": "https://www.innodisk.com/",
-    "attemptedAt": "2026-05-15T22:58:43+0000",
-    "attemptedAtEpoch": 1778885923.6568897,
+    "attemptedAt": "2026-05-21T00:36:45+0800",
+    "attemptedAtEpoch": 1779295005.850759,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5309": {
     "code": "5309",
     "companyName": "系統電",
     "companyUrl": "https://www.sysgration.com/",
-    "attemptedAt": "2026-05-15T22:59:27+0000",
-    "attemptedAtEpoch": 1778885967.2655993,
+    "attemptedAt": "2026-05-21T00:36:47+0800",
+    "attemptedAtEpoch": 1779295007.220026,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5314": {
     "code": "5314",
     "companyName": "世紀*",
     "companyUrl": "https://www.myson.com.tw/",
-    "attemptedAt": "2026-05-16T04:07:49+0000",
-    "attemptedAtEpoch": 1778904469.4812307,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:36:48+0800",
+    "attemptedAtEpoch": 1779295008.530096,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5324": {
     "code": "5324",
     "companyName": "士開",
     "companyUrl": "https://www.sldc.com.tw/",
-    "attemptedAt": "2026-05-16T04:08:10+0000",
-    "attemptedAtEpoch": 1778904490.2805073,
+    "attemptedAt": "2026-05-21T00:36:51+0800",
+    "attemptedAtEpoch": 1779295011.115545,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5328": {
     "code": "5328",
     "companyName": "華容",
     "companyUrl": "http://www.hjc.com.tw/",
-    "attemptedAt": "2026-05-16T04:09:14+0000",
-    "attemptedAtEpoch": 1778904554.5371208,
+    "attemptedAt": "2026-05-21T00:36:51+0800",
+    "attemptedAtEpoch": 1779295011.828515,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5345": {
     "code": "5345",
     "companyName": "馥鴻",
     "companyUrl": "https://www.full-home.com.tw/",
-    "attemptedAt": "2026-05-16T04:10:02+0000",
-    "attemptedAtEpoch": 1778904602.4996989,
+    "attemptedAt": "2026-05-21T00:36:52+0800",
+    "attemptedAtEpoch": 1779295012.792528,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5351": {
     "code": "5351",
     "companyName": "鈺創",
     "companyUrl": "https://www.etron.com/",
-    "attemptedAt": "2026-05-16T04:11:08+0000",
-    "attemptedAtEpoch": 1778904668.1812522,
+    "attemptedAt": "2026-05-21T00:36:54+0800",
+    "attemptedAtEpoch": 1779295014.163369,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5355": {
     "code": "5355",
     "companyName": "佳總",
     "companyUrl": "https://www.gia-tzoong.com.tw/",
-    "attemptedAt": "2026-05-16T04:11:51+0000",
-    "attemptedAtEpoch": 1778904711.149722,
+    "attemptedAt": "2026-05-21T00:36:56+0800",
+    "attemptedAtEpoch": 1779295016.125508,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5356": {
     "code": "5356",
     "companyName": "協益",
     "companyUrl": "http://www.sirtec.com.tw/",
-    "attemptedAt": "2026-05-16T04:12:59+0000",
-    "attemptedAtEpoch": 1778904779.5981212,
+    "attemptedAt": "2026-05-21T00:36:57+0800",
+    "attemptedAtEpoch": 1779295017.139219,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5381": {
     "code": "5381",
     "companyName": "光譜",
     "companyUrl": "https://www.uniplus.com.tw/",
-    "attemptedAt": "2026-05-16T04:13:37+0000",
-    "attemptedAtEpoch": 1778904817.0504434,
+    "attemptedAt": "2026-05-21T00:36:58+0800",
+    "attemptedAtEpoch": 1779295018.717422,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5392": {
     "code": "5392",
     "companyName": "能率",
     "companyUrl": "https://www.avy.com.tw/",
-    "attemptedAt": "2026-05-16T04:15:13+0000",
-    "attemptedAtEpoch": 1778904913.859001,
+    "attemptedAt": "2026-05-21T00:36:59+0800",
+    "attemptedAtEpoch": 1779295019.450971,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5410": {
     "code": "5410",
     "companyName": "國眾",
     "companyUrl": "https://www.leosys.com/",
-    "attemptedAt": "2026-05-16T04:16:23+0000",
-    "attemptedAtEpoch": 1778904983.2275724,
+    "attemptedAt": "2026-05-21T00:37:03+0800",
+    "attemptedAtEpoch": 1779295023.279177,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5425": {
     "code": "5425",
     "companyName": "台半",
     "companyUrl": "https://www.taiwansemi.com/",
-    "attemptedAt": "2026-05-16T04:17:40+0000",
-    "attemptedAtEpoch": 1778905060.2444685,
+    "attemptedAt": "2026-05-21T00:37:07+0800",
+    "attemptedAtEpoch": 1779295027.912926,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5426": {
     "code": "5426",
     "companyName": "振發",
     "companyUrl": "https://www.chengfwa.com.tw/",
-    "attemptedAt": "2026-05-16T04:17:47+0000",
-    "attemptedAtEpoch": 1778905067.0974865,
+    "attemptedAt": "2026-05-21T00:37:09+0800",
+    "attemptedAtEpoch": 1779295029.155872,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5438": {
     "code": "5438",
     "companyName": "東友",
     "companyUrl": "http://www.tecoimage.com.tw/",
-    "attemptedAt": "2026-05-16T04:18:03+0000",
-    "attemptedAtEpoch": 1778905083.8313973,
+    "attemptedAt": "2026-05-21T00:37:09+0800",
+    "attemptedAtEpoch": 1779295029.912116,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5450": {
     "code": "5450",
     "companyName": "南良",
     "companyUrl": "https://www.namliong-global.com/",
-    "attemptedAt": "2026-05-16T04:18:37+0000",
-    "attemptedAtEpoch": 1778905117.4243507,
+    "attemptedAt": "2026-05-21T00:37:10+0800",
+    "attemptedAtEpoch": 1779295030.705462,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5452": {
     "code": "5452",
     "companyName": "佶優",
     "companyUrl": "https://www.unicgroup.com/",
-    "attemptedAt": "2026-05-16T04:18:43+0000",
-    "attemptedAtEpoch": 1778905123.9077942,
+    "attemptedAt": "2026-05-21T00:37:16+0800",
+    "attemptedAtEpoch": 1779295036.0732028,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5455": {
     "code": "5455",
     "companyName": "昇益",
     "companyUrl": "https://www.signality.com.tw/",
-    "attemptedAt": "2026-05-16T04:18:51+0000",
-    "attemptedAtEpoch": 1778905131.0113788,
+    "attemptedAt": "2026-05-21T00:37:19+0800",
+    "attemptedAtEpoch": 1779295039.930371,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5471": {
     "code": "5471",
     "companyName": "松翰",
     "companyUrl": "https://www.sonix.com.tw/",
-    "attemptedAt": "2026-05-16T04:18:59+0000",
-    "attemptedAtEpoch": 1778905139.4010842,
+    "attemptedAt": "2026-05-21T00:37:20+0800",
+    "attemptedAtEpoch": 1779295040.676896,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5478": {
     "code": "5478",
     "companyName": "智冠",
     "companyUrl": "https://www.soft-world.com/",
-    "attemptedAt": "2026-05-16T04:19:36+0000",
-    "attemptedAtEpoch": 1778905176.0285788,
+    "attemptedAt": "2026-05-21T00:37:21+0800",
+    "attemptedAtEpoch": 1779295041.538762,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5481": {
     "code": "5481",
     "companyName": "新華",
     "companyUrl": "http://www.sinotact.com/",
-    "attemptedAt": "2026-05-16T04:19:42+0000",
-    "attemptedAtEpoch": 1778905182.619581,
+    "attemptedAt": "2026-05-21T00:37:22+0800",
+    "attemptedAtEpoch": 1779295042.254373,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5483": {
     "code": "5483",
     "companyName": "中美晶",
     "companyUrl": "http://www.saswafer.com/",
-    "attemptedAt": "2026-05-16T04:20:32+0000",
-    "attemptedAtEpoch": 1778905232.1734664,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:37:23+0800",
+    "attemptedAtEpoch": 1779295043.616363,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5487": {
     "code": "5487",
     "companyName": "通泰",
     "companyUrl": "https://www.tontek.com.tw/",
-    "attemptedAt": "2026-05-16T04:21:59+0000",
-    "attemptedAtEpoch": 1778905319.8749745,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:37:24+0800",
+    "attemptedAtEpoch": 1779295044.896605,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5490": {
     "code": "5490",
     "companyName": "同亨",
     "companyUrl": "https://www.xac.com.tw/",
-    "attemptedAt": "2026-05-16T04:23:09+0000",
-    "attemptedAtEpoch": 1778905389.8729694,
+    "attemptedAt": "2026-05-21T00:37:26+0800",
+    "attemptedAtEpoch": 1779295046.549105,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5515": {
     "code": "5515",
     "companyName": "建國",
     "companyUrl": "http://www.ckgroup.com.tw/",
-    "attemptedAt": "2026-05-16T04:23:41+0000",
-    "attemptedAtEpoch": 1778905421.1588595,
-    "candidateCount": 2,
+    "attemptedAt": "2026-05-21T00:37:28+0800",
+    "attemptedAtEpoch": 1779295048.000383,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5521": {
     "code": "5521",
     "companyName": "工信",
     "companyUrl": "http://www.kseco.com.tw/",
-    "attemptedAt": "2026-05-16T04:23:47+0000",
-    "attemptedAtEpoch": 1778905427.2003212,
+    "attemptedAt": "2026-05-21T00:37:29+0800",
+    "attemptedAtEpoch": 1779295049.860317,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5529": {
     "code": "5529",
     "companyName": "鉅陞",
     "companyUrl": "https://mega-international.com.tw/",
-    "attemptedAt": "2026-05-16T04:24:55+0000",
-    "attemptedAtEpoch": 1778905495.7709804,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:37:33+0800",
+    "attemptedAtEpoch": 1779295053.504092,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5609": {
     "code": "5609",
     "companyName": "中菲行",
     "companyUrl": "http://www.dimerco.com/",
-    "attemptedAt": "2026-05-16T04:25:56+0000",
-    "attemptedAtEpoch": 1778905556.3533263,
+    "attemptedAt": "2026-05-21T00:37:35+0800",
+    "attemptedAtEpoch": 1779295055.056586,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5876": {
     "code": "5876",
     "companyName": "上海商銀",
     "companyUrl": "https://www.scsb.com.tw/",
-    "attemptedAt": "2026-05-16T04:26:03+0000",
-    "attemptedAtEpoch": 1778905563.1711102,
+    "attemptedAt": "2026-05-21T00:37:35+0800",
+    "attemptedAtEpoch": 1779295055.7429981,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "5880": {
     "code": "5880",
     "companyName": "合庫金",
     "companyUrl": "https://www.tcfhc.com.tw/",
-    "attemptedAt": "2026-05-16T04:27:12+0000",
-    "attemptedAtEpoch": 1778905632.8003097,
+    "attemptedAt": "2026-05-21T00:37:36+0800",
+    "attemptedAtEpoch": 1779295056.8244889,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6005": {
     "code": "6005",
     "companyName": "群益證",
     "companyUrl": "https://WWW.CAPITAL.COM.TW/",
-    "attemptedAt": "2026-05-16T04:27:20+0000",
-    "attemptedAtEpoch": 1778905640.6326017,
+    "attemptedAt": "2026-05-21T00:37:37+0800",
+    "attemptedAtEpoch": 1779295057.5665002,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6015": {
     "code": "6015",
     "companyName": "宏遠證",
     "companyUrl": "http://www.honsec.com.tw/",
-    "attemptedAt": "2026-05-16T04:28:18+0000",
-    "attemptedAtEpoch": 1778905698.7106824,
+    "attemptedAt": "2026-05-21T00:37:39+0800",
+    "attemptedAtEpoch": 1779295059.247591,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6104": {
     "code": "6104",
@@ -3343,251 +3813,301 @@
     "code": "6108",
     "companyName": "競國",
     "companyUrl": "https://www.apcb.com.tw/",
-    "attemptedAt": "2026-05-16T04:29:40+0000",
-    "attemptedAtEpoch": 1778905780.288398,
+    "attemptedAt": "2026-05-21T00:37:43+0800",
+    "attemptedAtEpoch": 1779295063.002327,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6112": {
     "code": "6112",
     "companyName": "邁達特",
     "companyUrl": "https://www.metaage.com.tw/",
-    "attemptedAt": "2026-05-16T04:30:24+0000",
-    "attemptedAtEpoch": 1778905824.0840096,
+    "attemptedAt": "2026-05-21T00:37:43+0800",
+    "attemptedAtEpoch": 1779295063.9892302,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6116": {
     "code": "6116",
     "companyName": "彩晶",
     "companyUrl": "https://www.hannstar.com/",
-    "attemptedAt": "2026-05-16T04:31:15+0000",
-    "attemptedAtEpoch": 1778905875.8657026,
+    "attemptedAt": "2026-05-21T00:37:46+0800",
+    "attemptedAtEpoch": 1779295066.400244,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6123": {
     "code": "6123",
     "companyName": "上奇",
     "companyUrl": "https://www.grandtech.com/",
-    "attemptedAt": "2026-05-16T04:32:05+0000",
-    "attemptedAtEpoch": 1778905925.064569,
+    "attemptedAt": "2026-05-21T00:38:07+0800",
+    "attemptedAtEpoch": 1779295087.4558048,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6125": {
     "code": "6125",
     "companyName": "廣運",
     "companyUrl": "http://www.kenmec.com/",
-    "attemptedAt": "2026-05-16T04:32:10+0000",
-    "attemptedAtEpoch": 1778905930.166475,
+    "attemptedAt": "2026-05-21T00:38:08+0800",
+    "attemptedAtEpoch": 1779295088.2898822,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6126": {
     "code": "6126",
     "companyName": "信音",
     "companyUrl": "https://www.singatron.com.tw/",
-    "attemptedAt": "2026-05-16T04:33:09+0000",
-    "attemptedAtEpoch": 1778905989.0812356,
+    "attemptedAt": "2026-05-21T00:38:09+0800",
+    "attemptedAtEpoch": 1779295089.2622058,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6127": {
     "code": "6127",
     "companyName": "九豪",
     "companyUrl": "https://www.leatec.com/",
-    "attemptedAt": "2026-05-16T04:33:16+0000",
-    "attemptedAtEpoch": 1778905996.5297923,
+    "attemptedAt": "2026-05-21T00:38:10+0800",
+    "attemptedAtEpoch": 1779295090.38843,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6129": {
     "code": "6129",
     "companyName": "普誠",
     "companyUrl": "http://www.princeton.com.tw/",
-    "attemptedAt": "2026-05-16T04:33:33+0000",
-    "attemptedAtEpoch": 1778906013.467946,
+    "attemptedAt": "2026-05-21T00:39:28+0800",
+    "attemptedAtEpoch": 1779295168.559433,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6133": {
     "code": "6133",
     "companyName": "金橋",
     "companyUrl": "https://www.gbe.com.tw/",
-    "attemptedAt": "2026-05-16T04:33:38+0000",
-    "attemptedAtEpoch": 1778906018.6312363,
+    "attemptedAt": "2026-05-21T00:39:32+0800",
+    "attemptedAtEpoch": 1779295172.328023,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6136": {
     "code": "6136",
     "companyName": "富爾特",
     "companyUrl": "https://www.fullerton.com.tw/",
-    "attemptedAt": "2026-05-16T04:33:46+0000",
-    "attemptedAtEpoch": 1778906026.4569054,
+    "attemptedAt": "2026-05-21T00:39:33+0800",
+    "attemptedAtEpoch": 1779295173.078988,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6143": {
     "code": "6143",
     "companyName": "振曜",
     "companyUrl": "https://www.netronixinc.com/",
-    "attemptedAt": "2026-05-16T04:34:21+0000",
-    "attemptedAtEpoch": 1778906061.5509121,
+    "attemptedAt": "2026-05-21T00:39:34+0800",
+    "attemptedAtEpoch": 1779295174.0634508,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6147": {
     "code": "6147",
     "companyName": "頎邦",
     "companyUrl": "https://www.chipbond.com.tw/",
-    "attemptedAt": "2026-05-16T04:35:12+0000",
-    "attemptedAtEpoch": 1778906112.083165,
+    "attemptedAt": "2026-05-21T00:39:45+0800",
+    "attemptedAtEpoch": 1779295185.072001,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6148": {
     "code": "6148",
     "companyName": "驊宏資",
     "companyUrl": "https://www.azion.com.tw/",
-    "attemptedAt": "2026-05-16T04:35:49+0000",
-    "attemptedAtEpoch": 1778906149.8349395,
+    "attemptedAt": "2026-05-21T00:39:45+0800",
+    "attemptedAtEpoch": 1779295185.858102,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6150": {
     "code": "6150",
     "companyName": "撼訊",
     "companyUrl": "https://www.tul.com.tw/",
-    "attemptedAt": "2026-05-16T04:35:55+0000",
-    "attemptedAtEpoch": 1778906155.6239462,
+    "attemptedAt": "2026-05-21T00:39:50+0800",
+    "attemptedAtEpoch": 1779295190.920873,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6151": {
     "code": "6151",
     "companyName": "晉倫",
     "companyUrl": "https://www.ginar.com.tw/",
-    "attemptedAt": "2026-05-16T04:36:54+0000",
-    "attemptedAtEpoch": 1778906214.9361358,
+    "attemptedAt": "2026-05-21T00:39:52+0800",
+    "attemptedAtEpoch": 1779295192.086733,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6152": {
     "code": "6152",
     "companyName": "百一",
     "companyUrl": "https://www.pesi.com.tw/",
-    "attemptedAt": "2026-05-16T04:37:25+0000",
-    "attemptedAtEpoch": 1778906245.1261883,
+    "attemptedAt": "2026-05-21T00:39:54+0800",
+    "attemptedAtEpoch": 1779295194.779767,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6153": {
     "code": "6153",
     "companyName": "嘉聯益",
     "companyUrl": "https://www.careergroups.com/",
-    "attemptedAt": "2026-05-16T04:37:30+0000",
-    "attemptedAtEpoch": 1778906250.3631647,
+    "attemptedAt": "2026-05-21T00:39:55+0800",
+    "attemptedAtEpoch": 1779295195.733904,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6158": {
     "code": "6158",
     "companyName": "禾昌",
     "companyUrl": "https://www.p-two.com/",
-    "attemptedAt": "2026-05-16T04:38:24+0000",
-    "attemptedAtEpoch": 1778906304.651375,
+    "attemptedAt": "2026-05-21T00:39:56+0800",
+    "attemptedAtEpoch": 1779295196.696822,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6160": {
     "code": "6160",
     "companyName": "欣技",
     "companyUrl": "http://www.cipherlab.com.tw/",
-    "attemptedAt": "2026-05-16T04:38:34+0000",
-    "attemptedAtEpoch": 1778906314.6410582,
+    "attemptedAt": "2026-05-21T00:39:57+0800",
+    "attemptedAtEpoch": 1779295197.93244,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6164": {
     "code": "6164",
     "companyName": "華興",
     "companyUrl": "https://www.ledtech.com/",
-    "attemptedAt": "2026-05-16T04:38:39+0000",
-    "attemptedAtEpoch": 1778906319.260843,
+    "attemptedAt": "2026-05-21T00:40:04+0800",
+    "attemptedAtEpoch": 1779295204.660702,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6167": {
     "code": "6167",
     "companyName": "久正",
     "companyUrl": "https://www.powertip.com.tw/",
-    "attemptedAt": "2026-05-16T04:39:19+0000",
-    "attemptedAtEpoch": 1778906359.3232005,
+    "attemptedAt": "2026-05-21T00:40:06+0800",
+    "attemptedAtEpoch": 1779295206.578478,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6169": {
     "code": "6169",
     "companyName": "昱泉",
     "companyUrl": "https://www.interserv.com.tw/",
-    "attemptedAt": "2026-05-16T04:39:36+0000",
-    "attemptedAtEpoch": 1778906376.5211174,
+    "attemptedAt": "2026-05-21T00:40:07+0800",
+    "attemptedAtEpoch": 1779295207.277617,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6176": {
     "code": "6176",
     "companyName": "瑞儀",
     "companyUrl": "https://www.radiant.com.tw/",
-    "attemptedAt": "2026-05-16T04:40:11+0000",
-    "attemptedAtEpoch": 1778906411.9234228,
+    "attemptedAt": "2026-05-21T00:40:08+0800",
+    "attemptedAtEpoch": 1779295208.312117,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6182": {
     "code": "6182",
     "companyName": "合晶",
     "companyUrl": "http://www.waferworks.com/",
-    "attemptedAt": "2026-05-16T04:40:28+0000",
-    "attemptedAtEpoch": 1778906428.4772263,
+    "attemptedAt": "2026-05-21T00:40:29+0800",
+    "attemptedAtEpoch": 1779295229.1514409,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6186": {
     "code": "6186",
     "companyName": "新潤",
     "companyUrl": "http://www.shinruenn.com/",
-    "attemptedAt": "2026-05-16T04:41:23+0000",
-    "attemptedAtEpoch": 1778906483.5708976,
+    "attemptedAt": "2026-05-21T00:40:30+0800",
+    "attemptedAtEpoch": 1779295230.258042,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6187": {
     "code": "6187",
@@ -3603,641 +4123,769 @@
     "code": "6189",
     "companyName": "豐藝",
     "companyUrl": "https://www.promate.com.tw/",
-    "attemptedAt": "2026-05-16T04:43:35+0000",
-    "attemptedAtEpoch": 1778906615.320134,
+    "attemptedAt": "2026-05-21T00:40:32+0800",
+    "attemptedAtEpoch": 1779295232.34569,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6191": {
     "code": "6191",
     "companyName": "精成科",
     "companyUrl": "https://www.gbm.com.tw/",
-    "attemptedAt": "2026-05-16T04:43:49+0000",
-    "attemptedAtEpoch": 1778906629.701942,
+    "attemptedAt": "2026-05-21T00:40:33+0800",
+    "attemptedAtEpoch": 1779295233.07773,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6197": {
     "code": "6197",
     "companyName": "佳必琪",
     "companyUrl": "https://www.jpcco.com/",
-    "attemptedAt": "2026-05-16T04:44:46+0000",
-    "attemptedAtEpoch": 1778906686.6643496,
+    "attemptedAt": "2026-05-21T00:40:34+0800",
+    "attemptedAtEpoch": 1779295234.083916,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6213": {
     "code": "6213",
     "companyName": "聯茂",
     "companyUrl": "https://www.iteqcorp.com/",
-    "attemptedAt": "2026-05-16T08:22:01+0000",
-    "attemptedAtEpoch": 1778919721.6195846,
-    "candidateCount": 2,
-    "foundUseful": true,
-    "error": ""
+    "attemptedAt": "2026-05-21T00:40:35+0800",
+    "attemptedAtEpoch": 1779295235.157857,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6215": {
     "code": "6215",
     "companyName": "和椿",
     "companyUrl": "http://www.aurotek.com/",
-    "attemptedAt": "2026-05-16T08:23:43+0000",
-    "attemptedAtEpoch": 1778919823.7720768,
+    "attemptedAt": "2026-05-21T00:40:45+0800",
+    "attemptedAtEpoch": 1779295245.146892,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6216": {
     "code": "6216",
     "companyName": "居易",
     "companyUrl": "https://www.draytek.com/",
-    "attemptedAt": "2026-05-16T08:24:10+0000",
-    "attemptedAtEpoch": 1778919850.7311573,
+    "attemptedAt": "2026-05-21T00:40:47+0800",
+    "attemptedAtEpoch": 1779295247.022004,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6217": {
     "code": "6217",
     "companyName": "中探針",
     "companyUrl": "https://www.ccpcontactprobes.com/",
-    "attemptedAt": "2026-05-16T08:24:31+0000",
-    "attemptedAtEpoch": 1778919871.185042,
+    "attemptedAt": "2026-05-21T00:40:48+0800",
+    "attemptedAtEpoch": 1779295248.803753,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6220": {
     "code": "6220",
     "companyName": "岳豐",
     "companyUrl": "https://www.cables.com.tw/",
-    "attemptedAt": "2026-05-16T08:25:29+0000",
-    "attemptedAtEpoch": 1778919929.8806806,
+    "attemptedAt": "2026-05-21T00:40:49+0800",
+    "attemptedAtEpoch": 1779295249.631915,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6223": {
     "code": "6223",
     "companyName": "旺矽",
     "companyUrl": "https://www.mpi.com.tw/",
-    "attemptedAt": "2026-05-16T08:26:35+0000",
-    "attemptedAtEpoch": 1778919995.3003736,
+    "attemptedAt": "2026-05-21T00:40:50+0800",
+    "attemptedAtEpoch": 1779295250.6113012,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6224": {
     "code": "6224",
     "companyName": "聚鼎",
     "companyUrl": "https://www.pttc.com.tw/",
-    "attemptedAt": "2026-05-16T08:27:26+0000",
-    "attemptedAtEpoch": 1778920046.6118162,
+    "attemptedAt": "2026-05-21T00:40:51+0800",
+    "attemptedAtEpoch": 1779295251.6570728,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6231": {
     "code": "6231",
     "companyName": "系微",
     "companyUrl": "https://www.insyde.com/",
-    "attemptedAt": "2026-05-16T08:28:26+0000",
-    "attemptedAtEpoch": 1778920106.3200889,
+    "attemptedAt": "2026-05-21T00:40:54+0800",
+    "attemptedAtEpoch": 1779295254.46385,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6233": {
     "code": "6233",
     "companyName": "旺玖",
     "companyUrl": "https://www.prolific.com.tw/",
-    "attemptedAt": "2026-05-16T08:29:50+0000",
-    "attemptedAtEpoch": 1778920190.834287,
-    "candidateCount": 1,
-    "foundUseful": true,
-    "error": ""
+    "attemptedAt": "2026-05-21T00:40:55+0800",
+    "attemptedAtEpoch": 1779295255.156758,
+    "candidateCount": 0,
+    "foundUseful": false,
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6234": {
     "code": "6234",
     "companyName": "高僑",
     "companyUrl": "http://www.teraauto.com.tw/",
-    "attemptedAt": "2026-05-16T08:30:37+0000",
-    "attemptedAtEpoch": 1778920237.0279868,
+    "attemptedAt": "2026-05-21T00:40:56+0800",
+    "attemptedAtEpoch": 1779295256.898389,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6237": {
     "code": "6237",
     "companyName": "驊訊",
     "companyUrl": "http://www.cmedia.com.tw/",
-    "attemptedAt": "2026-05-16T08:31:32+0000",
-    "attemptedAtEpoch": 1778920292.3144987,
+    "attemptedAt": "2026-05-21T00:40:58+0800",
+    "attemptedAtEpoch": 1779295258.4801679,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6239": {
     "code": "6239",
     "companyName": "力成",
     "companyUrl": "https://www.pti.com.tw/",
-    "attemptedAt": "2026-05-16T08:32:31+0000",
-    "attemptedAtEpoch": 1778920351.6795344,
+    "attemptedAt": "2026-05-21T00:41:00+0800",
+    "attemptedAtEpoch": 1779295260.151499,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6243": {
     "code": "6243",
     "companyName": "迅杰",
     "companyUrl": "https://www.ene.com.tw/",
-    "attemptedAt": "2026-05-16T08:33:36+0000",
-    "attemptedAtEpoch": 1778920416.2246113,
+    "attemptedAt": "2026-05-21T00:41:00+0800",
+    "attemptedAtEpoch": 1779295260.955171,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6246": {
     "code": "6246",
     "companyName": "臺龍",
     "companyUrl": "https://www.tai-lon.com/",
-    "attemptedAt": "2026-05-16T08:34:42+0000",
-    "attemptedAtEpoch": 1778920482.2128758,
-    "candidateCount": 1,
+    "attemptedAt": "2026-05-21T00:41:01+0800",
+    "attemptedAtEpoch": 1779295261.889056,
+    "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6257": {
     "code": "6257",
     "companyName": "矽格",
     "companyUrl": "https://www.sigurd.com.tw/",
-    "attemptedAt": "2026-05-16T08:35:29+0000",
-    "attemptedAtEpoch": 1778920529.3998795,
+    "attemptedAt": "2026-05-21T00:41:07+0800",
+    "attemptedAtEpoch": 1779295267.58934,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6259": {
     "code": "6259",
     "companyName": "百徽",
     "companyUrl": "http://www.bullwill.com.tw/",
-    "attemptedAt": "2026-05-16T08:35:50+0000",
-    "attemptedAtEpoch": 1778920550.1265748,
+    "attemptedAt": "2026-05-21T00:41:08+0800",
+    "attemptedAtEpoch": 1779295268.308866,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6261": {
     "code": "6261",
     "companyName": "久元",
     "companyUrl": "https://www.ytec.com.tw/",
-    "attemptedAt": "2026-05-16T08:36:59+0000",
-    "attemptedAtEpoch": 1778920619.6537676,
+    "attemptedAt": "2026-05-21T00:41:09+0800",
+    "attemptedAtEpoch": 1779295269.120053,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6269": {
     "code": "6269",
     "companyName": "台郡",
     "companyUrl": "https://www.flexium.com.tw/",
-    "attemptedAt": "2026-05-16T08:37:17+0000",
-    "attemptedAtEpoch": 1778920637.5377288,
+    "attemptedAt": "2026-05-21T00:41:09+0800",
+    "attemptedAtEpoch": 1779295269.849288,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6270": {
     "code": "6270",
     "companyName": "倍微",
     "companyUrl": "http://www.pct.com.tw/",
-    "attemptedAt": "2026-05-16T08:38:27+0000",
-    "attemptedAtEpoch": 1778920707.4501936,
+    "attemptedAt": "2026-05-21T00:41:11+0800",
+    "attemptedAtEpoch": 1779295271.580707,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6274": {
     "code": "6274",
     "companyName": "台燿",
     "companyUrl": "https://www.tuc.com.tw/",
-    "attemptedAt": "2026-05-16T08:38:32+0000",
-    "attemptedAtEpoch": 1778920712.642127,
+    "attemptedAt": "2026-05-21T00:41:12+0800",
+    "attemptedAtEpoch": 1779295272.855988,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6275": {
     "code": "6275",
     "companyName": "元山",
     "companyUrl": "https://www.ystech.com.tw/",
-    "attemptedAt": "2026-05-16T08:39:21+0000",
-    "attemptedAtEpoch": 1778920761.5473282,
+    "attemptedAt": "2026-05-21T00:41:14+0800",
+    "attemptedAtEpoch": 1779295274.509129,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6282": {
     "code": "6282",
     "companyName": "康舒",
     "companyUrl": "http://www.acbel.com/",
-    "attemptedAt": "2026-05-16T08:39:27+0000",
-    "attemptedAtEpoch": 1778920767.494699,
+    "attemptedAt": "2026-05-21T00:41:36+0800",
+    "attemptedAtEpoch": 1779295296.1459,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6283": {
     "code": "6283",
     "companyName": "淳安",
     "companyUrl": "https://www.soe-ele.com/",
-    "attemptedAt": "2026-05-16T08:40:08+0000",
-    "attemptedAtEpoch": 1778920808.5579376,
+    "attemptedAt": "2026-05-21T00:41:37+0800",
+    "attemptedAtEpoch": 1779295297.1210492,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6284": {
     "code": "6284",
     "companyName": "佳邦",
     "companyUrl": "https://www.inpaq.com.tw/",
-    "attemptedAt": "2026-05-16T08:40:54+0000",
-    "attemptedAtEpoch": 1778920854.7118325,
+    "attemptedAt": "2026-05-21T00:41:39+0800",
+    "attemptedAtEpoch": 1779295299.5395808,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6290": {
     "code": "6290",
     "companyName": "良維",
     "companyUrl": "http://www.longwell.com/",
-    "attemptedAt": "2026-05-16T08:41:25+0000",
-    "attemptedAtEpoch": 1778920885.3039317,
+    "attemptedAt": "2026-05-21T00:41:43+0800",
+    "attemptedAtEpoch": 1779295303.038204,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6291": {
     "code": "6291",
     "companyName": "沛亨",
     "companyUrl": "https://www.analog.com.tw/",
-    "attemptedAt": "2026-05-16T08:42:02+0000",
-    "attemptedAtEpoch": 1778920922.928388,
+    "attemptedAt": "2026-05-21T00:41:43+0800",
+    "attemptedAtEpoch": 1779295303.733862,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6411": {
     "code": "6411",
     "companyName": "晶焱",
     "companyUrl": "https://www.amazingIC.com/",
-    "attemptedAt": "2026-05-16T08:42:09+0000",
-    "attemptedAtEpoch": 1778920929.7726526,
+    "attemptedAt": "2026-05-21T00:41:44+0800",
+    "attemptedAtEpoch": 1779295304.7531981,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6431": {
     "code": "6431",
     "companyName": "光麗-KY",
     "companyUrl": "http://www.kl-holdings.com/",
-    "attemptedAt": "2026-05-16T08:43:10+0000",
-    "attemptedAtEpoch": 1778920990.7921839,
+    "attemptedAt": "2026-05-21T00:41:46+0800",
+    "attemptedAtEpoch": 1779295306.472948,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6432": {
     "code": "6432",
     "companyName": "今展科",
     "companyUrl": "https://www.arlitech.com.tw/",
-    "attemptedAt": "2026-05-16T08:43:18+0000",
-    "attemptedAtEpoch": 1778920998.195686,
+    "attemptedAt": "2026-05-21T00:41:51+0800",
+    "attemptedAtEpoch": 1779295311.0178492,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6438": {
     "code": "6438",
     "companyName": "迅得",
     "companyUrl": "https://www.saa-symtek.com/",
-    "attemptedAt": "2026-05-16T08:43:25+0000",
-    "attemptedAtEpoch": 1778921005.0540662,
+    "attemptedAt": "2026-05-21T00:41:51+0800",
+    "attemptedAtEpoch": 1779295311.7333279,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6443": {
     "code": "6443",
     "companyName": "元晶",
     "companyUrl": "https://www.tsecpv.com/",
-    "attemptedAt": "2026-05-16T08:43:31+0000",
-    "attemptedAtEpoch": 1778921011.630383,
+    "attemptedAt": "2026-05-21T00:41:54+0800",
+    "attemptedAtEpoch": 1779295314.048791,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6446": {
     "code": "6446",
     "companyName": "藥華藥",
     "companyUrl": "http://www.PharmaEssentia.com/",
-    "attemptedAt": "2026-05-16T08:44:01+0000",
-    "attemptedAtEpoch": 1778921041.8811576,
+    "attemptedAt": "2026-05-21T00:41:59+0800",
+    "attemptedAtEpoch": 1779295319.148166,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6449": {
     "code": "6449",
     "companyName": "鈺邦",
     "companyUrl": "http://www.apaq.com.tw/",
-    "attemptedAt": "2026-05-16T08:44:47+0000",
-    "attemptedAtEpoch": 1778921087.0923045,
+    "attemptedAt": "2026-05-21T00:42:00+0800",
+    "attemptedAtEpoch": 1779295320.027421,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6485": {
     "code": "6485",
     "companyName": "點序",
     "companyUrl": "https://www.asolid-tek.com/",
-    "attemptedAt": "2026-05-16T08:45:40+0000",
-    "attemptedAtEpoch": 1778921140.664447,
+    "attemptedAt": "2026-05-21T00:42:01+0800",
+    "attemptedAtEpoch": 1779295321.636113,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6509": {
     "code": "6509",
     "companyName": "聚和",
     "companyUrl": "https://www.hopax.com/",
-    "attemptedAt": "2026-05-16T08:46:04+0000",
-    "attemptedAtEpoch": 1778921164.5868475,
+    "attemptedAt": "2026-05-21T00:42:02+0800",
+    "attemptedAtEpoch": 1779295322.758272,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6533": {
     "code": "6533",
     "companyName": "晶心科",
     "companyUrl": "http://www.andestech.com/",
-    "attemptedAt": "2026-05-16T08:46:21+0000",
-    "attemptedAtEpoch": 1778921181.367873,
+    "attemptedAt": "2026-05-21T00:43:20+0800",
+    "attemptedAtEpoch": 1779295400.914203,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6596": {
     "code": "6596",
     "companyName": "寬宏藝術",
     "companyUrl": "http://www.khaminc.com.tw/",
-    "attemptedAt": "2026-05-16T08:47:01+0000",
-    "attemptedAtEpoch": 1778921221.2550654,
+    "attemptedAt": "2026-05-21T00:43:21+0800",
+    "attemptedAtEpoch": 1779295401.652857,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "6664": {
     "code": "6664",
     "companyName": "群翊",
     "companyUrl": "http://www.gpline.com.tw/",
-    "attemptedAt": "2026-05-16T08:47:12+0000",
-    "attemptedAtEpoch": 1778921232.5387185,
+    "attemptedAt": "2026-05-21T00:43:25+0800",
+    "attemptedAtEpoch": 1779295405.521861,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8011": {
     "code": "8011",
     "companyName": "台通",
     "companyUrl": "https://www.ttcc.com.tw/",
-    "attemptedAt": "2026-05-16T08:48:04+0000",
-    "attemptedAtEpoch": 1778921284.6871555,
+    "attemptedAt": "2026-05-21T00:43:26+0800",
+    "attemptedAtEpoch": 1779295406.6120892,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8016": {
     "code": "8016",
     "companyName": "矽創",
     "companyUrl": "http://www.sitronix.com.tw/",
-    "attemptedAt": "2026-05-16T08:48:22+0000",
-    "attemptedAtEpoch": 1778921302.6255774,
+    "attemptedAt": "2026-05-21T00:44:44+0800",
+    "attemptedAtEpoch": 1779295484.764255,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8021": {
     "code": "8021",
     "companyName": "尖點",
     "companyUrl": "http://www.topoint.tw/",
-    "attemptedAt": "2026-05-16T08:49:12+0000",
-    "attemptedAtEpoch": 1778921352.7570205,
+    "attemptedAt": "2026-05-21T00:44:46+0800",
+    "attemptedAtEpoch": 1779295486.0398378,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8027": {
     "code": "8027",
     "companyName": "鈦昇",
     "companyUrl": "https://www.enr.com.tw/",
-    "attemptedAt": "2026-05-16T08:50:16+0000",
-    "attemptedAtEpoch": 1778921416.9158247,
+    "attemptedAt": "2026-05-21T00:44:48+0800",
+    "attemptedAtEpoch": 1779295488.769025,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8028": {
     "code": "8028",
     "companyName": "昇陽半導體",
     "companyUrl": "https://www.psi.com.tw/",
-    "attemptedAt": "2026-05-16T08:51:14+0000",
-    "attemptedAtEpoch": 1778921474.8548908,
+    "attemptedAt": "2026-05-21T00:44:49+0800",
+    "attemptedAtEpoch": 1779295489.472276,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8033": {
     "code": "8033",
     "companyName": "雷虎",
     "companyUrl": "https://www.thundertiger.com/",
-    "attemptedAt": "2026-05-16T08:51:34+0000",
-    "attemptedAtEpoch": 1778921494.1184468,
+    "attemptedAt": "2026-05-21T00:44:51+0800",
+    "attemptedAtEpoch": 1779295491.017799,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8034": {
     "code": "8034",
     "companyName": "榮群",
     "companyUrl": "https://www.opnet.com.tw/",
-    "attemptedAt": "2026-05-16T08:52:50+0000",
-    "attemptedAtEpoch": 1778921570.0778165,
+    "attemptedAt": "2026-05-21T00:44:51+0800",
+    "attemptedAtEpoch": 1779295491.943131,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8038": {
     "code": "8038",
     "companyName": "長園科",
     "companyUrl": "https://www.caec.com.tw/",
-    "attemptedAt": "2026-05-16T08:53:53+0000",
-    "attemptedAtEpoch": 1778921633.8994591,
+    "attemptedAt": "2026-05-21T00:44:53+0800",
+    "attemptedAtEpoch": 1779295493.9278002,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8039": {
     "code": "8039",
     "companyName": "台虹",
     "companyUrl": "https://www.taiflex.com.tw/",
-    "attemptedAt": "2026-05-16T08:54:17+0000",
-    "attemptedAtEpoch": 1778921657.8965678,
+    "attemptedAt": "2026-05-21T00:44:56+0800",
+    "attemptedAtEpoch": 1779295496.391874,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8040": {
     "code": "8040",
     "companyName": "九暘",
     "companyUrl": "https://www.icplus.com.tw/",
-    "attemptedAt": "2026-05-16T08:54:25+0000",
-    "attemptedAtEpoch": 1778921665.8334787,
+    "attemptedAt": "2026-05-21T00:45:00+0800",
+    "attemptedAtEpoch": 1779295500.380393,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8042": {
     "code": "8042",
     "companyName": "金山電",
     "companyUrl": "https://www.chinsan.com/",
-    "attemptedAt": "2026-05-16T08:54:52+0000",
-    "attemptedAtEpoch": 1778921692.7450447,
+    "attemptedAt": "2026-05-21T00:45:01+0800",
+    "attemptedAtEpoch": 1779295501.614538,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8049": {
     "code": "8049",
     "companyName": "晶采",
     "companyUrl": "https://www.ampire.com.tw/",
-    "attemptedAt": "2026-05-16T08:55:46+0000",
-    "attemptedAtEpoch": 1778921746.1597438,
+    "attemptedAt": "2026-05-21T00:45:02+0800",
+    "attemptedAtEpoch": 1779295502.426569,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8050": {
     "code": "8050",
     "companyName": "廣積",
     "companyUrl": "https://www.ibase.com.tw/",
-    "attemptedAt": "2026-05-16T08:56:44+0000",
-    "attemptedAtEpoch": 1778921804.3547385,
+    "attemptedAt": "2026-05-21T00:45:03+0800",
+    "attemptedAtEpoch": 1779295503.348973,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8054": {
     "code": "8054",
     "companyName": "安國",
     "companyUrl": "https://www.alcormicro.com/",
-    "attemptedAt": "2026-05-16T08:57:23+0000",
-    "attemptedAtEpoch": 1778921843.3818393,
+    "attemptedAt": "2026-05-21T00:45:04+0800",
+    "attemptedAtEpoch": 1779295504.25361,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8064": {
     "code": "8064",
     "companyName": "東捷",
     "companyUrl": "https://www.contrel.com.tw/",
-    "attemptedAt": "2026-05-16T08:57:31+0000",
-    "attemptedAtEpoch": 1778921851.4487424,
+    "attemptedAt": "2026-05-21T00:45:05+0800",
+    "attemptedAtEpoch": 1779295505.077889,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8074": {
     "code": "8074",
     "companyName": "鉅橡",
     "companyUrl": "https://www.aurona.com.tw/",
-    "attemptedAt": "2026-05-16T08:58:51+0000",
-    "attemptedAtEpoch": 1778921931.525249,
+    "attemptedAt": "2026-05-21T00:45:06+0800",
+    "attemptedAtEpoch": 1779295506.037807,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8076": {
     "code": "8076",
     "companyName": "伍豐",
     "companyUrl": "https://www.fecpos.com/tw/",
-    "attemptedAt": "2026-05-16T08:59:39+0000",
-    "attemptedAtEpoch": 1778921979.2841184,
+    "attemptedAt": "2026-05-21T00:45:07+0800",
+    "attemptedAtEpoch": 1779295507.146157,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8080": {
     "code": "8080",
     "companyName": "泰霖",
     "companyUrl": "https://www.ost.com.tw/",
-    "attemptedAt": "2026-05-16T08:59:47+0000",
-    "attemptedAtEpoch": 1778921987.9802778,
+    "attemptedAt": "2026-05-21T00:45:11+0800",
+    "attemptedAtEpoch": 1779295511.9185228,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8081": {
     "code": "8081",
     "companyName": "致新",
     "companyUrl": "http://www.gmt.com.tw/",
-    "attemptedAt": "2026-05-16T08:59:54+0000",
-    "attemptedAtEpoch": 1778921994.7707255,
+    "attemptedAt": "2026-05-21T00:45:12+0800",
+    "attemptedAtEpoch": 1779295512.593027,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8085": {
     "code": "8085",
     "companyName": "福華",
     "companyUrl": "http://www.fwd.com.tw/",
-    "attemptedAt": "2026-05-16T09:00:59+0000",
-    "attemptedAtEpoch": 1778922059.831503,
+    "attemptedAt": "2026-05-21T00:45:14+0800",
+    "attemptedAtEpoch": 1779295514.901226,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8086": {
     "code": "8086",
     "companyName": "宏捷科",
     "companyUrl": "http://www.awsc.com.tw/",
-    "attemptedAt": "2026-05-16T09:01:17+0000",
-    "attemptedAtEpoch": 1778922077.974561,
+    "attemptedAt": "2026-05-21T00:46:33+0800",
+    "attemptedAtEpoch": 1779295593.047755,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8088": {
     "code": "8088",
     "companyName": "品安",
     "companyUrl": "https://www.panram.com.tw/",
-    "attemptedAt": "2026-05-16T09:02:24+0000",
-    "attemptedAtEpoch": 1778922144.2719529,
+    "attemptedAt": "2026-05-21T00:46:33+0800",
+    "attemptedAtEpoch": 1779295593.735871,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8091": {
     "code": "8091",
     "companyName": "翔名",
     "companyUrl": "http://www.feedback.com.tw/",
-    "attemptedAt": "2026-05-16T10:41:58+0000",
-    "attemptedAtEpoch": 1778928118.6582096,
+    "attemptedAt": "2026-05-21T00:46:34+0800",
+    "attemptedAtEpoch": 1779295594.875353,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8096": {
     "code": "8096",
@@ -4253,151 +4901,181 @@
     "code": "8105",
     "companyName": "凌巨",
     "companyUrl": "https://www.giantplus.com/",
-    "attemptedAt": "2026-05-16T10:44:11+0000",
-    "attemptedAtEpoch": 1778928251.1251342,
+    "attemptedAt": "2026-05-21T00:46:36+0800",
+    "attemptedAtEpoch": 1779295596.389916,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8107": {
     "code": "8107",
     "companyName": "大億金茂",
     "companyUrl": "https://www.kenmos.com/",
-    "attemptedAt": "2026-05-16T10:44:58+0000",
-    "attemptedAtEpoch": 1778928298.5892234,
+    "attemptedAt": "2026-05-21T00:46:37+0800",
+    "attemptedAtEpoch": 1779295597.220384,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8111": {
     "code": "8111",
     "companyName": "立碁",
     "companyUrl": "http://www.ligitek.com/",
-    "attemptedAt": "2026-05-16T10:45:07+0000",
-    "attemptedAtEpoch": 1778928307.722981,
+    "attemptedAt": "2026-05-21T00:46:39+0800",
+    "attemptedAtEpoch": 1779295599.109623,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8112": {
     "code": "8112",
     "companyName": "至上",
     "companyUrl": "https://www.supreme.com.tw/",
-    "attemptedAt": "2026-05-16T10:45:15+0000",
-    "attemptedAtEpoch": 1778928315.2454891,
+    "attemptedAt": "2026-05-21T00:46:39+0800",
+    "attemptedAtEpoch": 1779295599.85894,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8163": {
     "code": "8163",
     "companyName": "達方",
     "companyUrl": "https://WWW.DARFON.COM.TW/",
-    "attemptedAt": "2026-05-16T10:46:14+0000",
-    "attemptedAtEpoch": 1778928374.2029963,
+    "attemptedAt": "2026-05-21T00:46:41+0800",
+    "attemptedAtEpoch": 1779295601.361176,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8171": {
     "code": "8171",
     "companyName": "天宇",
     "companyUrl": "http://www.feii.com.tw/",
-    "attemptedAt": "2026-05-16T10:47:17+0000",
-    "attemptedAtEpoch": 1778928437.3253067,
+    "attemptedAt": "2026-05-21T00:46:43+0800",
+    "attemptedAtEpoch": 1779295603.005724,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8176": {
     "code": "8176",
     "companyName": "智捷",
     "companyUrl": "https://www.zcom.com.tw/",
-    "attemptedAt": "2026-05-16T10:48:12+0000",
-    "attemptedAtEpoch": 1778928492.1829915,
+    "attemptedAt": "2026-05-21T00:46:44+0800",
+    "attemptedAtEpoch": 1779295604.8991091,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8213": {
     "code": "8213",
     "companyName": "志超",
     "companyUrl": "https://tpt-pcb.com.tw/",
-    "attemptedAt": "2026-05-16T10:48:17+0000",
-    "attemptedAtEpoch": 1778928497.4991431,
+    "attemptedAt": "2026-05-21T00:46:48+0800",
+    "attemptedAtEpoch": 1779295608.814193,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8222": {
     "code": "8222",
     "companyName": "寶一",
     "companyUrl": "https://www.aerowin.com/",
-    "attemptedAt": "2026-05-16T10:48:45+0000",
-    "attemptedAtEpoch": 1778928525.6843736,
+    "attemptedAt": "2026-05-21T00:46:49+0800",
+    "attemptedAtEpoch": 1779295609.752668,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8240": {
     "code": "8240",
     "companyName": "華宏",
     "companyUrl": "https://www.wahhong.com/",
-    "attemptedAt": "2026-05-16T10:49:37+0000",
-    "attemptedAtEpoch": 1778928577.751248,
+    "attemptedAt": "2026-05-21T00:46:50+0800",
+    "attemptedAtEpoch": 1779295610.479255,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8255": {
     "code": "8255",
     "companyName": "朋程",
     "companyUrl": "https://www.actron.com.tw/",
-    "attemptedAt": "2026-05-16T10:50:38+0000",
-    "attemptedAtEpoch": 1778928638.2834008,
+    "attemptedAt": "2026-05-21T00:46:51+0800",
+    "attemptedAtEpoch": 1779295611.3231518,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8261": {
     "code": "8261",
     "companyName": "富鼎",
     "companyUrl": "https://www.a-power.com.tw/",
-    "attemptedAt": "2026-05-16T10:51:33+0000",
-    "attemptedAtEpoch": 1778928693.7031386,
+    "attemptedAt": "2026-05-21T00:46:52+0800",
+    "attemptedAtEpoch": 1779295612.2706409,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8271": {
     "code": "8271",
     "companyName": "宇瞻",
     "companyUrl": "https://www.apacer.com/",
-    "attemptedAt": "2026-05-16T10:52:27+0000",
-    "attemptedAtEpoch": 1778928747.6512942,
+    "attemptedAt": "2026-05-21T00:46:53+0800",
+    "attemptedAtEpoch": 1779295613.194769,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8277": {
     "code": "8277",
     "companyName": "商丞",
     "companyUrl": "https://www.unifosa.com.tw/",
-    "attemptedAt": "2026-05-16T10:53:12+0000",
-    "attemptedAtEpoch": 1778928792.4666924,
+    "attemptedAt": "2026-05-21T00:46:53+0800",
+    "attemptedAtEpoch": 1779295613.9557672,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8299": {
     "code": "8299",
     "companyName": "群聯",
     "companyUrl": "https://www.phison.com/",
-    "attemptedAt": "2026-05-16T10:53:55+0000",
-    "attemptedAtEpoch": 1778928835.4411042,
+    "attemptedAt": "2026-05-21T00:46:54+0800",
+    "attemptedAtEpoch": 1779295614.720674,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8358": {
     "code": "8358",
@@ -4413,150 +5091,180 @@
     "code": "8383",
     "companyName": "千附",
     "companyUrl": "https://WWW.CHENFULL.COM.TW/",
-    "attemptedAt": "2026-05-16T10:55:40+0000",
-    "attemptedAtEpoch": 1778928940.3336053,
+    "attemptedAt": "2026-05-21T00:46:55+0800",
+    "attemptedAtEpoch": 1779295615.416397,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8401": {
     "code": "8401",
     "companyName": "白紗科",
     "companyUrl": "https://www.bsbs.com.tw/",
-    "attemptedAt": "2026-05-16T10:55:44+0000",
-    "attemptedAtEpoch": 1778928944.3682234,
+    "attemptedAt": "2026-05-21T00:46:56+0800",
+    "attemptedAtEpoch": 1779295616.364945,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8409": {
     "code": "8409",
     "companyName": "商之器",
     "companyUrl": "https://www.ebmtech.com/tw",
-    "attemptedAt": "2026-05-16T10:55:53+0000",
-    "attemptedAtEpoch": 1778928953.488338,
+    "attemptedAt": "2026-05-21T00:46:57+0800",
+    "attemptedAtEpoch": 1779295617.147163,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8437": {
     "code": "8437",
     "companyName": "大地-KY",
     "companyUrl": "http://www.edudadi.com/",
-    "attemptedAt": "2026-05-16T10:56:53+0000",
-    "attemptedAtEpoch": 1778929013.8869512,
+    "attemptedAt": "2026-05-21T00:46:59+0800",
+    "attemptedAtEpoch": 1779295619.558454,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8443": {
     "code": "8443",
     "companyName": "阿瘦",
     "companyUrl": "https://www.asogroup.com.tw/",
-    "attemptedAt": "2026-05-16T10:57:27+0000",
-    "attemptedAtEpoch": 1778929047.6265883,
+    "attemptedAt": "2026-05-21T00:47:00+0800",
+    "attemptedAtEpoch": 1779295620.4455879,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8927": {
     "code": "8927",
     "companyName": "北基",
     "companyUrl": "http://www.nspco.com.tw/",
-    "attemptedAt": "2026-05-16T10:58:36+0000",
-    "attemptedAtEpoch": 1778929116.3799608,
+    "attemptedAt": "2026-05-21T00:47:01+0800",
+    "attemptedAtEpoch": 1779295621.8154612,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8933": {
     "code": "8933",
     "companyName": "愛地雅",
     "companyUrl": "https://www.idealbike.com.tw/",
-    "attemptedAt": "2026-05-16T10:59:38+0000",
-    "attemptedAtEpoch": 1778929178.3256876,
+    "attemptedAt": "2026-05-21T00:47:02+0800",
+    "attemptedAtEpoch": 1779295622.882297,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8936": {
     "code": "8936",
     "companyName": "國統",
     "companyUrl": "http://www.kti.com.tw/",
-    "attemptedAt": "2026-05-16T11:00:18+0000",
-    "attemptedAtEpoch": 1778929218.1473627,
+    "attemptedAt": "2026-05-21T00:47:05+0800",
+    "attemptedAtEpoch": 1779295625.523697,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "8996": {
     "code": "8996",
     "companyName": "高力",
     "companyUrl": "https://www.kaori.com.tw/",
-    "attemptedAt": "2026-05-16T11:00:26+0000",
-    "attemptedAtEpoch": 1778929226.691026,
+    "attemptedAt": "2026-05-21T00:47:06+0800",
+    "attemptedAtEpoch": 1779295626.3427851,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "9912": {
     "code": "9912",
     "companyName": "偉聯",
     "companyUrl": "http://www.agneovo.com/",
-    "attemptedAt": "2026-05-16T11:01:16+0000",
-    "attemptedAtEpoch": 1778929276.236149,
+    "attemptedAt": "2026-05-21T00:47:07+0800",
+    "attemptedAtEpoch": 1779295627.433383,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "9914": {
     "code": "9914",
     "companyName": "美利達",
     "companyUrl": "https://www.merida-bikes.com/zh-tw/",
-    "attemptedAt": "2026-05-16T11:02:16+0000",
-    "attemptedAtEpoch": 1778929336.4503367,
+    "attemptedAt": "2026-05-21T00:47:10+0800",
+    "attemptedAtEpoch": 1779295630.763663,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "9917": {
     "code": "9917",
     "companyName": "中保科",
     "companyUrl": "https://WWW.SECOM.COM.TW/",
-    "attemptedAt": "2026-05-16T11:02:20+0000",
-    "attemptedAtEpoch": 1778929340.82682,
+    "attemptedAt": "2026-05-21T00:47:11+0800",
+    "attemptedAtEpoch": 1779295631.505286,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "9918": {
     "code": "9918",
     "companyName": "欣天然",
     "companyUrl": "http://www.shinshingas.com.tw/",
-    "attemptedAt": "2026-05-16T11:02:59+0000",
-    "attemptedAtEpoch": 1778929379.2301037,
+    "attemptedAt": "2026-05-21T00:47:12+0800",
+    "attemptedAtEpoch": 1779295632.3134542,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "9929": {
     "code": "9929",
     "companyName": "秋雨",
     "companyUrl": "http://www.choiceprintgroup.com/",
-    "attemptedAt": "2026-05-16T11:03:04+0000",
-    "attemptedAtEpoch": 1778929384.4805553,
+    "attemptedAt": "2026-05-21T00:47:13+0800",
+    "attemptedAtEpoch": 1779295633.1506948,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   },
   "9960": {
     "code": "9960",
     "companyName": "邁達康",
     "companyUrl": "https://www.golfshop.com.tw/",
-    "attemptedAt": "2026-05-16T11:03:57+0000",
-    "attemptedAtEpoch": 1778929437.724704,
+    "attemptedAt": "2026-05-21T00:47:16+0800",
+    "attemptedAtEpoch": 1779295636.908895,
     "candidateCount": 0,
     "foundUseful": false,
-    "error": ""
+    "error": "no likely official notice PDF found",
+    "errorType": "no_candidate",
+    "fetchEngine": "scrapling"
   }
 }

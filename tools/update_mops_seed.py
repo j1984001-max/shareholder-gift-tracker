@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import sys
 import time
 import urllib.parse
@@ -137,6 +138,13 @@ def prioritize_codes(codes: list[str], seed: dict[str, dict], official_sources: 
     return unique_codes([*official, *missing, *retryable_empty])
 
 
+def rotate_codes(codes: list[str], offset: int) -> list[str]:
+    if not codes:
+        return []
+    real_offset = offset % len(codes)
+    return [*codes[real_offset:], *codes[:real_offset]]
+
+
 def filename_from_url(url: str, code: str) -> str:
     path = urllib.parse.urlparse(url).path
     name = urllib.parse.unquote(Path(path).name)
@@ -211,6 +219,8 @@ def main() -> int:
     parser.add_argument("--official-pdf-sources", default="", help="JSON file mapping stock codes to official PDF URLs.")
     parser.add_argument("--remote-requested-url", default="", help="URL of /api/requested-codes to include searched codes.")
     parser.add_argument("--sleep", type=float, default=0.3, help="Seconds to sleep between MOPS requests.")
+    parser.add_argument("--rotate-offset", type=int, default=0, help="Rotate selected codes before limiting to avoid retrying the same front slice.")
+    parser.add_argument("--shuffle", action="store_true", help="Shuffle candidate codes before limiting.")
     args = parser.parse_args()
 
     sources = server.source_bundle()
@@ -243,6 +253,11 @@ def main() -> int:
     if args.skip_existing:
         codes = prioritize_codes(codes, seed, official_sources, args.retry_empty)
 
+    if args.shuffle:
+        random.shuffle(codes)
+    elif args.rotate_offset:
+        codes = rotate_codes(codes, args.rotate_offset)
+
     if args.limit > 0:
         codes = codes[: args.limit]
 
@@ -250,6 +265,7 @@ def main() -> int:
         print("No stock codes found.")
         return 0
 
+    hit_rate_limit = False
     for index, code in enumerate(codes, 1):
         wespai = sources["wespai"].get(code)
         ideal = sources["ideal"].get(code)
@@ -275,6 +291,7 @@ def main() -> int:
             print(f"  skipped: {error or 'no notice info'}")
             if rate_limited(error):
                 print("  MOPS appears rate-limited; stopping this run to avoid wasting requests.")
+                hit_rate_limit = True
                 break
             continue
 
@@ -287,7 +304,7 @@ def main() -> int:
 
     save_seed(seed)
     print(f"Updated {server.NOTICE_SEED_CACHE_PATH}")
-    return 0
+    return 2 if hit_rate_limit else 0
 
 
 if __name__ == "__main__":

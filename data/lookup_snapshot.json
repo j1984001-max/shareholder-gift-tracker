@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-21T23:00:17+0000",
+  "generatedAt": "2026-05-22T12:07:48+0800",
   "sourceStats": {
     "wespai": 742,
     "idealLabs": 0,
@@ -900,7 +900,7 @@
       "noticeFilename": "2026_1417_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -1008,7 +1008,7 @@
       "noticeFilename": "2026_1432_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -1062,7 +1062,7 @@
       "noticeFilename": "2026_1435_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -1592,7 +1592,7 @@
       "noticeFilename": "2026_1529_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -1687,7 +1687,7 @@
       "noticeFilename": "2026_1558_20260525F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -1795,7 +1795,7 @@
       "noticeFilename": "2026_1584_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -1903,7 +1903,7 @@
       "noticeFilename": "2026_1605_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -2106,7 +2106,7 @@
       "noticeFilename": "2026_1721_20260616F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -2309,7 +2309,7 @@
       "noticeFilename": "2026_1781_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -2508,7 +2508,7 @@
       "noticeFilename": "2026_1904_20260529F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -3119,7 +3119,7 @@
       "noticeFilename": "2026_2103_20260529F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -3467,7 +3467,7 @@
       "noticeFilename": "2026_2328_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -3647,7 +3647,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_2340_20260625F01_20260521_235833.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_2340_20260625F01_20260522_051507.pdf"
         }
       ]
     },
@@ -3899,7 +3899,7 @@
       "noticeFilename": "2026_2364_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -3953,7 +3953,7 @@
       "noticeFilename": "2026_2365_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -4102,7 +4102,7 @@
       "noticeFilename": "2026_2371_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -4558,7 +4558,7 @@
       "noticeFilename": "2026_2417_20260611F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -4815,7 +4815,7 @@
       "noticeFilename": "2026_2439_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -5271,7 +5271,7 @@
       "noticeFilename": "2026_2461_20260525F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -5366,7 +5366,7 @@
       "noticeFilename": "2026_2464_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -5528,7 +5528,7 @@
       "noticeFilename": "2026_2478_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -5636,7 +5636,7 @@
       "noticeFilename": "2026_2481_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年7月16日至115年7月20日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -5654,7 +5654,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_2481_20260618F01_20260519_124129.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_2481_20260618F01_20260521_004257.pdf"
         }
       ]
     },
@@ -5816,7 +5816,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_2488_20260624F01_20260521_235933.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_2488_20260624F01_20260522_051601.pdf"
         }
       ]
     },
@@ -6260,7 +6260,7 @@
       "noticeFilename": "2026_2516_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -6396,7 +6396,7 @@
       "noticeFilename": "2026_2601_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -6627,7 +6627,7 @@
       "noticeFilename": "2026_2616_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -6817,7 +6817,7 @@
       "noticeFilename": "2026_2705_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -6871,7 +6871,7 @@
       "noticeFilename": "2026_2727_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -7115,7 +7115,7 @@
       "noticeFilename": "2026_2883_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -7210,7 +7210,7 @@
       "noticeFilename": "2026_2885_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -7318,7 +7318,7 @@
       "noticeFilename": "2026_2889_20260529F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -7372,7 +7372,7 @@
       "noticeFilename": "2026_2890_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -7562,7 +7562,7 @@
       "noticeFilename": "2026_2913_20260611F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -7977,7 +7977,7 @@
       "noticeFilename": "2026_3029_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -8193,7 +8193,7 @@
       "noticeFilename": "2026_3036_20260514F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -8301,7 +8301,7 @@
       "noticeFilename": "2026_3038_20260520F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -8446,25 +8446,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": "2026-06-29",
-      "evotePickupEndDate": "2026-07-01",
+      "evotePickupStartDate": null,
+      "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
-      "evotePickupDocuments": "股東會 出席通知書或身分證明文件",
-      "evotePickupRule": "採電子投票之股東除外】。 (1) 紀念品於開會當天會議結束前會場發放。 (2) 採電子投票之股東，紀念品領取方式：A. 對象：限已於115年5月26日至6月22日完成電子投票之股東。 B. 攜帶文件：股東會 出席通知書或身分證明文件。 C. 領取期間及地點：自115年6月29日起至7月1日止 (每日9:00至17:00 )至中國信託商業銀行代理 部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。",
+      "evotePickupLocation": "中信",
+      "evotePickupDocuments": "",
+      "evotePickupRule": "",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_3043_20260625F01.pdf",
-      "noticeUploadedAt": "無",
-      "noticeEvotePickupPeriodText": "自115年6月29日起至7月1日止",
-      "noticeCacheStatus": "miss",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeFilename": "",
+      "noticeUploadedAt": "",
+      "noticeEvotePickupPeriodText": "",
+      "noticeCacheStatus": "",
+      "noticeSourceLabel": "",
+      "noticeSourceType": "",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "開會通知書",
+      "evotePickupSource": "",
       "notes": "",
       "sources": [
         {
@@ -8474,10 +8474,6 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3043&year=115&mtype=F&"
-        },
-        {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3043_20260625F01_20260521_125425.pdf"
         }
       ]
     },
@@ -8662,7 +8658,7 @@
       "noticeFilename": "2026_3049_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -8716,7 +8712,7 @@
       "noticeFilename": "2026_3050_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9019,7 +9015,7 @@
       "noticeFilename": "2026_3062_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9073,7 +9069,7 @@
       "noticeFilename": "2026_3078_20260624F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9091,7 +9087,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3078_20260624F01_20260522_041930.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3078_20260624F01_20260522_054904.pdf"
         }
       ]
     },
@@ -9168,7 +9164,7 @@
       "noticeFilename": "2026_3090_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9222,7 +9218,7 @@
       "noticeFilename": "2026_3094_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9276,7 +9272,7 @@
       "noticeFilename": "2026_3118_20260525F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9330,7 +9326,7 @@
       "noticeFilename": "2026_3122_20260508F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9434,7 +9430,7 @@
       "noticeFilename": "2026_3131_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9542,7 +9538,7 @@
       "noticeFilename": "2026_3149_20260601F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9596,7 +9592,7 @@
       "noticeFilename": "2026_3163_20260616F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9745,7 +9741,7 @@
       "noticeFilename": "2026_3206_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -9998,7 +9994,7 @@
       "noticeFilename": "2026_3221_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -10404,7 +10400,7 @@
       "noticeFilename": "2026_3268_20260624F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -10422,7 +10418,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3268_20260624F01_20260521_181332.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3268_20260624F01_20260522_055001.pdf"
         }
       ]
     },
@@ -10581,7 +10577,7 @@
       "noticeFilename": "2026_3289_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -10933,7 +10929,7 @@
       "noticeFilename": "2026_3322_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -11465,7 +11461,7 @@
       "noticeFilename": "2026_3390_20260616F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -11573,7 +11569,7 @@
       "noticeFilename": "2026_3441_20260520F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -11880,7 +11876,7 @@
       "noticeFilename": "2026_3484_20260623F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -11988,7 +11984,7 @@
       "noticeFilename": "2026_3498_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -12096,7 +12092,7 @@
       "noticeFilename": "2026_3518_20260609F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -12191,7 +12187,7 @@
       "noticeFilename": "2026_3527_20260624F01.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "於115年7月23日至115年7月27日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -12209,7 +12205,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3527_20260624F01_20260520_180300.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3527_20260624F01_20260521_004627.pdf"
         }
       ]
     },
@@ -12461,7 +12457,7 @@
       "noticeFilename": "2026_3550_20260616F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -13025,7 +13021,7 @@
       "noticeFilename": "2026_3607_20260615F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -13079,7 +13075,7 @@
       "noticeFilename": "2026_3615_20260624F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "115/05/22~115/06/17",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -13097,7 +13093,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3615_20260624F01_20260520_180334.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3615_20260624F01_20260521_004702.pdf"
         }
       ]
     },
@@ -13844,7 +13840,7 @@
       "noticeFilename": "2026_3710_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -13952,7 +13948,7 @@
       "noticeFilename": "2026_4102_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -14006,7 +14002,7 @@
       "noticeFilename": "2026_4105_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -14155,7 +14151,7 @@
       "noticeFilename": "2026_4119_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -14341,7 +14337,7 @@
       "noticeFilename": "2026_4133_20260529F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -14449,7 +14445,7 @@
       "noticeFilename": "2026_4147_20260525F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -14557,7 +14553,7 @@
       "noticeFilename": "2026_4168_20260611F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -14575,7 +14571,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4168_20260611F01_20260519_125059.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4168_20260611F01_20260521_004757.pdf"
         }
       ]
     },
@@ -14946,7 +14942,7 @@
       "noticeFilename": "2026_4533_20260611F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15000,7 +14996,7 @@
       "noticeFilename": "2026_4716_20260611F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15018,7 +15014,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4716_20260611F01_20260519_182212.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4716_20260611F01_20260521_004842.pdf"
         }
       ]
     },
@@ -15108,7 +15104,7 @@
       "noticeFilename": "2026_4735_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15244,7 +15240,7 @@
       "noticeFilename": "2026_4903_20260430F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15262,7 +15258,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4903_20260430F01_20260519_125433.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4903_20260430F01_20260521_005840.pdf"
         }
       ]
     },
@@ -15298,7 +15294,7 @@
       "noticeFilename": "2026_4906_20260525F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15352,7 +15348,7 @@
       "noticeFilename": "2026_4908_20260624F01.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15370,7 +15366,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4908_20260624F01_20260519_125536.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4908_20260624F01_20260521_005910.pdf"
         }
       ]
     },
@@ -15406,7 +15402,7 @@
       "noticeFilename": "2026_4909_20260623F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年7月1日起至7月3日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15424,7 +15420,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4909_20260623F01_20260519_182353.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4909_20260623F01_20260521_005934.pdf"
         }
       ]
     },
@@ -15514,7 +15510,7 @@
       "noticeFilename": "2026_4934_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年6月4日至115年6月8日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15532,7 +15528,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4934_20260522F01_20260519_125639.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4934_20260522F01_20260521_010002.pdf"
         }
       ]
     },
@@ -15568,7 +15564,7 @@
       "noticeFilename": "2026_4939_20260520F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年5月21日起至115年5月25日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15586,7 +15582,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4939_20260520F01_20260519_125704.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4939_20260520F01_20260521_010025.pdf"
         }
       ]
     },
@@ -15622,7 +15618,7 @@
       "noticeFilename": "2026_4953_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15640,7 +15636,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4953_20260527F01_20260519_182428.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4953_20260527F01_20260521_010054.pdf"
         }
       ]
     },
@@ -15674,7 +15670,7 @@
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "※一、股東會紀念品：不鏽鋼玻璃調料罐(或等值禮品)。二、徵求領取紀念品方式：貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品，請於115年5月22日起至115年6月16日止(星期例假日除外)，攜帶",
       "noticeFilename": "2026_4956_20260623F01.pdf",
-      "noticeUploadedAt": "",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "請於115年7月6日起至115年7月8日",
       "noticeCacheStatus": "miss",
       "noticeSourceLabel": "公開資訊觀測站通知書",
@@ -15694,7 +15690,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4956_20260623F01_20260521_125953.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4956_20260623F01_20260522_062411.pdf"
         }
       ]
     },
@@ -15798,7 +15794,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4968_20260528F01_20260519_182604.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4968_20260528F01_20260521_072051.pdf"
         }
       ]
     },
@@ -15834,7 +15830,7 @@
       "noticeFilename": "2026_4971_20260623F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15852,7 +15848,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4971_20260623F01_20260520_000433.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4971_20260623F01_20260521_072105.pdf"
         }
       ]
     },
@@ -15888,7 +15884,7 @@
       "noticeFilename": "2026_4973_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "請於115年5月18日起至115年6月12日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15906,7 +15902,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4973_20260618F01_20260520_042112.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4973_20260618F01_20260521_010219.pdf"
         }
       ]
     },
@@ -15942,7 +15938,7 @@
       "noticeFilename": "2026_4974_20260529F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年6月2日起至6月4日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -15960,7 +15956,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4974_20260529F01_20260520_125146.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4974_20260529F01_20260521_010244.pdf"
         }
       ]
     },
@@ -15996,7 +15992,7 @@
       "noticeFilename": "2026_4979_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年6月3日起至6月5日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16014,7 +16010,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4979_20260527F01_20260521_001250.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4979_20260527F01_20260521_010312.pdf"
         }
       ]
     },
@@ -16050,7 +16046,7 @@
       "noticeFilename": "2026_4991_20260603F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年6月8日起至6月10日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16068,7 +16064,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4991_20260603F01_20260519_182801.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4991_20260603F01_20260521_010336.pdf"
         }
       ]
     },
@@ -16145,7 +16141,7 @@
       "noticeFilename": "2026_4999_20260623F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16163,7 +16159,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4999_20260623F01_20260521_001309.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4999_20260623F01_20260521_010428.pdf"
         }
       ]
     },
@@ -16199,7 +16195,7 @@
       "noticeFilename": "2026_5009_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16217,7 +16213,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5009_20260528F01_20260521_001327.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5009_20260528F01_20260521_010451.pdf"
         }
       ]
     },
@@ -16294,7 +16290,7 @@
       "noticeFilename": "2026_5014_20260624F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "115/05/23~115/06/16",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16312,7 +16308,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5014_20260624F01_20260521_001344.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5014_20260624F01_20260521_010545.pdf"
         }
       ]
     },
@@ -16389,7 +16385,7 @@
       "noticeFilename": "2026_5202_20260521F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "請於115年4月20日起至115年5月1５日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16407,7 +16403,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5202_20260521F01_20260520_042501.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5202_20260521F01_20260521_010633.pdf"
         }
       ]
     },
@@ -16443,7 +16439,7 @@
       "noticeFilename": "2026_5203_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年7月1日至115年7月3日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16461,7 +16457,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5203_20260618F01_20260520_042525.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5203_20260618F01_20260521_010700.pdf"
         }
       ]
     },
@@ -16547,7 +16543,7 @@
       "noticeFilename": "2026_5263_20260609F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16565,7 +16561,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5263_20260609F01_20260520_125404.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5263_20260609F01_20260521_010735.pdf"
         }
       ]
     },
@@ -16601,7 +16597,7 @@
       "noticeFilename": "2026_5272_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16619,7 +16615,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5272_20260526F01_20260520_125430.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5272_20260526F01_20260521_010801.pdf"
         }
       ]
     },
@@ -16655,7 +16651,7 @@
       "noticeFilename": "2026_5289_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16673,7 +16669,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5289_20260527F01_20260521_001415.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5289_20260527F01_20260521_010827.pdf"
         }
       ]
     },
@@ -16709,7 +16705,7 @@
       "noticeFilename": "2026_5309_20260428F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年5月4日起至115年5月6日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16727,7 +16723,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5309_20260428F01_20260521_001440.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5309_20260428F01_20260521_010856.pdf"
         }
       ]
     },
@@ -16854,7 +16850,7 @@
       "noticeFilename": "2026_5328_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16872,7 +16868,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5328_20260522F01_20260521_130219.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5328_20260522F01_20260521_010957.pdf"
         }
       ]
     },
@@ -16949,7 +16945,7 @@
       "noticeFilename": "2026_5351_20260605F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年6月17日起至6月22日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -16967,7 +16963,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5351_20260605F01_20260522_000852.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5351_20260605F01_20260521_011047.pdf"
         }
       ]
     },
@@ -17021,7 +17017,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5355_20260611F01_20260521_001630.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5355_20260611F01_20260521_072326.pdf"
         }
       ]
     },
@@ -17057,7 +17053,7 @@
       "noticeFilename": "2026_5356_20260528F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17075,7 +17071,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5356_20260528F01_20260521_181800.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5356_20260528F01_20260521_011111.pdf"
         }
       ]
     },
@@ -17211,7 +17207,7 @@
       "noticeFilename": "2026_5410_20260525F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17229,7 +17225,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5410_20260525F01_20260521_130456.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5410_20260525F01_20260521_011159.pdf"
         }
       ]
     },
@@ -17265,7 +17261,7 @@
       "noticeFilename": "2026_5425_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17283,7 +17279,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5425_20260617F01_20260521_181845.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5425_20260617F01_20260521_011225.pdf"
         }
       ]
     },
@@ -17360,7 +17356,7 @@
       "noticeFilename": "2026_5438_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "自115年5月27日起至5月29日止",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17378,7 +17374,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5438_20260526F01_20260521_130634.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5438_20260526F01_20260521_011259.pdf"
         }
       ]
     },
@@ -17455,7 +17451,7 @@
       "noticeFilename": "2026_5452_20260615F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17473,7 +17469,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5452_20260615F01_20260522_001007.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5452_20260615F01_20260521_011334.pdf"
         }
       ]
     },
@@ -17550,7 +17546,7 @@
       "noticeFilename": "2026_5471_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年7月15日至115年7月17日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17568,7 +17564,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5471_20260617F01_20260522_042413.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5471_20260617F01_20260521_011424.pdf"
         }
       ]
     },
@@ -17604,7 +17600,7 @@
       "noticeFilename": "2026_5478_20260615F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17622,7 +17618,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5478_20260615F01_20260521_182121.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5478_20260615F01_20260521_011451.pdf"
         }
       ]
     },
@@ -17699,7 +17695,7 @@
       "noticeFilename": "2026_5483_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年5月25日至115年5月27日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17717,7 +17713,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5483_20260526F01_20260521_182226.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5483_20260526F01_20260521_011541.pdf"
         }
       ]
     },
@@ -17794,7 +17790,7 @@
       "noticeFilename": "2026_5490_20260616F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17812,7 +17808,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5490_20260616F01_20260522_001133.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5490_20260616F01_20260521_011630.pdf"
         }
       ]
     },
@@ -17889,7 +17885,7 @@
       "noticeFilename": "2026_5521_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -17907,7 +17903,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5521_20260522F01_20260522_065336.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5521_20260522F01_20260521_011723.pdf"
         }
       ]
     },
@@ -17984,7 +17980,7 @@
       "noticeFilename": "2026_5609_20260601F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年6月1日至115年6月3日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -18002,7 +17998,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5609_20260601F01_20260522_042531.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5609_20260601F01_20260521_011811.pdf"
         }
       ]
     },
@@ -18079,7 +18075,7 @@
       "noticeFilename": "2026_5880_20260618F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "於115年7月3日至115年7月7日",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -18097,7 +18093,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5880_20260618F01_20260522_042550.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5880_20260618F01_20260521_011902.pdf"
         }
       ]
     },
@@ -18282,7 +18278,7 @@
       "noticeFilename": "2026_6108_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -18300,7 +18296,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6108_20260617F01_20260522_042651.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6108_20260617F01_20260521_012018.pdf"
         }
       ]
     },
@@ -18377,7 +18373,7 @@
       "noticeFilename": "2026_6116_20260520F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -18395,7 +18391,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6116_20260520F01_20260522_042737.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6116_20260520F01_20260521_012112.pdf"
         }
       ]
     },
@@ -18469,12 +18465,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6125_20260521F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -18487,6 +18483,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6125&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6125_20260521F01_20260521_012204.pdf"
         }
       ]
     },
@@ -18519,12 +18519,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6126_20260608F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -18537,6 +18537,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6126&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6126_20260608F01_20260521_012239.pdf"
         }
       ]
     },
@@ -18609,25 +18613,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-22",
+      "evotePickupEndDate": "2026-06-24",
       "evotePickupPlace": "",
-      "evotePickupLocation": "凱基",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓及5樓)",
+      "evotePickupDocuments": "「戶口名簿」正本)",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。領取方式：1.本次股東常會如有公開徵求委託書之情事，本公司依規定將於115年5月15日前上傳徵求人徵求資料彙總表至證基會網站(https://free.sfi.org.tw)，查詢方式請參閱網站上之說明。股東得洽網址所載之公開徵求人交付委託書，而公司得依委託人數交付紀念品予徵求人，由其轉交股東。2.於115年5月16日至115年6月13日有採用電子投票行使表決權且投票成功之股東，請於115年6月22日至115年6月24日上午9時至下午5時止，攜帶身分證正本(未滿14歲之股東憑「戶口名簿」正本)至凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓及5樓)領取紀念品。3.除上述領取方式外，本公司僅於股東會當日會議結束前會場發放紀念品，會後恕不郵寄或補發。※股東會紀念品洽領須知※或統一編號身分證字號姓名或名稱編號",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6129_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年6月22日至115年6月24日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -18637,6 +18641,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6129&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6129_20260616F01_20260521_012316.pdf"
         }
       ]
     },
@@ -18754,7 +18762,7 @@
       "noticeFilename": "2026_6136_20260616F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -18772,7 +18780,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6136_20260616F01_20260522_065544.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6136_20260616F01_20260521_012352.pdf"
         }
       ]
     },
@@ -18795,25 +18803,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-25",
+      "evotePickupEndDate": "2026-06-29",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出「電子投 票平台」網頁之「議案表決情形」頁面全頁，於115年6月25日至115年 6月29日(例假日除外)上午9時至下午4時30分止，至元大證券股務代 理部：台北市大安區敦化南路二段67號B1或1樓（前往1樓紀念品發放 處領取時，股東請往敦化南路二段73巷進入至葉財記世貿大樓後方停 車場）換領紀念品，此期間非以電子方式行使表決權之股東，恕不發 放紀念品。 振曜科技股份有限公司115年股東常會開會通知書 D122-Z182-6102 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6143_20260612F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月25日至115年6月29日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -18823,6 +18831,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6143&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6143_20260612F01_20260521_012419.pdf"
         }
       ]
     },
@@ -18858,7 +18870,7 @@
       "noticeFilename": "2026_6147_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -18876,7 +18888,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6147_20260527F01_20260522_065720.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6147_20260527F01_20260521_012446.pdf"
         }
       ]
     },
@@ -18949,25 +18961,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-14",
+      "evotePickupEndDate": "2026-07-16",
       "evotePickupPlace": "",
-      "evotePickupLocation": "富邦",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "富邦綜合證券股份有限公司股務代理部",
+      "evotePickupDocuments": "身分證明文件或其他足資證明股東身份之文件(如健保卡或駕照)",
+      "evotePickupRule": "電子投票之股東如欲領取紀念品自 115年7月14日至115年7月16日止攜帶身 分證明文件或其他足資證明股東身份之 文件(如健保卡或駕照)等擇一皆可至富 邦綜合證券股份有限公司股務代理部領 取。 地址 電話 台北市中正區館前路6號12樓之8(捷運台北車站新光三越出口) (02)2331-2141 台北市中正區懷寧街42之1號1樓(心泰軟異國料理便當) (02)2331-6372 台北市中山區合江街188巷2號1樓 (02)2506-2926 台北市大安區延吉街135之2號7樓(忠孝東路口) (02)2778-3412 台北市士林區德行東路92號(檳榔店內-忠誠牛肉麵旁) (02)2828-2007 台北市南港區福德街311號(伊美自助洗衣店) (02)2786-7680 新北市永和區得和路373巷31弄11號1樓(原永元路) (02)2920-8426 新北市三重區文化北路226巷46號1樓(正義北路八方雲集後/三安里站牌) (02)2982-4608 新北市新莊區公園一路70巷2號(阿耀的店旁巷) (02)2993-1020 桃園市桃園區愛八街15號(麵包同話後方) (03)335-7025 新竹市北大路305巷8號(國泰世華旁巷) (03)523-7681 苗栗縣頭份市維新路35號(竹南南地下道全家福鞋店正對面) (037)627-163 台中市北區太平路217號(正美洗衣店) (04)2201-4514 彰化市中正路二段560巷22號(彰安國中旁巷內) (04)722-4669 嘉義市忠義街68號(蘭井街與光彩街中間) (05)222-3203 台南市北區公園路128號(好鄰居藥局) (06)221-9015 台南市中西區西門路二段407號1樓(舊大舞台對面) (06)221-8925 高雄市苓雅區青年一路48號(四維國小正對面) (07)222-8877 高雄市新興區中正三路98號1樓(搜尋:中正股務) (07)237-9898 屏東市中正路131號(秀波股務) (08)765-7277 徵求點地址 徵求點電話 台北市中正區博愛路80號B1 (02)2388-8750 台北市中正區中華路二段301巷4號(黃豆家豆花店旁邊) (02)2339-1391 台北市中山區民生東路二段148號Toffee服飾(松江路口,路易莎旁) (02)2542-9368 台北市松山區東興路5號1樓(統一證正對面) 0958-327-999 台北市大安區敦化南路二段81巷45弄27號 (02)2701-6245 台北市信義區永吉路278巷27弄32號1樓(永吉市場旁) (02)8787-5802 台北市士林區德行東路95號(芝加哥數位影像) (02)2838-2572 台北市南港區八德路四段909號1樓(貓狗909) 0975-756-871 基隆市仁愛區孝二路29巷9號1樓 (02)2425-0062 新北市板橋區長安街138巷1-1號(海山高中部後面，學盟補習班旁) (02)2963-7878 新北市新店區中正路187之1號(國泰世華銀行對面) (02)2913-3480 新竹市東區西大路97巷8號(牛肉麵巷內) (03)526-8892 桃園市中壢區民權路214號(萬利市場對面7-11巷口進入) (03)494-9706 桃園市桃園區中山東路199號(青溪國中對面) (03)331-8844 台中市北區英才路184號1樓-陳素菡(大麵羹斜對面) (04)2203-9343 彰化縣彰化市中山路二段885-2號1樓(金伍翔鋁門窗) (04)720-1027 台",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※一、股東會紀念品：時尚輕巧隨手杯200ml。二、股東如欲委託徵求人代理出席領取紀念品時，請於委託書(",
+      "noticeFilename": "2026_6150_20260615F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年7月14日至115年7月16日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -18977,6 +18989,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6150&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6150_20260615F01_20260521_012519.pdf"
         }
       ]
     },
@@ -19004,20 +19020,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "統一",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。＊股東如欲委任徵求人代理出席股東常會時，並領取紀念品請洽",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6151_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19027,6 +19043,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6151&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6151_20260527F01_20260521_012551.pdf"
         }
       ]
     },
@@ -19049,25 +19069,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-22",
+      "evotePickupEndDate": "2026-07-24",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "永豐金證券股務代理部(台北市重慶南路一段2號1樓)",
+      "evotePickupDocuments": "身分證正本（未滿14歲之股東憑「戶口名簿」正本）",
+      "evotePickupRule": "電子投票領取紀念品方式者，請於115年7月22日至115年 7月24日上午九時至下午四時止，憑身分證正本（未滿14 歲之股東憑「戶口名簿」正本 ）至永豐金證券股務代理 部(台北市重慶南路一段2號1樓)領取紀念品，逾期不再 發放，非以電子方式行使表決權之股東，恕不發放紀念 品。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6152_20260611F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月22日至115年7月24日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19077,6 +19097,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6152&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6152_20260611F01_20260521_012615.pdf"
         }
       ]
     },
@@ -19102,22 +19126,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "群益",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "葉財記世貿大樓後方停車場）",
+      "evotePickupDocuments": "出席簽到卡，或印出ཥɿcccҳୃ̨̻網頁之「議案表決情形」頁面全頁，於\u0012\u0012\u0016ϋ\u0018˜\u0013\u0014˚Їʱ˟",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出 ཥɿ cccҳୃ̨̻網頁之「議案表決情形」頁面全頁，於\u0012\u0012\u0016ϋ\u0018˜\u0013\u0014˚Ї ʱ˟，至元大證券 股務代理部：台北市大安區敦化南路二段67號B1或1樓（前往1樓紀念 品發放處領取時，股東請往敦化南路二段73巷進入至葉財記世貿大樓 後方停車場）換領紀念品，此期間非以電子方式行使表決權之股東， 恕不發放紀念品。 嘉聯益科技股份有限公司 115年股東常會 出席簽到卡 本股務代理部所蒐集之個人資料，僅會在辦理股務業務 之目的範圍內為處理或利用，相關資料將依法令或契約 之保存期限保存，貴股東如欲行使相關權利，請逕洽本 股務代理部。 Ιᛠ̔ จԫධ ਕԫਕeᓞᓣ(eCounter)ε̋л͜ᇞɪ ͵̙ீཀ eCounterʘਿ ྌᅡ лʘಛධ੮໮ᜊһf (ၣѧj https://stockservices.tdcc.com.tw/evote/index.html) ਕԫਕeᓞᓣ eCounter ᗫਪᕚ 23\u0001$PEFd፩ɝ ึ ᗫ༟ৃf ਕ 嘉聯益科技股份有限公司董事會 敬啟 嘉聯益科技股份有限公司115年股東常會開會通知書",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6153_20260610F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19127,6 +19151,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6153&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6153_20260610F01_20260521_014344.pdf"
         }
       ]
     },
@@ -19149,25 +19177,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-10",
+      "evotePickupEndDate": "2026-06-12",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "禾昌興業股份有限公司(桃園市桃園區興華路9號)",
+      "evotePickupDocuments": "(1)身分證或健保卡正本(二擇一) (2)憑出席簽到卡，或印出「電子投票平台」網頁之「議案表決 情形」頁面全頁(二擇一) 上述(1)(2)文件皆需具備，於115年6月10日至115年6月12日 下午1時至下午4時止，至禾昌興業股份有限公司(桃園市桃園區 興華路9號)換領紀念品，此期間非以電子方式行使表決權之股 東，恕不發放紀念品",
+      "evotePickupRule": "電子方式行使表決權且投票成功者，請攜帶下列文件： (1)身分證或健保卡正本(二擇一) (2)憑出席簽到卡，或印出「電子投票平台」網頁之「議案表決 情形」頁面全頁(二擇一) 上述(1)(2)文件皆需具備，於115年6月10日至115年6月12日 下午1時至下午4時止，至禾昌興業股份有限公司(桃園市桃園區 興華路9號)換領紀念品，此期間非以電子方式行使表決權之股 東，恕不發放紀念品。 辦理私募普通股及(或)無擔保可轉換公司債案說明(附件)",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6158_20260527F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月10日至115年6月12日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19177,6 +19205,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6158&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6158_20260527F01_20260521_014411.pdf"
         }
       ]
     },
@@ -19199,25 +19231,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-23",
+      "evotePickupEndDate": "2026-06-25",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "欣技資訊股份有限公司（新北市汐止區大同路3段196-3號5樓）",
+      "evotePickupDocuments": "出席簽到卡或印出「電子投票平台」網頁之「議案表決情形」頁面全頁(二擇一即可，不需申請補發開會通知書)",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡或印出「電子投票 平台」網頁之「議案表決情形」頁面全頁 (二擇一即可，不需申請補 發開會通知書) ，於115年6月23日至115年6月25日下午1時至下午4時止 (逾時不發放)，至欣技資訊股份有限公司（新北市汐止區大同路3段 196-3號5樓）換領紀念品，此期間非以電子方式行使表決權之股東， 恕不發放紀念品。 欣技資訊股份有限公司115年股東常會開會通知書 D122-Z493-6101 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6160_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月23日至115年6月25日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19227,6 +19259,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6160&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6160_20260616F01_20260521_020208.pdf"
         }
       ]
     },
@@ -19249,25 +19285,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-29",
+      "evotePickupEndDate": "2026-06-02",
       "evotePickupPlace": "",
-      "evotePickupLocation": "中信",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "A. 對象：限已於115年4月26日至5月23日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年5月29日起至6月2日止(每日9:00至17:00，例假日除外)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。正面3.indd戶號",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "一、股東會紀念品-妙管家洗潔精(紀念品數量如有不足時，得以價值相當者替代)。二、股東如欲委託代理出席領取紀念品時，請於委託書簽名或蓋章【徵求股數限壹仟股(含)以上】自115年4月24日起至5月20日止洽徵求人之徵求場所辦理(股東辦理股東會委託書及領取紀念品事宜，請依各徵求場所之營業時間內前往洽辦，例假日除外，各徵求場所得視徵求狀況提早結束徵求)，恕不郵寄及補發。徵求場所自115年4月24日起詳見證基會網站(https://free.sfi.org.tw)、中國信託商業銀行代理部網站(https://ecorp.ctbcbank.com/cts/index.jsp)或利用客服語音專線(02)6636-5566按股票代號:6164查詢。三、紀念品發放原則：持股未滿1,000股之股東，將不予發放紀念品【親自出席股東會或採電子投票之股東除外】。(1)紀念品於開會當天會議結束前會場發放。(2)採電子投票之股東，紀念品領取方式： A. 對象：限已於115年4月26日至5月23日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點：自115年5月29日起至6月2日止(每日9:00至17:00，例假日除外)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。正面3.indd戶號股東戶號姓名或名稱持有股數檢舉電話：(○二)二五四七三七三三。算所檢舉，經查證屬實者，最高給予檢舉獎金二十萬元，二、發現違法取得及使用委託書，可檢附具體事證向集保結一、禁止交付現金或其他利益之價購委託書行為。委託書徵求人委託人(股東)姓名或名稱姓名或名稱戶號住址編號簽名或蓋章身分證字號或統一編號受託代理人簽名或蓋章簽名或蓋章徵求場所及人員簽章處：華興503股東戶號：持有股數：股東戶名：親自出席簽章處第3聯：憑此出席簽到卡辦理報到503華興電子工業股份有限公司授權日期年月日一、茲委託君(須由委託人親自填寫，不得以蓋章方式代替)為本股東代理人，出席本公司115年5月26日舉行之股東常會，代理人並依下列授權行使股東權利：□(一)代理本股東就會議事項行使股東權利。(全權委託)□(二)代理本股東就下列各項議案行使本股東所委託表示之權利與意見，下列議案未勾選者，視為對各該議案表示承認或贊成。1.承認本公司一一四年度營業報告書及財務報表案：(1)○承認(2)○反對(3)○棄權2.承認本公司一一四年度盈餘分配案：(1)○承認(2)○反對(3)○棄權3.臨時動議。二、本股東未於前項□內勾選授權範圍或同時勾選者，視為全權委託，但股務代理機構擔任受託代理人者，不得接受全權委託，代理人應依前項(二)之授權內容行使股東權利。三、本股東代理人得對會議臨時事宜全權處理之。四、請將出席證(或出席簽到卡)寄交代理人收執，如因故改期開會，本委託書仍屬有效(限此一會期)。此致華興電子工業股份有限公司115年股東常會出席簽到卡時間：115年5月26日上午9時整地點：新北市新店區中興路三段219號203室(天下一家社教服務中心)正面1.indd股東台啟第1聯(限向郵局窗口交寄)國內郵資已付台北郵局許可證台北字第1333號國內郵簡未書寫正確郵遞區號者，應按信函交付郵資503中信銀為境內外處理股務業務之目的，在法令規定、相關事實或法律關係存續之期間，就直接或間接(例如透過集保)蒐集與股務相關之您的個人資料，將以書面及/或電子等形式處理、利用及/或國際傳輸，例如揭露予公務機關或協助處理股務之第三人。您得要求查詢、閱覽、製給複本、補充或更正、停止蒐集、處理、利用及/或國際傳輸或刪除您的個人資料，但中信銀可能因此無法提供您所需服務，亦可能依法或基於風險管理等因素而得不依您的請求為之。股東專屬自助櫃台集保股務e櫃台操作說明100-003台北巿中正區重慶南路一段83號5樓股務代理人中國信託商業銀行代理部客服專線:(02)6636-5566華興電子工業股份有限公司(股票代號:6164)郵簡內裝有附件，應作信函貼付郵資中華郵政(股)公司許可號碼簡字第0038號儒風公司印製，服務專線：(02)2225-1430第2聯S折條碼代號A2華興背面1.inddΡཊᖂӪ൐ġலོР෈ĲĲĶԑĶТĳķРġӪᆎġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġġȪ३኉ؑĲĭııı޶ĩ֤ĪоΰȫĩᙏᆎȈഷஅᜌİഷஅມİഷஅᜌڔİഷஅມڔİഷஅᜌڢİഷஅມڢİഷஅᜌڔĩ޶ĪϴѧĪġഷஅᜌڔ޶ӋԤ३ϴѧĳဴĲዂȃĶዂġġႫၗȈĩıĳĪĳĴĹĺĮĳĺĺĺġġĳĳဴġġġġġġႫၗȈĩıĳĪĳĶĳĲĮĳĴĴĶġਠȟġıĺĶĹĮķĲķĮĲĴĸȟġĩıĴĪĴķĸĮĲĳıĳȟġĩıĴĪĶĳĴĮĸķĹĲĳϞĲဴġĩıĵĪĳĳĹĸĮĳĹĴĸοȟġĩıĳĪĳĶĺĶĮķĲĹĺѮϛѿᙴনୢᙴ໨ၯĴဴĩĸĮĲĲᄇ७ĪġĩıĵĪĳĶĳĵĮĳĺĶĶࡓ಑Ĵ໢ĪĩıĵĪĹĴĶĮıĳĶĸĪġıĺĲĳĮĴıĴĮĴĶĴဎທķĹဴĩ៌Ϣທᇄӎிທϛ໢ĪġĩıĶĪĳĳĳĮĴĳıĴĲĸဴĲዂġĪġĩıķĪĳĳĲĮĺıĲĶĶĸဴġĵıĸဴĲዂĩᙟσᇆѮᄇ७ĪġĩıķĪĳĳĲĮĹĺĳĶԑΙၯĵĹဴĩѲᆰ୽ωғᄇ७ĪġĩıĸĪĳĳĳĮĹĹĸĸ୛ĪġĩıĸĪĳĴĸĮĺĹĺĹၯĲĳĵဴġĩıĸĪķĳĴĮķĳĶı՗ȟġ୛ĪġĩıĹĪĸķĶĮĸĳĸĸ",
+      "noticeFilename": "2026_6164_20260526F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年5月29日起至6月2日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19277,6 +19313,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6164&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6164_20260526F01_20260521_020233.pdf"
         }
       ]
     },
@@ -19299,25 +19339,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-14",
+      "evotePickupEndDate": "2026-07-16",
       "evotePickupPlace": "",
       "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupDocuments": "身分證明文件影本或印出「股東e服務-股東會電子投票平台」網頁之「議案表決情形」頁面全頁(二擇一)至本公司股務代理機構(台北市中正區重慶南路一段2號1樓；忠孝西路側門)領取股東會紀念品，逾期不再發放，非以電子方式行使表決權之股東，恕不發放紀念品",
+      "evotePickupRule": "電子投票領取紀念品方式:請於115年7月14日至115年7月16日上午九時至下午四時止(例假日除外)，憑身分證明 文件影本或印出「股東e服務-股東會電子投票平台」網頁之「議案表決情形」頁面全頁(二擇一)至本公司股務代 理機構(台北市中正區重慶南路一段2號1樓；忠孝西路側門)領取股東會紀念品，逾期不再發放，非以電子方式行 使表決權之股東，恕不發放紀念品。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6167_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月14日至115年7月16日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19327,6 +19367,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6167&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6167_20260616F01_20260521_020258.pdf"
         }
       ]
     },
@@ -19409,12 +19453,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "-",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6176_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -19423,6 +19467,10 @@
         {
           "label": "宏遠股代",
           "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6176_20260527F01_20260521_022021.pdf"
         }
       ]
     },
@@ -19450,20 +19498,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "凱基",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品，其數量如有不足時，得以價值相當者替代之。領取方式：1.本次股東常會如有公開徵求委託書之情事，本公司依規定將於115年5月18日前上傳徵求人徵求資料彙總表至證基會網站(https://free.sfi.org.tw)，查詢方式請參閱網站上之說明。股東得洽網址所載之公開徵求人交付委託書，而公司得依委託人數交付紀念品予徵求人，由其轉交股東。2.本公司本次股東常會委託股務代理機構凱基證券股份有限公司擔任受託代理人。股東如未克出席股東會，得於115年5月19日至115年6月12日(例假日除外)在",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6182_20260618F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19473,6 +19521,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6182&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6182_20260618F01_20260521_023624.pdf"
         }
       ]
     },
@@ -19599,25 +19651,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-10",
+      "evotePickupEndDate": "2026-07-14",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "(1)身分證或健保卡正本(二擇一) (2)憑 出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」 頁面全頁(二擇一) 上述(1)(2)文件皆需具備，於115年7月10日至115年7月14日(例假日 除外)上午9時至下午4時30分止，至元大證券股務代理部：台北市大 安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處領取時，股東 請往敦化南路二段73巷進入至葉財記世貿大樓後方停車場）換領紀念 品，此期間非以電子方式行使表決權之股東，恕不發放紀念品",
+      "evotePickupRule": "電子方式行使表決權且投票成功者，請攜帶下列文件： (1)身分證或健保卡正本(二擇一) (2)憑 出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」 頁面全頁(二擇一) 上述(1)(2)文件皆需具備，於115年7月10日至115年7月14日(例假日 除外)上午9時至下午4時30分止，至元大證券股務代理部：台北市大 安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處領取時，股東 請往敦化南路二段73巷進入至葉財記世貿大樓後方停車場）換領紀念 品，此期間非以電子方式行使表決權之股東，恕不發放紀念品。 豐藝電子股份有限公司115年股東常會開會通知書 D122-Z557-6102 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6189_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年7月10日至115年7月14日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19627,6 +19679,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6189&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6189_20260528F01_20260521_023700.pdf"
         }
       ]
     },
@@ -19659,12 +19715,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6191_20260618F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -19677,6 +19733,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6191&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6191_20260618F01_20260521_025250.pdf"
         }
       ]
     },
@@ -19784,22 +19844,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄且會後不補發）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_6215_20260529F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19809,6 +19869,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6215&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6215_20260529F01_20260521_030904.pdf"
         }
       ]
     },
@@ -19931,25 +19995,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-15",
+      "evotePickupEndDate": "2026-06-17",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "永豐金證券(股)公司股務代理部(台北市重慶南路一段2號1樓忠孝西路側門)",
+      "evotePickupDocuments": "出席簽到卡、印出「股東e服務-股東會電子投票平台」網頁之「議案表決情形」頁面全頁或身分證明文件（以上三擇一）",
+      "evotePickupRule": "電子投票領取紀念品方式：請自115年6月15日至115年6月17日上午9時至下午4時止，憑出席簽到卡、印出「股東e服務-股東會電子投票平台」網頁之「議案表決情形」頁 面全頁或身分證明文件（以上三擇一），至永豐金證券(股)公司股務代理部(台北市重慶南路一段2號1樓忠孝西路側門)領取紀念品，逾期恕不補發。 ５、紀念品恕不郵寄，會議結束後恕不補發（紀念品數量如有不足時，將提供等值商品）",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6220_20260609F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請自115年6月15日至115年6月17日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19959,6 +20023,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6220&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6220_20260609F01_20260521_030951.pdf"
         }
       ]
     },
@@ -19981,25 +20049,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-22",
+      "evotePickupEndDate": "2026-06-24",
       "evotePickupPlace": "",
       "evotePickupLocation": "華南",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupDocuments": "股東會開會通知書全聯或印出「股東會電子投票平台-股東e票通」網頁之「議案表決情形」頁面全頁(不接受手機或電子設備出示畫面)",
+      "evotePickupRule": "以電子方式行使表決權者，請憑股東會開會通知書全聯或印出「股東會電子投票平台-股東e票通 」網頁之「議案表決情形」頁面全頁(不接受手機或電子設備出示畫面)，於115年6月22日起至 115年6月24日止，至華南永昌綜合證券股份有限公司股務代理部領取(每日早上9:00起至下午 4:30止，例假日除外)，此期間內非以電子方式行使表決權之股東，恕不發放紀念品。 誠信原則：堅持誠信 ，信守承諾，建立與 客戶及合作夥伴之長 遠合作關係。 客戶導向：所有決策 及活動均以提供客戶 更好的服務為目的。 永續經營：藉由競爭 力之不斷提昇，創造 盈餘，積極承擔企業 之社會責任。 合作分享：團隊合作 ，追求卓越，創造客 戶、員工、股東三贏 之企業。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6223_20260617F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月22日起至115年6月24日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20009,6 +20077,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6223&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6223_20260617F01_20260521_032135.pdf"
         }
       ]
     },
@@ -20031,25 +20103,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-09-21",
+      "evotePickupEndDate": "2026-09-23",
       "evotePickupPlace": "",
-      "evotePickupLocation": "凱基",
+      "evotePickupLocation": "凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓或5樓)",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。領取方式：1.本次股東常會如有公開徵求委託書之情事，本公司依規定將於115年5月15日前上傳徵求人徵求資料彙總表至證基會網站(https://free.sfi.org.tw)，查詢方式請參閱網站上之說明。股東得洽網址所載之公開徵求人交付委託書，而公司得依委託人數交付紀念品予徵求人，由其轉交股東。2.於115年5月16日至115年6月13日有採用電子投票行使表決權且投票成功之股東，請於115年9月21日至115年9月23日持身分證正本及下列任一文件：「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁或出席通知書，至凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓或5樓)領取紀念品。3.除上述領取方式外，本公司僅於股東會當日會議結束前會場發放紀念品，會後恕不郵寄或補發。此致貴股東聚鼎科技股份有限公司一一五年股東常會開會通知書聚鼎科技股份有限公司董事會敬啟",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6224_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年9月21日至115年9月23日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20059,6 +20131,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6224&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6224_20260616F01_20260521_032200.pdf"
         }
       ]
     },
@@ -20086,20 +20162,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "凱基",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "以電子方式行使表決權者得領取外，本公司將不予發放紀念品。 領取方式：",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6231_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20109,6 +20185,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6231&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6231_20260527F01_20260521_033852.pdf"
         }
       ]
     },
@@ -20280,25 +20360,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-04",
+      "evotePickupEndDate": "2026-06-08",
       "evotePickupPlace": "",
-      "evotePickupLocation": "康和",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "康和綜合證券股份有限公司股務代理部",
+      "evotePickupDocuments": "本出席簽到卡",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、貴股東如擬親自出席股東會，敬請於股東會開會當日(會議結束前)，憑本出席簽到卡至股東會現場出席並領取紀念品，會後恕不補發或郵寄。四、以電子方式行使表決權之股東,請於民國115年6月4日至115年6月8日止，持「開會通知書」或列印「電子投票確認單」(二擇一)至康和綜合證券股份有限公司股務代理部領取。※紀念品領取須知※\u0016%ˀൟБਗ×不接陌生電話×不點未知連結×不聽投資明牌×不怕莫名威脅×不給個人資料Ꮸᑘ\u0012\u0017\u0016ˀൟᗺਖ਼ᇞ1\"2\"3\"4\"5\"6\"7\"8\"9\"10\"11\"12\"1\"2\"3\"4\"5\"6\"7\"8\"9\"10\"M-B01-1070322-02-1力成115No.61150414/JF318x12”MB01107032202",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※\u0016%ˀൟБਗ×不接陌生電話×不點未知連結×不聽投資明牌×不怕莫名威脅×不給個人資料Ꮸᑘ\u0012\u0017\u0016ˀൟᗺਖ਼ᇞ1\"2\"3\"4\"5\"6\"7\"8\"9\"10\"11\"12\"1\"2\"3\"4\"5\"6\"7\"8\"9\"10\"M-B01-1070322-02-1力成115No.61150414/JF318x12”MB01107032202",
+      "noticeFilename": "2026_6239_20260527F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年6月4日至115年6月8日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20308,6 +20388,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6239&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6239_20260527F01_20260521_033931.pdf"
         }
       ]
     },
@@ -20330,25 +20414,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-14",
+      "evotePickupEndDate": "2026-07-16",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出「電 子 投票平台」網頁之「議案表決情形」頁面全頁，於115年7月14日至 115年7月16日上午9時至下午4時30分止，至元大證券股務代理部：台北 市大安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處領取時， 股東請往敦化南路二段73巷進入至葉財記世貿大樓後方停車場）換領 紀念品，此期間非以電子方式行使表決權之股東，恕不發放紀念品。 442 股東戶號： 股東或代 理人姓名 持有股數： ： 115-1 ※股東、徵求人、受託代理人及指派代表人出席股東會時，請 攜帶附有照片之身分證明文件正本，以備核驗。 ※出席簽到卡及委託書兩者均簽名或蓋章者視為親自出席，但 委託書由股東交付徵求人或受託代理人者視為委託出席。 親自出席簽名或蓋章 ＊注意事項：持股未滿1,000股之股東 ，除股東親自出席股東會或以電子方 式行使表決權外，恕不發放紀念品。 股東會紀念品：統一超商50元商品卡 ( ○ 二)",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6243_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年7月14日至115年7月16日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20358,6 +20442,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6243&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6243_20260616F01_20260521_035645.pdf"
         }
       ]
     },
@@ -20380,25 +20468,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-06",
+      "evotePickupEndDate": "2026-07-08",
       "evotePickupPlace": "",
-      "evotePickupLocation": "華南",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "華南永昌綜合證券股份有限公司股務代理部",
+      "evotePickupDocuments": "股東會開會通知書全聯或列印出「股東會電子投票平台-股東e票通」網頁之「議案表決情形」頁面全頁(不接受手機或電子設備出示畫面)",
+      "evotePickupRule": "以電子方式行使表決權者，請憑股東會開會通知書全 聯或列印出「股東會電子投票平台-股東e票通」網頁 之「議案表決情形」頁面全頁(不接受手機或電子設 備出示畫面)，於115年7月6日起至115年7月8日止，至 華南永昌綜合證券股份有限公司股務代理部領取(每 日9:00起至16:00止，例假日除外)，此期間內非以電 子方式行使表決權之股東，恕不發放紀念品。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6246_20260624F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年7月6日起至115年7月8日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20408,6 +20496,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6246&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6246_20260624F01_20260522_065922.pdf"
         }
       ]
     },
@@ -20430,25 +20522,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-25",
+      "evotePickupEndDate": "2026-06-29",
       "evotePickupPlace": "",
-      "evotePickupLocation": "凱基",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓或5樓)",
+      "evotePickupDocuments": "出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。領取方式：1.本次股東常會如有公開徵求委託書之情事，本公司依規定將於115年4月28日前上傳徵求人徵求資料彙總表至證基會網站(https://free.sfi.org.tw)，查詢方式請參閱網站上之說明。股東得洽網址所載之公開徵求人交付委託書，而公司得依委託人數交付紀念品予徵求人，由其轉交股東。2.於115年4月29日至115年5月26日有採用電子投票行使表決權且投票成功之股東，請於115年6月25日至115年6月29日(例假日除外)攜帶出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)，至凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓或5樓)領取紀念品。3.除上述領取方式外，本公司僅於股東會當日會議結束前會場發放紀念品，會後恕不郵寄或補發。此致貴股東矽格股份有限公司董事會敬啟矽格股份有限公司一一五年股東常會開會通知書矽格股份有限公司115年股東常會委託書徵求人彙總名單",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6257_20260529F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年6月25日至115年6月29日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20458,6 +20550,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6257&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6257_20260529F01_20260521_035717.pdf"
         }
       ]
     },
@@ -20521,25 +20617,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-08",
+      "evotePickupEndDate": "2026-06-03",
       "evotePickupPlace": "",
       "evotePickupLocation": "群益",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月8日起至115年6月3日止(星期例假日除外)，攜帶",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※台北市大安區敦化南路二段97號地下二樓股務代理人群益金鼎證券股份有限公司股務代理部辦理時間：週一至週五上午8：30～下午4：3024小時語音專線：(02)2702-3999語音代號：群益金鼎證券股務代理部網址：agency.capital.com.tw106420久元電子股份有限公司6261正面2.indd二十萬元，檢舉電話：︵○二︶二五四七三七三三。保結算所檢舉，經查證屬實者，最高給予檢舉獎金二、發現違法取得及使用委託書，可檢附具體事證向集一、禁止交付現金或其他利益之價購委託書行為。持有股數身分證字號或統一編號姓名或名稱股東戶號委託書住址受託代理人徵求人委託人（股東）編號簽名或蓋章簽名或蓋章徵求場所及人員簽章處戶號：股東或代理人姓名出席簽到卡編號：股東戶號：持有股數：：663※請攜帶附有照片之身分證明文件以備核驗※法人指派書茲指派君出席貴公司本次股東會，依法行使一切股東權利。(法人股東親自出席專用)簽名或蓋章親自出席簽名或蓋章姓名或名稱戶號姓名或名稱115-663久元電子股份有限公司授權日期年月日此致久元電子股份有限公司一一五年股東常會時間：115年6月9日(星期二)上午九時正地點：新竹市科學園區科技路5號4樓(本公司餐廳)一、茲委託君(須由委託人親自填寫，不得以蓋章方式代替)為本股東代理人，出席本公司115年6月9日舉行之股東常會，代理人並依下列授權行使股東權利：□(一)代理本股東就會議事項行使股東權利。(全權委託)□(二)代理本股東就下列各項議案行使本股東所委託表示之權利與意見，下列議案未勾選者，視為對各該議案表示承認或贊成。1.承認本公司一一四年度營業報告書及財務報告案：□1.承認□2.反對□3.棄權2.承認本公司一一四年度盈餘分配案：□1.承認□2.反對□3.棄權二、本股東未於前項□內勾選授權範圍或同時勾選者，視為全權委託，但股務代理機構擔任受託代理人者，不得接受全權委託，代理人應依前項(二)之授權內容行使股東權利。三、本股東代理人得對會議臨時事宜全權處理之。四、請將出席證(或出席簽到卡)寄交代理人收執，如因故改期開會，本委託書仍屬有效(限此一會期)。正面3.indd原登記(帳號無誤者，免寄回)新增或變更(請附存摺封面影本)(請蓋股東印鑑)銀行存款帳號(分行別、科目、編號、檢碼)銀行代號聯絡電話(請務必填寫)股東戶號股東戶名銀行名稱選項本人同意每年度現金股利依左列帳號匯撥或郵寄支票□撤銷原登記帳戶，改郵寄支票※※同意匯撥者，無須寄回本聯※※663久元電子股份有限公司一一五年現金股利匯款帳戶登記申請書1.本匯款申請書請於115年6月9日(星期二)前寄達群益金鼎證券股務代理部。2.現金股利發放日另行公告，並依下列指定方式辦理。3.貴股東原登記帳號無誤者免寄回。※洽領紀念品須知※一、股東會紀念品：7-11商品券35元。(紀念品數量不足時，將提供等值商品代替。)二、紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月8日起至115年6月3日止(星期例假日除外)，攜帶",
+      "noticeFilename": "2026_6261_20260609F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年5月8日起至115年6月3日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20549,6 +20645,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6261&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6261_20260609F01_20260521_041524.pdf"
         }
       ]
     },
@@ -20571,25 +20671,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-03",
+      "evotePickupEndDate": "2026-06-05",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出 「電子投票平台」網頁之「議案表決情形」頁面全頁，於115 年6月3日至115年6月5日(例假日除外)上午9時至下午4時30分 止，至元大證券股務代理部：台北市大安區敦化南路二段67號 B1或1樓（前往1樓紀念品發放處領取時，股東請往敦化南路二 段73巷進入至葉財記世貿大樓後方停車場）換領紀念品，此期 間非以電子方式行使表決權之股東，恕不發放紀念品。 (附件一) (附件二) 發行115年度限制員工權利新股案說明 辦理公開募集發行普通股，或發行新股參與海外存託憑證， 或私募方式發行普通股、或海外或國內可轉換公司債案說明 股東印鑑卡 表單及注意事項 股務事務e櫃檯(eCounter)，請股東多加利用線上 辦理股務相關事務。股東亦可透過eCounter之基 本資料變更服務，申請辦理股票股利之集保劃撥 帳號及現金股利之款項帳號變更。( 網址： https://stockservices.tdcc.com.tw/evote/index.html) 股務事務e櫃檯 eCounter (一)擬依據公司法第267條及金融監督管理委員會發佈之「發行人募集與發 行有價證券處理準則」等相關規定，訂定本公司民國115年限制員工權 利新股發行辦法。 (二)本次擬發行之限制員工權利新股自股東會決議後一年內，得分次向主管 機關申報，於主管機關申報生效通知到達之日起二年內，得視實際需要 ，一次或分次發行，實際發行日期及相關作業事項由董事會授權董事長 訂定之。 (三)本次發行之限制員工權利新股內容如下：",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6269_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月3日至115年6月5日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20599,6 +20699,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6269&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6269_20260528F01_20260521_042231.pdf"
         }
       ]
     },
@@ -20621,25 +20725,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-11",
+      "evotePickupEndDate": "2026-06-15",
       "evotePickupPlace": "",
-      "evotePickupLocation": "凱基",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓或5樓)",
+      "evotePickupDocuments": "出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。領取方式：1.本次股東常會如有公開徵求委託書之情事，本公司依規定將於115年4月24日前上傳徵求人徵求資料彙總表至證基會網站(https://free.sfi.org.tw)，查詢方式請參閱網站上之說明。股東得洽網址所載之公開徵求人交付委託書，而公司得依委託人數交付紀念品予徵求人，由其轉交股東。2.於115年4月25日至115年5月23日有採用電子投票行使表決權且投票成功之股東，請於115年6月11日至115年6月15日(例假日除外)攜帶出席通知書、身分證明文件、列印之「股東會電子投票平台-股東e服務」網頁之「議案表決情形」頁面全頁(擇一皆可)，至凱基證券股份有限公司股務代理部(台北市重慶南路一段2號1樓或5樓)領取紀念品。3.除上述領取方式外，本公司僅於股東會當日會議結束前會場發放紀念品，會後恕不郵寄或補發。此致貴股東倍微科技股份有限公司董事會敬啟倍微科技股份有限公司一一五年股東常會開會通知書A01倍微科技股份有限公司115年股東常會委託書徵求人彙總名單",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6270_20260526F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年6月11日至115年6月15日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20649,6 +20753,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6270&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6270_20260526F01_20260521_042258.pdf"
         }
       ]
     },
@@ -20715,22 +20823,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※元山科技工業股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：酒精濕紙巾（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_6275_20260528F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20740,6 +20848,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6275&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6275_20260528F01_20260521_044041.pdf"
         }
       ]
     },
@@ -20762,25 +20874,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-08",
+      "evotePickupEndDate": "2026-06-10",
       "evotePickupPlace": "",
-      "evotePickupLocation": "中信",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "採電子投票之股東除外】。 (1)紀念品於開會當天會議結束前會場發放。 (2)採電子投票之股東，紀念品領取方式: A. 對象:限已於115年4月28日至5月25日完成電子投票之股東。  B. 攜帶文件: 股東會出席通知書或身分證明文件。  C. 領取期間及地點:自115年6月8日起至6月10日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不 郵寄及補發。 Ò\u0012\u0013 ᕐԻ \u0001\u0011\u0015\u0010\u0011\u0012\u000e\u0012",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "徵求人凱基證券股份有限公司(簡稱:凱基證/凱基証/凱基證券/凱基証券/凱基證卷/凱基証卷)1.凱基證券股份有限公司地址：台北市重慶南路一段2號1樓、5樓電話：02-238929992.全通事務處理股份有限公司全省徵求場所地址：台北市大安區敦化南路二段11巷22號電話：02-25212335徵求場所名稱或所委託代為處理徵求事務者名稱ў˸ɪᅄӋɛคᐼΤఊ੬ึ˚ಂ\u0012\u0012\u0016ϋ\u0016˜\u0013\u0019˚",
+      "noticeFilename": "2026_6282_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年6月8日起至6月10日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20790,6 +20902,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6282&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6282_20260528F01_20260521_044106.pdf"
         }
       ]
     },
@@ -20853,25 +20969,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-06",
+      "evotePickupEndDate": "2026-07-08",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出「電子投 票平台」網頁之「議案表決情形」頁面全頁，於115年7月6日至115年 7月8日上午9時至下午4時30分止，至元大證券股務代理部：台北市大 安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處領取時，股東 請往敦化南路二段73巷進入至葉財記世貿大樓後方停車場）換領紀念 品，此期間非以電子方式行使表決權之股東，恕不發放紀念品。 佳邦科技股份有限公司115年股東常會開會通知書 D122-Z376-6102 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "委託書用紙填發須知一、股東親自出席者，不得以另一部份股權委託他人代理，委託書與出席簽到卡均簽名或蓋章者，視為親自出席，但委託書由股東交付徵求人或受託代理人者視為委託出席。二、委託書之委託人及受託代理人，應依公開發行公司出席股東會使用委託書規則及公司法第一七七條規定辦理。三、應使用本公司印發之委託書用紙，且一股東以出具一委託書，並以委託一人為限。四、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。五、受託代理人如非股東，請於股東戶號欄內填寫身分證字號或統一編號。六、徵求人如為信託事業、股務代理機構，請於股東戶號欄內填寫統一編號。七、委託書送達公司後，股東欲親自出席股東會或欲以書面或電子方式行使表決權者，應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。佳邦科技股份有限公司董事會敬啟徵求點電話（02）2351-6733（02）8972-5568（02）2595-6189（02）2563-5077（02）2718-0952（02）2778-3412（02）2706-3889（02）2753-5992（02）2827-9151（02）2956-2019（02）2920-8426（02）2982-4608（02）2993-1020（02）2677-20490958-616-137（03）335-7025（03）288-8234（03）523-7681（04）2201-4514（04）2407-3827（04）2622-0217（04）722-4669（049）232-7456（06）228-6026（06）221-9015（07）222-8877（07）237-9898（07）556-0952（07）623-6250（08）765-7277全通事務處理股份有限公司部份徵求場地表徵求點地址台北市中正區重慶南路一段18號（日野苑飯店旁邊）台北市中正區武昌街一段8號台北市大同區承德路三段206之2號（承三208巷口）台北市中山區吉林路144巷10號2樓台北市中山區龍江路155巷6號1樓（長春路口）台北市大安區延吉街135之2號7樓（忠孝東路口）台北市大安區敦化南路二段11巷22號（敦南信義路口）台北市信義區虎林街100巷17號1樓台北市北投區致遠一路二段117號1樓（彩券行-陽信銀旁）新北市板橋區東門街30之2號1樓之2（府中1號出口）新北市永和區得和路373巷31弄11號1樓（原永元路）新北市三重區文化北路226巷46號1樓（正義北路八方雲集後/三安里站牌）新北市新莊區公園一路70巷2號（阿耀的店旁巷）新北市鶯歌區中正一路93號（全國寢具行）宜蘭縣宜蘭市聖後街214號（富邦證券旁）桃園市桃園區愛八街15號（麵包同話後方）桃園市楊梅區中山北路一段12巷4弄2號新竹市北大路305巷8號（國泰世華旁巷）台中市北區太平路217號（正美洗衣店）台中市大里區德芳路二段27號（享宸養生館）台中市清水區光華路43巷2號彰化市中正路二段560巷22號（彰安國中旁巷內）南投縣草屯鎮炎峰街3之7號（土銀斜對面）台南市中西區友愛東街15號（萬川餅店旁）台南市北區公園路128號（好鄰居藥局）高雄市苓雅區青年一路48號（四維國小正對面）高雄市新興區中正三路98號1樓（搜尋:中正股務）高雄市左營區立信路221號高雄市岡山區公園東路124號屏東市中正路131號（秀波股務）(摘錄)D122-Z376-6102_佳邦科技(A2版)(息)校對日期業務簽章客戶簽章次數本稿件經製版後即無法更改請校對無誤後於客戶欄簽章芳經辦人:周柔均3115.4.30佳邦科技股份有限公司115年股東常會委託書徵求人彙總名單",
+      "noticeFilename": "2026_6284_20260612F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年7月6日至115年7月8日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20881,6 +20997,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6284&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6284_20260612F01_20260521_044138.pdf"
         }
       ]
     },
@@ -20903,25 +21023,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-27",
+      "evotePickupEndDate": "2026-05-29",
       "evotePickupPlace": "",
-      "evotePickupLocation": "中信",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "A. 對象：限已於115年4月25日至5月22日完成電子投票之股東。 B. 攜帶文件：股東會出席通知書或身分證明文件。 C. 領取期間及地點:自115年5月27日至5月29日止(每日9:00至17:00)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發。良維科技股份有限公司115年股東常會委託書徵求人彙總名單",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6290_20260525F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年5月27日至5月29日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20931,6 +21051,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6290&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6290_20260525F01_20260521_044201.pdf"
         }
       ]
     },
@@ -21035,25 +21159,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-08",
+      "evotePickupEndDate": "2026-06-03",
       "evotePickupPlace": "",
       "evotePickupLocation": "群益",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月8日起至115年6月3日止(星期例假日除外)，攜帶",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※台北市大安區敦化南路二段97號地下二樓股務代理人群益金鼎證券股份有限公司股務代理部辦理時間：週一至週五上午8：30～下午4：3024小時語音專線：(02)2702-3999語音代號：群益金鼎證券股務代理部網址：agency.capital.com.tw106420晶焱科技股份有限公司6411正面2.indd二十萬元，檢舉電話：︵○二︶二五四七三七三三。保結算所檢舉，經查證屬實者，最高給予檢舉獎金二、發現違法取得及使用委託書，可檢附具體事證向集一、禁止交付現金或其他利益之價購委託書行為。持有股數身分證字號或統一編號姓名或名稱股東戶號委託書住址受託代理人徵求人委託人（股東）編號簽名或蓋章簽名或蓋章徵求場所及人員簽章處戶號：股東或代理人姓名出席簽到卡編號：股東戶號：持有股數：：699※請攜帶附有照片之身分證明文件以備核驗※法人指派書茲指派君出席貴公司本次股東會，依法行使一切股東權利。(法人股東親自出席專用)簽名或蓋章親自出席簽名或蓋章姓名或名稱戶號姓名或名稱115-699晶焱科技股份有限公司授權日期年月日此致晶焱科技股份有限公司一一五年股東常會時間：115年6月9日(星期二)上午九時整地點：新北市中和區中正路726號B2(一期服務中心會議室)一、茲委託君(須由委託人親自填寫，不得以蓋章方式代替)為本股東代理人，出席本公司115年6月9日舉行之股東常會，代理人並依下列授權行使股東權利：□(一)代理本股東就會議事項行使股東權利。(全權委託)□(二)代理本股東就下列各項議案行使本股東所委託表示之權利與意見，下列議案未勾選者，視為對各該議案表示承認或贊成。1.承認114年度決算表冊案：□1.承認□2.反對□3.棄權2.承認114年度盈餘分派案：□1.承認□2.反對□3.棄權3.發行限制員工權利新股案：□1.贊成□2.反對□3.棄權二、本股東未於前項□內勾選授權範圍或同時勾選者，視為全權委託，但股務代理機構擔任受託代理人者，不得接受全權委託，代理人應依前項(二)之授權內容行使股東權利。三、本股東代理人得對會議臨時事宜全權處理之。四、請將出席證(或出席簽到卡)寄交代理人收執，如因故改期開會，本委託書仍屬有效(限此一會期)。正面3.indd原登記(帳號無誤者，免寄回)新增或變更(請附存摺封面影本)(請蓋股東印鑑)銀行存款帳號(分行別、科目、編號、檢碼)銀行代號聯絡電話(請務必填寫)股東戶號股東戶名銀行名稱選項本人同意每年度現金股利依左列帳號匯撥或郵寄支票□撤銷原登記帳戶，改郵寄支票※※同意匯撥者，無須寄回本聯※※699晶焱科技股份有限公司一一五年現金股利匯款帳戶登記申請書1.本匯款申請書請於115年6月9日(星期二)前寄達群益金鼎證券股務代理部。2.現金股利發放日另行公告，並依下列指定方式辦理。3.貴股東原登記帳號無誤者免寄回。※洽領紀念品須知※一、股東會紀念品：7-11商品卡50元。(紀念品數量不足時，將提供等值商品代替。)二、紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月8日起至115年6月3日止(星期例假日除外)，攜帶",
+      "noticeFilename": "2026_6411_20260609F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年5月8日起至115年6月3日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21063,6 +21187,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6411&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6411_20260609F01_20260521_044301.pdf"
         }
       ]
     },
@@ -21126,25 +21254,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-17",
+      "evotePickupEndDate": "2026-07-21",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "永豐金證券股務代理部(台北市重慶南路一段2號1樓，台開大樓忠孝西路側門)",
+      "evotePickupDocuments": "身份證正本(未滿14歲之股東憑『戶口名簿』正本)",
+      "evotePickupRule": "電子投票領取紀念品方式：請於115年7月17日至115年7月21日，例假日除外，憑身 份證正本(未滿14歲之股東憑『戶口名簿』正本)至永豐金證券股務代理部(台北市 重慶南路一段2號1樓，台開大樓忠孝西路側門)領取紀念品，領取時間為上午9點 至下午4點，逾期不再發放，非以電子方式行使表決權之股東，恕不發放紀念品。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6432_20260611F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月17日至115年7月21日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21154,6 +21282,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6432&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6432_20260611F01_20260521_044356.pdf"
         }
       ]
     },
@@ -21176,25 +21308,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-04-28",
+      "evotePickupEndDate": "2026-05-21",
       "evotePickupPlace": "",
-      "evotePickupLocation": "台新",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "台新證券股務代理部(台北市建國北路一段96號B1、1樓)",
+      "evotePickupDocuments": "身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁",
+      "evotePickupRule": "以電子方式行使表決權者得領 取外，本公司將不予發放紀念品；其數量如有不足時，得以等值商品替代之；紀 念品恕不郵寄，逾期亦不再發放。 紀念品領取方式如下： 115/4/28~115/5/21 洽徵求人領取 ※徵求人得視徵求狀況提 前結束徵求 115/6/08~115/6/10 電子投票股東領取 ※例假日除外 ※每日08:30~16:30 115/5/29 股東會會場領取 請持第三聯委託書於「委託人」欄位簽名或蓋章，洽 各徵求場所辦理。 【徵求股數限1,000股(含)以上】 完成電子投票作業且未重複填具委託書委託他人出席 之股東，請攜帶身分證明文件、股東會出席簽到卡、 或列印之電子投票「議案表決情形」全頁等擇一 皆 可，至台新證券股務代理部(台北市建國北路一段96 號B1、1樓)領取紀念品。 紀念品發放至股東會會議結束為止。 洽領紀念品須知 戶名 銀行帳號 戶號 （無誤免寄回） 銀行代號 銀行名稱 銀行存款帳號(分行別、科目、帳號、檢查號碼) 郵 局 局 號 帳 號 迅得 327 700 請於 年 月 日前寄回 第二聯 現金股利匯款帳號登記表 115 5 29",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "戶名銀行帳號戶號（無誤免寄回）銀行代號銀行名稱銀行存款帳號(分行別、科目、帳號、檢查號碼)郵局局號帳號迅得327700請於年月日前寄回",
+      "noticeFilename": "2026_6438_20260529F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "115/4/28~115/5/21",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21204,6 +21336,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6438&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6438_20260529F01_20260521_044424.pdf"
         }
       ]
     },
@@ -21226,25 +21362,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-04-22",
+      "evotePickupEndDate": "2026-05-15",
       "evotePickupPlace": "",
-      "evotePickupLocation": "第一",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "下午4時30分止，至第一金證券股務代理部",
+      "evotePickupDocuments": "第三聯委託書洽徵求人徵求場所(詳第四聯)辦理，徵求人得視徵求狀況提前結束徵求。３、持股1,000股以上之股東如不委託或親自出席股東會而欲",
+      "evotePickupRule": "以電子方式行使表決權者得領取外，本公司不予發放紀念品。 ※領取方式：(※恕不郵寄，逾期亦不補發) １、親自出席股東會者，請於開會當日會議結束前至會場親自領取，會後恕不補發。 ２、股東如委託徵求人(限1,000股(含)以上)出席股東會並領取紀念品者，請自115年4月22日起至115年5月15日止(例假日除外)，攜 帶第三聯委託書洽徵求人徵求場所(詳第四聯)辦理，徵求人得視徵求狀況提前結束徵求。 ３、持股1,000股以上之股東如不委託或親自出席股東會而欲領取紀念品者，請持出席簽到卡於115年5月22日至股東會開會會場洽領 ，發放至會議結束止。 ４、以電子方式行使表決權之股東且投票成功者，請列印「股東e服務－電子投票」網頁之「議案表決情形」頁面全頁，自115年7月 8日起至115年7月10日止，於營業時間上午9時起至下午4時30分止，至第一金證券股務代理部換領紀念品。(※此期間，非以電 子投票行使表決權之股東，恕不發放紀念品) \u0012\u0012\u0016 ※ 核對： 委託人（股東） 股東戶號 戶 號 戶 號 持有股數 姓 名 或 名 稱 徵 求 人 住 址 編號 身分證字號 或統一編號 簽名或蓋章 簽名或蓋章 簽名或蓋章受 託 代 理 人 姓 名 或 名 稱 姓 名 或 名 稱 ɓeধ։ৄcccccccccccё඲͟։ৄɛፋІ෬ᄳd ͉ʮ̡\u0012\u0012\u0016ϋ\u0016 ᛆлj ͪ ࿁΢༈ᙄ ᗎϓf j Ⴉ \u0013 ´ˀ࿁ \u0014 ´૝ᛆ j cccccccccccccˉႩ \u0013 ´ˀ࿁ \u0014 ´૝ᛆ j cccccccccccccˉ\u0001 \u0012 ´ᗎϓ \u0013 ´ˀ࿁ \u0014 ´૝ᛆ Όᛆ dʔ੻ટաΌᛆ։ ᛆлf Όᛆஈଣʘf ҷಂ Ϥɓึಂf ߧ 授權日 期 年 月 日 元晶太陽能科技股份有限公司 委 託 書 徵求場所及人員簽章處： 元晶太陽能科技股份有限公司 紀念品領取須知 親自辦理地址：台北市大安區安和路一段二十七號六樓 股務專 線： ( 0 2 ) 2 5 6 3 - 5 7 1 1 (代表號 ) 106646 營業時間：星期一至星 證券代號：6443 期五上午8:45至下午4:45止 ਕ ˾ ଣ ɛ ʮ̡ 元晶太陽能科技股份有限公司 104 時間：115年5月22日(星期五)上午九時整 地點：屏東縣屏東市大溪路335之12號 (本公司屏東廠) 104 股務代理部地圖您可搭乘的公車路線： 663、665、235、261、270、 311藍、37、651、245、263、 292、543、621、662 下車站名：仁愛安和路口 您可搭乘的捷運路線：板南線 到站站名：忠孝敦化站 仁 愛 路 安 和 路 路 南 化 敦 忠 孝 東 路 SOGO 第一金證券 股東常會通 知 請 先 拆 閱 依個資法應告知事項： 「第一金證券基於為您於中華民 國境內外處理有價證券及有價證券持有人登 記之目的，在相關事實、法律關係存續或法令規定之期間， 就直接或間接蒐集之您的個人資料（以留存於第一 金證券之個人資料類別為準）， 將以書面、音軌及/或電子等形式處理、利用及/或國 際傳輸，包括但不限於揭露予公務機關或 協助處理本事項之第三人。您得要求查詢、閱覽、製給複本、 補充或更正、停止蒐集、處理、 利用及/或國際傳輸或刪除您的個人資料，但第一金證券可能因此無法提供您所需之股務服務，另 第一金證券亦可能因執行職務及或業務 所必須等因素而得不依您的請求為之。」 ӔᛆdၣѧjIUUQT\u001b\u0010\u0010TUPDLTFSWJDFT\u000fUEDD\u000fDPN\u000fUXf 委託書用紙填發須知",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "親自辦理地址：台北市大安區安和路一段二十七號六樓股務專線：(02)2563-5711(代表號)106646營業時間：星期一至星證券代號：6443期五上午8:45至下午4:45止ਕ˾ଣɛʮ̡元晶太陽能科技股份有限公司104時間：115年5月22日(星期五)上午九時整地點：屏東縣屏東市大溪路335之12號(本公司屏東廠)104股務代理部地圖您可搭乘的公車路線：663、665、235、261、270、311藍、37、651、245、263、292、543、621、662下車站名：仁愛安和路口您可搭乘的捷運路線：板南線到站站名：忠孝敦化站仁愛路安和路路南化敦忠孝東路SOGO第一金證券股東常會通知請先拆閱依個資法應告知事項：「第一金證券基於為您於中華民國境內外處理有價證券及有價證券持有人登記之目的，在相關事實、法律關係存續或法令規定之期間，就直接或間接蒐集之您的個人資料（以留存於第一金證券之個人資料類別為準），將以書面、音軌及/或電子等形式處理、利用及/或國際傳輸，包括但不限於揭露予公務機關或協助處理本事項之第三人。您得要求查詢、閱覽、製給複本、補充或更正、停止蒐集、處理、利用及/或國際傳輸或刪除您的個人資料，但第一金證券可能因此無法提供您所需之股務服務，另第一金證券亦可能因執行職務及或業務所必須等因素而得不依您的請求為之。」ӔᛆdၣѧjIUUQT\u001b\u0010\u0010TUPDLTFSWJDFT\u000fUEDD\u000fDPN\u000fUXf委託書用紙填發須知一、股東親自出席者，不得以另一部份股權委託他人代理，委託書與親自出席簽到卡均簽名或蓋章者，視為親自出席；但委託書由股東交付徵求人或受託代理人者，視為委託出席。二、委託書之委託人、徵求人及受託代理人，應依公開發行公司出席股東會使用委託書規則及公司法第一七七條規定辦理。三、應使用本公司印發之委託書用紙，且一股東以出具一委託書，並以委託一人為限。四、委託出席者請詳填受託代理人或徵求人戶號、姓名、身分證字號、住址，受託代理人如非股東，請於股東戶號欄內填寫身分證字號或統一編號，簽名或蓋章欄內簽名或蓋章即可。五、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總公告之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。六、委託書最遲應於開會五日前送達本公司股務代理人第一金證券股份有限公司股務代理部。七、委託書送達公司後，股東欲親自出席股東會或欲以書面或電子方式行使表決權者，應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。二出席簽到卡股東戶號：股東戶名：持有股數：法人股東指派書茲指派君出席貴公司本次股東會，依法行使一切股東權利。(法人股東親自出席專用)ࢩႊ௝一、本公司訂於民國115年5月22日（星期五）上午9時整（受理股東開始報到時間為上午8時30分，報到處地點同開會地點），假屏東縣屏東市大溪路335之12號(本公司屏東廠)，召開115年股東常會，會議主要內容：(一)報告事項：1.114年度營業報告。2.審計委員會查核114年度決算表冊報告。3.公司虧損達實收資本額二分之一報告。4.董事酬金政策報告。(二)承認事項：1.本公司114年度營業報告書及各項財務報表承認案。2.本公司114年度虧損撥補承認案。(三)討論事項：1.修正本公司「公司章程」部分條文案。(四)臨時動議。二、依公司法第一六五條規定自中華民國115年3月24日至115年5月22日止停止股票轉讓過戶登記。三、本次股東會如有公司法第172條規定之事項，其主要內容，請至公開資訊觀測站（網址：https://mops.twse.com.tw）點選「單一公司／電子文件下載／年報及股東會相關資料」輸入本公司代號及年度查詢。四、除公告外，特函奉達，並隨函檢附股東常會出席簽到卡及委託書各一份，至希查照撥冗出席。貴股東如親自出席時，請於",
+      "noticeFilename": "2026_6443_20260522F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請自115年4月22日起至115年5月15日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21254,6 +21390,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6443&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6443_20260522F01_20260521_044452.pdf"
         }
       ]
     },
@@ -21358,25 +21498,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-17",
+      "evotePickupEndDate": "2026-06-22",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：請持身份證正本於115年6月 17日至115年6月22日(例假日除外)上午9時至下午4時30分止，至 元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓 （前往1樓紀念品發放處領取時，股東請往敦化南路二段73巷進 入至葉財記世貿大樓後方停車場）換領紀念品，此期間非以電子 方式行使表決權之股東，恕不發放紀念品。 點序科技股份有限公司115年股東常會開會通知書 D122-Z758-6102 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_6485_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月17日至115年6月22日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21386,6 +21526,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6485&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6485_20260616F01_20260521_044607.pdf"
         }
       ]
     },
@@ -21418,12 +21562,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6509_20260528F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -21436,6 +21580,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6509&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6509_20260528F01_20260521_044634.pdf"
         }
       ]
     },
@@ -21515,22 +21663,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※寬宏藝術經紀股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：展覽入場交換券（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_6596_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21540,6 +21688,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6596&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6596_20260526F01_20260521_044722.pdf"
         }
       ]
     },
@@ -21608,20 +21760,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "富邦",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。正面2.indd持有股數：茲指派君出席貴公司本次股東會，依法行使一切股東權利。(法人股東親自出席專用)徵求場所及：人員簽章處(○二)二五四七三七三三。最高給予檢舉獎金二十萬元，檢舉電話：事證向集保結算所檢舉，經查證屬實者，二、發現違法取得及使用委託書，可檢附具體一、禁止交付現金或其他利益之價購委託書行為。身分證字號或統一編號受託代理人姓名或名稱姓名或名稱姓名或名稱戶號戶號住址徵求人簽名或蓋章簽名或蓋章簽名或蓋章委託人（股東）委託書",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8011_20260525F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21631,6 +21783,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8011&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8011_20260525F01_20260521_050336.pdf"
         }
       ]
     },
@@ -21653,25 +21809,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-04-27",
+      "evotePickupEndDate": "2026-05-18",
       "evotePickupPlace": "",
-      "evotePickupLocation": "台新",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "功能列「電子投票」-「公司eGift專區」，即可查詢",
+      "evotePickupDocuments": "股未達1,000股)股東領取實體禮物卡※例假日除外※每日08:30~16:30持股未達1,000股並完成電子投票作業且未重複填具委託書委託他人出席之股東，請攜帶身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁等擇一皆可",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品；其數量如有不足時，得以等值商品替代之；紀念品恕不郵寄，逾期亦不再發放。二、紀念品領取方式如下：115/04/27~115/05/18洽徵求人場所領取實體禮物卡※徵求人得視徵求狀況提前結束徵求紀念品發放至股東會會議結束為止。115/05/25股東會會場領取實體禮物卡115/06/15~115/06/17電子投票(限持股未達1,000股)股東領取實體禮物卡※例假日除外※每日08:30~16:30持股未達1,000股並完成電子投票作業且未重複填具委託書委託他人出席之股東，請攜帶身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁等擇一皆可，至台新證券股務代理部(台北市建國北路一段96號B1、1樓)領取紀念品。1.持股1,000股(含)以上並完成電子投票作業且未重複填具委託書委託他人出席之股東，須透過臺灣集保結算所eGift服務領取電子紀念品。2.自115年6月15日起，股東登入股東e服務平台，至功能列「電子投票」-「公司eGift專區」，即可查詢領取eGift連結及序號/驗證碼等相關資料。3.紀念品領取及兌換流程：①集保網站電子投票列表直接點選「紀念品」按鈕，或自功能列「電子投票」→「公司eGift專區」進入領取/下載紀念品連結②輸入序號/驗證碼③持該條碼至門市兌換。請持",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "一、紀念品名稱：【全家便利商店35元禮物卡】持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品；其數量如有不足時，得以等值商品替代之；紀念品恕不郵寄，逾期亦不再發放。二、紀念品領取方式如下：115/04/27~115/05/18洽徵求人場所領取實體禮物卡※徵求人得視徵求狀況提前結束徵求紀念品發放至股東會會議結束為止。115/05/25股東會會場領取實體禮物卡115/06/15~115/06/17電子投票(限持股未達1,000股)股東領取實體禮物卡※例假日除外※每日08:30~16:30持股未達1,000股並完成電子投票作業且未重複填具委託書委託他人出席之股東，請攜帶身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁等擇一皆可，至台新證券股務代理部(台北市建國北路一段96號B1、1樓)領取紀念品。1.持股1,000股(含)以上並完成電子投票作業且未重複填具委託書委託他人出席之股東，須透過臺灣集保結算所eGift服務領取電子紀念品。2.自115年6月15日起，股東登入股東e服務平台，至功能列「電子投票」-「公司eGift專區」，即可查詢領取eGift連結及序號/驗證碼等相關資料。3.紀念品領取及兌換流程：①集保網站電子投票列表直接點選「紀念品」按鈕，或自功能列「電子投票」→「公司eGift專區」進入領取/下載紀念品連結②輸入序號/驗證碼③持該條碼至門市兌換。請持",
+      "noticeFilename": "2026_8016_20260525F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "115/04/27~115/05/18",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21681,6 +21837,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8016&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8016_20260525F01_20260521_050404.pdf"
         }
       ]
     },
@@ -21706,22 +21866,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※尖點科技股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：公益沐浴球（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_8021_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21731,6 +21891,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8021&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8021_20260526F01_20260521_052006.pdf"
         }
       ]
     },
@@ -21753,25 +21917,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-27",
+      "evotePickupEndDate": "2026-07-29",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "永豐金證券股務代理部(台北市重慶南路一段2號1樓，台開大樓忠孝西路側門)",
+      "evotePickupDocuments": "身份證正本(未滿14歲之股東憑『戶口名簿』正本)",
+      "evotePickupRule": "電子投票領取紀念品方式：請於115年7月27日至115年7月29日，例假日除外，憑身份證正本(未滿14歲之 股東憑『戶口名簿』正本)至永豐金證券股務代理部(台北市重慶南路一段2號1樓，台開大樓忠孝西路側門) 領取紀念品，領取時間為上午9點至下午4點，逾期不再發放，非以電子方式行使表決權之股東，恕不發放 紀念品。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8027_20260618F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月27日至115年7月29日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21781,6 +21945,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8027&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8027_20260618F01_20260521_052028.pdf"
         }
       ]
     },
@@ -21806,22 +21974,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※昇陽國際半導體股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：原木隔熱桌墊（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取，每一出席人以領取一份為限。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_8028_20260521F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21831,6 +21999,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8028&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8028_20260521F01_20260521_052334.pdf"
         }
       ]
     },
@@ -21856,22 +22028,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※雷虎科技股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：抗菌洗手露（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※徵求場所及人員簽章處：雷虎科技股份有限公司一一五年股東常會出席簽到卡時間：115年5月14日(星期四)上午九時整地點：台中市工業區六路7號(本公司三樓會議室)持有股數：親自出席簽名或蓋章股東戶號：股東戶名：",
+      "noticeFilename": "2026_8033_20260514F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21881,6 +22053,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8033&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8033_20260514F01_20260521_052402.pdf"
         }
       ]
     },
@@ -21903,25 +22079,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-14",
+      "evotePickupEndDate": "2026-07-16",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "開會地點",
+      "evotePickupDocuments": "『户口名簿』正本）",
+      "evotePickupRule": "電子投票領取紀念品方式：請於115年7月14日至115年7月16日（例假日除外）上午九時至下午四 時止。领取方式：請持股東『身分證正本』（未滿14歲之股東憑『户口名簿』正本）至本公司股 務代理機構(台北市中正區重慶南路一段2號1樓-忠孝西路側門）領取股東會紀念品，逾期不再發 放，非以電子方式行使表決權之股東，恕不發放紀念品。 (三)親自出席股東會請攜帶本通知書並於第二聯親自出席處簽名或蓋章後，於115年6月11日開會當 天會議結束前辦理報到並領取紀念品，會議結束後恕不補發。 (四)持股1,000股(含)以上之股東，如不委託出席股東常會而欲領紀念品者，請持本通知書於115年6 月11日開會當天會議結束前至開會地點領取紀念品。 (五)紀念品恕不郵寄，會議結束後恕不補發。（紀念品數量不足時，將提供等值商品）",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8034_20260611F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月14日至115年7月16日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -21931,6 +22107,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8034&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8034_20260611F01_20260521_054024.pdf"
         }
       ]
     },
@@ -22008,20 +22188,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "元大",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "採電子投票之股東，紀念品發放方式：",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8039_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22031,6 +22211,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8039&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8039_20260527F01_20260521_054057.pdf"
         }
       ]
     },
@@ -22135,25 +22319,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-14",
+      "evotePickupEndDate": "2026-07-16",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "永豐金證券股務代理部(台北市重慶南路一段2號1樓台開大樓忠孝西路側門)",
+      "evotePickupDocuments": "持身分證正本(未滿14歲之股東憑「戶口名簿」正本)",
+      "evotePickupRule": "A. 對象：限已於115年4月28日至115年5月25日完成電子投票(未撤銷、未與委託書重覆)之股東。 B. 攜帶文件：持身分證正本(未滿14歲之股東憑「戶口名簿」正本)。 C. 領取期間及地點：以電子方式行使表決權之股東請於115年7月14日至115年7月16日上午9時至下午4時止，至永豐金證券股務代理部(台北市重慶南路一段2號1樓台開大樓忠孝西路側門)領取紀念品，逾期不再發放。四、法人股東如欲指派人員出席者，除於出席簽到卡蓋章外，可填寫",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8049_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月14日至115年7月16日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22163,6 +22347,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8049&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8049_20260528F01_20260521_061357.pdf"
         }
       ]
     },
@@ -22285,25 +22473,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-04-27",
+      "evotePickupEndDate": "2026-05-22",
       "evotePickupPlace": "",
       "evotePickupLocation": "群益",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年4月27日起至115年5月22日止(星期例假日除外)，攜帶",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※台北市大安區敦化南路二段97號地下二樓股務代理人群益金鼎證券股份有限公司股務代理部辦理時間：週一至週五上午8：30～下午4：3024小時語音專線：(02)2702-3999語音代號：群益金鼎證券股務代理部網址：agency.capital.com.tw106420東捷科技股份有限公司8064正面2.indd二十萬元，檢舉電話：︵○二︶二五四七三七三三。保結算所檢舉，經查證屬實者，最高給予檢舉獎金二、發現違法取得及使用委託書，可檢附具體事證向集一、禁止交付現金或其他利益之價購委託書行為。持有股數身分證字號或統一編號姓名或名稱股東戶號委託書住址受託代理人徵求人委託人（股東）編號簽名或蓋章簽名或蓋章徵求場所及人員簽章處戶號：股東或代理人姓名出席簽到卡編號：股東戶號：持有股數：：564※請攜帶附有照片之身分證明文件以備核驗※法人指派書茲指派君出席貴公司本次股東會，依法行使一切股東權利。(法人股東親自出席專用)簽名或蓋章親自出席簽名或蓋章姓名或名稱戶號姓名或名稱115-564東捷科技股份有限公司授權日期年月日此致東捷科技股份有限公司一一五年股東常會時間：115年5月28日(星期四)上午九時正地點：台南市南部科學園區南科六路9號101會議室一、茲委託君(須由委託人親自填寫，不得以蓋章方式代替)為本股東代理人，出席本公司115年5月28日舉行之股東常會，代理人並依下列授權行使股東權利：□(一)代理本股東就會議事項行使股東權利。(全權委託)□(二)代理本股東就下列各項議案行使本股東所委託表示之權利與意見，下列議案未勾選者，視為對各該議案表示承認或贊成。1.114年度決算表冊案：□1.承認□2.反對□3.棄權2.114年度盈餘分配案：□1.承認□2.反對□3.棄權3.修訂「公司章程」案：□1.贊成□2.反對□3.棄權4.改選董事案。5.解除新任董事及其代表人競業禁止之限制案：□1.贊成□2.反對□3.棄權二、本股東未於前項□內勾選授權範圍或同時勾選者，視為全權委託，但股務代理機構擔任受託代理人者，不得接受全權委託，代理人應依前項(二)之授權內容行使股東權利。三、本股東代理人得對會議臨時事宜全權處理之。四、請將出席證(或出席簽到卡)寄交代理人收執，如因故改期開會，本委託書仍屬有效(限此一會期)。正面3.indd",
+      "noticeFilename": "2026_8064_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年4月27日起至115年5月22日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22313,6 +22501,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8064&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8064_20260528F01_20260521_062440.pdf"
         }
       ]
     },
@@ -22345,12 +22537,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8074_20260429F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -22363,6 +22555,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8074&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8074_20260429F01_20260521_062504.pdf"
         }
       ]
     },
@@ -22395,12 +22591,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8076_20260612F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -22413,6 +22609,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8076&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8076_20260612F01_20260521_064126.pdf"
         }
       ]
     },
@@ -22520,22 +22720,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "統一",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※福華電子股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：植舒香皂組（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※網址：https://www.gfortune.com.tw/股務代理人股務代理部福華電子股份有限公司福邦證券股份有限公司客服專線:(02)2371-1658【公司代號:8085】台北市中正區忠孝西路一段6號6樓100405",
+      "noticeFilename": "2026_8085_20260617F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22545,6 +22745,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8085&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8085_20260617F01_20260521_065815.pdf"
         }
       ]
     },
@@ -22567,25 +22771,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-22",
+      "evotePickupEndDate": "2026-07-24",
       "evotePickupPlace": "",
-      "evotePickupLocation": "富邦",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "富邦綜合證券股份有限公司股務代理部",
+      "evotePickupDocuments": "身分證明文件或其他足資證明股東身份之文件(如健保卡或駕照)",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品，且紀念品不得代領。四、使用電子投票之股東如欲領取紀念品自115年7月22日至115年7月24日止攜帶身分證明文件或其他足資證明股東身份之文件(如健保卡或駕照)等擇一皆可至富邦綜合證券股份有限公司股務代理部領取。五、紀念品恕不郵寄，會後恕不補發，若有不足得以等值商品替代。序號徵求人委任股東徵求場所名稱或所委託代為處理徵求事務者名稱1富邦綜合證券股份有限公司(簡稱：富邦證/富邦證券/富邦証/富邦証券/富邦證卷/富邦証卷)中美矽晶製品股份有限公司1.富邦綜合證券股份有限公司地址：臺北市中正區許昌街17號11樓、1樓聯絡電話：(02)2361-13002.全通事務處理股份有限公司全省徵求場所(詳",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※一、股東會紀念品：統一超商咖啡卡35元。二、貴股東如不克親自出席欲委託徵求人出席股東會，敬請於委託書(",
+      "noticeFilename": "2026_8086_20260528F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年7月22日至115年7月24日止",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22595,6 +22799,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8086&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8086_20260528F01_20260521_070525.pdf"
         }
       ]
     },
@@ -22627,12 +22835,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8088_20260612F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -22645,6 +22853,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8088&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8088_20260612F01_20260521_070550.pdf"
         }
       ]
     },
@@ -22853,25 +23065,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-04",
+      "evotePickupEndDate": "2026-06-08",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出「電子投 票平台」網頁之「議案表決情形」頁面全頁，於115年6月4日至115年 6月8日(例假日除外)上午9時至下午4時30分止，至元大證券股務代理 部：台北市大安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處 領取時，股東請往敦化南路二段73巷進入至葉財記世貿大樓後方停車 場）換領紀念品，此期間非以電子方式行使表決權之股東，恕不發放 紀念品。 立碁電子工業股份有限公司115年股東常會開會通知書 D122-Z676-6102 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8111_20260529F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月4日至115年6月8日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22881,6 +23093,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8111&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8111_20260529F01_20260521_070719.pdf"
         }
       ]
     },
@@ -22913,12 +23129,12 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8112_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
@@ -22931,6 +23147,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8112&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8112_20260526F01_20260521_070740.pdf"
         }
       ]
     },
@@ -22953,25 +23173,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-04-27",
+      "evotePickupEndDate": "2026-05-21",
       "evotePickupPlace": "",
       "evotePickupLocation": "台新",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品；其數量如有不足時，得以等值商品替代之；紀念品恕不郵寄，逾期亦不再發放。二、紀念品領取方式如下：115/04/27~115/05/21洽受託代理人領取※例假日除外115/06/10~115/06/12電子投票股東領取※例假日除外※每日08:30~16:30115/05/27於股東會會場領取請持",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "X-B01-1070418-03達方115No.31150323/JF118“x12“XB01107041803一經定稿即以此版面印刷請仔細校對後簽名",
+      "noticeFilename": "2026_8163_20260527F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "115/04/27~115/05/21",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -22981,6 +23201,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8163&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8163_20260527F01_20260521_070803.pdf"
         }
       ]
     },
@@ -23044,25 +23268,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-06",
+      "evotePickupEndDate": "2026-07-08",
       "evotePickupPlace": "",
-      "evotePickupLocation": "永豐",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "開會地點",
+      "evotePickupDocuments": "(1)『身分證正本』（未滿14歲之股東憑『戶口名簿』正本） (2) 印出『股東會電子投票平台-股東ｅ票通』網頁之『議案表決情形』頁面全頁印出或出席簽到卡（二擇一即可，不需申請補發開會 通知書） 上述(1)(2)文件皆需具備，至新竹市東區新安路2-1號B1（尼尼生活館）領取股東會紀念品，此期間非以電子方式行使表決權之股 東，恕不發放紀念品",
+      "evotePickupRule": "電子投票領取紀念品方式：請於115年7月6日至115年7月8日，每日上午九時至中午十二時止（逾時不發放）。 領取方式：請攜帶下列文件 (1)『身分證正本』（未滿14歲之股東憑『戶口名簿』正本） (2) 印出『股東會電子投票平台-股東ｅ票通』網頁之『議案表決情形』頁面全頁印出或出席簽到卡（二擇一即可，不需申請補發開會 通知書） 上述(1)(2)文件皆需具備，至新竹市東區新安路2-1號B1（尼尼生活館）領取股東會紀念品，此期間非以電子方式行使表決權之股 東，恕不發放紀念品。 (三) 親自出席股東會請攜帶本通知書並於第二聯親自出席處簽名或蓋章後，於民國115年5月20日開會當天會議結束前辦理報到並領取紀念 品，會議結束後恕不補發。 (四) 持股1,000股(含)以上之股東，如不委託出席股東常會而欲領紀念品者，請持本通知書於115年5月20日開會當天會議結束前至開會地 點領取紀念品。 (五)紀念品恕不郵寄，會議結束後恕不補發。（紀念品數量不足時，將提供等值商品）",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8176_20260520F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年7月6日至115年7月8日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23072,6 +23296,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8176&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8176_20260520F01_20260521_070831.pdf"
         }
       ]
     },
@@ -23099,20 +23327,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "凱基",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "以電子方式行使表決權者得領取外，本公司將不予發放紀念品。 領取方式：",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8213_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23122,6 +23350,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8213&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8213_20260527F01_20260521_070854.pdf"
         }
       ]
     },
@@ -23276,25 +23508,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-15",
+      "evotePickupEndDate": "2026-06-17",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出「電子投 票平台」網頁之「議案表決情形」頁面全頁，於115年6月15日至115年 6月17日上午9時至下午4時30分止，至元大證券股務代理部：台北市 大安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處領取時，股 東請往敦化南路二段73巷進入至葉財記世貿大樓後方停車場）換領紀 念品，此期間非以電子方式行使表決權之股東，恕不發放紀念品。 富鼎先進電子股份有限公司115年股東常會開會通知書 D122-Z230-6102 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8261_20260527F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年6月15日至115年6月17日",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23304,6 +23536,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8261&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8261_20260527F01_20260521_071013.pdf"
         }
       ]
     },
@@ -23331,20 +23567,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "凱基",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。有關洽領須知及洽領方式詳",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8271_20260528F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23354,6 +23590,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8271&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8271_20260528F01_20260521_071037.pdf"
         }
       ]
     },
@@ -23376,25 +23616,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-08",
+      "evotePickupEndDate": "2026-06-03",
       "evotePickupPlace": "",
       "evotePickupLocation": "群益",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月8日起至115年6月3日止(星期例假日除外)，攜帶",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※請股東多加利用集保結算所「股東e服務」電子投票及股務事務電子通知，登入同意接收email股利發放通知網址https://stockservices.tdcc.com.tw正面2.indd二十萬元，檢舉電話：(○二)二五四七三七三三。保結算所檢舉，經查證屬實者，最高給予檢舉獎金二、發現違法取得及使用委託書，可檢附具體事證向集一、禁止交付現金或其他利益之價購委託書行為。持有股數身分證字號或統一編號姓名或名稱股東戶號委託書住址受託代理人徵求人委託人（股東）編號簽名或蓋章簽名或蓋章戶號徵求場所及人員簽章處：簽名或蓋章姓名或名稱戶號姓名或名稱出席簽到卡編號：股東或代理人姓名股東戶號：持有股數：：261※請攜帶附有照片之身分證明文件以備核驗※簽名或蓋章親自出席法人指派書茲指派君出席貴公司本次股東會，依法行使一切股東權利。(法人股東親自出席專用)一、茲委託君(須由委託人親自填寫，不得以蓋章方式代替)為本股東代理人，出席本公司115年6月9日舉行之股東常會，代理人並依下列授權行使股東權利：□(一)代理本股東就會議事項行使股東權利。(全權委託)□(二)代理本股東就下列各項議案行使本股東所委託表示之權利與意見，下列議案未勾選者，視為對各該議案表示承認或贊成。1.本公司一一四年度決算表冊承認案：□1.承認□2.反對□3.棄權2.本公司一一四年度虧損撥補承認案：□1.承認□2.反對□3.棄權3.擬修訂本公司「取得或處分資產處理程序」討論案：□1.贊成□2.反對□3.棄權4.擬修訂本公司「公司章程」討論案：□1.贊成□2.反對□3.棄權5.擬辦理本公司減資彌補虧損討論案：□1.贊成□2.反對□3.棄權6.擬辦理本公司私募普通股討論案：□1.贊成□2.反對□3.棄權7.本公司董事補選案。8.擬解除本公司新任董事競業禁止限制討論案：□1.贊成□2.反對□3.棄權二、本股東未於前項□內勾選授權範圍或同時勾選者，視為全權委託，但股務代理機構擔任受託代理人者，不得接受全權委託，代理人應依前項(二)之授權內容行使股東權利。三、本股東代理人得對會議臨時事宜全權處理之。四、請將出席證(或出席簽到卡)寄交代理人收執，如因故改期開會，本委託書仍屬有效(限此一會期)。商丞科技股份有限公司授權日期年月日此致商丞科技股份有限公司一一五年股東常會時間：115年6月9日(星期二)上午九時正地點：劍潭海外青年活動中心教學區三樓332室(台北市士林區中山北路四段16號)115-261",
+      "noticeFilename": "2026_8277_20260609F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年5月8日起至115年6月3日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23404,6 +23644,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8277&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8277_20260609F01_20260521_073537.pdf"
         }
       ]
     },
@@ -23539,20 +23783,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "統一",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。＊股東如欲委任徵求人代理出席股東常會時，並領取紀念品請洽",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8383_20260529F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23562,6 +23806,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8383&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8383_20260529F01_20260521_071144.pdf"
         }
       ]
     },
@@ -23671,20 +23919,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "永豐",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、紀念品領取方式：(一)貴股東如欲委託代理出席者，請於開會通知書",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8437_20260611F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23694,6 +23942,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8437&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8437_20260611F01_20260521_071259.pdf"
         }
       ]
     },
@@ -23721,20 +23973,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "凱基",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "以電子方式行使表決權者得領取外，本公司將不予發放紀念品。 領取方式：",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_8443_20260617F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23744,6 +23996,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8443&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8443_20260617F01_20260521_073615.pdf"
         }
       ]
     },
@@ -23807,25 +24063,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-06",
+      "evotePickupEndDate": "2026-07-08",
       "evotePickupPlace": "",
-      "evotePickupLocation": "自辦",
+      "evotePickupLocation": "代發地點：台北市大安區敦化南路二段97號B2(群益金鼎證券股份有限公司股務代理部)",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "電子投票領取紀念品方式： 使用電子投票且投票成功之股東如欲領取紀念品，請自 115 年7月6日起至115年7月8日止(早上8:30至下午4:30)攜電子投票 「議案表決情形」、股東會出席通知書、身分證或其他足資 證明股東身份之文件影本(如健保卡或駕照)等擇一皆可，至 代發地點：台北市大安區敦化南路二段97號B2(群益金鼎證 券股份有限公司股務代理部)領取。此期間非以電子方式行使 表決權且投票成功之股東，恕不發放紀念品。 愛地雅工業股份有限公司115年股東常會 茲指派 君 擔任本公司之法人代表，出 席 貴公司一一五年五月二 十九日股東常會，依法行使 一切股東權利。 此致 愛地雅工業股份有限公司 法人股東(蓋章)： 中華民國115年 月 日 YS1150318 永信資訊(02)22982928 9.5×12吋 03/31-1",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeFilename": "2026_8933_20260529F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請自115年7月6日起至115年7月8日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23835,6 +24091,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8933&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8933_20260529F01_20260521_073635.pdf"
         }
       ]
     },
@@ -23860,22 +24120,22 @@
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "福邦",
+      "evotePickupLocation": "會場",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "，至遲應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。七、委託書最遲應於開會五日前送達本公司股務代理人福邦證券股份有限公司股務代理部。※洽領紀念品須知※國統國際股份有限公司一一五年股東常會紀念品兌換券◎股東會紀念品：7-11咖啡券35元（數量如有不足時，得以同等值商品替代之）。◎紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。◎紀念品領取方式（紀念品恕不郵寄）：1.親自出席股東會者，請於開會當天會議結束前至會場領取。2.股東如欲委託代理出席並領取紀念品者【徵求股數限1,000股(含)以上】，請於",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_8936_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23885,6 +24145,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8936&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8936_20260526F01_20260521_073652.pdf"
         }
       ]
     },
@@ -23912,20 +24176,20 @@
       "evotePickupPlace": "",
       "evotePickupLocation": "兆豐",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "採電子投票之股東外，持股未 滿1,000股之股東，本公司將不予發放紀念品，會後恕不郵寄或補發。",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "※一、股東會紀念品：7-ELEVEN商品卡面額50元。二、紀念品發放原則：除親自出席股東會或採電子投票之股東外，持股未滿1,000股之股東，本公司將不予發放紀念品，會後恕不郵寄或補發。三、股東如欲交付徵求委託書領取實體紀念品，請依以下方式辦理：(一)限持股1,000股以上之股東，欲委託徵求人時，請於",
+      "noticeFilename": "2026_8996_20260529F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeCacheStatus": "hit",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23935,6 +24199,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8996&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_8996_20260529F01_20260521_073710.pdf"
         }
       ]
     },
@@ -23957,25 +24225,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-18",
+      "evotePickupEndDate": "2026-06-12",
       "evotePickupPlace": "",
       "evotePickupLocation": "群益",
       "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupRule": "得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月18日起至115年6月12日止(星期例假日除外)，攜帶",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "※委託書使用須知一、股東親自出席者，不得以另一部份股權委託他人代理，委託書與親自出席簽到卡均簽名或蓋章者，視為親自出席；但委託書由股東交付徵求人或受託代理人者，視為委託出席。二、委託書之委託人、徵求人及受託代理人，應依公開發行公司出席股東會使用委託書規則及公司法第一七七條規定辦理。三、應使用本公司印發之委託書用紙，且一股東以出具一委託書，並以委託一人為限。四、委託出席者請詳填受託代理人或徵求人戶號、姓名、身分證字號、住址，受託代理人如非股東，請於股東戶號欄內填寫身分證字號或統一編號，簽名或蓋章欄內簽名或蓋章即可。五、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總公告之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。六、委託書最遲應於開會五日前送達本公司股務代理人群益金鼎證券股份有限公司股務代理部。七、委託書送達公司後，股東欲親自出席股東會或欲以書面或電子方式行使表決權者，應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。※洽領紀念品須知※一、股東會紀念品：便利商店禮物卡35元。(紀念品數量不足時，將提供等值商品代替。)二、紀念品發放原則：持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。三、紀念品領取方式：1.貴股東如對本次股東會各項議案之意思表示與徵求人相同時，如不親自出席股東會而欲委託代理出席領取紀念品【徵求股數限1,000股(含)以上】，請於115年5月18日起至115年6月12日止(星期例假日除外)，攜帶",
+      "noticeFilename": "2026_9912_20260618F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "請於115年5月18日起至115年6月12日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -23985,6 +24253,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=9912&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_9912_20260618F01_20260521_073726.pdf"
         }
       ]
     },
@@ -24057,25 +24329,25 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-08",
+      "evotePickupEndDate": "2026-07-10",
       "evotePickupPlace": "",
-      "evotePickupLocation": "元大",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "元大證券股務代理部：台北市大安區敦化南路二段67號B1或1樓",
+      "evotePickupDocuments": "出席簽到卡，或印出「電子投票平台」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "電子方式行使表決權且投票成功者：憑出席簽到卡，或印出「電子投 票平台」網頁之「議案表決情形」頁面全頁，於115年7月8日至115年 7月10日上午9時至下午4時30分止，至元大證券股務代理部：台北市 大安區敦化南路二段67號B1或1樓（前往1樓紀念品發放處領取時，股 東請往敦化南路二段73巷進入至葉財記世貿大樓後方停車場）換領紀 念品，此期間非以電子方式行使表決權之股東，恕不發放紀念品。 中興保全科技股份有限公司115年股東常會開會通知書 D122-Z271-6104 背",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
+      "noticeGiftSummary": "委託書用紙填發須知一、股東親自出席者，不得以另一部份股權委託他人代理，委託書與出席簽到卡均簽名或蓋章者，視為親自出席，但委託書由股東交付徵求人或受託代理人者視為委託出席。二、委託書之委託人及受託代理人，應依公開發行公司出席股東會使用委託書規則及公司法第一七七條規定辦理。三、應使用本公司印發之委託書用紙，且一股東以出具一委託書，並以委託一人為限。四、股東接受他人徵求委託書前，應請徵求人提供徵求委託書之書面及廣告內容資料，或參考公司彙總之徵求人書面及廣告資料，切實瞭解徵求人與擬支持被選舉人之背景資料及徵求人對股東會各項議案之意見。五、受託代理人如非股東，請於股東戶號欄內填寫身分證字號或統一編號。六、徵求人如為信託事業、股務代理機構，請於股東戶號欄內填寫統一編號。七、委託書送達公司後，股東欲親自出席股東會或欲以書面或電子方式行使表決權者，應於股東會開會二日前，以書面向公司為撤銷委託之通知；逾期撤銷者，以委託代理人出席行使之表決權為準。中興保全科技股份有限公司115年股東常會委託書徵求人彙總名單",
+      "noticeFilename": "2026_9917_20260529F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "於115年7月8日至115年7月10日",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -24085,6 +24357,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=9917&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_9917_20260529F01_20260521_073754.pdf"
         }
       ]
     },
