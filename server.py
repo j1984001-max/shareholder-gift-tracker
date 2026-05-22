@@ -66,6 +66,17 @@ def normalize_text(value: str) -> str:
     return " ".join(value.replace("\xa0", " ").split())
 
 
+def clean_pickup_documents_text(value: str) -> str:
+    cleaned = normalize_text(value or "").strip("：:，,。 ")
+    if not cleaned:
+        return ""
+    cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
+    cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
+    cleaned = re.sub(r"[）)]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
+    cleaned = re.sub(r"[）)]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
+    return cleaned.strip("：:，,。 )）")
+
+
 def strip_notice_noise(text: str) -> str:
     cleaned = compact_text(text or "")
     if not cleaned:
@@ -930,31 +941,132 @@ def extract_pickup_documents(rule_text: str) -> str:
     if not rule:
         return ""
 
-    def clean_documents(value: str) -> str:
-        cleaned = value.strip("：:，,。 ")
-        cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
-        cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
-        return cleaned.strip("：:，,。 ")
-
     match = re.search(r"攜帶下列文件之一[:：](.+?)至下列地點", rule)
     if match:
-        return clean_documents(match.group(1))
+        return clean_pickup_documents_text(match.group(1))
 
     match = re.search(r"(?:攜帶文件|攜帶資料|攜帶下列文件)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
     if match:
-        return clean_documents(match.group(1))
+        return clean_pickup_documents_text(match.group(1))
 
     match = re.search(r"(?:憑|限持)(.{2,160}?)(?:至[^。；]+?(?:領取|換領)|，?於\d{2,3}年|$)", compact)
     if match:
-        return clean_documents(match.group(1))
+        return clean_pickup_documents_text(match.group(1))
 
     match = re.search(r"攜帶(.{2,160}?)(?:至[^。；]+?領取|等擇一皆可|領取)", compact)
     if match:
-        return clean_documents(match.group(1))
+        return clean_pickup_documents_text(match.group(1))
 
     if "身分證明文件" in compact and "股東會出席通知書" in compact:
         return "股東會出席通知書或身分證明文件"
 
+    if any(keyword in compact for keyword in ("身分證", "戶口名簿", "健保卡", "駕照", "出席通知書", "議案表決情形")):
+        return clean_pickup_documents_text(rule)
+
+    return ""
+
+
+def normalize_evote_rule(
+    rule_text: str,
+    period_text: str,
+    location: str,
+    documents: str,
+) -> str:
+    cleaned = strip_notice_noise(rule_text)
+    has_evote_signal = any(
+        marker in cleaned
+        for marker in (
+            "電子投票",
+            "電子方式行使表決權",
+            "採電子投票",
+            "投票成功",
+        )
+    )
+    generic_locations = {"會場", "自辦", "公司", "本公司"}
+    if not has_evote_signal and not period_text and not documents:
+        return ""
+    if not period_text and not documents and location in generic_locations:
+        return ""
+
+    base_parts: list[str] = []
+    if period_text:
+        base_parts.append(f"領取時間：{period_text}")
+    if location:
+        base_parts.append(f"領取地點：{location}")
+    if documents:
+        base_parts.append(f"攜帶文件：{documents}")
+
+    notices: list[str] = []
+    if cleaned:
+        normalized = (
+            cleaned.replace("A.", "；A.")
+            .replace("B.", "；B.")
+            .replace("C.", "；C.")
+            .replace("D.", "；D.")
+            .replace("◎", "；")
+        )
+        parts = re.split(r"[。；]", normalized)
+        include_markers = (
+            "電子投票",
+            "電子方式行使表決權",
+            "採電子投票",
+            "投票成功",
+            "議案表決情形",
+            "出席通知書",
+            "身分證",
+            "戶口名簿",
+            "健保卡",
+            "駕照",
+            "證明文件",
+            "恕不",
+            "本人",
+        )
+        exclude_markers = (
+            "委託書",
+            "徵求人",
+            "受託代理",
+            "公司法",
+            "開會二日前",
+            "開會五日前",
+            "簽到卡時間",
+            "股東戶號",
+            "股東戶名",
+            "持有股數",
+            "紀念品兌換券",
+            "郵簡內裝有附件",
+        )
+        seen = set()
+        for raw in parts:
+            part = raw.strip("：:，,。 ;；")
+            if not part or len(part) < 4:
+                continue
+            if any(marker in part for marker in exclude_markers):
+                continue
+            if (
+                any(marker in part for marker in include_markers)
+                or (period_text and period_text in part)
+                or (location and location in part)
+                or (documents and documents in part)
+            ):
+                for pattern in (
+                    r"限[^。；]{0,80}",
+                    r"僅限[^。；]{0,80}",
+                    r"本人[^。；]{0,80}",
+                    r"恕不[^。；]{0,80}",
+                ):
+                    for match in re.findall(pattern, part):
+                        notice = match.strip("：:，,。 ;；")
+                        if notice and notice not in seen and "紀念品兌換券" not in notice:
+                            notices.append(notice)
+                            seen.add(notice)
+
+    if notices:
+        base_parts.append(f"補充：{'；'.join(notices)}")
+
+    if base_parts and not has_evote_signal:
+        return "；".join(base_parts)
+    if base_parts:
+        return "；".join(base_parts)
     return ""
 
 
@@ -965,13 +1077,7 @@ def compose_notice_summary(
     rule_text: str,
     fallback_summary: str,
 ) -> str:
-    evote_markers = (
-        "電子投票",
-        "電子方式行使表決權",
-        "採電子投票",
-        "投票成功",
-    )
-    has_evote_signal = any(marker in rule_text for marker in evote_markers)
+    normalized_rule = normalize_evote_rule(rule_text, period_text, location, documents)
     if not period_text and not documents:
         return ""
 
@@ -983,7 +1089,7 @@ def compose_notice_summary(
     if documents:
         parts.append(f"攜帶文件：{documents}")
 
-    cleaned_rule = strip_notice_noise(rule_text)
+    cleaned_rule = normalized_rule or strip_notice_noise(rule_text)
     if cleaned_rule:
         cleaned_rule = re.sub(r"\s+", " ", cleaned_rule).strip("：:，,。 ;；")
         if period_text:
@@ -1021,17 +1127,28 @@ def compose_notice_summary(
 
 
 def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
-    evote_pickup_rule = strip_notice_noise(record.get("evotePickupRule", ""))
+    raw_evote_pickup_rule = record.get("evotePickupRule", "")
     evote_pickup_place = record.get("evotePickupPlace", "")
     transfer_agent_name = record.get("transferAgentName", "") or record.get("transferAgentShort", "")
     evote_pickup_source = record.get("evotePickupSource", "")
     evote_pickup_location = record.get("evotePickupLocation", "") or extract_pickup_location(
         evote_pickup_source,
         evote_pickup_place,
-        evote_pickup_rule,
+        raw_evote_pickup_rule,
         transfer_agent_name,
     )
-    evote_pickup_documents = record.get("evotePickupDocuments", "") or extract_pickup_documents(evote_pickup_rule)
+    cached_documents = clean_pickup_documents_text(record.get("evotePickupDocuments", ""))
+    parsed_documents = extract_pickup_documents(raw_evote_pickup_rule)
+    evote_pickup_documents = cached_documents
+    if (
+        not evote_pickup_documents
+        or (
+            parsed_documents
+            and len(parsed_documents) > len(evote_pickup_documents)
+            and any(keyword in parsed_documents for keyword in ("身分證", "戶口名簿", "健保卡", "出席通知書"))
+        )
+    ):
+        evote_pickup_documents = parsed_documents
     period_text = record.get("noticeEvotePickupPeriodText", "")
     if not period_text:
         start = record.get("evotePickupStartDate")
@@ -1040,6 +1157,12 @@ def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
             period_text = f"{start} 至 {end}"
         else:
             period_text = start or end or ""
+    evote_pickup_rule = normalize_evote_rule(
+        raw_evote_pickup_rule,
+        period_text,
+        evote_pickup_location,
+        evote_pickup_documents,
+    )
 
     gift_summary = trim_notice_summary(record.get("noticeGiftSummary", ""))
     notice_summary = compose_notice_summary(
