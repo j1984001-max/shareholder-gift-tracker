@@ -365,33 +365,20 @@ exportBtn.addEventListener("click", async () => {
   exportBtn.disabled = true;
   statusText.textContent = "正在產生 Excel...";
   try {
-    const response = await fetch("/api/export.xlsx", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ codes }),
-    });
-    if (!response.ok) {
-      let message = "Excel 匯出失敗";
-      try {
-        const payload = await response.json();
-        message = payload.error || message;
-      } catch {}
-      throw new Error(message);
-    }
-    const blob = await response.blob();
-    const disposition = response.headers.get("Content-Disposition") || "";
-    const filenameMatch = disposition.match(/filename=\"?([^"]+)\"?/i);
-    const filename = filenameMatch ? filenameMatch[1] : "shareholder-gifts.xlsx";
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = filename;
-    document.body.appendChild(anchor);
-    anchor.click();
-    anchor.remove();
-    URL.revokeObjectURL(url);
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "/api/export.xlsx";
+    form.style.display = "none";
+
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = "codes";
+    input.value = codes.join(" ");
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+    form.submit();
+    form.remove();
     statusText.textContent = "Excel 已開始下載";
   } catch (error) {
     statusText.textContent = error.message || "Excel 匯出失敗";

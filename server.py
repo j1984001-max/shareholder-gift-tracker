@@ -1747,13 +1747,24 @@ class AppHandler(SimpleHTTPRequestHandler):
             length = int(self.headers.get("Content-Length", "0"))
         except ValueError:
             length = 0
-        try:
-            raw_body = self.rfile.read(max(0, length))
-            payload = json.loads(raw_body.decode("utf-8")) if raw_body else {}
-        except Exception:
-            json_response(self, {"ok": False, "error": "匯出參數格式錯誤。"}, status=400)
-            return
-        codes = clean_codes(" ".join(str(code) for code in payload.get("codes", [])))
+        raw_body = self.rfile.read(max(0, length))
+        content_type = (self.headers.get("Content-Type") or "").lower()
+        codes: list[str] = []
+        if "application/json" in content_type:
+            try:
+                payload = json.loads(raw_body.decode("utf-8")) if raw_body else {}
+            except Exception:
+                json_response(self, {"ok": False, "error": "匯出參數格式錯誤。"}, status=400)
+                return
+            codes = clean_codes(" ".join(str(code) for code in payload.get("codes", [])))
+        else:
+            try:
+                parsed = urllib.parse.parse_qs(raw_body.decode("utf-8"))
+            except Exception:
+                json_response(self, {"ok": False, "error": "匯出參數格式錯誤。"}, status=400)
+                return
+            raw_codes = parsed.get("codes", [""])[0]
+            codes = clean_codes(raw_codes)
         self.handle_export(",".join(codes))
 
 
