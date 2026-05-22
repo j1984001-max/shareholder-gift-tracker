@@ -436,30 +436,41 @@ exportBtn.addEventListener("click", async () => {
   exportBtn.disabled = true;
   statusText.textContent = "正在產生 Excel...";
   try {
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = "/api/export.xlsx";
-    form.target = "excelDownloadFrame";
-    form.style.display = "none";
+    const response = await fetch("/api/export.xlsx", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+      },
+      body: new URLSearchParams({ codes: codes.join(" ") }),
+    });
 
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = "codes";
-    input.value = codes.join(" ");
-    form.appendChild(input);
-
-    let frame = document.querySelector('iframe[name="excelDownloadFrame"]');
-    if (!frame) {
-      frame = document.createElement("iframe");
-      frame.name = "excelDownloadFrame";
-      frame.style.display = "none";
-      document.body.appendChild(frame);
+    if (!response.ok) {
+      const errorText = await response.text();
+      let message = "Excel 匯出失敗";
+      try {
+        message = JSON.parse(errorText).error || message;
+      } catch {
+        message = errorText || message;
+      }
+      throw new Error(message);
     }
 
-    document.body.appendChild(form);
-    form.submit();
-    form.remove();
-    statusText.textContent = "Excel 已開始下載";
+    const blob = await response.blob();
+    if (!blob.size) throw new Error("Excel 匯出失敗：下載內容是空的");
+
+    const disposition = response.headers.get("Content-Disposition") || "";
+    const filenameMatch = disposition.match(/filename\*?=(?:UTF-8''|")?([^";]+)/i);
+    const filename = decodeURIComponent(filenameMatch?.[1] || `shareholder-gifts-${Date.now()}.xlsx`);
+    const downloadUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = filename.replace(/[\\/:*?"<>|]/g, "-");
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+    statusText.textContent = `Excel 已下載：${link.download}`;
   } catch (error) {
     statusText.textContent = error.message || "Excel 匯出失敗";
   } finally {
