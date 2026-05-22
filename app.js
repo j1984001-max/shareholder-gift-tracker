@@ -228,15 +228,15 @@ function buildStatusBadge(item) {
 }
 
 function renderSources(item) {
-  if (!item.sources?.length) return "—";
+  if (!item.sources?.length) return '<span class="source-empty">未標示</span>';
   return item.sources
-    .map((source) => `<a href="${source.url}" target="_blank" rel="noreferrer">${source.label}</a>`)
-    .join("<br>");
+    .map((source) => `<a class="source-pill" href="${source.url}" target="_blank" rel="noreferrer">${source.label}</a>`)
+    .join("");
 }
 
 function renderRows(results) {
   if (!results.length) {
-    resultsBody.innerHTML = '<tr><td colspan="7" class="empty-cell">查無結果</td></tr>';
+    resultsBody.innerHTML = '<tr><td colspan="5" class="empty-cell">查無結果</td></tr>';
     return;
   }
 
@@ -273,14 +273,16 @@ function renderRows(results) {
                 ? "本次新抓"
                 : "未使用"
           }</span>
-        </div>
-      `;
-      const agentBlock = `
-        <div class="cell-stack">
-          <span><strong>股代：</strong>${item.transferAgentName || item.transferAgentShort || "未提供"}</span>
-          <span><strong>電話：</strong>${item.transferAgentPhone || "未提供"}</span>
-          <span><strong>零股寄單：</strong>${item.oddLotMail || "未提供"}</span>
-          <span><strong>備註：</strong>${item.notes || item.proxyPeriodText || "—"}</span>
+          <div class="merged-meta">
+            <span><strong>股代：</strong>${item.transferAgentName || item.transferAgentShort || "未提供"}</span>
+            <span><strong>電話：</strong>${item.transferAgentPhone || "未提供"}</span>
+            <span><strong>零股寄單：</strong>${item.oddLotMail || "未提供"}</span>
+            <span><strong>備註：</strong>${item.notes || item.proxyPeriodText || "—"}</span>
+          </div>
+          <div class="source-links">
+            <strong>來源</strong>
+            <div>${renderSources(item)}</div>
+          </div>
         </div>
       `;
 
@@ -296,8 +298,6 @@ function renderRows(results) {
           <td>${souvenirText}</td>
           <td>${dateBlock}</td>
           <td>${evoteBlock}</td>
-          <td>${agentBlock}</td>
-          <td class="sources-cell">${renderSources(item)}</td>
         </tr>
       `;
     })
@@ -322,7 +322,7 @@ async function lookup(codes) {
   refreshBtn.disabled = true;
   exportBtn.disabled = true;
   statusText.textContent = "正在抓取最新資料...";
-  resultsBody.innerHTML = '<tr><td colspan="7" class="empty-cell">準備開始逐筆查詢...</td></tr>';
+  resultsBody.innerHTML = '<tr><td colspan="5" class="empty-cell">準備開始逐筆查詢...</td></tr>';
 
   try {
     const collected = [];
@@ -392,7 +392,7 @@ async function lookup(codes) {
   } catch (error) {
     exportBtn.disabled = true;
     statusText.textContent = error.message || "查詢失敗";
-    resultsBody.innerHTML = `<tr><td colspan="7" class="empty-cell">${statusText.textContent}</td></tr>`;
+    resultsBody.innerHTML = `<tr><td colspan="5" class="empty-cell">${statusText.textContent}</td></tr>`;
   } finally {
     lookupBtn.disabled = false;
     refreshBtn.disabled = false;
@@ -475,6 +475,7 @@ saveWatchlistBtn.addEventListener("click", () => {
 
 loadSampleBtn.addEventListener("click", () => {
   codesInput.value = sampleCodes.join("\n");
+  updateCodeCounter();
 });
 
 clearBtn.addEventListener("click", () => {
