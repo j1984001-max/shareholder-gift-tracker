@@ -997,6 +997,10 @@ def extract_pickup_documents(rule_text: str) -> str:
     if match:
         return clean_pickup_documents_text(match.group(1))
 
+    match = re.search(r"請持有效的(.{2,220}?)(?:，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,100}(?:領取|換領)|$)", compact)
+    if match:
+        return clean_pickup_documents_text(match.group(1))
+
     match = re.search(r"(?:憑|限持)(.{2,160}?)(?:至[^。；]+?(?:領取|換領)|，?於\d{2,3}年|$)", compact)
     if match:
         return clean_pickup_documents_text(match.group(1))
@@ -1012,6 +1016,19 @@ def extract_pickup_documents(rule_text: str) -> str:
         return clean_pickup_documents_text(rule)
 
     return ""
+
+
+def is_useful_pickup_notice(notice: str) -> bool:
+    cleaned = normalize_text(notice)
+    if not cleaned or len(cleaned) < 5:
+        return False
+    if "紀念品兌換券" in cleaned or "至領取" in cleaned:
+        return False
+    # Regexes that start at "限" can accidentally slice company names ending in
+    # 有限公司, producing junk such as "限公司(...)".
+    if cleaned.startswith("限公司"):
+        return False
+    return True
 
 
 def normalize_evote_rule(
@@ -1104,7 +1121,7 @@ def normalize_evote_rule(
                 ):
                     for match in re.findall(pattern, part):
                         notice = match.strip("：:，,。 ;；")
-                        if notice and notice not in seen and "紀念品兌換券" not in notice:
+                        if is_useful_pickup_notice(notice) and notice not in seen:
                             notices.append(notice)
                             seen.add(notice)
 
@@ -1158,12 +1175,7 @@ def compose_notice_summary(
             deduped = []
             seen = set()
             for notice in notices:
-                if (
-                    notice not in seen
-                    and len(notice) >= 5
-                    and "至領取" not in notice
-                    and "紀念品兌換券" not in notice
-                ):
+                if is_useful_pickup_notice(notice) and notice not in seen:
                     deduped.append(notice)
                     seen.add(notice)
             if deduped:
