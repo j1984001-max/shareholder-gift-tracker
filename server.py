@@ -19,6 +19,11 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font
 from pypdf import PdfReader
 
+try:
+    from scrapling.fetchers import Fetcher as ScraplingFetcher
+except Exception:  # pragma: no cover - Scrapling is an optional local crawler dependency.
+    ScraplingFetcher = None
+
 ROOT = Path(__file__).resolve().parent
 HOST = "0.0.0.0"
 PORT = int(os.environ.get("PORT", "8765"))
@@ -54,6 +59,7 @@ HEADERS = {
 REQUEST_DELAY_MIN_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MIN_MS", "0"))
 REQUEST_DELAY_MAX_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MAX_MS", "0"))
 ALLOW_LIVE_LOOKUP = os.environ.get("ALLOW_LIVE_LOOKUP", "").lower() in {"1", "true", "yes", "on"}
+MOPS_FETCH_ENGINE = os.environ.get("MOPS_FETCH_ENGINE", "auto").lower()
 
 CACHE: dict[str, tuple[float, Any]] = {}
 NOTICE_CACHE_MEMORY: dict[str, Any] | None = None
@@ -189,6 +195,47 @@ def fetch_bytes(
 
 def fetch_text_with_encoding(url: str, encoding: str, data: bytes | None = None, timeout: int = 30) -> str:
     return fetch_bytes(url, data=data, timeout=timeout).decode(encoding, "ignore")
+
+
+def fetch_mops_text_with_encoding(url: str, encoding: str = "big5", timeout: int = 30) -> str:
+    if MOPS_FETCH_ENGINE in {"scrapling", "auto"} and ScraplingFetcher is not None:
+        try:
+            return fetch_text_with_scrapling(url, timeout=timeout)
+        except Exception as error:
+            if MOPS_FETCH_ENGINE == "scrapling":
+                raise RuntimeError(f"Scrapling MOPS fetch failed: {error}") from error
+    return fetch_text_with_encoding(url, encoding, timeout=timeout)
+
+
+def fetch_text_with_scrapling(url: str, timeout: int = 30) -> str:
+    if ScraplingFetcher is None:
+        raise RuntimeError("Scrapling is not installed")
+
+    polite_request_delay()
+    attempts = (
+        {"timeout": timeout, "follow_redirects": True, "stealthy_headers": True},
+        {"timeout": timeout, "follow_redirects": True},
+    )
+    last_error: Exception | None = None
+    for kwargs in attempts:
+        try:
+            page = ScraplingFetcher.get(url, **kwargs)
+            for attr in ("html_content", "body", "text", "html"):
+                value = getattr(page, attr, "")
+                if callable(value):
+                    value = value()
+                if isinstance(value, str):
+                    text = value.strip()
+                    if text and text.lower() != "none":
+                        return value
+            rendered = str(page)
+            if rendered.strip() and rendered.strip().lower() != "none":
+                return rendered
+        except TypeError as error:
+            last_error = error
+        except Exception as error:
+            last_error = error
+    raise RuntimeError(str(last_error or "Scrapling could not fetch page"))
 
 
 def cached(name: str, loader) -> Any:
@@ -666,7 +713,7 @@ def source_bundle() -> dict[str, Any]:
 
 def fetch_notice_listing(code: str) -> dict[str, str] | None:
     query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
-    html_text = html.unescape(fetch_text_with_encoding(query_url, "big5"))
+    html_text = html.unescape(fetch_mops_text_with_encoding(query_url, "big5"))
 
     def strip_tags(fragment: str) -> str:
         return normalize_text(re.sub(r"<[^>]+>", " ", fragment))
@@ -743,7 +790,7 @@ def resolve_notice_pdf_url(code: str, filename: str) -> str:
     }
     encoded_params = urllib.parse.urlencode(params)
     try:
-        html_text = fetch_text_with_encoding(
+        html_text = fetch_mops_text_with_encoding(
             f"https://doc.twse.com.tw/server-java/t57sb01?{encoded_params}",
             "big5",
         )

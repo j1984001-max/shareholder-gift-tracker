@@ -203,6 +203,18 @@ def fetch_official_pdf_notice_info(code: str, source: dict[str, str]) -> tuple[d
     return entry, ""
 
 
+def fetch_from_official_sources(code: str, sources: list[dict[str, str]]) -> tuple[dict | None, str]:
+    last_error = ""
+    for source in sources:
+        info, error = fetch_official_pdf_notice_info(code, source)
+        if info:
+            print(f"  official pdf: {source.get('label') or source['url']}")
+            return info, ""
+        last_error = error
+        print(f"  official pdf skipped: {source.get('label') or source['url']} ({error})")
+    return None, last_error
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Update deployable MOPS notice seed cache for selected stocks.")
     parser.add_argument("codes", nargs="*", help="Stock codes or mixed text, e.g. 1101 2317 or '台泥（1101）'.")
@@ -221,6 +233,7 @@ def main() -> int:
     parser.add_argument("--sleep", type=float, default=0.3, help="Seconds to sleep between MOPS requests.")
     parser.add_argument("--rotate-offset", type=int, default=0, help="Rotate selected codes before limiting to avoid retrying the same front slice.")
     parser.add_argument("--shuffle", action="store_true", help="Shuffle candidate codes before limiting.")
+    parser.add_argument("--prefer-mops", action="store_true", help="Try MOPS before known official PDF fallbacks.")
     args = parser.parse_args()
 
     sources = server.source_bundle()
@@ -276,17 +289,18 @@ def main() -> int:
             seed.pop(code, None)
             server.NOTICE_CACHE_MEMORY = dict(seed)
 
-        info = None
-        error = ""
-        for source in official_sources.get(code, []):
-            info, error = fetch_official_pdf_notice_info(code, source)
-            if info:
-                print(f"  official pdf: {source.get('label') or source['url']}")
-                break
-            print(f"  official pdf skipped: {source.get('label') or source['url']} ({error})")
-
-        if not info:
+        if args.prefer_mops:
             info, error = server.safe_get_mops_notice_info(code, meeting_date)
+            if not info and not rate_limited(error):
+                fallback_info, fallback_error = fetch_from_official_sources(code, official_sources.get(code, []))
+                if fallback_info:
+                    info, error = fallback_info, ""
+                elif fallback_error:
+                    error = fallback_error
+        else:
+            info, error = fetch_from_official_sources(code, official_sources.get(code, []))
+            if not info:
+                info, error = server.safe_get_mops_notice_info(code, meeting_date)
         if not info:
             print(f"  skipped: {error or 'no notice info'}")
             if rate_limited(error):

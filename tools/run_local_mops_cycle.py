@@ -116,6 +116,7 @@ def main() -> int:
                     str(current_mops_limit),
                     "--retry-empty",
                     "--skip-existing",
+                    "--prefer-mops",
                     "--sleep",
                     str(current_mops_sleep),
                     "--rotate-offset",
