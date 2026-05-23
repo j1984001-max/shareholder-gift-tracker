@@ -51,7 +51,7 @@ function setViewMode(mode) {
   currentModeBtn?.classList.toggle("active", viewMode === "current");
   compareModeBtn?.classList.toggle("active", viewMode === "compare");
   lookupBtn.textContent = viewMode === "compare" ? "查詢三年度比較" : "查詢最新資料";
-  exportBtn.textContent = viewMode === "compare" ? "下載今年 Excel" : "下載 Excel";
+  exportBtn.textContent = viewMode === "compare" ? "下載三年度 Excel" : "下載 Excel";
   if (viewMode === "compare") {
     statusText.textContent = "三年度比較會讀取本機已建好的歷史快照，不會在線上臨時爬 MOPS。";
   }
@@ -740,14 +740,20 @@ exportBtn.addEventListener("click", async () => {
     return;
   }
   exportBtn.disabled = true;
-  statusText.textContent = viewMode === "compare" ? "正在產生今年資料 Excel..." : "正在產生 Excel...";
+  const isCompareExport = viewMode === "compare";
+  statusText.textContent = isCompareExport ? "正在產生三年度比較 Excel..." : "正在產生 Excel...";
   try {
+    const body = new URLSearchParams({ codes: codes.join(" ") });
+    if (isCompareExport) {
+      body.set("mode", "compare");
+      body.set("years", compareYearsParam());
+    }
     const response = await fetch("/api/export.xlsx", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
       },
-      body: new URLSearchParams({ codes: codes.join(" ") }),
+      body,
     });
 
     if (!response.ok) {

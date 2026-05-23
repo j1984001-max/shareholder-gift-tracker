@@ -1539,6 +1539,33 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
     return rows
 
 
+def export_row_values(item: dict[str, Any]) -> list[str]:
+    return [
+        item.get("code", ""),
+        item.get("companyName", ""),
+        item.get("status", ""),
+        item.get("souvenirName", ""),
+        item.get("lastBuyDate", "") or "",
+        item.get("meetingDate", "") or "",
+        item.get("meetingCity", ""),
+        item.get("evoteStartDate", "") or "",
+        item.get("evoteEndDate", "") or "",
+        item.get("evotePickupStartDate", "") or "",
+        item.get("evotePickupEndDate", "") or "",
+        item.get("noticeEvotePickupPeriodText", ""),
+        item.get("evotePickupSource", ""),
+        item.get("evotePickupLocation", ""),
+        item.get("evotePickupDocuments", ""),
+        item.get("evotePickupRule", ""),
+        item.get("noticeSummary", "") or item.get("noticeGiftSummary", ""),
+        item.get("noticeCacheStatus", ""),
+        item.get("transferAgentName", "") or item.get("transferAgentShort", ""),
+        item.get("transferAgentPhone", ""),
+        item.get("oddLotMail", ""),
+        " | ".join(source.get("label", "") for source in item.get("sources", [])),
+    ]
+
+
 def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     workbook = Workbook()
     worksheet = workbook.active
@@ -1564,6 +1591,99 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     for row in worksheet.iter_rows(min_row=2):
         for cell in row:
             cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in wrap_columns)
+
+    output = io.BytesIO()
+    workbook.save(output)
+    return output.getvalue()
+
+
+def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[int]) -> bytes:
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.title = "三年度比較"
+
+    year_fields = [
+        ("狀態", "status"),
+        ("紀念品", "souvenirName"),
+        ("最後買進日", "lastBuyDate"),
+        ("股東會日期", "meetingDate"),
+        ("股東會地點", "meetingCity"),
+        ("電子投票開始", "evoteStartDate"),
+        ("電子投票結束", "evoteEndDate"),
+        ("電投領取開始", "evotePickupStartDate"),
+        ("電投領取結束", "evotePickupEndDate"),
+        ("電投領取期間原文", "noticeEvotePickupPeriodText"),
+        ("電投領取來源", "evotePickupSource"),
+        ("電投領取地點", "evotePickupLocation"),
+        ("電投攜帶資料", "evotePickupDocuments"),
+        ("電投領取資訊", "evotePickupRule"),
+        ("通知書摘要(電投重點)", "noticeSummary"),
+        ("通知書來源", "noticeSourceLabel"),
+        ("股代名稱", "transferAgentName"),
+    ]
+    header = ["股票代號", "公司名稱"]
+    for year in years:
+        header.extend(f"{year}年 {label}" for label, _ in year_fields)
+    worksheet.append(header)
+
+    for row in compare_rows:
+        history_by_year = {
+            int(item.get("rocYear") or 0): item
+            for item in row.get("years", [])
+            if isinstance(item, dict)
+        }
+        values = [row.get("code", ""), row.get("companyName", "")]
+        for year in years:
+            item = history_by_year.get(year, {})
+            for _, field in year_fields:
+                if field == "noticeSummary":
+                    values.append(item.get("noticeSummary", "") or item.get("noticeGiftSummary", ""))
+                elif field == "transferAgentName":
+                    values.append(item.get("transferAgentName", "") or item.get("transferAgentShort", ""))
+                else:
+                    values.append(item.get(field, "") or "")
+        worksheet.append([excel_safe_value(value) for value in values])
+
+    for cell in worksheet[1]:
+        cell.font = Font(bold=True)
+        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+
+    worksheet.freeze_panes = "C2"
+    worksheet.column_dimensions["A"].width = 12
+    worksheet.column_dimensions["B"].width = 18
+    for column_cells in worksheet.iter_cols(min_col=3, max_col=worksheet.max_column):
+        column_letter = column_cells[0].column_letter
+        worksheet.column_dimensions[column_letter].width = 18
+
+    wide_wrap_labels = {"領取地點", "攜帶資料", "領取資訊", "通知書摘要", "期間原文"}
+    for row in worksheet.iter_rows(min_row=2):
+        for cell in row:
+            header_value = str(worksheet.cell(row=1, column=cell.column).value or "")
+            should_wrap = any(label in header_value for label in wide_wrap_labels)
+            cell.alignment = Alignment(vertical="top", wrap_text=should_wrap)
+
+    detail_sheet = workbook.create_sheet("年度明細")
+    detail_header = ["年度", *build_export_rows([])[0]]
+    detail_sheet.append(detail_header)
+    for row in compare_rows:
+        for item in row.get("years", []):
+            detail_sheet.append([excel_safe_value(item.get("rocYear", "")), *[excel_safe_value(value) for value in export_row_values(item)]])
+
+    for cell in detail_sheet[1]:
+        cell.font = Font(bold=True)
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+    detail_sheet.freeze_panes = "A2"
+    detail_widths = {
+        "A": 10, "B": 12, "C": 18, "D": 10, "E": 28, "F": 14, "G": 14,
+        "H": 12, "I": 14, "J": 14, "K": 14, "L": 14, "M": 24, "N": 12,
+        "O": 24, "P": 36, "Q": 48, "R": 56, "S": 12, "T": 22, "U": 18,
+        "V": 10, "W": 24,
+    }
+    for column, width in detail_widths.items():
+        detail_sheet.column_dimensions[column].width = width
+    for row in detail_sheet.iter_rows(min_row=2):
+        for cell in row:
+            cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in {"M", "O", "P", "Q", "R", "W"})
 
     output = io.BytesIO()
     workbook.save(output)
@@ -1902,7 +2022,9 @@ class AppHandler(SimpleHTTPRequestHandler):
         if parsed.path == "/api/export.xlsx":
             query = urllib.parse.parse_qs(parsed.query)
             raw_codes = query.get("codes", [""])[0]
-            self.handle_export(raw_codes)
+            raw_years = query.get("years", [""])[0]
+            mode = query.get("mode", [""])[0]
+            self.handle_export(raw_codes, raw_years=raw_years, mode=mode)
             return
         if parsed.path == "/api/health":
             json_response(
@@ -2021,7 +2143,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                 status=502,
             )
 
-    def handle_export(self, raw_codes: str) -> None:
+    def handle_export(self, raw_codes: str, raw_years: str = "", mode: str = "") -> None:
         codes = clean_codes(raw_codes)
         if not codes:
             json_response(
@@ -2031,9 +2153,17 @@ class AppHandler(SimpleHTTPRequestHandler):
             )
             return
         try:
-            results, _, _ = build_lookup_results(codes)
-            body = build_export_xlsx(results)
-            filename = f"shareholder-gifts-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
+            export_mode = (mode or "").lower()
+            if export_mode == "compare":
+                years = parse_roc_years(raw_years) if raw_years else DEFAULT_COMPARE_ROC_YEARS
+                compare_rows, _ = build_compare_results(codes, years)
+                body = build_compare_export_xlsx(compare_rows, years)
+                year_part = "-".join(str(year) for year in years)
+                filename = f"shareholder-gifts-compare-{year_part}-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
+            else:
+                results, _, _ = build_lookup_results(codes)
+                body = build_export_xlsx(results)
+                filename = f"shareholder-gifts-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
             self.send_response(200)
             self.send_header("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
             self.send_header("Content-Disposition", f'attachment; filename="{filename}"')
@@ -2056,6 +2186,8 @@ class AppHandler(SimpleHTTPRequestHandler):
         raw_body = self.rfile.read(max(0, length))
         content_type = (self.headers.get("Content-Type") or "").lower()
         codes: list[str] = []
+        mode = ""
+        raw_years = ""
         if "application/json" in content_type:
             try:
                 payload = json.loads(raw_body.decode("utf-8")) if raw_body else {}
@@ -2063,6 +2195,8 @@ class AppHandler(SimpleHTTPRequestHandler):
                 json_response(self, {"ok": False, "error": "匯出參數格式錯誤。"}, status=400)
                 return
             codes = clean_codes(" ".join(str(code) for code in payload.get("codes", [])))
+            mode = str(payload.get("mode", ""))
+            raw_years = str(payload.get("years", ""))
         else:
             try:
                 parsed = urllib.parse.parse_qs(raw_body.decode("utf-8"))
@@ -2071,7 +2205,9 @@ class AppHandler(SimpleHTTPRequestHandler):
                 return
             raw_codes = parsed.get("codes", [""])[0]
             codes = clean_codes(raw_codes)
-        self.handle_export(",".join(codes))
+            mode = parsed.get("mode", [""])[0]
+            raw_years = parsed.get("years", [""])[0]
+        self.handle_export(",".join(codes), raw_years=raw_years, mode=mode)
 
 
 def main() -> None:
