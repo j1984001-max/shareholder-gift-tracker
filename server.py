@@ -33,6 +33,7 @@ APP_VERSION = os.environ.get("RENDER_GIT_COMMIT", "dev")
 CACHE_DIR = ROOT / ".cache"
 NOTICE_CACHE_PATH = CACHE_DIR / "mops_notice_cache.json"
 NOTICE_SEED_CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
+MOPS_ATTEMPT_LOG_PATH = ROOT / "data" / "mops_notice_attempts.json"
 OFFICIAL_SITE_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
 LOOKUP_SNAPSHOT_PATH = ROOT / "data" / "lookup_snapshot.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
@@ -297,6 +298,16 @@ def load_lookup_snapshot() -> dict[str, Any]:
     return LOOKUP_SNAPSHOT_MEMORY
 
 
+def load_json_dict(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
 def save_notice_cache(cache: dict[str, Any]) -> None:
     global NOTICE_CACHE_MEMORY
     NOTICE_CACHE_MEMORY = cache
@@ -306,7 +317,9 @@ def save_notice_cache(cache: dict[str, Any]) -> None:
 def build_notice_progress() -> dict[str, Any]:
     watchlist_path = ROOT / "data" / "mops_seed_watchlist.txt"
     watchlist_codes = clean_codes(watchlist_path.read_text(encoding="utf-8")) if watchlist_path.exists() else []
+    watchlist_set = set(watchlist_codes)
     cache = load_notice_cache()
+    attempt_log = load_json_dict(MOPS_ATTEMPT_LOG_PATH)
     official_scan_cache: dict[str, Any] = {}
     if OFFICIAL_SITE_SCAN_CACHE_PATH.exists():
         try:
@@ -325,7 +338,21 @@ def build_notice_progress() -> dict[str, Any]:
         for code, item in watched_cache.items()
         if item.get("sourceType") in {"company_pdf", "official_pdf", "transfer_agent_pdf"}
     ]
+    tracked_attempts = {
+        code: item
+        for code, item in attempt_log.items()
+        if code in watchlist_set and isinstance(item, dict) and item.get("attemptedAt")
+    }
+    # Entries already in the curated notice cache predate the attempt log, so
+    # count them as inferred attempts without pretending their failure history is known.
+    inferred_attempted = set(tracked_attempts) | set(with_notice)
+    rate_limited_attempts = [
+        code
+        for code, item in tracked_attempts.items()
+        if item.get("status") == "rate_limited" or "查詢過量" in str(item.get("error", ""))
+    ]
     latest_fetched = max((item.get("fetchedAt", "") for item in watched_cache.values()), default="")
+    latest_mops_attempt = max((item.get("attemptedAt", "") for item in tracked_attempts.values()), default="")
     official_scanned = [code for code in watchlist_codes if (official_scan_cache.get(code) or {}).get("attemptedAt")]
     official_found = [code for code in watchlist_codes if (official_scan_cache.get(code) or {}).get("foundUseful")]
     latest_official_scan = max(((official_scan_cache.get(code) or {}).get("attemptedAt", "") for code in watchlist_codes), default="")
@@ -334,11 +361,16 @@ def build_notice_progress() -> dict[str, Any]:
         "noticeCached": len(with_notice),
         "pickupDateCached": len(with_pickup_date),
         "officialPdfCached": len(company_pdf),
+        "mopsAttemptLogged": len(tracked_attempts),
+        "mopsAttemptedOrCached": len(inferred_attempted),
+        "mopsNeverAttempted": max(0, len(watchlist_codes) - len(inferred_attempted)),
+        "mopsRateLimited": len(rate_limited_attempts),
         "officialSiteScanned": len(official_scanned),
         "officialSiteFound": len(official_found),
         "missingNotice": max(0, len(watchlist_codes) - len(with_notice)),
         "missingPickupDate": max(0, len(watchlist_codes) - len(with_pickup_date)),
         "latestFetchedAt": latest_fetched,
+        "latestMopsAttemptAt": latest_mops_attempt,
         "latestOfficialSiteScan": latest_official_scan,
     }
 

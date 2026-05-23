@@ -26,6 +26,51 @@ def save_seed(seed: dict[str, dict]) -> None:
     server.NOTICE_SEED_CACHE_PATH.write_text(json.dumps(seed, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def load_attempt_log() -> dict[str, dict]:
+    if server.MOPS_ATTEMPT_LOG_PATH.exists():
+        payload = json.loads(server.MOPS_ATTEMPT_LOG_PATH.read_text(encoding="utf-8"))
+        return payload if isinstance(payload, dict) else {}
+    return {}
+
+
+def save_attempt_log(attempts: dict[str, dict]) -> None:
+    server.MOPS_ATTEMPT_LOG_PATH.parent.mkdir(exist_ok=True)
+    server.MOPS_ATTEMPT_LOG_PATH.write_text(
+        json.dumps(dict(sorted(attempts.items())), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def record_mops_attempt(
+    attempts: dict[str, dict],
+    code: str,
+    status: str,
+    error: str = "",
+    info: dict | None = None,
+    meeting_date: str | None = None,
+) -> None:
+    previous = attempts.get(code) if isinstance(attempts.get(code), dict) else {}
+    attempts[code] = {
+        "code": code,
+        "attemptedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "attemptCount": int(previous.get("attemptCount") or 0) + 1,
+        "status": status,
+        "error": (error or "")[:500],
+        "meetingDate": meeting_date or "",
+        "filename": (info or {}).get("filename", ""),
+        "sourceType": (info or {}).get("sourceType", "mops" if info else ""),
+        "hasNotice": bool(info and ((info or {}).get("filename") or (info or {}).get("pdfUrl"))),
+        "hasPickupDate": bool(
+            info
+            and (
+                (info or {}).get("evotePickupStartDate")
+                or (info or {}).get("evotePickupEndDate")
+                or (info or {}).get("evotePickupPeriodText")
+            )
+        ),
+    }
+
+
 def load_official_pdf_sources(path: Path) -> dict[str, list[dict[str, str]]]:
     if not path.exists():
         return {}
@@ -238,6 +283,7 @@ def main() -> int:
 
     sources = server.source_bundle()
     seed = load_seed()
+    attempts = load_attempt_log()
     official_sources = load_official_pdf_sources(Path(args.official_pdf_sources)) if args.official_pdf_sources else {}
     if args.all:
         source_codes = set(sources["wespai"]) | set(sources["ideal"]) | set(sources["honsec"])
@@ -289,8 +335,12 @@ def main() -> int:
             seed.pop(code, None)
             server.NOTICE_CACHE_MEMORY = dict(seed)
 
+        attempted_mops = False
+        mops_error = ""
         if args.prefer_mops:
+            attempted_mops = True
             info, error = server.safe_get_mops_notice_info(code, meeting_date)
+            mops_error = error
             if not info and not rate_limited(error):
                 fallback_info, fallback_error = fetch_from_official_sources(code, official_sources.get(code, []))
                 if fallback_info:
@@ -300,9 +350,15 @@ def main() -> int:
         else:
             info, error = fetch_from_official_sources(code, official_sources.get(code, []))
             if not info:
+                attempted_mops = True
                 info, error = server.safe_get_mops_notice_info(code, meeting_date)
+                mops_error = error
         if not info:
             print(f"  skipped: {error or 'no notice info'}")
+            if attempted_mops:
+                status = "rate_limited" if rate_limited(error) else "not_found"
+                record_mops_attempt(attempts, code, status, error, meeting_date=meeting_date)
+                save_attempt_log(attempts)
             if rate_limited(error):
                 print("  MOPS appears rate-limited; stopping this run to avoid wasting requests.")
                 hit_rate_limit = True
@@ -310,6 +366,10 @@ def main() -> int:
             continue
 
         seed[code] = info
+        if attempted_mops:
+            status = "success" if not mops_error else "fallback_success"
+            record_mops_attempt(attempts, code, status, mops_error, info, meeting_date=meeting_date)
+            save_attempt_log(attempts)
         start_date = info.get("evotePickupStartDate") or "-"
         end_date = info.get("evotePickupEndDate") or "-"
         print(f"  cached: {info.get('filename')} pickup={start_date}~{end_date}")
