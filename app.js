@@ -87,6 +87,68 @@ function formatRange(start, end) {
   return formatDate(start || end);
 }
 
+function rocDateToIso(year, month, day) {
+  const fullYear = Number(year) + 1911;
+  return `${fullYear}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+function inferVotePeriodFromText(text) {
+  const compact = (text || "").replace(/\s+/g, "");
+  if (!compact || !compact.includes("電子投票")) return null;
+
+  const patterns = [
+    /(\d{2,3})年(\d{1,2})月(\d{1,2})日(?:起)?(?:至|到|迄)(?:(\d{2,3})年)?(\d{1,2})月(\d{1,2})日(?:止|前)?[^。；]{0,50}(?:完成)?電子投票/,
+    /(?:電子投票|電子方式行使表決權)[^。；]{0,90}?(\d{2,3})年(\d{1,2})月(\d{1,2})日(?:起)?(?:至|到|迄)(?:(\d{2,3})年)?(\d{1,2})月(\d{1,2})日/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = compact.match(pattern);
+    if (match) {
+      const [, startYear, startMonth, startDay, endYear, endMonth, endDay] = match;
+      return {
+        start: rocDateToIso(startYear, startMonth, startDay),
+        end: rocDateToIso(endYear || startYear, endMonth, endDay),
+      };
+    }
+  }
+
+  return null;
+}
+
+function getVotePeriod(item) {
+  if (item.evoteStartDate || item.evoteEndDate) {
+    return {
+      text: formatRange(item.evoteStartDate, item.evoteEndDate),
+      source: "",
+      hasPeriod: true,
+    };
+  }
+
+  const inferred = inferVotePeriodFromText(
+    [
+      item.evotePickupRule,
+      item.noticeSummary,
+      item.noticeGiftSummary,
+      item.meetingDistributionRule,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  );
+  if (inferred) {
+    return {
+      text: formatRange(inferred.start, inferred.end),
+      source: "（由通知書條件推估）",
+      hasPeriod: true,
+    };
+  }
+
+  return {
+    text: hasPickupPeriod(item) ? "未補到投票期間（已補到領取期）" : "未提供",
+    source: "",
+    hasPeriod: false,
+  };
+}
+
 function formatPickupPeriod(item) {
   const range = formatRange(item.evotePickupStartDate, item.evotePickupEndDate);
   if (range !== "未提供") return range;
@@ -99,6 +161,10 @@ function hasPickupPeriod(item) {
 
 function hasNotice(item) {
   return Boolean(item.noticeFilename || item.noticeSourceLabel);
+}
+
+function hasVotePeriod(item) {
+  return getVotePeriod(item).hasPeriod;
 }
 
 function updateCodeCounter() {
@@ -181,7 +247,7 @@ function renderSummary(results) {
   const published = results.filter((item) => item.status === "published").length;
   const unpublished = results.filter((item) => item.status === "unpublished").length;
   const changed = results.filter((item) => item.changed).length;
-  const withVote = results.filter((item) => item.evoteStartDate || item.evoteEndDate).length;
+  const withVote = results.filter((item) => hasVotePeriod(item)).length;
   const withPickupDate = results.filter(
     (item) => hasPickupPeriod(item),
   ).length;
@@ -195,7 +261,7 @@ function renderSummary(results) {
     ["缺電投日期", missingPickupDate, "優先追蹤這些標的"],
     ["已抓通知書", withNotice, "已從 MOPS 或官方 PDF 補到通知書"],
     ["有新變化", changed, "和上次查詢相比有欄位變動"],
-    ["含電子投票", withVote, "已補到電子投票起訖資訊"],
+    ["有投票期間", withVote, "已補到電子投票起訖或通知書條件"],
   ];
 
   cards.forEach(([label, value, note]) => {
@@ -247,6 +313,7 @@ function renderRows(results) {
       const pickupLocation = item.evotePickupLocation || item.evotePickupPlace || "未補到地點";
       const pickupDocuments = item.evotePickupDocuments || "未補到攜帶資料";
       const pickupRule = item.evotePickupRule || item.noticeSummary || item.meetingDistributionRule || "未補到更細資訊";
+      const votePeriod = getVotePeriod(item);
       const dateBlock = `
         <div class="cell-stack">
           <span><strong>最後買進：</strong>${formatDate(item.lastBuyDate)}</span>
@@ -256,7 +323,7 @@ function renderRows(results) {
       `;
       const evoteBlock = `
         <div class="cell-stack">
-          <span><strong>電子投票：</strong>${formatRange(item.evoteStartDate, item.evoteEndDate)}</span>
+          <span><strong>電子投票期間：</strong>${votePeriod.text}${votePeriod.source}</span>
           <div class="pickup-focus ${hasPickupPeriod(item) ? "ready" : "missing"}">
             <span><strong>電投領取期</strong>${pickupPeriod}</span>
             <span><strong>領取地點</strong>${pickupLocation}</span>
