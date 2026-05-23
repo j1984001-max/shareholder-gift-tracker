@@ -43,6 +43,7 @@ jobs:
       - name: Update seed cache
         shell: bash
         env:
+          MOPS_FETCH_ENGINE: "auto"
           HTTP_REQUEST_DELAY_MIN_MS: "3000"
           HTTP_REQUEST_DELAY_MAX_MS: "7000"
         run: |
@@ -51,15 +52,50 @@ jobs:
           LIMIT="${{ github.event.inputs.limit || '60' }}"
           SKIP_EXISTING="${{ github.event.inputs.skip_existing || 'true' }}"
 
+          run_mops_update() {
+            set +e
+            python tools/update_mops_seed.py "$@"
+            status=$?
+            set -e
+            if [[ "$status" == "2" ]]; then
+              echo "MOPS appears rate-limited; continuing with official-site fallback."
+              return 0
+            fi
+            return "$status"
+          }
+
           if [[ -n "$CODES" ]]; then
+            run_mops_update "$CODES" \
+              --official-pdf-sources data/official_notice_sources.json \
+              --prefer-mops \
+              --force \
+              --sleep 3
             python tools/discover_official_notices.py "$CODES" \
               --sources-file data/official_notice_sources.json \
               --scan-cache-file data/official_site_scan_cache.json \
               --max-pages-per-company 12 \
+              --skip-cached-pickup \
               --update-seed \
               --sleep 0.6
-            python tools/update_mops_seed.py "$CODES" --official-pdf-sources data/official_notice_sources.json --force --sleep 3
           else
+            ROTATE_OFFSET=$(( (${GITHUB_RUN_NUMBER:-0} * LIMIT) % 1975 ))
+            EXTRA_ARGS=(
+              --watchlist-file data/mops_seed_watchlist.txt
+              --official-pdf-sources data/official_notice_sources.json
+              --remote-requested-url https://shareholder-gift-tracker.onrender.com/api/requested-codes
+              --limit "$LIMIT"
+              --retry-empty
+              --prefer-mops
+              --rotate-offset "$ROTATE_OFFSET"
+              --sleep 3
+            )
+            if [[ "$SKIP_EXISTING" == "true" ]]; then
+              EXTRA_ARGS+=(--skip-existing)
+            else
+              EXTRA_ARGS+=(--force)
+            fi
+            run_mops_update "${EXTRA_ARGS[@]}"
+
             python tools/discover_official_notices.py \
               --watchlist-file data/mops_seed_watchlist.txt \
               --sources-file data/official_notice_sources.json \
@@ -68,22 +104,9 @@ jobs:
               --max-pages-per-company 10 \
               --skip-cached-pickup \
               --skip-recent-attempt-hours 168 \
+              --rotate-offset "$ROTATE_OFFSET" \
               --update-seed \
               --sleep 0.6
-            EXTRA_ARGS=(
-              --watchlist-file data/mops_seed_watchlist.txt
-              --official-pdf-sources data/official_notice_sources.json
-              --remote-requested-url https://shareholder-gift-tracker.onrender.com/api/requested-codes
-              --limit "$LIMIT"
-              --retry-empty
-              --sleep 3
-            )
-            if [[ "$SKIP_EXISTING" == "true" ]]; then
-              EXTRA_ARGS+=(--skip-existing)
-            else
-              EXTRA_ARGS+=(--force)
-            fi
-            python tools/update_mops_seed.py "${EXTRA_ARGS[@]}"
           fi
           python tools/build_lookup_snapshot.py --watchlist-file data/mops_seed_watchlist.txt
 
