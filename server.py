@@ -28,6 +28,8 @@ ROOT = Path(__file__).resolve().parent
 HOST = "0.0.0.0"
 PORT = int(os.environ.get("PORT", "8765"))
 CURRENT_YEAR = date.today().year
+CURRENT_ROC_YEAR = CURRENT_YEAR - 1911
+DEFAULT_COMPARE_ROC_YEARS = [CURRENT_ROC_YEAR - offset for offset in range(3)]
 CACHE_TTL_SECONDS = int(os.environ.get("CACHE_TTL_SECONDS", "1800"))
 APP_VERSION = os.environ.get("RENDER_GIT_COMMIT", "dev")
 CACHE_DIR = ROOT / ".cache"
@@ -41,7 +43,7 @@ NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
 NOTICE_CACHE_VERSION = 3
 EXCEL_ILLEGAL_CHAR_RE = re.compile(r"[\x00-\x08\x0b-\x0c\x0e-\x1f]")
 
-WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_YEAR - 1911}"
+WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_ROC_YEAR}"
 IDEAL_URL = "https://souvenir.ideal-labs.com/"
 HONSEC_URL = "https://srd.honsec.com.tw/stock/souvenir.aspx"
 
@@ -64,10 +66,66 @@ MOPS_FETCH_ENGINE = os.environ.get("MOPS_FETCH_ENGINE", "auto").lower()
 
 CACHE: dict[str, tuple[float, Any]] = {}
 NOTICE_CACHE_MEMORY: dict[str, Any] | None = None
-LOOKUP_SNAPSHOT_MEMORY: dict[str, Any] | None = None
+LOOKUP_SNAPSHOT_MEMORY: dict[int, dict[str, Any]] = {}
 
 CACHE_DIR.mkdir(exist_ok=True)
 NOTICE_PDF_DIR.mkdir(exist_ok=True)
+
+
+def normalize_roc_year(value: int | str | None = None) -> int:
+    if value in {None, ""}:
+        return CURRENT_ROC_YEAR
+    raw = str(value).strip()
+    if not raw:
+        return CURRENT_ROC_YEAR
+    match = re.search(r"\d{3,4}", raw)
+    if not match:
+        raise ValueError(f"年度格式錯誤：{value}")
+    year = int(match.group(0))
+    if year >= 1912:
+        year -= 1911
+    if year < 90 or year > CURRENT_ROC_YEAR:
+        raise ValueError(f"年度超出可用範圍：{value}")
+    return year
+
+
+def parse_roc_years(raw: str | None) -> list[int]:
+    if not raw:
+        return [CURRENT_ROC_YEAR]
+    years: list[int] = []
+    for token in re.findall(r"\d{3,4}", raw):
+        roc_year = normalize_roc_year(token)
+        if roc_year not in years:
+            years.append(roc_year)
+    return years or [CURRENT_ROC_YEAR]
+
+
+def wespai_url_for_year(roc_year: int | str | None = None) -> str:
+    return f"https://stock.wespai.com/stock{normalize_roc_year(roc_year)}"
+
+
+def notice_cache_storage_key(code: str, roc_year: int | str | None = None) -> str:
+    normalized_year = normalize_roc_year(roc_year)
+    return code if normalized_year == CURRENT_ROC_YEAR else f"{normalized_year}:{code}"
+
+
+def notice_cache_lookup(cache: dict[str, Any], code: str, roc_year: int | str | None = None) -> dict[str, Any] | None:
+    normalized_year = normalize_roc_year(roc_year)
+    keys = [notice_cache_storage_key(code, normalized_year)]
+    if normalized_year == CURRENT_ROC_YEAR:
+        keys.append(f"{normalized_year}:{code}")
+    for key in keys:
+        entry = cache.get(key)
+        if isinstance(entry, dict):
+            return entry
+    return None
+
+
+def lookup_snapshot_path_for_year(roc_year: int | str | None = None) -> Path:
+    normalized_year = normalize_roc_year(roc_year)
+    if normalized_year == CURRENT_ROC_YEAR:
+        return LOOKUP_SNAPSHOT_PATH
+    return ROOT / "data" / "lookup_snapshots" / f"lookup_snapshot_{normalized_year}.json"
 
 
 def normalize_text(value: str) -> str:
@@ -282,20 +340,22 @@ def load_notice_cache() -> dict[str, Any]:
     return NOTICE_CACHE_MEMORY
 
 
-def load_lookup_snapshot() -> dict[str, Any]:
+def load_lookup_snapshot(roc_year: int | str | None = None) -> dict[str, Any]:
     global LOOKUP_SNAPSHOT_MEMORY
-    if LOOKUP_SNAPSHOT_MEMORY is not None:
-        return LOOKUP_SNAPSHOT_MEMORY
-    if LOOKUP_SNAPSHOT_PATH.exists():
+    normalized_year = normalize_roc_year(roc_year)
+    if normalized_year in LOOKUP_SNAPSHOT_MEMORY:
+        return LOOKUP_SNAPSHOT_MEMORY[normalized_year]
+    snapshot_path = lookup_snapshot_path_for_year(normalized_year)
+    if snapshot_path.exists():
         try:
-            payload = json.loads(LOOKUP_SNAPSHOT_PATH.read_text(encoding="utf-8"))
+            payload = json.loads(snapshot_path.read_text(encoding="utf-8"))
             if isinstance(payload, dict):
-                LOOKUP_SNAPSHOT_MEMORY = payload
-                return LOOKUP_SNAPSHOT_MEMORY
+                LOOKUP_SNAPSHOT_MEMORY[normalized_year] = payload
+                return LOOKUP_SNAPSHOT_MEMORY[normalized_year]
         except Exception:
             pass
-    LOOKUP_SNAPSHOT_MEMORY = {}
-    return LOOKUP_SNAPSHOT_MEMORY
+    LOOKUP_SNAPSHOT_MEMORY[normalized_year] = {}
+    return LOOKUP_SNAPSHOT_MEMORY[normalized_year]
 
 
 def load_json_dict(path: Path) -> dict[str, Any]:
@@ -383,10 +443,13 @@ def build_source_stats(sources: dict[str, Any]) -> dict[str, int]:
     }
 
 
-def snapshot_metadata() -> dict[str, Any]:
-    snapshot = load_lookup_snapshot()
+def snapshot_metadata(roc_year: int | str | None = None) -> dict[str, Any]:
+    normalized_year = normalize_roc_year(roc_year)
+    snapshot = load_lookup_snapshot(normalized_year)
     records = snapshot.get("records") if isinstance(snapshot.get("records"), dict) else {}
     return {
+        "rocYear": normalized_year,
+        "year": normalized_year + 1911,
         "dataMode": "snapshot" if records else "live",
         "snapshotGeneratedAt": snapshot.get("generatedAt", "") if records else "",
         "snapshotRecordCount": len(records),
@@ -504,13 +567,13 @@ def parse_pickup_roc_range_from_text(value: str) -> tuple[str | None, str | None
     return None, None, ""
 
 
-def parse_mmdd_to_iso(value: str) -> str | None:
+def parse_mmdd_to_iso(value: str, western_year: int | None = None) -> str | None:
     cleaned = normalize_text(value)
     match = re.fullmatch(r"(\d{2})\.(\d{2})", cleaned)
     if not match:
         return None
     month, day = match.groups()
-    return f"{CURRENT_YEAR}-{month}-{day}"
+    return f"{western_year or CURRENT_YEAR}-{month}-{day}"
 
 
 def parse_roc_date(value: str) -> str | None:
@@ -601,8 +664,11 @@ class VisibleTextParser(HTMLParser):
             self.items.append(text)
 
 
-def load_wespai() -> dict[str, dict[str, Any]]:
-    html = fetch_text(WESPAI_URL)
+def load_wespai_for_year(roc_year: int | str | None = None) -> dict[str, dict[str, Any]]:
+    normalized_year = normalize_roc_year(roc_year)
+    western_year = normalized_year + 1911
+    source_url = wespai_url_for_year(normalized_year)
+    html = fetch_text(source_url)
     parser = SimpleTableParser()
     parser.feed(html)
     target_table: list[list[TableCell]] | None = None
@@ -627,25 +693,31 @@ def load_wespai() -> dict[str, dict[str, Any]]:
             continue
         rows[code] = {
             "code": code,
+            "roc_year": normalized_year,
+            "year": western_year,
             "company_name": values[2],
             "price_text": values[3],
             "souvenir_name": values[4],
             "meeting_date_text": values[6],
-            "meeting_date": parse_mmdd_to_iso(values[6]),
+            "meeting_date": parse_mmdd_to_iso(values[6], western_year),
             "meeting_city": values[7],
             "last_buy_date_text": values[8],
-            "last_buy_date": parse_mmdd_to_iso(values[8]),
+            "last_buy_date": parse_mmdd_to_iso(values[8], western_year),
             "transfer_agent_short": values[9],
             "transfer_agent_phone": values[10],
             "odd_lot_mail": values[12],
             "reelection": values[13],
-            "source_url": WESPAI_URL,
+            "source_url": source_url,
             "official_doc_url": (
                 f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}"
-                f"&year={CURRENT_YEAR - 1911}&mtype=F&"
+                f"&year={normalized_year}&mtype=F&"
             ),
         }
     return rows
+
+
+def load_wespai() -> dict[str, dict[str, Any]]:
+    return load_wespai_for_year(CURRENT_ROC_YEAR)
 
 
 def load_ideal() -> dict[str, dict[str, Any]]:
@@ -736,15 +808,24 @@ def load_honsec() -> dict[str, dict[str, Any]]:
     return rows
 
 
-def source_bundle() -> dict[str, Any]:
-    wespai = safe_cached_source("wespai", load_wespai)
-    ideal = safe_cached_source("ideal", load_ideal)
-    honsec = safe_cached_source("honsec", load_honsec)
+def source_bundle(roc_year: int | str | None = None) -> dict[str, Any]:
+    normalized_year = normalize_roc_year(roc_year)
+    wespai_cache_name = "wespai" if normalized_year == CURRENT_ROC_YEAR else f"wespai-{normalized_year}"
+    wespai = safe_cached_source(wespai_cache_name, lambda: load_wespai_for_year(normalized_year))
+    if normalized_year == CURRENT_ROC_YEAR:
+        ideal = safe_cached_source("ideal", load_ideal)
+        honsec = safe_cached_source("honsec", load_honsec)
+    else:
+        # These sources only expose the active season reliably. Historical
+        # comparisons use Wespai plus the year-specific MOPS notice cache.
+        ideal = {}
+        honsec = {}
     return {"wespai": wespai, "ideal": ideal, "honsec": honsec}
 
 
-def fetch_notice_listing(code: str) -> dict[str, str] | None:
-    query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
+def fetch_notice_listing(code: str, roc_year: int | str | None = None) -> dict[str, str] | None:
+    normalized_year = normalize_roc_year(roc_year)
+    query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={normalized_year}&mtype=F&"
     html_text = html.unescape(fetch_mops_text_with_encoding(query_url, "big5"))
 
     def strip_tags(fragment: str) -> str:
@@ -1274,26 +1355,37 @@ def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
     return record
 
 
-def build_notice_listing_from_meeting_date(code: str, meeting_date: str | None) -> dict[str, str] | None:
+def build_notice_listing_from_meeting_date(
+    code: str,
+    meeting_date: str | None,
+    roc_year: int | str | None = None,
+) -> dict[str, str] | None:
     if not meeting_date or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meeting_date):
         return None
+    normalized_year = normalize_roc_year(roc_year)
+    western_year = normalized_year + 1911
     compact_meeting_date = meeting_date.replace("-", "")
-    query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={CURRENT_YEAR - 1911}&mtype=F&"
+    query_url = f"https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id={code}&year={normalized_year}&mtype=F&"
     return {
-        "year": "",
+        "year": str(normalized_year),
         "dataType": "",
         "meetingType": "",
         "detail": "開會通知",
         "remark": "",
-        "filename": f"{CURRENT_YEAR}_{code}_{compact_meeting_date}F01.pdf",
+        "filename": f"{western_year}_{code}_{compact_meeting_date}F01.pdf",
         "uploadedAt": "",
         "queryUrl": query_url,
     }
 
 
-def get_mops_notice_info(code: str, meeting_date: str | None = None) -> dict[str, Any] | None:
+def get_mops_notice_info(
+    code: str,
+    meeting_date: str | None = None,
+    roc_year: int | str | None = None,
+) -> dict[str, Any] | None:
+    normalized_year = normalize_roc_year(roc_year)
     cache = load_notice_cache()
-    cached_entry = cache.get(code)
+    cached_entry = notice_cache_lookup(cache, code, normalized_year)
     cached_source_type = (cached_entry or {}).get("sourceType", "")
     cached_is_current = bool(cached_entry and cached_entry.get("parserVersion") == NOTICE_CACHE_VERSION)
     cached_is_official_pdf = cached_source_type in {"official_pdf", "company_pdf", "transfer_agent_pdf"}
@@ -1301,9 +1393,9 @@ def get_mops_notice_info(code: str, meeting_date: str | None = None) -> dict[str
         cached_entry["cacheStatus"] = "hit"
         return cached_entry
 
-    listing = fetch_notice_listing(code)
+    listing = fetch_notice_listing(code, normalized_year)
     if not listing:
-        listing = build_notice_listing_from_meeting_date(code, meeting_date)
+        listing = build_notice_listing_from_meeting_date(code, meeting_date, normalized_year)
     if not listing:
         return None
 
@@ -1328,6 +1420,8 @@ def get_mops_notice_info(code: str, meeting_date: str | None = None) -> dict[str
     summary = extract_notice_summary(text)
     entry = {
         "code": code,
+        "rocYear": normalized_year,
+        "year": normalized_year + 1911,
         "filename": listing["filename"],
         "parserVersion": NOTICE_CACHE_VERSION,
         "uploadedAt": listing["uploadedAt"],
@@ -1337,14 +1431,18 @@ def get_mops_notice_info(code: str, meeting_date: str | None = None) -> dict[str
         "cacheStatus": "miss",
         **summary,
     }
-    cache[code] = entry
+    cache[notice_cache_storage_key(code, normalized_year)] = entry
     save_notice_cache(cache)
     return entry
 
 
-def safe_get_mops_notice_info(code: str, meeting_date: str | None = None) -> tuple[dict[str, Any] | None, str]:
+def safe_get_mops_notice_info(
+    code: str,
+    meeting_date: str | None = None,
+    roc_year: int | str | None = None,
+) -> tuple[dict[str, Any] | None, str]:
     try:
-        return get_mops_notice_info(code, meeting_date), ""
+        return get_mops_notice_info(code, meeting_date, roc_year), ""
     except Exception as error:
         return None, str(error)
 
@@ -1481,6 +1579,8 @@ def excel_safe_value(value: Any) -> Any:
 def empty_record(code: str, note: str = "") -> dict[str, Any]:
     return {
         "code": code,
+        "rocYear": CURRENT_ROC_YEAR,
+        "year": CURRENT_YEAR,
         "companyName": "",
         "status": "unpublished",
         "isPublished": False,
@@ -1528,8 +1628,11 @@ def build_lookup_results(
     *,
     allow_live_lookup: bool | None = None,
     allow_live_notice_fetch: bool | None = None,
+    roc_year: int | str | None = None,
+    snapshot_only: bool = False,
 ) -> tuple[list[dict[str, Any]], dict[str, int], dict[str, Any]]:
-    snapshot = load_lookup_snapshot()
+    normalized_year = normalize_roc_year(roc_year)
+    snapshot = load_lookup_snapshot(normalized_year)
     snapshot_records = snapshot.get("records") if isinstance(snapshot.get("records"), dict) else {}
     use_snapshot = bool(snapshot_records)
     effective_live_lookup = ALLOW_LIVE_LOOKUP if allow_live_lookup is None else allow_live_lookup
@@ -1548,15 +1651,23 @@ def build_lookup_results(
             missing_codes.append(code)
 
     source_stats = snapshot.get("sourceStats", {}) if use_snapshot else {}
-    if missing_codes and (effective_live_lookup or not use_snapshot):
-        sources = source_bundle()
+    if missing_codes and not snapshot_only and (effective_live_lookup or not use_snapshot):
+        sources = source_bundle(normalized_year)
         for code in missing_codes:
-            results_map[code] = build_record(code, sources, allow_live_notice_fetch=effective_notice_fetch)
+            results_map[code] = build_record(
+                code,
+                sources,
+                allow_live_notice_fetch=effective_notice_fetch,
+                roc_year=normalized_year,
+            )
         if not source_stats:
             source_stats = build_source_stats(sources)
     else:
         for code in missing_codes:
-            results_map[code] = empty_record(code, "這檔資料尚未由本機同步流程補齊，請先更新本機資料後再部署。")
+            record = empty_record(code, "這檔資料尚未由本機同步流程補齊，請先更新本機資料後再部署。")
+            record["rocYear"] = normalized_year
+            record["year"] = normalized_year + 1911
+            results_map[code] = record
 
     if not isinstance(source_stats, dict):
         source_stats = {}
@@ -1565,12 +1676,18 @@ def build_lookup_results(
         "idealLabs": int(source_stats.get("idealLabs", 0)),
         "honsec": int(source_stats.get("honsec", 0)),
     }
-    metadata = snapshot_metadata()
+    metadata = snapshot_metadata(normalized_year)
     results = [results_map.get(code, empty_record(code)) for code in codes]
     return results, normalized_source_stats, metadata
 
 
-def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bool = True) -> dict[str, Any]:
+def build_record(
+    code: str,
+    sources: dict[str, Any],
+    allow_live_notice_fetch: bool = True,
+    roc_year: int | str | None = None,
+) -> dict[str, Any]:
+    normalized_year = normalize_roc_year(roc_year)
     wespai = sources["wespai"].get(code)
     ideal = sources["ideal"].get(code)
     honsec = sources["honsec"].get(code)
@@ -1587,13 +1704,15 @@ def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bo
     should_try_mops = bool((wespai or ideal or honsec) and should_fetch_mops_notice(ideal, honsec))
     mops_notice = None
     mops_error = ""
+    cached_notice = notice_cache_lookup(load_notice_cache(), code, normalized_year)
     if should_try_mops:
         if allow_live_notice_fetch:
-            mops_notice, mops_error = safe_get_mops_notice_info(code, meeting_date)
+            mops_notice, mops_error = safe_get_mops_notice_info(code, meeting_date, normalized_year)
         else:
-            cached_notice = load_notice_cache().get(code)
             if isinstance(cached_notice, dict):
                 mops_notice = cached_notice
+    elif isinstance(cached_notice, dict):
+        mops_notice = cached_notice
 
     evote_start = (ideal or {}).get("evote_start_date") or (honsec or {}).get("evote_start_date")
     evote_end = (ideal or {}).get("evote_end_date") or (honsec or {}).get("evote_end_date")
@@ -1668,6 +1787,8 @@ def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bo
 
     return {
         "code": code,
+        "rocYear": normalized_year,
+        "year": normalized_year + 1911,
         "companyName": company_name,
         "status": status,
         "isPublished": is_published,
@@ -1702,15 +1823,54 @@ def build_record(code: str, sources: dict[str, Any], allow_live_notice_fetch: bo
         "noticeCacheStatus": (mops_notice or {}).get("cacheStatus", ""),
         "noticeSourceLabel": (mops_notice or {}).get("sourceLabel", "公開資訊觀測站通知書" if mops_notice else ""),
         "noticeSourceType": (mops_notice or {}).get("sourceType", "mops" if mops_notice else ""),
-        "mopsAttempted": should_try_mops,
+        "mopsAttempted": bool(mops_notice or (should_try_mops and allow_live_notice_fetch)),
         "mopsError": mops_error,
         "evotePickupSource": evote_pickup_source,
         "notes": (
-            "目前在整合來源中尚未看到今年紀念品公告，建議保留 watchlist 持續追蹤。"
+            "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。"
             if status == "unpublished"
             else ""
         ),
         "sources": source_links,
+    }
+
+
+def build_compare_results(
+    codes: list[str],
+    roc_years: list[int] | None = None,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    years = roc_years or DEFAULT_COMPARE_ROC_YEARS
+    per_year_records: dict[int, dict[str, dict[str, Any]]] = {}
+    per_year_metadata: dict[str, Any] = {}
+    for roc_year in years:
+        results, source_stats, metadata = build_lookup_results(
+            codes,
+            roc_year=roc_year,
+            allow_live_lookup=False,
+            allow_live_notice_fetch=False,
+            snapshot_only=True,
+        )
+        per_year_records[roc_year] = {item["code"]: item for item in results}
+        per_year_metadata[str(roc_year)] = {
+            **metadata,
+            "sourceStats": source_stats,
+        }
+
+    rows: list[dict[str, Any]] = []
+    for code in codes:
+        history = [per_year_records.get(roc_year, {}).get(code, empty_record(code)) for roc_year in years]
+        company_name = next((item.get("companyName") for item in history if item.get("companyName")), "")
+        rows.append(
+            {
+                "code": code,
+                "companyName": company_name,
+                "years": history,
+            }
+        )
+
+    return rows, {
+        "years": years,
+        "perYear": per_year_metadata,
     }
 
 
@@ -1730,7 +1890,14 @@ class AppHandler(SimpleHTTPRequestHandler):
         if parsed.path == "/api/lookup":
             query = urllib.parse.parse_qs(parsed.query)
             raw_codes = query.get("codes", [""])[0]
-            self.handle_lookup(raw_codes)
+            raw_years = query.get("years", [""])[0]
+            self.handle_lookup(raw_codes, raw_years)
+            return
+        if parsed.path == "/api/compare":
+            query = urllib.parse.parse_qs(parsed.query)
+            raw_codes = query.get("codes", [""])[0]
+            raw_years = query.get("years", [""])[0]
+            self.handle_compare(raw_codes, raw_years)
             return
         if parsed.path == "/api/export.xlsx":
             query = urllib.parse.parse_qs(parsed.query)
@@ -1774,7 +1941,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             self.path = "/index.html"
         super().do_GET()
 
-    def handle_lookup(self, raw_codes: str) -> None:
+    def handle_lookup(self, raw_codes: str, raw_years: str = "") -> None:
         codes = clean_codes(raw_codes)
         if not codes:
             json_response(
@@ -1790,13 +1957,15 @@ class AppHandler(SimpleHTTPRequestHandler):
 
         try:
             record_requested_codes(codes)
-            results, source_stats, metadata = build_lookup_results(codes)
+            roc_years = parse_roc_years(raw_years)
+            results, source_stats, metadata = build_lookup_results(codes, roc_year=roc_years[0])
             json_response(
                 self,
                 {
                     "ok": True,
                     "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
                     "requestedCodes": codes,
+                    "requestedYears": roc_years,
                     "sourceStats": source_stats,
                     **metadata,
                     "results": results,
@@ -1808,6 +1977,45 @@ class AppHandler(SimpleHTTPRequestHandler):
                 {
                     "ok": False,
                     "error": f"資料抓取失敗：{error}",
+                    "results": [],
+                },
+                status=502,
+            )
+
+    def handle_compare(self, raw_codes: str, raw_years: str = "") -> None:
+        codes = clean_codes(raw_codes)
+        if not codes:
+            json_response(
+                self,
+                {
+                    "ok": False,
+                    "error": "請輸入至少一筆股票代號。",
+                    "results": [],
+                },
+                status=400,
+            )
+            return
+
+        try:
+            record_requested_codes(codes)
+            years = parse_roc_years(raw_years) if raw_years else DEFAULT_COMPARE_ROC_YEARS
+            results, metadata = build_compare_results(codes, years)
+            json_response(
+                self,
+                {
+                    "ok": True,
+                    "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                    "requestedCodes": codes,
+                    **metadata,
+                    "results": results,
+                },
+            )
+        except Exception as error:
+            json_response(
+                self,
+                {
+                    "ok": False,
+                    "error": f"三年度比較資料讀取失敗：{error}",
                     "results": [],
                 },
                 status=502,

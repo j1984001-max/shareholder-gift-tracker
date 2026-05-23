@@ -80,6 +80,7 @@ def main() -> int:
                 str(args.mops_limit),
                 "--retry-empty",
                 "--skip-existing",
+                "--prefer-mops",
                 "--sleep",
                 str(args.mops_sleep),
             ],

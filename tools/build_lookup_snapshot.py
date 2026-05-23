@@ -39,8 +39,13 @@ def main() -> int:
     )
     parser.add_argument(
         "--output",
-        default=str(server.LOOKUP_SNAPSHOT_PATH),
+        default="",
         help="Output JSON path for the built lookup snapshot.",
+    )
+    parser.add_argument(
+        "--roc-year",
+        default=str(server.CURRENT_ROC_YEAR),
+        help="ROC meeting year to build, e.g. 115, 114, 113. Western years like 2026 also work.",
     )
     parser.add_argument(
         "--allow-live-notice-fetch",
@@ -49,6 +54,7 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    roc_year = server.normalize_roc_year(args.roc_year)
     codes = server.clean_codes(" ".join(args.codes))
     if args.watchlist_file:
         codes.extend(read_codes_file(Path(args.watchlist_file)))
@@ -57,22 +63,25 @@ def main() -> int:
         print("No stock codes found.")
         return 0
 
-    sources = server.source_bundle()
+    sources = server.source_bundle(roc_year)
     records = {}
     for index, code in enumerate(codes, 1):
-        print(f"[{index}/{len(codes)}] build {code}", flush=True)
+        print(f"[{index}/{len(codes)}] build {code} year={roc_year}", flush=True)
         records[code] = server.build_record(
             code,
             sources,
             allow_live_notice_fetch=args.allow_live_notice_fetch,
+            roc_year=roc_year,
         )
 
     payload = {
         "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "rocYear": roc_year,
+        "year": roc_year + 1911,
         "sourceStats": server.build_source_stats(sources),
         "records": records,
     }
-    output_path = Path(args.output)
+    output_path = Path(args.output) if args.output else server.lookup_snapshot_path_for_year(roc_year)
     output_path.parent.mkdir(exist_ok=True)
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {output_path}")

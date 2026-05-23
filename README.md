@@ -39,6 +39,34 @@ http://127.0.0.1:8765
 
 通知書下載與解析建議都在你的本機跑完，再把結果推到 GitHub 讓 Render 自動部署。部署後網站查詢會優先讀 [data/lookup_snapshot.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshot.json) 與 [data/mops_notice_seed_cache.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/mops_notice_seed_cache.json)，避免 Render 線上臨時打外部網站。
 
+## 三年度比較資料
+
+網站支援「今年資料」與「三年度比較」。三年度比較會讀：
+
+- 115 年：[data/lookup_snapshot.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshot.json)
+- 114 年：[data/lookup_snapshots/lookup_snapshot_114.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshots/lookup_snapshot_114.json)
+- 113 年：[data/lookup_snapshots/lookup_snapshot_113.json](/Users/wujohnson/Documents/New project/shareholder-gift-tracker/data/lookup_snapshots/lookup_snapshot_113.json)
+
+先建立三年度基礎資料（紀念品、股東會日期、最後買進日）：
+
+```bash
+cd "/Users/wujohnson/Documents/New project/shareholder-gift-tracker"
+PYTHONPATH=.vendor python3 tools/build_year_snapshots.py --years 115,114,113 --watchlist-file data/mops_seed_watchlist.txt
+```
+
+前兩年度的電投領取日期、地點、攜帶資料仍要靠年度化的 MOPS 通知書快取慢慢補。每次小批次跑 5 檔，避免查詢過量：
+
+```bash
+cd "/Users/wujohnson/Documents/New project/shareholder-gift-tracker"
+PYTHONPATH=.vendor MOPS_FETCH_ENGINE=auto HTTP_REQUEST_DELAY_MIN_MS=3000 HTTP_REQUEST_DELAY_MAX_MS=7000 \
+  python3 tools/update_mops_seed.py --roc-year 114 --watchlist-file data/mops_seed_watchlist.txt \
+  --official-pdf-sources data/official_notice_sources.json --prefer-mops --retry-empty --skip-existing --limit 5 --sleep 10
+
+PYTHONPATH=.vendor python3 tools/build_lookup_snapshot.py --roc-year 114 --watchlist-file data/mops_seed_watchlist.txt
+```
+
+跑 113 年時把 `--roc-year 114` 改成 `--roc-year 113`。歷史通知書快取會用 `114:1101`、`113:1101` 這種 key 儲存，不會覆蓋今年 115 年的資料。
+
 推薦的本機更新流程：
 
 ```bash

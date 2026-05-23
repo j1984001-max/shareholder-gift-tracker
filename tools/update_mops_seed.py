@@ -44,14 +44,18 @@ def save_attempt_log(attempts: dict[str, dict]) -> None:
 def record_mops_attempt(
     attempts: dict[str, dict],
     code: str,
+    roc_year: int,
     status: str,
     error: str = "",
     info: dict | None = None,
     meeting_date: str | None = None,
 ) -> None:
-    previous = attempts.get(code) if isinstance(attempts.get(code), dict) else {}
-    attempts[code] = {
+    attempt_key = server.notice_cache_storage_key(code, roc_year)
+    previous = attempts.get(attempt_key) if isinstance(attempts.get(attempt_key), dict) else {}
+    attempts[attempt_key] = {
         "code": code,
+        "rocYear": roc_year,
+        "year": roc_year + 1911,
         "attemptedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "attemptCount": int(previous.get("attemptCount") or 0) + 1,
         "status": status,
@@ -165,20 +169,31 @@ def rate_limited(error: str) -> bool:
     )
 
 
-def prioritize_codes(codes: list[str], seed: dict[str, dict], official_sources: dict[str, list[dict[str, str]]], retry_empty: bool) -> list[str]:
+def prioritize_codes(
+    codes: list[str],
+    seed: dict[str, dict],
+    official_sources: dict[str, list[dict[str, str]]],
+    retry_empty: bool,
+    roc_year: int,
+) -> list[str]:
     official = [
         code
         for code in codes
-        if code in official_sources and (code not in seed or not has_pickup_details(seed.get(code)))
+        if code in official_sources
+        and not has_pickup_details(server.notice_cache_lookup(seed, code, roc_year))
     ]
-    missing = [code for code in codes if code not in seed and code not in official_sources]
+    missing = [
+        code
+        for code in codes
+        if not server.notice_cache_lookup(seed, code, roc_year) and code not in official_sources
+    ]
     retryable_empty = [
         code
         for code in codes
         if retry_empty
-        and code in seed
+        and server.notice_cache_lookup(seed, code, roc_year)
         and code not in official_sources
-        and not has_pickup_details(seed.get(code))
+        and not has_pickup_details(server.notice_cache_lookup(seed, code, roc_year))
     ]
     return unique_codes([*official, *missing, *retryable_empty])
 
@@ -279,9 +294,15 @@ def main() -> int:
     parser.add_argument("--rotate-offset", type=int, default=0, help="Rotate selected codes before limiting to avoid retrying the same front slice.")
     parser.add_argument("--shuffle", action="store_true", help="Shuffle candidate codes before limiting.")
     parser.add_argument("--prefer-mops", action="store_true", help="Try MOPS before known official PDF fallbacks.")
+    parser.add_argument(
+        "--roc-year",
+        default=str(server.CURRENT_ROC_YEAR),
+        help="ROC meeting year to update, e.g. 115, 114, 113. Western years like 2026 also work.",
+    )
     args = parser.parse_args()
 
-    sources = server.source_bundle()
+    roc_year = server.normalize_roc_year(args.roc_year)
+    sources = server.source_bundle(roc_year)
     seed = load_seed()
     attempts = load_attempt_log()
     official_sources = load_official_pdf_sources(Path(args.official_pdf_sources)) if args.official_pdf_sources else {}
@@ -310,7 +331,7 @@ def main() -> int:
     codes = unique_codes(codes)
 
     if args.skip_existing:
-        codes = prioritize_codes(codes, seed, official_sources, args.retry_empty)
+        codes = prioritize_codes(codes, seed, official_sources, args.retry_empty, roc_year)
 
     if args.shuffle:
         random.shuffle(codes)
@@ -332,14 +353,14 @@ def main() -> int:
         print(f"[{index}/{len(codes)}] {code} meeting_date={meeting_date or '-'}")
 
         if args.force:
-            seed.pop(code, None)
+            seed.pop(server.notice_cache_storage_key(code, roc_year), None)
             server.NOTICE_CACHE_MEMORY = dict(seed)
 
         attempted_mops = False
         mops_error = ""
         if args.prefer_mops:
             attempted_mops = True
-            info, error = server.safe_get_mops_notice_info(code, meeting_date)
+            info, error = server.safe_get_mops_notice_info(code, meeting_date, roc_year)
             mops_error = error
             if not info and not rate_limited(error):
                 fallback_info, fallback_error = fetch_from_official_sources(code, official_sources.get(code, []))
@@ -351,13 +372,13 @@ def main() -> int:
             info, error = fetch_from_official_sources(code, official_sources.get(code, []))
             if not info:
                 attempted_mops = True
-                info, error = server.safe_get_mops_notice_info(code, meeting_date)
+                info, error = server.safe_get_mops_notice_info(code, meeting_date, roc_year)
                 mops_error = error
         if not info:
             print(f"  skipped: {error or 'no notice info'}")
             if attempted_mops:
                 status = "rate_limited" if rate_limited(error) else "not_found"
-                record_mops_attempt(attempts, code, status, error, meeting_date=meeting_date)
+                record_mops_attempt(attempts, code, roc_year, status, error, meeting_date=meeting_date)
                 save_attempt_log(attempts)
             if rate_limited(error):
                 print("  MOPS appears rate-limited; stopping this run to avoid wasting requests.")
@@ -365,10 +386,10 @@ def main() -> int:
                 break
             continue
 
-        seed[code] = info
+        seed[server.notice_cache_storage_key(code, roc_year)] = info
         if attempted_mops:
             status = "success" if not mops_error else "fallback_success"
-            record_mops_attempt(attempts, code, status, mops_error, info, meeting_date=meeting_date)
+            record_mops_attempt(attempts, code, roc_year, status, mops_error, info, meeting_date=meeting_date)
             save_attempt_log(attempts)
         start_date = info.get("evotePickupStartDate") or "-"
         end_date = info.get("evotePickupEndDate") or "-"

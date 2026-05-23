@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800;900&family=DM+Serif+Display&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20260523-6">
+  <link rel="stylesheet" href="./styles.css?v=20260523-7">
 </head>
 <body>
   <div class="page-shell">
@@ -47,6 +47,11 @@
         <div class="button-row">
           <button id="lookupBtn" class="primary-btn" type="button">查詢最新資料</button>
           <button id="saveWatchlistBtn" class="ghost-btn" type="button">儲存 watchlist</button>
+        </div>
+
+        <div class="mode-toggle" aria-label="查詢模式">
+          <button id="currentModeBtn" class="mode-btn active" type="button">今年資料</button>
+          <button id="compareModeBtn" class="mode-btn" type="button">三年度比較</button>
         </div>
 
         <div class="button-row compact">
@@ -120,6 +125,6 @@
     </article>
   </template>
 
-  <script src="./app.js?v=20260523-6"></script>
+  <script src="./app.js?v=20260523-7"></script>
 </body>
 </html>

@@ -225,6 +225,31 @@ textarea:focus {
   margin-top: 10px;
 }
 
+.mode-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+}
+
+.mode-btn {
+  border-radius: calc(var(--radius) - 2px);
+  padding: 10px 12px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.mode-btn.active {
+  background: var(--text);
+  color: #fff;
+}
+
 .primary-btn,
 .ghost-btn,
 .chip-btn {
@@ -578,6 +603,47 @@ th {
 .source-empty {
   color: var(--muted);
   font-size: 13px;
+}
+
+.year-comparison {
+  display: grid;
+  gap: 8px;
+}
+
+.year-card {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+}
+
+.year-card.current {
+  border-color: rgba(15, 118, 110, 0.28);
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.year-card.missing {
+  border-color: rgba(199, 79, 79, 0.18);
+  background: rgba(199, 79, 79, 0.05);
+}
+
+.year-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.year-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 @media (max-width: 1200px) {

@@ -1,12 +1,16 @@
 const WATCHLIST_KEY = "shareholder-gift-tracker-watchlist-v1";
 const SNAPSHOT_KEY = "shareholder-gift-tracker-snapshot-v1";
 const AUTO_REFRESH_MS = 15 * 60 * 1000;
+const CURRENT_ROC_YEAR = new Date().getFullYear() - 1911;
+const COMPARE_YEARS = [CURRENT_ROC_YEAR, CURRENT_ROC_YEAR - 1, CURRENT_ROC_YEAR - 2];
 
 const sampleCodes = ["2317", "2409", "3037", "9938", "2006", "1416"];
 
 const codesInput = document.getElementById("codesInput");
 const lookupBtn = document.getElementById("lookupBtn");
 const saveWatchlistBtn = document.getElementById("saveWatchlistBtn");
+const currentModeBtn = document.getElementById("currentModeBtn");
+const compareModeBtn = document.getElementById("compareModeBtn");
 const loadSampleBtn = document.getElementById("loadSampleBtn");
 const clearBtn = document.getElementById("clearBtn");
 const refreshBtn = document.getElementById("refreshBtn");
@@ -24,6 +28,7 @@ const filterTabs = [...document.querySelectorAll(".filter-tab")];
 let activeCodes = [];
 let lastResponse = null;
 let activeFilter = "all";
+let viewMode = "current";
 exportBtn.disabled = true;
 
 function extractCodes(raw) {
@@ -35,6 +40,21 @@ function extractCodes(raw) {
   const bracketMatches = [...normalized.matchAll(/\((\d{3,6})\)/g)].map((match) => match[1]);
   const plainMatches = [...normalized.matchAll(/\d{3,6}/g)].map((match) => match[0]);
   return [...new Set([...bracketMatches, ...plainMatches])];
+}
+
+function compareYearsParam() {
+  return COMPARE_YEARS.join(",");
+}
+
+function setViewMode(mode) {
+  viewMode = mode === "compare" ? "compare" : "current";
+  currentModeBtn?.classList.toggle("active", viewMode === "current");
+  compareModeBtn?.classList.toggle("active", viewMode === "compare");
+  lookupBtn.textContent = viewMode === "compare" ? "查詢三年度比較" : "查詢最新資料";
+  exportBtn.textContent = viewMode === "compare" ? "下載今年 Excel" : "下載 Excel";
+  if (viewMode === "compare") {
+    statusText.textContent = "三年度比較會讀取本機已建好的歷史快照，不會在線上臨時爬 MOPS。";
+  }
 }
 
 function saveWatchlist(codes) {
@@ -237,9 +257,56 @@ function filterResults(results) {
   });
 }
 
+function latestYearRecord(row) {
+  return row.years?.[0] || {};
+}
+
+function rowHasPickupPeriod(row) {
+  return row.years?.some((item) => hasPickupPeriod(item));
+}
+
+function rowHasNotice(row) {
+  return row.years?.some((item) => hasNotice(item));
+}
+
+function filterCompareResults(rows) {
+  const keyword = (resultSearchInput?.value || "").trim().toLowerCase();
+  return rows.filter((row) => {
+    const latest = latestYearRecord(row);
+    if (activeFilter === "pickup" && !rowHasPickupPeriod(row)) return false;
+    if (activeFilter === "missingPickup" && hasPickupPeriod(latest)) return false;
+    if (activeFilter === "notice" && !rowHasNotice(row)) return false;
+    if (activeFilter === "changed") return true;
+    if (!keyword) return true;
+
+    return [
+      row.code,
+      row.companyName,
+      ...((row.years || []).flatMap((item) => [
+        item.companyName,
+        item.souvenirName,
+        item.transferAgentName,
+        item.transferAgentShort,
+        item.evotePickupLocation,
+        item.evotePickupDocuments,
+        item.noticeSummary,
+      ])),
+    ]
+      .filter(Boolean)
+      .join(" ")
+      .toLowerCase()
+      .includes(keyword);
+  });
+}
+
 function renderResultSet(results) {
   renderSummary(results);
   renderRows(filterResults(results));
+}
+
+function renderCompareResultSet(rows) {
+  renderCompareSummary(rows);
+  renderCompareRows(filterCompareResults(rows));
 }
 
 function renderSummary(results) {
@@ -262,6 +329,34 @@ function renderSummary(results) {
     ["已抓通知書", withNotice, "已從 MOPS 或官方 PDF 補到通知書"],
     ["有新變化", changed, "和上次查詢相比有欄位變動"],
     ["有投票期間", withVote, "已補到電子投票起訖或通知書條件"],
+  ];
+
+  cards.forEach(([label, value, note]) => {
+    const node = summaryCardTemplate.content.firstElementChild.cloneNode(true);
+    node.querySelector(".summary-label").textContent = label;
+    node.querySelector(".summary-value").textContent = value;
+    node.querySelector(".summary-note").textContent = note;
+    summaryStrip.appendChild(node);
+  });
+}
+
+function renderCompareSummary(rows) {
+  summaryStrip.innerHTML = "";
+  const latestRecords = rows.map((row) => latestYearRecord(row));
+  const withCurrentPickup = latestRecords.filter((item) => hasPickupPeriod(item)).length;
+  const withAnyNotice = rows.filter((row) => rowHasNotice(row)).length;
+  const withThreeYearGift = rows.filter((row) =>
+    (row.years || []).filter((item) => item.souvenirName).length >= 3,
+  ).length;
+  const missingCurrentPickup = Math.max(0, rows.length - withCurrentPickup);
+
+  const cards = [
+    ["追蹤代號", rows.length, "這次比較的股票數"],
+    ["比較年度", COMPARE_YEARS.join(" / "), "今年與前兩年度"],
+    ["今年有電投日期", withCurrentPickup, "目前年度已補到領取日期"],
+    ["今年缺電投日期", missingCurrentPickup, "仍要優先補通知書"],
+    ["三年都有紀念品", withThreeYearGift, "適合做年度變化比較"],
+    ["任一年有通知書", withAnyNotice, "MOPS 或官方 PDF 已補到"],
   ];
 
   cards.forEach(([label, value, note]) => {
@@ -378,7 +473,128 @@ function renderRows(results) {
   });
 }
 
+function yearCard(item, section = "gift") {
+  const rocYear = item.rocYear || (item.year ? Number(item.year) - 1911 : "");
+  const isCurrent = Number(rocYear) === CURRENT_ROC_YEAR;
+  const hasData = Boolean(item.souvenirName || item.meetingDate || item.noticeFilename || item.noticeSourceLabel);
+  const statusText =
+    item.status === "published"
+      ? "已公告"
+      : item.status === "partial"
+        ? "部分資料"
+        : "未補齊";
+  const className = `year-card ${isCurrent ? "current" : ""} ${hasData ? "" : "missing"}`;
+
+  if (section === "dates") {
+    return `
+      <div class="${className}">
+        <div class="year-card-head"><strong>${rocYear} 年</strong><span>${statusText}</span></div>
+        <p>最後買進：${formatDate(item.lastBuyDate)}</p>
+        <p>股東會：${formatDate(item.meetingDate)}</p>
+        <p>地點：${item.meetingCity || "未提供"}</p>
+      </div>
+    `;
+  }
+
+  if (section === "pickup") {
+    return `
+      <div class="${className}">
+        <div class="year-card-head"><strong>${rocYear} 年</strong><span>${hasNotice(item) ? "有通知書" : "無通知書"}</span></div>
+        <p>電投領取期：${formatPickupPeriod(item)}</p>
+        <p>地點：${item.evotePickupLocation || item.evotePickupPlace || "未補到地點"}</p>
+        <p>攜帶：${item.evotePickupDocuments || "未補到攜帶資料"}</p>
+        <p>摘要：${item.noticeSummary || item.evotePickupRule || "未補到摘要"}</p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="${className}">
+      <div class="year-card-head"><strong>${rocYear} 年</strong><span>${statusText}</span></div>
+      <p>紀念品：${item.souvenirName || "尚未補齊"}</p>
+      <p>股代：${item.transferAgentName || item.transferAgentShort || "未提供"}</p>
+    </div>
+  `;
+}
+
+function renderCompareRows(rows) {
+  if (!rows.length) {
+    resultsBody.innerHTML = '<tr><td colspan="5" class="empty-cell">查無比較結果</td></tr>';
+    return;
+  }
+
+  resultsBody.innerHTML = rows
+    .map((row) => {
+      const latest = latestYearRecord(row);
+      const history = row.years || [];
+      return `
+        <tr class="${hasPickupPeriod(latest) ? "" : "row-missing-pickup"}">
+          <td>
+            <div class="stock-block">
+              <strong>${row.code}</strong>
+              <span>${row.companyName || latest.companyName || "尚未比對到公司名稱"}</span>
+            </div>
+          </td>
+          <td></td>
+          <td><div class="year-comparison">${history.map((item) => yearCard(item, "gift")).join("")}</div></td>
+          <td><div class="year-comparison">${history.map((item) => yearCard(item, "dates")).join("")}</div></td>
+          <td><div class="year-comparison">${history.map((item) => yearCard(item, "pickup")).join("")}</div></td>
+        </tr>
+      `;
+    })
+    .join("");
+
+  [...resultsBody.querySelectorAll("tr")].forEach((row, index) => {
+    const cell = row.children[1];
+    const latest = latestYearRecord(rows[index]);
+    if (cell) {
+      cell.appendChild(buildStatusBadge(latest));
+    }
+  });
+}
+
+async function lookupCompare(codes) {
+  if (!codes.length) {
+    statusText.textContent = "請先輸入至少一筆可辨識的股票代號";
+    return;
+  }
+
+  activeCodes = codes;
+  lookupBtn.disabled = true;
+  refreshBtn.disabled = true;
+  exportBtn.disabled = true;
+  statusText.textContent = `正在讀取 ${COMPARE_YEARS.join(" / ")} 年比較快照...`;
+  resultsBody.innerHTML = '<tr><td colspan="5" class="empty-cell">正在整理三年度比較...</td></tr>';
+
+  try {
+    const response = await fetch(
+      `/api/compare?codes=${encodeURIComponent(codes.join(" "))}&years=${encodeURIComponent(compareYearsParam())}`,
+    );
+    const payload = await response.json();
+    if (!response.ok || !payload.ok) {
+      throw new Error(payload.error || "三年度比較讀取失敗");
+    }
+    lastResponse = { mode: "compare", requestedCodes: codes, results: payload.results || [] };
+    updatedAtText.textContent = new Date().toLocaleString("zh-TW");
+    statusText.textContent = `已完成 ${lastResponse.results.length} 檔三年度比較。`;
+    renderCompareResultSet(lastResponse.results);
+    exportBtn.disabled = false;
+  } catch (error) {
+    exportBtn.disabled = true;
+    statusText.textContent = error.message || "三年度比較讀取失敗";
+    resultsBody.innerHTML = `<tr><td colspan="5" class="empty-cell">${statusText.textContent}</td></tr>`;
+  } finally {
+    lookupBtn.disabled = false;
+    refreshBtn.disabled = false;
+  }
+}
+
 async function lookup(codes) {
+  if (viewMode === "compare") {
+    await lookupCompare(codes);
+    return;
+  }
+
   if (!codes.length) {
     statusText.textContent = "請先輸入至少一筆可辨識的股票代號";
     return;
@@ -446,12 +662,12 @@ async function lookup(codes) {
       }
 
       const preview = previewDiffs(collected);
-      lastResponse = { requestedCodes: codes, results: preview };
+      lastResponse = { mode: "current", requestedCodes: codes, results: preview };
       renderResultSet(preview);
     }
 
     const enriched = computeDiffs(collected);
-    lastResponse = { requestedCodes: codes, results: enriched };
+    lastResponse = { mode: "current", requestedCodes: codes, results: enriched };
     exportBtn.disabled = !enriched.length;
     updatedAtText.textContent = new Date().toLocaleString("zh-TW");
     statusText.textContent = `已完成 ${enriched.length} 檔查詢，資料已逐筆載入。`;
@@ -471,6 +687,21 @@ lookupBtn.addEventListener("click", () => {
   lookup(codes);
 });
 
+currentModeBtn?.addEventListener("click", () => {
+  setViewMode("current");
+  if (lastResponse?.results) {
+    lookup(activeCodes.length ? activeCodes : extractCodes(codesInput.value));
+  }
+});
+
+compareModeBtn?.addEventListener("click", () => {
+  setViewMode("compare");
+  const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
+  if (codes.length) {
+    lookup(codes);
+  }
+});
+
 codesInput.addEventListener("input", updateCodeCounter);
 
 filterTabs.forEach((button) => {
@@ -478,14 +709,22 @@ filterTabs.forEach((button) => {
     activeFilter = button.dataset.filter || "all";
     filterTabs.forEach((tab) => tab.classList.toggle("active", tab === button));
     if (lastResponse?.results) {
-      renderResultSet(lastResponse.results);
+      if (lastResponse.mode === "compare") {
+        renderCompareResultSet(lastResponse.results);
+      } else {
+        renderResultSet(lastResponse.results);
+      }
     }
   });
 });
 
 resultSearchInput?.addEventListener("input", () => {
   if (lastResponse?.results) {
-    renderResultSet(lastResponse.results);
+    if (lastResponse.mode === "compare") {
+      renderCompareResultSet(lastResponse.results);
+    } else {
+      renderResultSet(lastResponse.results);
+    }
   }
 });
 
@@ -501,7 +740,7 @@ exportBtn.addEventListener("click", async () => {
     return;
   }
   exportBtn.disabled = true;
-  statusText.textContent = "正在產生 Excel...";
+  statusText.textContent = viewMode === "compare" ? "正在產生今年資料 Excel..." : "正在產生 Excel...";
   try {
     const response = await fetch("/api/export.xlsx", {
       method: "POST",
@@ -571,6 +810,7 @@ setInterval(() => {
 }, AUTO_REFRESH_MS);
 
 function bootstrap() {
+  setViewMode("current");
   refreshNoticeProgress();
   const saved = loadWatchlist();
   if (saved) {
