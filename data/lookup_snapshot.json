@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-24T11:05:49+0000",
+  "generatedAt": "2026-05-24T14:22:31+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -37357,7 +37357,7 @@
       "noticeFilename": "2026_3373_20260623F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -38510,7 +38510,7 @@
       "noticeFilename": "2026_3455_20260624F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -39852,7 +39852,7 @@
       "noticeFilename": "2026_3523_20260623F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
