@@ -217,7 +217,7 @@ def fetch_official_pdf_notice_info(code: str, source: dict[str, str]) -> tuple[d
     url = source["url"]
     try:
         pdf_bytes = server.fetch_bytes(url)
-        text = server.extract_notice_text(pdf_bytes)
+        text, text_metadata = server.extract_notice_text_with_metadata(pdf_bytes)
         summary = server.extract_notice_summary(text)
     except Exception as error:
         return None, str(error)
@@ -255,6 +255,9 @@ def fetch_official_pdf_notice_info(code: str, source: dict[str, str]) -> tuple[d
         "cacheStatus": "miss",
         "sourceType": source.get("sourceType") or "official_pdf",
         "sourceLabel": source.get("label") or "官方通知書",
+        "textEngine": text_metadata.get("engine", ""),
+        "textScore": text_metadata.get("score"),
+        "ocrUsed": text_metadata.get("ocrUsed", False),
         **summary,
     }
     for field in ("evotePickupLocation", "evotePickupDocuments"):

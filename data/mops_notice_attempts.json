@@ -41,6 +41,20 @@
     "hasNotice": true,
     "hasPickupDate": true
   },
+  "2371": {
+    "code": "2371",
+    "rocYear": 115,
+    "year": 2026,
+    "attemptedAt": "2026-05-26T21:00:39+0800",
+    "attemptCount": 1,
+    "status": "success",
+    "error": "",
+    "meetingDate": "2026-05-26",
+    "filename": "2026_2371_20260526F01.pdf",
+    "sourceType": "mops",
+    "hasNotice": true,
+    "hasPickupDate": true
+  },
   "2601": {
     "code": "2601",
     "rocYear": 115,
@@ -51,6 +65,20 @@
     "error": "",
     "meetingDate": "2026-06-18",
     "filename": "2026_2601_20260618F01.pdf",
+    "sourceType": "mops",
+    "hasNotice": true,
+    "hasPickupDate": true
+  },
+  "3118": {
+    "code": "3118",
+    "rocYear": 115,
+    "year": 2026,
+    "attemptedAt": "2026-05-26T21:00:51+0800",
+    "attemptCount": 1,
+    "status": "success",
+    "error": "",
+    "meetingDate": "2026-05-25",
+    "filename": "2026_3118_20260525F01.pdf",
     "sourceType": "mops",
     "hasNotice": true,
     "hasPickupDate": true

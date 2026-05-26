@@ -7,6 +7,7 @@ import io
 import html
 import os
 import random
+import shutil
 import time
 import urllib.parse
 import urllib.request
@@ -18,6 +19,26 @@ from typing import Any
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font
 from pypdf import PdfReader
+
+try:
+    import fitz  # PyMuPDF
+except Exception:  # pragma: no cover - optional stronger PDF parser.
+    fitz = None
+
+try:
+    from pdfminer.high_level import extract_text as pdfminer_extract_text
+except Exception:  # pragma: no cover - optional stronger PDF parser.
+    pdfminer_extract_text = None
+
+try:
+    from PIL import Image
+except Exception:  # pragma: no cover - optional OCR dependency.
+    Image = None
+
+try:
+    import pytesseract
+except Exception:  # pragma: no cover - optional OCR dependency.
+    pytesseract = None
 
 try:
     from scrapling.fetchers import Fetcher as ScraplingFetcher
@@ -40,7 +61,7 @@ OFFICIAL_SITE_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
 LOOKUP_SNAPSHOT_PATH = ROOT / "data" / "lookup_snapshot.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
-NOTICE_CACHE_VERSION = 4
+NOTICE_CACHE_VERSION = 5
 EXCEL_ILLEGAL_CHAR_RE = re.compile(r"[\x00-\x08\x0b-\x0c\x0e-\x1f]")
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_ROC_YEAR}"
@@ -63,6 +84,10 @@ REQUEST_DELAY_MIN_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MIN_MS", "0"))
 REQUEST_DELAY_MAX_MS = int(os.environ.get("HTTP_REQUEST_DELAY_MAX_MS", "0"))
 ALLOW_LIVE_LOOKUP = os.environ.get("ALLOW_LIVE_LOOKUP", "").lower() in {"1", "true", "yes", "on"}
 MOPS_FETCH_ENGINE = os.environ.get("MOPS_FETCH_ENGINE", "auto").lower()
+PDF_OCR_MODE = os.environ.get("PDF_OCR_MODE", "auto").lower()
+PDF_OCR_LANG = os.environ.get("PDF_OCR_LANG", "chi_tra+eng")
+PDF_OCR_MAX_PAGES = int(os.environ.get("PDF_OCR_MAX_PAGES", "3"))
+PDF_OCR_MIN_SCORE = int(os.environ.get("PDF_OCR_MIN_SCORE", "80"))
 
 CACHE: dict[str, tuple[float, Any]] = {}
 NOTICE_CACHE_MEMORY: dict[str, Any] | None = None
@@ -945,9 +970,155 @@ def resolve_notice_pdf_url(code: str, filename: str) -> str:
     return urllib.parse.urljoin("https://doc.twse.com.tw", match.group(1))
 
 
-def extract_notice_text(pdf_bytes: bytes) -> str:
+def pdf_text_quality_score(text: str) -> int:
+    compact = compact_text(text or "")
+    if not compact:
+        return -999
+
+    score = min(len(compact) // 120, 35)
+    for keyword, weight in (
+        ("電子", 10),
+        ("投票", 10),
+        ("領取", 12),
+        ("換領", 10),
+        ("紀念品", 12),
+        ("身分證", 8),
+        ("議案表決情形", 18),
+        ("股務代理部", 8),
+    ):
+        if keyword in compact:
+            score += weight
+
+    start_date, _, _ = parse_pickup_roc_range_from_text(compact)
+    if start_date:
+        score += 60
+
+    # pypdf sometimes decodes embedded subset fonts into Tibetan/Cyrillic/Oriya
+    # lookalike characters. Penalize those outputs so PyMuPDF/pdfminer wins.
+    suspicious = sum(
+        1
+        for char in compact
+        if (
+            "\u0400" <= char <= "\u052f"
+            or "\u0600" <= char <= "\u06ff"
+            or "\u0b00" <= char <= "\u0b7f"
+            or "\u0f00" <= char <= "\u0fff"
+            or char in {"ɿ", "", "", "՟", "༟"}
+        )
+    )
+    if suspicious:
+        score -= min(120, suspicious * 3)
+
+    return score
+
+
+def extract_notice_text_with_pypdf(pdf_bytes: bytes) -> str:
     reader = PdfReader(io.BytesIO(pdf_bytes))
     return "\n".join((page.extract_text() or "") for page in reader.pages)
+
+
+def extract_notice_text_with_pymupdf(pdf_bytes: bytes) -> list[tuple[str, str]]:
+    if fitz is None:
+        return []
+    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+    normal_text = "\n".join((page.get_text("text") or "") for page in doc)
+
+    block_chunks: list[str] = []
+    for page in doc:
+        blocks = sorted(page.get_text("blocks"), key=lambda block: (block[1], block[0]))
+        for block in blocks:
+            if len(block) > 4 and block[4]:
+                block_chunks.append(str(block[4]))
+    block_text = "\n".join(block_chunks)
+
+    candidates = [("pymupdf", normal_text)]
+    if block_text and block_text != normal_text:
+        candidates.append(("pymupdf-blocks", block_text))
+    return candidates
+
+
+def extract_notice_text_with_pdfminer(pdf_bytes: bytes) -> str:
+    if pdfminer_extract_text is None:
+        return ""
+    return pdfminer_extract_text(io.BytesIO(pdf_bytes)) or ""
+
+
+def extract_notice_text_with_ocr(pdf_bytes: bytes) -> str:
+    if PDF_OCR_MODE in {"0", "false", "off", "disabled", "none"}:
+        return ""
+    if fitz is None or Image is None or pytesseract is None or shutil.which("tesseract") is None:
+        return ""
+
+    chunks: list[str] = []
+    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+    page_limit = min(len(doc), max(1, PDF_OCR_MAX_PAGES))
+    matrix = fitz.Matrix(2, 2)
+    for page_index in range(page_limit):
+        page = doc.load_page(page_index)
+        pixmap = page.get_pixmap(matrix=matrix, alpha=False)
+        image = Image.open(io.BytesIO(pixmap.tobytes("png")))
+        try:
+            chunks.append(pytesseract.image_to_string(image, lang=PDF_OCR_LANG))
+        except Exception:
+            # Missing OCR language packs should not break regular parsing.
+            return ""
+    return "\n".join(chunk for chunk in chunks if chunk)
+
+
+def extract_notice_text_with_metadata(pdf_bytes: bytes) -> tuple[str, dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+
+    def add_candidate(engine: str, text: str) -> None:
+        cleaned = text or ""
+        if not cleaned.strip():
+            return
+        candidates.append(
+            {
+                "engine": engine,
+                "text": cleaned,
+                "score": pdf_text_quality_score(cleaned),
+            }
+        )
+
+    try:
+        add_candidate("pypdf", extract_notice_text_with_pypdf(pdf_bytes))
+    except Exception:
+        pass
+
+    for engine, text in extract_notice_text_with_pymupdf(pdf_bytes):
+        add_candidate(engine, text)
+
+    try:
+        add_candidate("pdfminer", extract_notice_text_with_pdfminer(pdf_bytes))
+    except Exception:
+        pass
+
+    best = max(candidates, key=lambda item: item["score"], default={"engine": "", "text": "", "score": -999})
+    ocr_used = False
+    if best["score"] < PDF_OCR_MIN_SCORE:
+        ocr_text = extract_notice_text_with_ocr(pdf_bytes)
+        if ocr_text.strip():
+            ocr_used = True
+            add_candidate("ocr-tesseract", ocr_text)
+            if best["text"]:
+                add_candidate("combined-ocr", f"{best['text']}\n{ocr_text}")
+            best = max(candidates, key=lambda item: item["score"], default=best)
+
+    metadata = {
+        "engine": best.get("engine", ""),
+        "score": int(best.get("score", 0)),
+        "ocrUsed": ocr_used,
+        "candidates": [
+            {"engine": item["engine"], "score": int(item["score"])}
+            for item in sorted(candidates, key=lambda item: item["score"], reverse=True)
+        ],
+    }
+    return str(best.get("text", "")), metadata
+
+
+def extract_notice_text(pdf_bytes: bytes) -> str:
+    text, _ = extract_notice_text_with_metadata(pdf_bytes)
+    return text
 
 
 def extract_notice_evote_block(text: str) -> str:
@@ -1110,9 +1281,16 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
     def clean_location(value: str) -> str:
         cleaned = value.strip("：:，,。 ")
         cleaned = re.sub(r"^(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:\([^)]*\))?至", "", cleaned)
-        cleaned = re.sub(r"（前往.*$", "", cleaned)
-        cleaned = re.sub(r"\(前往.*$", "", cleaned)
         return cleaned.strip("：:，,。 ")
+
+    match = re.search(
+        r"(?:請於|於)\d{2,3}年\d{1,2}月\d{1,2}日(?:起)?至(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:止)?[^。；]{0,260}?[，,]至(.{2,260}?)(?:領取|換領)紀念品",
+        rule,
+    )
+    if match:
+        location = clean_location(match.group(1))
+        if location:
+            return location
 
     match = re.search(r"(?:請於|於)\d{2,3}年\d{1,2}月\d{1,2}日(?:起)?至(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:止)?[^。；]{0,220}?至([^，。；]+?)(?:領取|換領)", rule)
     if match:
@@ -1193,6 +1371,10 @@ def extract_pickup_documents(rule_text: str) -> str:
             document_candidates.append((match.start(), match.group(1)))
     if document_candidates:
         return clean_pickup_documents_text(sorted(document_candidates, key=lambda item: item[0])[0][1])
+
+    match = re.search(r"請於領取紀念品簽章處(.{2,220}?)(?:，?自\d{2,3}年|自\d{2,3}年|，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,100}(?:領取|換領)|$)", compact)
+    if match:
+        return clean_pickup_documents_text(f"於領取紀念品簽章處{match.group(1)}")
 
     match = re.search(r"攜帶(.{2,160}?)(?:至[^。；]+?領取|等擇一皆可|領取)", compact)
     if match:
@@ -1492,7 +1674,7 @@ def get_mops_notice_info(
         pdf_bytes = fetch_bytes(pdf_url)
         pdf_path.write_bytes(pdf_bytes)
 
-    text = extract_notice_text(pdf_bytes)
+    text, text_metadata = extract_notice_text_with_metadata(pdf_bytes)
     summary = extract_notice_summary(text)
     entry = {
         "code": code,
@@ -1505,6 +1687,9 @@ def get_mops_notice_info(
         "pdfUrl": pdf_url,
         "fetchedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
         "cacheStatus": "miss",
+        "textEngine": text_metadata.get("engine", ""),
+        "textScore": text_metadata.get("score"),
+        "ocrUsed": text_metadata.get("ocrUsed", False),
         **summary,
     }
     cache[notice_cache_storage_key(code, normalized_year)] = entry
