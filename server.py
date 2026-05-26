@@ -40,7 +40,7 @@ OFFICIAL_SITE_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
 LOOKUP_SNAPSHOT_PATH = ROOT / "data" / "lookup_snapshot.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
-NOTICE_CACHE_VERSION = 3
+NOTICE_CACHE_VERSION = 4
 EXCEL_ILLEGAL_CHAR_RE = re.compile(r"[\x00-\x08\x0b-\x0c\x0e-\x1f]")
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_ROC_YEAR}"
@@ -158,7 +158,6 @@ def strip_notice_noise(text: str) -> str:
         r"徵求人",
         r"受託代理人",
         r"第\s*[一二三四五六七八九十0-9]+\s*聯",
-        r"出席簽到卡",
         r"委託書填表須知",
         r"※股東、徵求人、受託代理人",
         r"﹏+",
@@ -554,7 +553,29 @@ def parse_pickup_roc_range_from_text(value: str) -> tuple[str | None, str | None
                 continue
             candidates.append((priority, match))
     if candidates:
-        priority, match = sorted(candidates, key=lambda item: (item[0], item[1].start()))[0]
+        def candidate_score(item: tuple[int, re.Match[str]]) -> tuple[int, int, int]:
+            priority, match = item
+            before = normalized[max(0, match.start() - 140) : match.start()]
+            after = normalized[match.end() : match.end() + 260]
+            context = before + match.group(1) + after
+            score = 100 - priority * 10
+            if re.search(r"(領取|換領|領獎|發放|洽領)", after):
+                score += 35
+            if re.search(r"(紀念品|股務代理部|股代|地址|地點)", after):
+                score += 18
+            if re.search(r"(身分證|戶口名簿|出席通知書|議案表決情形|上述.*文件|請持|攜帶|憑)", before):
+                score += 22
+            if re.search(r"(此期間非|逾時不發放|逾期不補發|電子方式行使表決權之股東)", context):
+                score += 18
+            if re.search(r"(委託書徵求期間|徵求期間|徵求人|證基會|free\.sfi)", context):
+                score -= 35
+            if re.search(r"(行使期間為|股東e服務|電子投票平台)", context) and not re.search(r"(領取|換領|紀念品)", context):
+                score -= 45
+            if re.search(r"(股東會當日|開會當天會議結束前|會場領取)", context) and not re.search(r"(電子方式|電子投票|投票成功)", context):
+                score -= 15
+            return (-score, priority, match.start())
+
+        priority, match = sorted(candidates, key=candidate_score)[0]
         start_date = parse_flexible_roc_date(match.group(2))
         end_date = parse_flexible_roc_date(match.group(4), fallback_year=int(match.group(3)))
         return start_date, end_date, match.group(1)
@@ -931,39 +952,85 @@ def extract_notice_text(pdf_bytes: bytes) -> str:
 
 def extract_notice_evote_block(text: str) -> str:
     markers = [
+        "電子方式行使表決權且投票成功者",
+        "以電子方式行使表決權且投票成功",
+        "採用電子投票行使表決權且投票成功",
+        "有採用電子投票行使表決權且投票成功",
+        "電子投票股東領取紀念品",
+        "採電子方式行使表決權之股東",
         "採電子投票之股東",
         "電子投票之股東",
         "電子投票領取紀念品方式",
-        "電子方式行使表決權且投票成功者",
         "電子投票成功且未以其他方式",
-        "採電子方式行使表決權之股東",
         "以電子方式行使表決權者",
+        "電子投票",
     ]
-    start = -1
+    compact = compact_text(text)
+    candidates: list[str] = []
     for marker in markers:
-        start = text.find(marker)
-        if start != -1:
-            break
-    if start == -1:
+        for match in re.finditer(re.escape(marker), compact):
+            start = max(0, match.start() - 180)
+            window = compact[start : match.start() + 2200]
+
+            # If the marker sits inside a numbered pickup item, start closer to
+            # that item so proxy/voting-period dates earlier in the notice do
+            # not beat the actual electronic-vote pickup period.
+            prefix = compact[start : match.start()]
+            item_match = list(re.finditer(r"(?:[。；]|^)\d+[\.、]", prefix))
+            if item_match:
+                item_start = start + item_match[-1].start()
+                window = compact[item_start : match.start() + 2200]
+
+            stop_candidates = []
+            for pattern in (
+                r"開會通知書",
+                r"委託書使用須知",
+                r"股東戶號",
+                r"徵求場所.*?表",
+                r"長龍會議顧問股份有限公司",
+                r"全通事務處理股份有限公司",
+            ):
+                stop = re.search(pattern, window[220:])
+                if stop:
+                    stop_candidates.append(stop.start() + 220)
+            if stop_candidates:
+                window = window[: min(stop_candidates)]
+            candidates.append(window)
+
+    if not candidates:
         return ""
 
-    snippet = text[start : start + 1500]
-    stop_patterns = [
-        r"註：",
-        r"股東常會日期",
-        r"委託書填表須知",
-        r"背面\d+\.indd",
-        r"背面",
-        r"\n\s*\d+\.",
-        r"\n[一二三四五六七八九十]+、",
-        r"\n[一二三四五六七八九十]+[\.\s]",
-    ]
-    end = len(snippet)
-    for pattern in stop_patterns:
-        match = re.search(pattern, snippet[1:])
-        if match:
-            end = min(end, match.start() + 1)
-    return normalize_text(snippet[:end])
+    def score_candidate(candidate: str) -> tuple[int, int]:
+        start_date, _, _ = parse_pickup_roc_range_from_text(candidate)
+        score = 0
+        if start_date:
+            score += 40
+        if re.search(r"(領取|換領|領獎|發放|洽領)", candidate):
+            score += 20
+        if "紀念品" in candidate:
+            score += 12
+        if "投票成功" in candidate:
+            score += 20
+        if "議案表決情形" in candidate:
+            score += 18
+        if re.search(r"(身分證|戶口名簿|出席通知書)", candidate):
+            score += 8
+        if "此期間非" in candidate:
+            score += 20
+        if re.search(r"(股務代理部|股代|地址|地點)", candidate):
+            score += 8
+        if re.search(r"(徵求人|委託書之委託人|受託代理人)", candidate) and not re.search(
+            r"(投票成功|議案表決情形|此期間非)", candidate
+        ):
+            score -= 35
+        if re.search(r"(不得領取|不予發放紀念品)", candidate) and not re.search(r"(如欲領取|領取方式|換領)", candidate):
+            score -= 24
+        if "行使期間為" in candidate and not re.search(r"(如欲領取|領取紀念品|換領紀念品)", candidate):
+            score -= 20
+        return (-score, len(candidate))
+
+    best = sorted(candidates, key=score_candidate)[0]
+    return normalize_text(best)
 
 
 def extract_notice_summary(text: str) -> dict[str, Any]:
@@ -1042,6 +1109,7 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
 
     def clean_location(value: str) -> str:
         cleaned = value.strip("：:，,。 ")
+        cleaned = re.sub(r"^(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:\([^)]*\))?至", "", cleaned)
         cleaned = re.sub(r"（前往.*$", "", cleaned)
         cleaned = re.sub(r"\(前往.*$", "", cleaned)
         return cleaned.strip("：:，,。 ")
@@ -1106,17 +1174,25 @@ def extract_pickup_documents(rule_text: str) -> str:
     if match:
         return clean_pickup_documents_text(match.group(1))
 
-    match = re.search(r"(?:攜帶文件|攜帶資料|攜帶下列文件)：?([^。；]+?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
+    match = re.search(r"(?:請)?攜帶下列文件(?:辦理)?[：:]?(.{2,500}?)(?:，?並?(?:自|於)\d{2,3}年|(?:自|於)\d{2,3}年|至[^。；]{0,120}(?:領取|換領)|$)", rule)
     if match:
         return clean_pickup_documents_text(match.group(1))
 
-    match = re.search(r"請持有效的(.{2,220}?)(?:，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,100}(?:領取|換領)|$)", compact)
+    match = re.search(r"(?:攜帶文件|攜帶資料)[：:]?(.{2,220}?)(?:。|；|C\.|領取期間|發放期間|$)", rule)
     if match:
         return clean_pickup_documents_text(match.group(1))
 
-    match = re.search(r"(?:憑|限持)(.{2,160}?)(?:至[^。；]+?(?:領取|換領)|，?於\d{2,3}年|$)", compact)
-    if match:
-        return clean_pickup_documents_text(match.group(1))
+    document_candidates: list[tuple[int, str]] = []
+    for pattern in (
+        r"請持有效的(.{2,220}?)(?:，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,100}(?:領取|換領)|$)",
+        r"請持(.{2,220}?)(?:，?自\d{2,3}年|自\d{2,3}年|，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,100}(?:領取|換領)|$)",
+        r"(?:憑|限持)(.{2,160}?)(?:至[^。；]+?(?:領取|換領)|，?於\d{2,3}年|$)",
+    ):
+        match = re.search(pattern, compact)
+        if match:
+            document_candidates.append((match.start(), match.group(1)))
+    if document_candidates:
+        return clean_pickup_documents_text(sorted(document_candidates, key=lambda item: item[0])[0][1])
 
     match = re.search(r"攜帶(.{2,160}?)(?:至[^。；]+?領取|等擇一皆可|領取)", compact)
     if match:
