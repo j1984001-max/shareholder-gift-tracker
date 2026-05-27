@@ -61,7 +61,7 @@ OFFICIAL_SITE_SCAN_CACHE_PATH = ROOT / "data" / "official_site_scan_cache.json"
 LOOKUP_SNAPSHOT_PATH = ROOT / "data" / "lookup_snapshot.json"
 REQUESTED_CODES_PATH = CACHE_DIR / "requested_codes.json"
 NOTICE_PDF_DIR = CACHE_DIR / "mops-notices"
-NOTICE_CACHE_VERSION = 5
+NOTICE_CACHE_VERSION = 7
 EXCEL_ILLEGAL_CHAR_RE = re.compile(r"[\x00-\x08\x0b-\x0c\x0e-\x1f]")
 
 WESPAI_URL = f"https://stock.wespai.com/stock{CURRENT_ROC_YEAR}"
@@ -175,6 +175,12 @@ def strip_notice_noise(text: str) -> str:
 
     stop_patterns = [
         r"window\.focus\(\)",
+        r"背面\s*\d*\.indd",
+        r"簽名或蓋章領取日期",
+        r"領取日期年月日",
+        r"股務代理人股務代理部收",
+        r"寄件人[:：]",
+        r"國內郵資",
         r"股東戶號[:：]",
         r"股東或代\s*理人姓名",
         r"持有股數[:：]",
@@ -226,6 +232,49 @@ def trim_notice_summary(text: str) -> str:
     cleaned = re.sub(r"[（(]持股1,000股以上[）)][:：]?", "", cleaned)
     cleaned = re.sub(r"\s+", " ", cleaned)
     return cleaned.strip("：:，,。 ;；")
+
+
+EVOTE_SIGNAL_PATTERN = (
+    r"(?:電子(?:投票|方式行使表決權)|以電子方式行使表決權|"
+    r"採電子(?:投票|方式行使表決權)|完成電子投票|投票成功|電子投票方式出席)"
+)
+GIFT_PICKUP_PATTERN = (
+    r"(?:紀念品|贈品|議案表決情形|領取期間|領取地點|領取時間|"
+    r"領取方式|領取.{0,24}(?:紀念品|贈品)|換領(?:紀念品|贈品)?|洽領(?:紀念品|贈品)?)"
+)
+PICKUP_EVIDENCE_RE = re.compile(
+    rf"(?:{EVOTE_SIGNAL_PATTERN}.{{0,180}}{GIFT_PICKUP_PATTERN}|"
+    r"此期間非以電子.{0,120}(?:恕不|不發放).{0,30}(?:紀念品|贈品))"
+)
+CORE_PICKUP_EVIDENCE_RE = PICKUP_EVIDENCE_RE
+VOTE_PERIOD_ONLY_RE = re.compile(r"(行使期間|電子投票期間|股東e服務|電子投票平台)")
+
+
+def has_evote_pickup_evidence(text: str) -> bool:
+    return bool(PICKUP_EVIDENCE_RE.search(compact_text(text or "")))
+
+
+def has_core_pickup_evidence(text: str) -> bool:
+    return bool(CORE_PICKUP_EVIDENCE_RE.search(compact_text(text or "")))
+
+
+def has_meaningful_pickup_rule(text: str) -> bool:
+    compact = compact_text(text or "")
+    if not compact:
+        return False
+    if re.search(r"(無發放紀念品|不發放紀念品|無發放股東會紀念品)", compact) and not re.search(
+        r"(領取|換領|發放期間|領取期間|攜帶|請持|議案表決情形|完成電子投票|投票成功)",
+        compact,
+    ):
+        return False
+    return has_evote_pickup_evidence(compact)
+
+
+def looks_like_vote_period_only(text: str) -> bool:
+    compact = compact_text(text or "")
+    if not compact:
+        return False
+    return bool(VOTE_PERIOD_ONLY_RE.search(compact)) and not has_evote_pickup_evidence(compact)
 
 
 def json_response(handler: SimpleHTTPRequestHandler, payload: dict[str, Any], status: int = 200) -> None:
@@ -573,6 +622,9 @@ def parse_pickup_roc_range_from_text(value: str) -> tuple[str | None, str | None
     ]
     for priority, pattern in patterns:
         for match in re.finditer(pattern, normalized):
+            preceding = normalized[max(0, match.start() - 40) : match.start()]
+            if re.search(r"(行使期間為?|電子投票期間[:：為]?)", preceding):
+                continue
             following = normalized[match.end() : match.end() + 140]
             if priority == 2 and not re.search(r"(領取|換領|發放|股務|紀念品)", following):
                 continue
@@ -601,6 +653,9 @@ def parse_pickup_roc_range_from_text(value: str) -> tuple[str | None, str | None
             return (-score, priority, match.start())
 
         priority, match = sorted(candidates, key=candidate_score)[0]
+        context = normalized[max(0, match.start() - 120) : match.end() + 260]
+        if looks_like_vote_period_only(context) or not has_evote_pickup_evidence(context):
+            return None, None, ""
         start_date = parse_flexible_roc_date(match.group(2))
         end_date = parse_flexible_roc_date(match.group(4), fallback_year=int(match.group(3)))
         return start_date, end_date, match.group(1)
@@ -1242,6 +1297,8 @@ def extract_notice_summary(text: str) -> dict[str, Any]:
     )
     pretty_summary = trim_notice_summary(pretty_summary)
     pretty_evote = strip_notice_noise(pretty_evote)
+    if looks_like_vote_period_only(pretty_evote) or (pretty_evote and not has_meaningful_pickup_rule(pretty_evote)):
+        pretty_evote = ""
 
     # Summary should focus on gift/distribution notes; if OCR or regex picked
     # the electronic-vote block or proxy boilerplate, drop it from summary.
@@ -1360,6 +1417,15 @@ def extract_pickup_documents(rule_text: str) -> str:
     if match:
         return clean_pickup_documents_text(match.group(1))
 
+    match = re.search(
+        r"((?:憑|印出|攜帶)[^。；]{0,160}議案表決情形[^。；]{0,180}"
+        r"(?:身分證|戶口名簿|健保卡|駕照|證明文件)[^。；]{0,100}?)"
+        r"(?:，?領取期間|，?於\d{2,3}年|，?至[^。；]{0,120}(?:領取|換領)|。|；|$)",
+        compact,
+    )
+    if match:
+        return clean_pickup_documents_text(match.group(1))
+
     document_candidates: list[tuple[int, str]] = []
     for pattern in (
         r"請持有效的(.{2,220}?)(?:，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,100}(?:領取|換領)|$)",
@@ -1409,17 +1475,9 @@ def normalize_evote_rule(
     documents: str,
 ) -> str:
     cleaned = strip_notice_noise(rule_text)
-    has_evote_signal = any(
-        marker in cleaned
-        for marker in (
-            "電子投票",
-            "電子方式行使表決權",
-            "採電子投票",
-            "投票成功",
-        )
-    )
     generic_locations = {"會場", "自辦", "公司", "本公司"}
-    if not has_evote_signal and not period_text and not documents:
+    has_explicit_pickup = has_evote_pickup_evidence(cleaned)
+    if not has_explicit_pickup:
         return ""
     if not period_text and not documents and location in generic_locations:
         return ""
@@ -1499,8 +1557,6 @@ def normalize_evote_rule(
     if notices:
         base_parts.append(f"補充：{'；'.join(notices)}")
 
-    if base_parts and not has_evote_signal:
-        return "；".join(base_parts)
     if base_parts:
         return "；".join(base_parts)
     return ""
@@ -1514,6 +1570,8 @@ def compose_notice_summary(
     fallback_summary: str,
 ) -> str:
     normalized_rule = normalize_evote_rule(rule_text, period_text, location, documents)
+    if not normalized_rule:
+        return ""
     if not period_text and not documents:
         return ""
 
@@ -1594,6 +1652,12 @@ def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
         evote_pickup_location,
         evote_pickup_documents,
     )
+    if not evote_pickup_rule:
+        evote_pickup_location = ""
+        evote_pickup_documents = ""
+        period_text = ""
+        record["evotePickupStartDate"] = None
+        record["evotePickupEndDate"] = None
 
     gift_summary = trim_notice_summary(record.get("noticeGiftSummary", ""))
     notice_summary = compose_notice_summary(
@@ -2147,22 +2211,41 @@ def build_record(
         if (honsec or {}).get("evote_pickup_rule")
         else ("開會通知書" if mops_has_pickup_info else "")
     )
-    evote_pickup_rule = (honsec or {}).get("evote_pickup_rule") or (mops_notice or {}).get("evotePickupRule", "")
+    raw_evote_pickup_rule = (honsec or {}).get("evote_pickup_rule") or (mops_notice or {}).get("evotePickupRule", "")
     evote_pickup_location = extract_pickup_location(
         evote_pickup_source,
         (honsec or {}).get("evote_pickup_place", ""),
-        evote_pickup_rule,
+        raw_evote_pickup_rule,
         transfer_agent_name,
     )
     evote_pickup_location = (mops_notice or {}).get("evotePickupLocation") or evote_pickup_location
     evote_pickup_documents = (mops_notice or {}).get("evotePickupDocuments") or extract_pickup_documents(
-        evote_pickup_rule
+        raw_evote_pickup_rule
     )
-    notice_summary = compose_notice_summary(
-        (mops_notice or {}).get("evotePickupPeriodText", ""),
+    evote_pickup_period_text = (mops_notice or {}).get("evotePickupPeriodText", "")
+    if not evote_pickup_period_text:
+        if pickup_start and pickup_end:
+            evote_pickup_period_text = f"{pickup_start} 至 {pickup_end}"
+        else:
+            evote_pickup_period_text = pickup_start or pickup_end or ""
+    evote_pickup_rule = normalize_evote_rule(
+        raw_evote_pickup_rule,
+        evote_pickup_period_text,
         evote_pickup_location,
         evote_pickup_documents,
-        evote_pickup_rule,
+    )
+    if not evote_pickup_rule:
+        pickup_start = None
+        pickup_end = None
+        evote_pickup_location = ""
+        evote_pickup_documents = ""
+        evote_pickup_period_text = ""
+        evote_pickup_source = ""
+    notice_summary = compose_notice_summary(
+        evote_pickup_period_text,
+        evote_pickup_location,
+        evote_pickup_documents,
+        raw_evote_pickup_rule,
         (mops_notice or {}).get("giftSummary", ""),
     )
 
@@ -2200,7 +2283,7 @@ def build_record(
         "noticeGiftSummary": (mops_notice or {}).get("giftSummary", ""),
         "noticeFilename": (mops_notice or {}).get("filename", ""),
         "noticeUploadedAt": (mops_notice or {}).get("uploadedAt", ""),
-        "noticeEvotePickupPeriodText": (mops_notice or {}).get("evotePickupPeriodText", ""),
+        "noticeEvotePickupPeriodText": evote_pickup_period_text,
         "noticeCacheStatus": (mops_notice or {}).get("cacheStatus", ""),
         "noticeSourceLabel": (mops_notice or {}).get("sourceLabel", "公開資訊觀測站通知書" if mops_notice else ""),
         "noticeSourceType": (mops_notice or {}).get("sourceType", "mops" if mops_notice else ""),
