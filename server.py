@@ -1461,11 +1461,37 @@ def is_useful_pickup_notice(notice: str) -> bool:
         return False
     if "紀念品兌換券" in cleaned or "至領取" in cleaned:
         return False
+    if cleaned in {"恕不發放", "恕不發放紀念品"}:
+        return False
     # Regexes that start at "限" can accidentally slice company names ending in
     # 有限公司, producing junk such as "限公司(...)".
     if cleaned.startswith("限公司"):
         return False
     return True
+
+
+def collect_pickup_notices(text: str, max_chars: int = 80) -> list[str]:
+    """Extract short, contextual reminders tied to e-vote gift pickup."""
+    cleaned = normalize_text(text)
+    if not cleaned:
+        return []
+
+    notices: list[str] = []
+    seen = set()
+    patterns = (
+        rf"限[^。；]{{0,{max_chars}}}",
+        rf"僅限[^。；]{{0,{max_chars}}}",
+        rf"本人[^。；]{{0,{max_chars}}}",
+        rf"(?:逾期|會場|現場|當日|股東會當日|開會當日|未依|未於|其他方式)[^。；]{{0,{max_chars}}}恕不[^。；]{{0,{max_chars}}}",
+        rf"恕不(?:郵寄|補發)[^。；]{{0,{max_chars}}}",
+    )
+    for pattern in patterns:
+        for match in re.findall(pattern, cleaned):
+            notice = match.strip("：:，,。 ;；")
+            if is_useful_pickup_notice(notice) and notice not in seen:
+                notices.append(notice)
+                seen.add(notice)
+    return notices
 
 
 def normalize_evote_rule(
@@ -1542,17 +1568,10 @@ def normalize_evote_rule(
                 or (location and location in part)
                 or (documents and documents in part)
             ):
-                for pattern in (
-                    r"限[^。；]{0,80}",
-                    r"僅限[^。；]{0,80}",
-                    r"本人[^。；]{0,80}",
-                    r"恕不[^。；]{0,80}",
-                ):
-                    for match in re.findall(pattern, part):
-                        notice = match.strip("：:，,。 ;；")
-                        if is_useful_pickup_notice(notice) and notice not in seen:
-                            notices.append(notice)
-                            seen.add(notice)
+                for notice in collect_pickup_notices(part, 80):
+                    if notice not in seen:
+                        notices.append(notice)
+                        seen.add(notice)
 
     if notices:
         base_parts.append(f"補充：{'；'.join(notices)}")
@@ -1592,14 +1611,7 @@ def compose_notice_summary(
             cleaned_rule = cleaned_rule.replace(location, "").strip("：:，,。 ;；")
         if documents:
             cleaned_rule = cleaned_rule.replace(documents, "").strip("：:，,。 ;；")
-        notices: list[str] = []
-        for pattern in (
-            r"限[^。；]{0,60}",
-            r"僅限[^。；]{0,60}",
-            r"本人[^。；]{0,60}",
-            r"恕不[^。；]{0,60}",
-        ):
-            notices.extend(match.strip("：:，,。 ;；") for match in re.findall(pattern, cleaned_rule))
+        notices = collect_pickup_notices(cleaned_rule, 60)
         if notices:
             deduped = []
             seen = set()
