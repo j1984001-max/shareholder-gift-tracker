@@ -1658,12 +1658,20 @@ def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
             period_text = f"{start} 至 {end}"
         else:
             period_text = start or end or ""
+    has_structured_snapshot_rule = bool(
+        raw_evote_pickup_rule
+        and period_text
+        and (record.get("evotePickupStartDate") or record.get("evotePickupEndDate"))
+        and re.search(r"(領取時間|領取地點|攜帶文件)[：:]", raw_evote_pickup_rule)
+    )
     evote_pickup_rule = normalize_evote_rule(
         raw_evote_pickup_rule,
         period_text,
         evote_pickup_location,
         evote_pickup_documents,
     )
+    if not evote_pickup_rule and has_structured_snapshot_rule:
+        evote_pickup_rule = raw_evote_pickup_rule
     if not evote_pickup_rule:
         evote_pickup_location = ""
         evote_pickup_documents = ""
@@ -1679,6 +1687,8 @@ def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
         evote_pickup_rule,
         gift_summary,
     )
+    if not notice_summary and has_structured_snapshot_rule:
+        notice_summary = trim_notice_summary(record.get("noticeSummary", "") or evote_pickup_rule)
 
     record["evotePickupRule"] = evote_pickup_rule
     record["evotePickupLocation"] = evote_pickup_location
