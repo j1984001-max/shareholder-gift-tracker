@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-30T19:56:24+0000",
+  "generatedAt": "2026-05-30T23:12:40+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -260,17 +260,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1108_20260629F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1108_20260629F01_20260531_061814.pdf"
+        }
+      ]
     },
     "1109": {
       "code": "1109",
@@ -2323,17 +2328,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1315_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1315_20260626F01_20260531_061848.pdf"
+        }
+      ]
     },
     "1316": {
       "code": "1316",
@@ -2617,26 +2627,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-01",
+      "evotePickupEndDate": "2026-07-03",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "領取時間：自115年7月1日起至7月3日止；領取地點：中國信託商業銀行代理部(台北市中正區懷寧街70號)；攜帶文件：股東會出席通知書或身分證明文件；補充：限已於115年5月27日至6月23日完成電子投票之股東；恕不郵寄及補發",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeSummary": "領取時間：自115年7月1日起至7月3日止；領取地點：中國信託商業銀行代理部(台北市中正區懷寧街70號)；攜帶文件：股東會出席通知書或身分證明文件；補充：限已於115年5月27日至6月23日完成電子投票之股東；恕不郵寄及補發",
+      "noticeGiftSummary": "一、股東會紀念品-口罩壹盒(紀念品數量如有不足時，得以價值相當者替代)。二、",
+      "noticeFilename": "2026_1325_20260626F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年7月1日起至7月3日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -2646,6 +2656,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1325&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1325_20260626F01_20260531_061919.pdf"
         }
       ]
     },
@@ -2730,13 +2744,13 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1336_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "",
@@ -2748,6 +2762,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1336&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1336_20260626F01_20260531_061941.pdf"
         }
       ]
     },
@@ -3688,17 +3706,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1434_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1434_20260626F01_20260531_062005.pdf"
+        }
+      ]
     },
     "1435": {
       "code": "1435",
@@ -5434,17 +5457,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1475_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1475_20260626F01_20260531_062039.pdf"
+        }
+      ]
     },
     "1476": {
       "code": "1476",
@@ -6889,17 +6917,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1538_20260629F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1538_20260629F01_20260531_062102.pdf"
+        }
+      ]
     },
     "1539": {
       "code": "1539",
@@ -7356,14 +7389,14 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "詳",
+      "noticeFilename": "2026_1569_20260629F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "",
@@ -7375,6 +7408,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1569&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1569_20260629F01_20260531_062122.pdf"
         }
       ]
     },
@@ -7789,17 +7826,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1589_20260630F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1589_20260630F01_20260531_062145.pdf"
+        }
+      ]
     },
     "1590": {
       "code": "1590",
@@ -9399,17 +9441,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1717_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1717_20260626F01_20260531_062357.pdf"
+        }
+      ]
     },
     "1718": {
       "code": "1718",
@@ -10862,13 +10909,13 @@
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_1786_20260629F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "",
@@ -10884,6 +10931,10 @@
         {
           "label": "宏遠股代",
           "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_1786_20260629F01_20260531_062418.pdf"
         }
       ]
     },
@@ -14843,17 +14894,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2227_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2227_20260626F01_20260531_062808.pdf"
+        }
+      ]
     },
     "2228": {
       "code": "2228",
@@ -15800,17 +15856,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2308_20260528F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2308_20260528F01_20260531_062931.pdf"
+        }
+      ]
     },
     "2312": {
       "code": "2312",
@@ -18754,17 +18815,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2393_20260609F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2393_20260609F01_20260531_063315.pdf"
+        }
+      ]
     },
     "2395": {
       "code": "2395",
@@ -18847,17 +18913,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2397_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2397_20260527F01_20260531_063349.pdf"
+        }
+      ]
     },
     "2399": {
       "code": "2399",
@@ -18880,26 +18951,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-01",
+      "evotePickupEndDate": "2026-07-03",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "福邦證券股務代理部",
+      "evotePickupDocuments": "「身分證正本」或「健保卡正本」並於領取紀念品簽章處簽名或蓋章，或持「身分證正本」或「健保卡正本」並列印出「股東會電子投票平台-股東ｅ服務」網頁之「議案表決情形」頁面全頁",
+      "evotePickupRule": "領取時間：自115年7月1日起至115年7月3日止；領取地點：福邦證券股務代理部；攜帶文件：「身分證正本」或「健保卡正本」並於領取紀念品簽章處簽名或蓋章，或持「身分證正本」或「健保卡正本」並列印出「股東會電子投票平台-股東ｅ服務」網頁之「議案表決情形」頁面全頁",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeSummary": "領取時間：自115年7月1日起至115年7月3日止；領取地點：福邦證券股務代理部；攜帶文件：「身分證正本」或「健保卡正本」並於領取紀念品簽章處簽名或蓋章，或持「身分證正本」或「健保卡正本」並列印出「股東會電子投票平台-股東ｅ服務」網頁之「議案表決情形」頁面全頁",
+      "noticeGiftSummary": "」※※※※※※※※※※徵求場所及人員簽章處：映泰股份有限公司一一五年股東常會出席簽到卡時間：115年6月17日(星期三)上午九時整地點：豪鼎飯店-北新館(新北市新店區北新路三段205號1樓)",
+      "noticeFilename": "2026_2399_20260617F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年7月1日起至115年7月3日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -18909,6 +18980,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2399&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2399_20260617F01_20260531_063415.pdf"
         }
       ]
     },
@@ -19670,26 +19745,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-12",
+      "evotePickupEndDate": "2026-06-16",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "福邦證券股務代理部",
+      "evotePickupDocuments": "『身分證正本』並列印出「電子投票」平台之「議案表決情形」頁面全頁",
+      "evotePickupRule": "領取時間：自115年6月12日起至115年6月16日止；領取地點：福邦證券股務代理部；攜帶文件：『身分證正本』並列印出「電子投票」平台之「議案表決情形」頁面全頁",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeSummary": "領取時間：自115年6月12日起至115年6月16日止；領取地點：福邦證券股務代理部；攜帶文件：『身分證正本』並列印出「電子投票」平台之「議案表決情形」頁面全頁",
+      "noticeGiftSummary": "」※※※※※※※※※※",
+      "noticeFilename": "2026_2421_20260525F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年6月12日起至115年6月16日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -19699,6 +19774,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2421&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2421_20260525F01_20260531_063515.pdf"
         }
       ]
     },
@@ -20033,26 +20112,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-06-23",
+      "evotePickupEndDate": "2026-06-25",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "兆豐證券股份有限公司BATONeeaitMRAAEAA4s3kERI=FOBMRLE)»eee(三)股東會當天會場領取紀念品,紀念品發放至會議結束為止,會後|,RANE",
+      "evotePickupDocuments": "三地址:台北市忠孝東路二段095號1樓,電話:(02)3393-0898BERLE[PR(一)以電子方式行使表決權之股東:印出「股東會電子投票平台一股寫統一編號。一東e票通」網頁之「議案表決情形」頁面全頁、身分證明文件或|四、其他議案事項性質依本規定列其他足資證明股東身分之文件(如健保卡或駕照)等擇一皆可,開領取期間如下:五、委託書送達公司後,股東銳親1.電子投票領取紀念品期間:115年6月23日至115年6月25日上自出席股東會或欲以書面或電午0:00至下午4:30止,此期間非以電子方式行使表決權之股東子方式行使表決權者、應於股,起不發放紀念品。東會開會二日前,以書面向公2.電子投票行使胡決權領取紀念品地點:兆豐證券股份有限公司BATONeeaitMRAAEAA4s3kERI=FOBMRLE)»eee(三)股東會當天會場領取紀念品,紀念品發放至會議結束為止,會後|,RANE",
+      "evotePickupRule": "領取時間：領取紀念品期間:115年6月23日至115年6月25日；領取地點：兆豐證券股份有限公司BATONeeaitMRAAEAA4s3kERI=FOBMRLE)»eee(三)股東會當天會場領取紀念品,紀念品發放至會議結束為止,會後|,RANE；攜帶文件：三地址:台北市忠孝東路二段095號1樓,電話:(02)3393-0898BERLE[PR(一)以電子方式行使表決權之股東:印出「股東會電子投票平台一股寫統一編號。一東e票通」網頁之「議案表決情形」頁面全頁、身分證明文件或|四、其他議案事項性質依本規定列其他足資證明股東身分之文件(如健保卡或駕照)等擇一皆可,開領取期間如下:五、委託書送達公司後,股東銳親1.電子投票領取紀念品期間:115年6月23日至115年6月25日上自出席股東會或欲以書面或電午0:00至下午4:30止,此期間非以電子方式行使表決權之股東子方式行使表決權者、應於股,起不發放紀念品。東會開會二日前,以書面向公2.電子投票行使胡決權領取紀念品地點:兆豐證券股份有限公司BATONeeaitMRAAEAA4s3kERI=FOBMRLE)»eee(三)股東會當天會場領取紀念品,紀念品發放至會議結束為止,會後|,RANE",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeSummary": "領取時間：領取紀念品期間:115年6月23日至115年6月25日；領取地點：兆豐證券股份有限公司BATONeeaitMRAAEAA4s3kERI=FOBMRLE)»eee(三)股東會當天會場領取紀念品,紀念品發放至會議結束為止,會後|,RANE；攜帶文件：三地址:台北市忠孝東路二段095號1樓,電話:(02)3393-0898BERLE[PR(一)以電子方式行使表決權之股東:印出「股東會電子投票平台一股寫統一編號。一東e票通」網頁之「議案表決情形」頁面全頁、身分證明文件或|四、其他議案事項性質依本規定列其他足資證明股東身分之文件(如健保卡或駕照)等擇一皆可,開領取期間如下:五、委託書送達公司後,股東銳親1.電子投票領取紀念品期間:115年6月23日至115年6月25日上自出席股東會或欲以書面或電午0:00至下午4:30止,此期間非以電子方式行使表決權之股東子方式行使表決權者、應於股,起不發放紀念品。東會開會二日前,以書面向公2.電子投票行使胡決權領取紀念品地點:兆豐證券股份有限公司BATONeeaitMRAAEAA4s3kERI=FOBMRLE)»eee(三)股東會當天會場領取紀念品,紀念品發放至會議結束為止,會後|,RANE",
+      "noticeGiftSummary": "※",
+      "noticeFilename": "2026_2429_20260616F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "領取紀念品期間:115年6月23日至115年6月25日",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -20062,6 +20141,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2429&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2429_20260616F01_20260531_063842.pdf"
         }
       ]
     },
@@ -20301,17 +20384,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2434_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2434_20260527F01_20260531_063951.pdf"
+        }
+      ]
     },
     "2436": {
       "code": "2436",
@@ -20516,17 +20604,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2440_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2440_20260626F01_20260531_064022.pdf"
+        }
+      ]
     },
     "2441": {
       "code": "2441",
@@ -22667,17 +22760,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2496_20260529F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2496_20260529F01_20260531_064342.pdf"
+        }
+      ]
     },
     "2497": {
       "code": "2497",
@@ -23119,17 +23217,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2514_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2514_20260626F01_20260531_064407.pdf"
+        }
+      ]
     },
     "2515": {
       "code": "2515",
@@ -23473,17 +23576,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2530_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2530_20260626F01_20260531_064439.pdf"
+        }
+      ]
     },
     "2534": {
       "code": "2534",
@@ -23835,17 +23943,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2540_20260630F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2540_20260630F01_20260531_064502.pdf"
+        }
+      ]
     },
     "2542": {
       "code": "2542",
@@ -24015,26 +24128,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-28",
+      "evotePickupEndDate": "2026-06-01",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書或身分證明文件",
+      "evotePickupRule": "領取時間：自115年5月28日起至6月1日止；領取地點：中國信託商業銀行代理部(台北市中正區懷寧街70號)；攜帶文件：股東會出席通知書或身分證明文件；補充：限已於115年4月25日至5月22日完成電子投票之股東；恕不郵寄及補發",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeSummary": "領取時間：自115年5月28日起至6月1日止；領取地點：中國信託商業銀行代理部(台北市中正區懷寧街70號)；攜帶文件：股東會出席通知書或身分證明文件；補充：限已於115年4月25日至5月22日完成電子投票之股東；恕不郵寄及補發",
+      "noticeGiftSummary": "一、股東會紀念品-環球購物中心禮券100元。二、",
+      "noticeFilename": "2026_2546_20260525F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年5月28日起至6月1日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -24044,6 +24157,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2546&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2546_20260525F01_20260531_064524.pdf"
         }
       ]
     },
@@ -25915,17 +26032,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2707_20260616F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2707_20260616F01_20260531_064547.pdf"
+        }
+      ]
     },
     "2712": {
       "code": "2712",
@@ -25959,17 +26081,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2712_20260520F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2712_20260520F01_20260531_064613.pdf"
+        }
+      ]
     },
     "2718": {
       "code": "2718",
@@ -26003,17 +26130,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2718_20260529F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2718_20260529F01_20260531_064644.pdf"
+        }
+      ]
     },
     "2719": {
       "code": "2719",
@@ -26047,17 +26179,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2719_20260527F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2719_20260527F01_20260531_064705.pdf"
+        }
+      ]
     },
     "2722": {
       "code": "2722",
@@ -26091,17 +26228,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2722_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2722_20260526F01_20260531_064736.pdf"
+        }
+      ]
     },
     "2723": {
       "code": "2723",
@@ -26135,17 +26277,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2723_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2723_20260526F01_20260531_064807.pdf"
+        }
+      ]
     },
     "2724": {
       "code": "2724",
@@ -26179,17 +26326,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2724_20260604F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2724_20260604F01_20260531_064839.pdf"
+        }
+      ]
     },
     "2726": {
       "code": "2726",
@@ -26223,17 +26375,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2726_20260625F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2726_20260625F01_20260531_064903.pdf"
+        }
+      ]
     },
     "2727": {
       "code": "2727",
@@ -26324,17 +26481,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2729_20260622F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2729_20260622F01_20260531_064934.pdf"
+        }
+      ]
     },
     "2731": {
       "code": "2731",
@@ -26367,14 +26529,14 @@
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeGiftSummary": "※(1)股東會紀念品：國內外團體旅遊兌換券700元(國內團體200元及國外團體500元)(2)本次徵求股數限徵求1,000股(含)以上，股東如欲委託",
+      "noticeFilename": "2026_2731_20260525F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "",
@@ -26386,6 +26548,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2731&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2731_20260525F01_20260531_064959.pdf"
         }
       ]
     },
@@ -26421,17 +26587,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2732_20260609F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2732_20260609F01_20260531_065052.pdf"
+        }
+      ]
     },
     "2734": {
       "code": "2734",
@@ -26454,26 +26625,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-08",
+      "evotePickupEndDate": "2026-07-10",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "中國信託商業銀行代理部(台北市中正區懷寧街70號)",
+      "evotePickupDocuments": "股東會出席通知書及身分證明文件",
+      "evotePickupRule": "領取時間：自115年7月8日起至7月10日止；領取地點：中國信託商業銀行代理部(台北市中正區懷寧街70號)；攜帶文件：股東會出席通知書及身分證明文件；補充：限已於115年5月30日至6月26日完成電子投票之股東；恕不郵寄及補發",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeSummary": "領取時間：自115年7月8日起至7月10日止；領取地點：中國信託商業銀行代理部(台北市中正區懷寧街70號)；攜帶文件：股東會出席通知書及身分證明文件；補充：限已於115年5月30日至6月26日完成電子投票之股東；恕不郵寄及補發",
+      "noticeGiftSummary": "一、股東會紀念品-ESG永續公益刨刀(紀念品數量如有不足時，得以價值相當者替代)。二、",
+      "noticeFilename": "2026_2734_20260629F01.pdf",
+      "noticeUploadedAt": "無",
+      "noticeEvotePickupPeriodText": "自115年7月8日起至7月10日止",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -26483,6 +26654,10 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2734&year=115&mtype=F&"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2734_20260629F01_20260531_065129.pdf"
         }
       ]
     },
@@ -26518,17 +26693,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2736_20260615F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2736_20260615F01_20260531_065149.pdf"
+        }
+      ]
     },
     "2739": {
       "code": "2739",
@@ -26562,17 +26742,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2739_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2739_20260526F01_20260531_065220.pdf"
+        }
+      ]
     },
     "2740": {
       "code": "2740",
@@ -26650,17 +26835,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2743_20260609F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2743_20260609F01_20260531_065338.pdf"
+        }
+      ]
     },
     "2745": {
       "code": "2745",
@@ -26687,24 +26877,29 @@
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
       "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupDocuments": "工及董事酬勞分配情形報告。4人公司價原因、SR‘iy。(一)承認事項:].本公司114年度營業報告書及上訂本公司「取得或處分金股利分配案俟股和aon同表案2.本公司114年度友分配(四)臨時動議CERAAR至公開資訊觀測站(網]八、AREERBETSTEIN行使期間為",
+      "evotePickupRule": "攜帶文件：工及董事酬勞分配情形報告。4人公司價原因、SR‘iy。(一)承認事項:].本公司114年度營業報告書及上訂本公司「取得或處分金股利分配案俟股和aon同表案2.本公司114年度友分配(四)臨時動議CERAAR至公開資訊觀測站(網]八、AREERBETSTEIN行使期間為",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
+      "noticeSummary": "攜帶文件：工及董事酬勞分配情形報告。4人公司價原因、SR‘iy。(一)承認事項:].本公司114年度營業報告書及上訂本公司「取得或處分金股利分配案俟股和aon同表案2.本公司114年度友分配(四)臨時動議CERAAR至公開資訊觀測站(網]八、AREERBETSTEIN行使期間為",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2745_20260615F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2745_20260615F01_20260531_065400.pdf"
+        }
+      ]
     },
     "2748": {
       "code": "2748",
@@ -26782,17 +26977,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2751_20260609F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2751_20260609F01_20260531_065624.pdf"
+        }
+      ]
     },
     "2752": {
       "code": "2752",
@@ -26826,17 +27026,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2752_20260617F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2752_20260617F01_20260531_065751.pdf"
+        }
+      ]
     },
     "2753": {
       "code": "2753",
@@ -26870,17 +27075,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2753_20260611F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2753_20260611F01_20260531_065813.pdf"
+        }
+      ]
     },
     "2754": {
       "code": "2754",
@@ -26914,17 +27124,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2754_20260624F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2754_20260624F01_20260531_065849.pdf"
+        }
+      ]
     },
     "2755": {
       "code": "2755",
@@ -26951,24 +27166,29 @@
       "evotePickupEndDate": null,
       "evotePickupPlace": "",
       "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupDocuments": "午每股盈餘分配3.5元)。(二新股案於呈奉主管增資配股基準日實列舉於召集通知外org.tw),輸入查詢條件即可:統計驗證機構為台新綜合證券股份有限公司股務代理部。(觀測站公告外,特函出上及委託書名證券股份有限公八、本次股東會股東得以電子方式行使表決權,行使期間為",
+      "evotePickupRule": "攜帶文件：午每股盈餘分配3.5元)。(二新股案於呈奉主管增資配股基準日實列舉於召集通知外org.tw),輸入查詢條件即可:統計驗證機構為台新綜合證券股份有限公司股務代理部。(觀測站公告外,特函出上及委託書名證券股份有限公八、本次股東會股東得以電子方式行使表決權,行使期間為",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
+      "noticeSummary": "攜帶文件：午每股盈餘分配3.5元)。(二新股案於呈奉主管增資配股基準日實列舉於召集通知外org.tw),輸入查詢條件即可:統計驗證機構為台新綜合證券股份有限公司股務代理部。(觀測站公告外,特函出上及委託書名證券股份有限公八、本次股東會股東得以電子方式行使表決權,行使期間為",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2755_20260526F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2755_20260526F01_20260531_065928.pdf"
+        }
+      ]
     },
     "2756": {
       "code": "2756",
@@ -27002,17 +27222,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2756_20260609F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2756_20260609F01_20260531_070004.pdf"
+        }
+      ]
     },
     "2762": {
       "code": "2762",
@@ -27046,17 +27271,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_2762_20260525F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_2762_20260525F01_20260531_070053.pdf"
+        }
+      ]
     },
     "2801": {
       "code": "2801",
@@ -28646,7 +28876,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "",
+      "proxyPeriodText": "SITEMAP",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
@@ -40074,7 +40304,7 @@
       "noticeFilename": "113開會通知.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-local",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "單井官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -68002,7 +68232,7 @@
       "noticeFilename": "investor_2026042422370407.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-local",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "萬潤官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -69162,7 +69392,7 @@
       "noticeFilename": "115年開會通知書-中文版-定稿-0414.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-local",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "聯茂官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -84285,7 +84515,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "SITEMAP",
+      "proxyPeriodText": "",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
@@ -91185,7 +91415,7 @@
       "noticeFilename": "3. 114年股東常會開會電子通知書(上傳)_2025.4.22.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-local",
+      "noticeCacheStatus": "hit",
       "noticeSourceLabel": "擎亞官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
