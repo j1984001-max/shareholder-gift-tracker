@@ -176,17 +176,17 @@ def prioritize_codes(
     retry_empty: bool,
     roc_year: int,
 ) -> list[str]:
-    official = [
-        code
-        for code in codes
-        if code in official_sources
-        and not has_pickup_details(server.notice_cache_lookup(seed, code, roc_year))
-    ]
     missing = [
         code
         for code in codes
-        if not server.notice_cache_lookup(seed, code, roc_year) and code not in official_sources
+        if not server.notice_cache_lookup(seed, code, roc_year)
     ]
+    official = [
+        code
+        for code in missing
+        if code in official_sources
+    ]
+    missing_mops = [code for code in missing if code not in official_sources]
     retryable_empty = [
         code
         for code in codes
@@ -195,7 +195,7 @@ def prioritize_codes(
         and code not in official_sources
         and not has_pickup_details(server.notice_cache_lookup(seed, code, roc_year))
     ]
-    return unique_codes([*official, *missing, *retryable_empty])
+    return unique_codes([*official, *missing_mops, *retryable_empty])
 
 
 def rotate_codes(codes: list[str], offset: int) -> list[str]:

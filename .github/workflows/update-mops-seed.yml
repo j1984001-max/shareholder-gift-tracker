@@ -92,7 +92,6 @@ jobs:
               --official-pdf-sources data/official_notice_sources.json
               --remote-requested-url https://shareholder-gift-tracker.onrender.com/api/requested-codes
               --limit "$LIMIT"
-              --retry-empty
               --prefer-mops
               --rotate-offset "$ROTATE_OFFSET"
               --sleep 3

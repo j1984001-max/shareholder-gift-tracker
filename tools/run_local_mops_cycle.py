@@ -114,7 +114,6 @@ def main() -> int:
                     str(OFFICIAL_SOURCES_PATH),
                     "--limit",
                     str(current_mops_limit),
-                    "--retry-empty",
                     "--skip-existing",
                     "--prefer-mops",
                     "--sleep",
