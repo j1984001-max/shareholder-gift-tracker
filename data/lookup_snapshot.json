@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T04:58:58+0000",
+  "generatedAt": "2026-06-05T10:29:37+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -75281,13 +75281,13 @@
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_6470_20260626F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "",
@@ -75303,6 +75303,10 @@
         {
           "label": "宏遠股代",
           "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
+        },
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_6470_20260626F01_20260605_182835.pdf"
         }
       ]
     },
@@ -89361,7 +89365,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "SITEMAP",
+      "proxyPeriodText": "",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
