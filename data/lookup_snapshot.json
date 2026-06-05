@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-04T23:10:53+0000",
+  "generatedAt": "2026-06-05T04:58:58+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -36527,17 +36527,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_3265_20260528F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_3265_20260528F01_20260605_125257.pdf"
+        }
+      ]
     },
     "3266": {
       "code": "3266",
@@ -89356,7 +89361,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "",
+      "proxyPeriodText": "SITEMAP",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
@@ -100353,17 +100358,22 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "",
-      "noticeUploadedAt": "",
+      "noticeFilename": "2026_9906_20260630F01.pdf",
+      "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "",
-      "noticeSourceLabel": "",
-      "noticeSourceType": "",
-      "mopsAttempted": false,
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "公開資訊觀測站通知書",
+      "noticeSourceType": "mops",
+      "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
-      "sources": []
+      "sources": [
+        {
+          "label": "開會通知書",
+          "url": "https://doc.twse.com.tw/pdf/2026_9906_20260630F01_20260605_125620.pdf"
+        }
+      ]
     },
     "9907": {
       "code": "9907",
