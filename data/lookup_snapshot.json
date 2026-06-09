@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T22:59:44+0000",
+  "generatedAt": "2026-06-09T04:42:22+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -102363,7 +102363,7 @@
       "isPublished": false,
       "souvenirName": "",
       "meetingDate": null,
-      "lastBuyDate": "2026-05-26",
+      "lastBuyDate": "2026-05-28",
       "meetingCity": "",
       "priceText": "",
       "transferAgentName": "",
@@ -102382,7 +102382,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "SITEMAP",
+      "proxyPeriodText": "",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
