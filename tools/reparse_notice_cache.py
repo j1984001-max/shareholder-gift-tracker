@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import re
 import time
@@ -16,6 +17,16 @@ CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
 sys.path.insert(0, str(ROOT))
 
 import server  # noqa: E402
+
+
+MEANINGFUL_CACHE_FIELDS = (
+    "giftSummary",
+    "evotePickupRule",
+    "evotePickupStartDate",
+    "evotePickupEndDate",
+    "evotePickupPeriodText",
+    "pdfUrl",
+)
 
 
 def has_pickup_date(item: dict[str, Any]) -> bool:
@@ -305,12 +316,34 @@ def save_cache(data: dict[str, Any]) -> None:
     CACHE_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def rotate_candidates(
+    candidates: list[tuple[str, dict[str, Any]]],
+    offset: int,
+) -> list[tuple[str, dict[str, Any]]]:
+    if not candidates:
+        return candidates
+    normalized_offset = offset % len(candidates)
+    if normalized_offset == 0:
+        return candidates
+    return candidates[normalized_offset:] + candidates[:normalized_offset]
+
+
+def has_meaningful_change(before: dict[str, Any], after: dict[str, Any]) -> bool:
+    return any(before.get(field) != after.get(field) for field in MEANINGFUL_CACHE_FIELDS)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Reparse cached shareholder meeting notices with the current PDF/OCR parser."
     )
     parser.add_argument("codes", nargs="*", help="Optional stock codes or mixed text to reparse.")
     parser.add_argument("--limit", type=int, default=0, help="Maximum number of cache entries to process.")
+    parser.add_argument(
+        "--rotate-offset",
+        type=int,
+        default=0,
+        help="Rotate the candidate list before applying --limit, useful for scheduled batch reparsing.",
+    )
     parser.add_argument(
         "--only-missing-pickup",
         action="store_true",
@@ -344,6 +377,16 @@ def main() -> int:
         action="store_true",
         help="Allow empty second-pass fields to overwrite existing fields. Off by default to avoid data loss.",
     )
+    parser.add_argument(
+        "--only-write-changed",
+        action="store_true",
+        help="Do not persist metadata-only reparse changes; keep cache commits focused on real extracted fields.",
+    )
+    parser.add_argument(
+        "--exit-zero-on-partial",
+        action="store_true",
+        help="Exit successfully even if some PDFs fail or rate-limit, after saving any successful progress.",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Parse and report without writing cache updates.")
     args = parser.parse_args()
 
@@ -365,6 +408,9 @@ def main() -> int:
         ):
             candidates.append((key, raw_item))
 
+    if args.rotate_offset:
+        candidates = rotate_candidates(candidates, args.rotate_offset)
+
     if args.limit > 0:
         candidates = candidates[: args.limit]
 
@@ -381,10 +427,13 @@ def main() -> int:
         "out_of_year_dates_ignored": 0,
         "vote_period_only_cleared": 0,
         "ocr_used": 0,
+        "changed": 0,
+        "unchanged_restored": 0,
         "rate_limited": 0,
     }
 
     for index, (key, item) in enumerate(candidates, 1):
+        original_item = copy.deepcopy(item)
         code = cache_code(key, item)
         roc_year = cache_roc_year(key, item)
         removed_existing_out_of_year = clear_out_of_year_pickup(item, roc_year)
@@ -460,6 +509,14 @@ def main() -> int:
         else:
             item["cacheStatus"] = "reparsed-local"
 
+        meaningful_changed = has_meaningful_change(original_item, item)
+        if args.only_write_changed and not meaningful_changed:
+            data[key] = original_item
+            item = original_item
+            stats["unchanged_restored"] += 1
+        else:
+            stats["changed"] += int(meaningful_changed)
+
         stats["reparsed"] += 1
         stats["new_pickup_dates"] += int(new_date)
         stats["new_pickup_details"] += int(new_detail)
@@ -493,6 +550,8 @@ def main() -> int:
             for name, value in stats.items()
         )
     )
+    if args.exit_zero_on_partial:
+        return 0
     return 0 if stats["failed"] == 0 and stats["rate_limited"] == 0 else 1
 
 
