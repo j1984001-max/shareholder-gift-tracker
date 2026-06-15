@@ -1,6 +1,12 @@
 name: Update MOPS notice seed cache
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-mops-seed.yml"
+      - "tools/reparse_notice_cache.py"
   workflow_dispatch:
     inputs:
       codes:
