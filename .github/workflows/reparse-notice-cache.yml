@@ -1,0 +1,113 @@
+name: Reparse notice cache
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/reparse-notice-cache.yml"
+      - "tools/reparse_notice_cache.py"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximum cached notices to parse in this run."
+        required: false
+        default: "240"
+      rotate_offset:
+        description: "Optional explicit candidate rotate offset. Leave empty for automatic rotation."
+        required: false
+        default: ""
+      no_download:
+        description: "Only use existing text/PDF cache, without downloading missing PDFs."
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      refresh_text_cache:
+        description: "Force re-extract notice text even when text cache exists."
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+  schedule:
+    - cron: "45 */2 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reparse-notice-cache-main
+  cancel-in-progress: false
+
+jobs:
+  reparse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install OCR system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            tesseract-ocr \
+            tesseract-ocr-chi-tra \
+            tesseract-ocr-eng
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Reparse cached notices
+        shell: bash
+        env:
+          HTTP_REQUEST_DELAY_MIN_MS: "3000"
+          HTTP_REQUEST_DELAY_MAX_MS: "7000"
+          PDF_OCR_MODE: "auto"
+        run: |
+          set -euo pipefail
+          LIMIT="${{ github.event.inputs.limit || '240' }}"
+          REQUESTED_OFFSET="${{ github.event.inputs.rotate_offset || '' }}"
+          NO_DOWNLOAD="${{ github.event.inputs.no_download || 'false' }}"
+          REFRESH_TEXT_CACHE="${{ github.event.inputs.refresh_text_cache || 'false' }}"
+          WATCHLIST_TOTAL=$(python -c 'from pathlib import Path; lines=Path("data/mops_seed_watchlist.txt").read_text(encoding="utf-8").splitlines(); print(sum(1 for line in lines if line.strip() and not line.lstrip().startswith("#")) or 1)')
+
+          if [[ -n "$REQUESTED_OFFSET" ]]; then
+            ROTATE_OFFSET="$REQUESTED_OFFSET"
+          else
+            ROTATE_OFFSET=$(( (${GITHUB_RUN_NUMBER:-0} * LIMIT) % WATCHLIST_TOTAL ))
+          fi
+
+          EXTRA_ARGS=(
+            --only-missing-pickup
+            --include-current
+            --limit "$LIMIT"
+            --rotate-offset "$ROTATE_OFFSET"
+            --sleep 1
+            --save-every 20
+            --only-write-changed
+            --exit-zero-on-partial
+          )
+          if [[ "$NO_DOWNLOAD" == "true" ]]; then
+            EXTRA_ARGS+=(--no-download)
+          fi
+          if [[ "$REFRESH_TEXT_CACHE" == "true" ]]; then
+            EXTRA_ARGS+=(--refresh-text-cache)
+          fi
+
+          python tools/reparse_notice_cache.py "${EXTRA_ARGS[@]}"
+          python tools/build_lookup_snapshot.py --watchlist-file data/mops_seed_watchlist.txt
+
+      - name: Commit parser updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Reparse notice cache"
+          file_pattern: data/mops_notice_seed_cache.json data/lookup_snapshot.json data/notice_text_cache/

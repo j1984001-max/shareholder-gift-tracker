@@ -14,6 +14,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE_PATH = ROOT / "data" / "mops_notice_seed_cache.json"
+TEXT_CACHE_DIR = ROOT / "data" / "notice_text_cache"
+TEXT_CACHE_SCHEMA_VERSION = 1
 sys.path.insert(0, str(ROOT))
 
 import server  # noqa: E402
@@ -25,6 +27,8 @@ MEANINGFUL_CACHE_FIELDS = (
     "evotePickupStartDate",
     "evotePickupEndDate",
     "evotePickupPeriodText",
+    "evotePickupLocation",
+    "evotePickupDocuments",
     "pdfUrl",
 )
 
@@ -210,6 +214,72 @@ def download_pdf_url(url: str) -> bytes:
     return server.fetch_bytes(url, timeout=60)
 
 
+def text_cache_path(code: str, roc_year: int) -> Path:
+    return TEXT_CACHE_DIR / str(roc_year) / f"{code}.json"
+
+
+def load_notice_text_cache(
+    code: str,
+    roc_year: int,
+    item: dict[str, Any],
+) -> tuple[str, dict[str, Any]] | None:
+    path = text_cache_path(code, roc_year)
+    if not path.exists():
+        return None
+
+    try:
+        cached = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+    if cached.get("schemaVersion") != TEXT_CACHE_SCHEMA_VERSION:
+        return None
+    if str(cached.get("code") or "") != code:
+        return None
+    if int(cached.get("rocYear") or 0) != roc_year:
+        return None
+    if str(cached.get("filename") or "") != filename_from_item(code, item):
+        return None
+
+    text = str(cached.get("text") or "")
+    if not text.strip():
+        return None
+
+    metadata = cached.get("metadata")
+    if not isinstance(metadata, dict):
+        metadata = {}
+    return text, metadata
+
+
+def save_notice_text_cache(
+    code: str,
+    roc_year: int,
+    item: dict[str, Any],
+    text: str,
+    metadata: dict[str, Any],
+) -> None:
+    path = text_cache_path(code, roc_year)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "schemaVersion": TEXT_CACHE_SCHEMA_VERSION,
+        "code": code,
+        "rocYear": roc_year,
+        "year": roc_year + 1911,
+        "filename": filename_from_item(code, item),
+        "pdfUrl": str(item.get("pdfUrl") or ""),
+        "uploadedAt": str(item.get("uploadedAt") or ""),
+        "metadata": {
+            "engine": metadata.get("engine", ""),
+            "score": metadata.get("score"),
+            "ocrUsed": metadata.get("ocrUsed", False),
+            "candidates": metadata.get("candidates", []),
+        },
+        "cachedAt": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "text": text,
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def load_pdf_bytes(
     code: str,
     item: dict[str, Any],
@@ -378,6 +448,16 @@ def main() -> int:
         help="Allow empty second-pass fields to overwrite existing fields. Off by default to avoid data loss.",
     )
     parser.add_argument(
+        "--no-text-cache",
+        action="store_true",
+        help="Do not read or write extracted notice text cache files.",
+    )
+    parser.add_argument(
+        "--refresh-text-cache",
+        action="store_true",
+        help="Ignore existing notice text cache files and refresh them from PDFs.",
+    )
+    parser.add_argument(
         "--only-write-changed",
         action="store_true",
         help="Do not persist metadata-only reparse changes; keep cache commits focused on real extracted fields.",
@@ -427,6 +507,8 @@ def main() -> int:
         "out_of_year_dates_ignored": 0,
         "vote_period_only_cleared": 0,
         "ocr_used": 0,
+        "text_cached": 0,
+        "text_cache_written": 0,
         "changed": 0,
         "unchanged_restored": 0,
         "rate_limited": 0,
@@ -438,44 +520,69 @@ def main() -> int:
         roc_year = cache_roc_year(key, item)
         removed_existing_out_of_year = clear_out_of_year_pickup(item, roc_year)
         removed_vote_period_only = clear_vote_period_only_pickup(item)
-        pdf_bytes, source, error = load_pdf_bytes(
-            code,
-            item,
-            download_missing=not args.no_download,
-            refresh_stale_pdf_url=not args.no_refresh_stale_pdf_url,
-        )
-        if source == "rate_limited" and args.rate_limit_sleep > 0:
-            print(f"[{index}/{len(candidates)}] {code} rate_limited: sleeping {args.rate_limit_sleep:.0f}s")
-            time.sleep(args.rate_limit_sleep)
+
+        text = ""
+        text_metadata: dict[str, Any] = {}
+        cached_text = None
+        if not args.no_text_cache and not args.refresh_text_cache:
+            cached_text = load_notice_text_cache(code, roc_year, item)
+
+        if cached_text:
+            text, text_metadata = cached_text
+            source = "text-cache"
+            error = ""
+            stats["text_cached"] += 1
+        else:
             pdf_bytes, source, error = load_pdf_bytes(
                 code,
                 item,
                 download_missing=not args.no_download,
                 refresh_stale_pdf_url=not args.no_refresh_stale_pdf_url,
             )
+            if source == "rate_limited" and args.rate_limit_sleep > 0:
+                print(f"[{index}/{len(candidates)}] {code} rate_limited: sleeping {args.rate_limit_sleep:.0f}s")
+                time.sleep(args.rate_limit_sleep)
+                pdf_bytes, source, error = load_pdf_bytes(
+                    code,
+                    item,
+                    download_missing=not args.no_download,
+                    refresh_stale_pdf_url=not args.no_refresh_stale_pdf_url,
+                )
 
-        if source == "rate_limited":
-            stats["rate_limited"] += 1
-            stats["out_of_year_dates_ignored"] += int(removed_existing_out_of_year)
-            stats["vote_period_only_cleared"] += int(removed_vote_period_only)
-            print(f"[{index}/{len(candidates)}] {code} rate_limited: {error}")
-            if not args.dry_run:
-                save_cache(data)
-                print("  saved progress before stopping on rate limit")
-            break
+            if source == "rate_limited":
+                stats["rate_limited"] += 1
+                stats["out_of_year_dates_ignored"] += int(removed_existing_out_of_year)
+                stats["vote_period_only_cleared"] += int(removed_vote_period_only)
+                print(f"[{index}/{len(candidates)}] {code} rate_limited: {error}")
+                if not args.dry_run:
+                    save_cache(data)
+                    print("  saved progress before stopping on rate limit")
+                break
 
-        if not pdf_bytes:
-            if source == "missing":
-                stats["missing"] += 1
-            else:
+            if not pdf_bytes:
+                if source == "missing":
+                    stats["missing"] += 1
+                else:
+                    stats["failed"] += 1
+                stats["out_of_year_dates_ignored"] += int(removed_existing_out_of_year)
+                stats["vote_period_only_cleared"] += int(removed_vote_period_only)
+                print(f"[{index}/{len(candidates)}] {code} skip {source}: {error}")
+                continue
+
+            try:
+                text, text_metadata = server.extract_notice_text_with_metadata(pdf_bytes)
+            except Exception as error:
                 stats["failed"] += 1
-            stats["out_of_year_dates_ignored"] += int(removed_existing_out_of_year)
-            stats["vote_period_only_cleared"] += int(removed_vote_period_only)
-            print(f"[{index}/{len(candidates)}] {code} skip {source}: {error}")
-            continue
+                stats["out_of_year_dates_ignored"] += int(removed_existing_out_of_year)
+                stats["vote_period_only_cleared"] += int(removed_vote_period_only)
+                print(f"[{index}/{len(candidates)}] {code} text_extract_error: {error}")
+                continue
+
+            if text.strip() and not args.no_text_cache and not args.dry_run:
+                save_notice_text_cache(code, roc_year, item, text, text_metadata)
+                stats["text_cache_written"] += 1
 
         try:
-            text, text_metadata = server.extract_notice_text_with_metadata(pdf_bytes)
             summary = server.extract_notice_summary(text)
             summary, ignored_out_of_year = summary_with_valid_year(summary, roc_year)
         except Exception as error:
@@ -506,6 +613,8 @@ def main() -> int:
             item["cacheStatus"] = "reparsed-refreshed"
         elif source == "downloaded":
             item["cacheStatus"] = "reparsed-download"
+        elif source == "text-cache":
+            item["cacheStatus"] = "reparsed-text-cache"
         else:
             item["cacheStatus"] = "reparsed-local"
 

@@ -1,12 +1,6 @@
 name: Update MOPS notice seed cache
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/update-mops-seed.yml"
-      - "tools/reparse_notice_cache.py"
   workflow_dispatch:
     inputs:
       codes:
@@ -17,10 +11,6 @@ on:
         description: "Maximum records to update when codes is empty."
         required: false
         default: "60"
-      reparse_limit:
-        description: "Maximum cached notices to second-pass parse after updating."
-        required: false
-        default: "120"
       skip_existing:
         description: "Skip stocks that are already in the seed cache."
         required: false
@@ -66,14 +56,11 @@ jobs:
           HTTP_REQUEST_DELAY_MAX_MS: "7000"
         run: |
           set -euo pipefail
-          EVENT_NAME="${{ github.event_name }}"
           CODES="${{ github.event.inputs.codes || '' }}"
           LIMIT="${{ github.event.inputs.limit || '60' }}"
-          REPARSE_LIMIT="${{ github.event.inputs.reparse_limit || '120' }}"
           SKIP_EXISTING="${{ github.event.inputs.skip_existing || 'true' }}"
           WATCHLIST_TOTAL=$(python -c 'from pathlib import Path; lines=Path("data/mops_seed_watchlist.txt").read_text(encoding="utf-8").splitlines(); print(sum(1 for line in lines if line.strip() and not line.lstrip().startswith("#")) or 1)')
           ROTATE_OFFSET=0
-          REPARSE_OFFSET=0
 
           run_mops_update() {
             set +e
@@ -86,21 +73,6 @@ jobs:
             fi
             return "$status"
           }
-
-          if [[ "$EVENT_NAME" == "push" ]]; then
-            REPARSE_OFFSET=$(( (${GITHUB_RUN_NUMBER:-0} * REPARSE_LIMIT) % WATCHLIST_TOTAL ))
-            python tools/reparse_notice_cache.py \
-              --only-missing-pickup \
-              --include-current \
-              --limit "$REPARSE_LIMIT" \
-              --rotate-offset "$REPARSE_OFFSET" \
-              --sleep 1 \
-              --save-every 20 \
-              --only-write-changed \
-              --exit-zero-on-partial
-            python tools/build_lookup_snapshot.py --watchlist-file data/mops_seed_watchlist.txt
-            exit 0
-          fi
 
           if [[ -n "$CODES" ]]; then
             run_mops_update "$CODES" \
@@ -115,17 +87,8 @@ jobs:
               --skip-cached-pickup \
               --update-seed \
               --sleep 0.6
-            python tools/reparse_notice_cache.py "$CODES" \
-              --only-missing-pickup \
-              --include-current \
-              --limit "$REPARSE_LIMIT" \
-              --sleep 1 \
-              --save-every 20 \
-              --only-write-changed \
-              --exit-zero-on-partial
           else
             ROTATE_OFFSET=$(( (${GITHUB_RUN_NUMBER:-0} * LIMIT) % WATCHLIST_TOTAL ))
-            REPARSE_OFFSET=$(( (${GITHUB_RUN_NUMBER:-0} * REPARSE_LIMIT) % WATCHLIST_TOTAL ))
             EXTRA_ARGS=(
               --watchlist-file data/mops_seed_watchlist.txt
               --official-pdf-sources data/official_notice_sources.json
@@ -153,16 +116,6 @@ jobs:
               --rotate-offset "$ROTATE_OFFSET" \
               --update-seed \
               --sleep 0.6
-
-            python tools/reparse_notice_cache.py \
-              --only-missing-pickup \
-              --include-current \
-              --limit "$REPARSE_LIMIT" \
-              --rotate-offset "$REPARSE_OFFSET" \
-              --sleep 1 \
-              --save-every 20 \
-              --only-write-changed \
-              --exit-zero-on-partial
           fi
           python tools/build_lookup_snapshot.py --watchlist-file data/mops_seed_watchlist.txt
 
