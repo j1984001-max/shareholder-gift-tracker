@@ -25,6 +25,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: shareholder-gift-tracker-data-main
+  cancel-in-progress: false
+
 jobs:
   update-seed:
     runs-on: ubuntu-latest

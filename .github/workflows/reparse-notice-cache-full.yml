@@ -1,0 +1,135 @@
+name: Reparse notice cache full sweep
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/reparse-notice-cache-full.yml"
+  workflow_dispatch:
+    inputs:
+      shard_count:
+        description: "Number of parser shards."
+        required: false
+        default: "8"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shareholder-gift-tracker-data-main
+  cancel-in-progress: false
+
+jobs:
+  extract-text:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install OCR system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            tesseract-ocr \
+            tesseract-ocr-chi-tra \
+            tesseract-ocr-eng
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Extract notice text cache shard
+        shell: bash
+        env:
+          HTTP_REQUEST_DELAY_MIN_MS: "1000"
+          HTTP_REQUEST_DELAY_MAX_MS: "2500"
+          PDF_OCR_MODE: "auto"
+        run: |
+          set -euo pipefail
+          SHARD_COUNT="${{ github.event.inputs.shard_count || '8' }}"
+          python tools/reparse_notice_cache.py \
+            --only-missing-pickup \
+            --include-current \
+            --shard-index "${{ matrix.shard }}" \
+            --shard-count "$SHARD_COUNT" \
+            --sleep 0.2 \
+            --save-every 50 \
+            --only-write-changed \
+            --exit-zero-on-partial
+
+      - name: Upload text cache shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: notice-text-cache-${{ matrix.shard }}
+          path: data/notice_text_cache/
+          if-no-files-found: ignore
+          retention-days: 1
+
+  merge-and-parse:
+    runs-on: ubuntu-latest
+    needs: extract-text
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Download text cache artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: _notice_text_artifacts
+          pattern: notice-text-cache-*
+          merge-multiple: false
+
+      - name: Merge text cache artifacts
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+
+          artifacts = Path("_notice_text_artifacts")
+          target = Path("data/notice_text_cache")
+          target.mkdir(parents=True, exist_ok=True)
+          copied = 0
+          for source in artifacts.glob("notice-text-cache-*"):
+              for file_path in source.rglob("*.json"):
+                  relative = file_path.relative_to(source)
+                  destination = target / relative
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  shutil.copy2(file_path, destination)
+                  copied += 1
+          print(f"merged_text_cache_files={copied}")
+          PY
+
+      - name: Parse all available text cache
+        run: |
+          python tools/reparse_notice_cache.py \
+            --only-missing-pickup \
+            --include-current \
+            --no-download \
+            --save-every 100 \
+            --only-write-changed \
+            --exit-zero-on-partial
+          python tools/build_lookup_snapshot.py --watchlist-file data/mops_seed_watchlist.txt
+
+      - name: Commit full parser updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Full reparse notice cache"
+          file_pattern: data/mops_notice_seed_cache.json data/lookup_snapshot.json data/notice_text_cache/**

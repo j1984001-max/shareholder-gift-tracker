@@ -1,12 +1,6 @@
 name: Reparse notice cache
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/reparse-notice-cache.yml"
-      - "tools/reparse_notice_cache.py"
   workflow_dispatch:
     inputs:
       limit:
@@ -40,7 +34,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: reparse-notice-cache-main
+  group: shareholder-gift-tracker-data-main
   cancel-in-progress: false
 
 jobs:

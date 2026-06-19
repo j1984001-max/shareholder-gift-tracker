@@ -398,6 +398,18 @@ def rotate_candidates(
     return candidates[normalized_offset:] + candidates[:normalized_offset]
 
 
+def shard_candidates(
+    candidates: list[tuple[str, dict[str, Any]]],
+    shard_index: int,
+    shard_count: int,
+) -> list[tuple[str, dict[str, Any]]]:
+    if shard_count <= 1:
+        return candidates
+    if shard_index < 0 or shard_index >= shard_count:
+        raise ValueError("--shard-index must be between 0 and --shard-count - 1")
+    return candidates[shard_index::shard_count]
+
+
 def has_meaningful_change(before: dict[str, Any], after: dict[str, Any]) -> bool:
     return any(before.get(field) != after.get(field) for field in MEANINGFUL_CACHE_FIELDS)
 
@@ -413,6 +425,18 @@ def main() -> int:
         type=int,
         default=0,
         help="Rotate the candidate list before applying --limit, useful for scheduled batch reparsing.",
+    )
+    parser.add_argument(
+        "--shard-index",
+        type=int,
+        default=0,
+        help="Process only this zero-based shard of the candidate list.",
+    )
+    parser.add_argument(
+        "--shard-count",
+        type=int,
+        default=1,
+        help="Split candidates into this many deterministic shards before applying --limit.",
     )
     parser.add_argument(
         "--only-missing-pickup",
@@ -490,6 +514,9 @@ def main() -> int:
 
     if args.rotate_offset:
         candidates = rotate_candidates(candidates, args.rotate_offset)
+
+    if args.shard_count > 1:
+        candidates = shard_candidates(candidates, args.shard_index, args.shard_count)
 
     if args.limit > 0:
         candidates = candidates[: args.limit]
