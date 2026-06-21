@@ -26104,7 +26104,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6807&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6807_20260616F01_20260618_190304.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6807_20260616F01_20260621_230219.pdf",
     "fetchedAt": "2026-05-30T14:18:30+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -26115,7 +26115,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T11:03:27+0000"
+    "reparsedAt": "2026-06-21T15:02:39+0000"
   },
   "6811": {
     "code": "6811",
@@ -26125,9 +26125,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6811&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6811_20260528F01_20260530_221847.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6811_20260528F01_20260621_230313.pdf",
     "fetchedAt": "2026-05-30T14:18:56+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pymupdf",
     "textScore": 83,
     "ocrUsed": false,
@@ -26135,7 +26135,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:03:23+0000"
   },
   "6821": {
     "code": "6821",
@@ -26145,9 +26146,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6821&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6821_20260626F01_20260530_221912.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6821_20260626F01_20260621_230336.pdf",
     "fetchedAt": "2026-05-30T14:19:22+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 91,
     "ocrUsed": false,
@@ -26155,7 +26156,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:03:46+0000"
   },
   "6823": {
     "code": "6823",
@@ -26228,9 +26230,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6831&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6831_20260623F01_20260530_222117.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6831_20260623F01_20260621_230437.pdf",
     "fetchedAt": "2026-05-30T14:22:11+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "ocr-tesseract",
     "textScore": 95,
     "ocrUsed": true,
@@ -26238,7 +26240,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:04:59+0000"
   },
   "6834": {
     "code": "6834",
@@ -26309,9 +26312,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6841&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6841_20260427F01_20260530_222542.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6841_20260427F01_20260621_230516.pdf",
     "fetchedAt": "2026-05-30T14:26:10+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "ocr-tesseract",
     "textScore": 66,
     "ocrUsed": true,
@@ -26319,7 +26322,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:05:41+0000"
   },
   "6843": {
     "code": "6843",
@@ -26411,9 +26415,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6855&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6855_20260605F01_20260530_222927.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6855_20260605F01_20260621_230554.pdf",
     "fetchedAt": "2026-05-30T14:29:46+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
@@ -26421,7 +26425,8 @@
     "evotePickupRule": "入(網址:https://free.sf1org.tw),輸入查詢條件即可之統計驗證機構為台新綜合證券股份有限公司股務代3託書各乙份,如決定親自出席,請會場報到卅\"並填妥代理人相關資料及簽名或蓋章有證券股份股務代:八、本次股東會股東得以電子方式行使表決權,行使期間為:自115年5月6日至115年6月2日止,請軍登入臺灣集中保管結算所股份有限公司「股東e服務/電子投票」,依相關說明投票。【網址:https://stockservices.tdcc.comtw】。九、參加股東會者請攜帶身分證明文件以備查驗。hsaah查照辦理為荷。ae※本次股東常會無發放紀念品PeelFo}JERReanARAMAIRELESSaae104946{U2ALR46-30053mHe@BERNERSTAREAAOEMeeSeRwRSLA“-“x=要加©4RBNO(®).€we«=O一tt<xats5SaatSeo茲指派擔任本公司之法人代表,出席”貴公司一一五年六月五日股東常會,依法行使一切股東權利。此至數泓科技股份有限公司法人股東蓋章:Ww;oraanPat中華民國115年A",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:06:13+0000"
   },
   "6856": {
     "code": "6856",
@@ -26452,9 +26457,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6859&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6859_20260529F01_20260530_223027.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6859_20260529F01_20260621_230701.pdf",
     "fetchedAt": "2026-05-30T14:30:36+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
     "textScore": 83,
     "ocrUsed": false,
@@ -26462,7 +26467,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:07:09+0000"
   },
   "6861": {
     "code": "6861",
@@ -26472,7 +26478,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6861&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6861_20260529F01_20260618_191212.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6861_20260529F01_20260621_230724.pdf",
     "fetchedAt": "2026-05-30T14:31:00+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
@@ -26483,7 +26489,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T11:12:20+0000"
+    "reparsedAt": "2026-06-21T15:07:38+0000"
   },
   "6862": {
     "code": "6862",
@@ -26598,7 +26604,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6872&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6872_20260608F01_20260618_191512.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6872_20260608F01_20260621_230857.pdf",
     "fetchedAt": "2026-05-30T14:39:05+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
@@ -26609,7 +26615,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T11:15:31+0000"
+    "reparsedAt": "2026-06-21T15:09:14+0000"
   },
   "6873": {
     "code": "6873",
@@ -26619,7 +26625,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6873&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6873_20260612F01_20260618_191557.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6873_20260612F01_20260621_230930.pdf",
     "fetchedAt": "2026-05-30T14:39:31+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
@@ -26630,7 +26636,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T11:16:12+0000"
+    "reparsedAt": "2026-06-21T15:09:43+0000"
   },
   "6874": {
     "code": "6874",
@@ -26660,9 +26666,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6875&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6875_20260526F01_20260530_224010.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6875_20260526F01_20260621_231046.pdf",
     "fetchedAt": "2026-05-30T14:40:21+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 86,
     "ocrUsed": false,
@@ -26670,7 +26676,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:11:01+0000"
   },
   "6877": {
     "code": "6877",
@@ -26680,9 +26687,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6877&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6877_20260525F01_20260530_224035.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6877_20260525F01_20260621_231131.pdf",
     "fetchedAt": "2026-05-30T14:40:43+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 83,
     "ocrUsed": false,
@@ -26690,7 +26697,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:11:40+0000"
   },
   "6881": {
     "code": "6881",
@@ -26700,9 +26708,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6881&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6881_20260508F01_20260530_224057.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6881_20260508F01_20260621_231153.pdf",
     "fetchedAt": "2026-05-30T14:41:04+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pymupdf",
     "textScore": 83,
     "ocrUsed": false,
@@ -26710,7 +26718,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:12:03+0000"
   },
   "7584": {
     "code": "7584",
@@ -26720,7 +26729,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7584&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7584_20260528F01_20260618_191728.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7584_20260528F01_20260621_231215.pdf",
     "fetchedAt": "2026-05-30T14:41:40+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -26731,7 +26740,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T11:17:51+0000"
+    "reparsedAt": "2026-06-21T15:12:36+0000"
   },
   "7610": {
     "code": "7610",
@@ -26782,9 +26791,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7642&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7642_20260520F01_20260530_224303.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7642_20260520F01_20260621_231316.pdf",
     "fetchedAt": "2026-05-30T14:43:26+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
     "textScore": 65,
     "ocrUsed": true,
@@ -26792,7 +26801,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:13:39+0000"
   },
   "7703": {
     "code": "7703",
@@ -26822,9 +26832,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7704&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7704_20260518F01_20260530_224406.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7704_20260518F01_20260621_231413.pdf",
     "fetchedAt": "2026-05-30T14:44:22+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pymupdf",
     "textScore": 93,
     "ocrUsed": false,
@@ -26832,7 +26842,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:14:25+0000"
   },
   "7705": {
     "code": "7705",
@@ -26927,9 +26938,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7712&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7712_20260616F01_20260530_224620.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7712_20260616F01_20260621_231539.pdf",
     "fetchedAt": "2026-05-30T14:46:46+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
     "textScore": 65,
     "ocrUsed": true,
@@ -26937,7 +26948,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:16:00+0000"
   },
   "7713": {
     "code": "7713",
@@ -26986,22 +26998,23 @@
     "rocYear": 115,
     "year": 2026,
     "filename": "2026_7715_20260525F01.pdf",
-    "parserVersion": 5,
+    "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7715&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7715_20260525F01_20260528_002558.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7715_20260525F01_20260621_231610.pdf",
     "fetchedAt": "2026-05-27T16:26:07+0000",
-    "cacheStatus": "miss",
-    "textEngine": "pypdf",
-    "textScore": 128,
-    "ocrUsed": false,
+    "cacheStatus": "reparsed-refreshed",
+    "textEngine": "combined-ocr",
+    "textScore": 75,
+    "ocrUsed": true,
     "giftSummary": "",
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
     "evotePickupLocation": "",
-    "evotePickupDocuments": ""
+    "evotePickupDocuments": "",
+    "reparsedAt": "2026-06-21T15:16:28+0000"
   },
   "7722": {
     "code": "7722",
@@ -27073,9 +27086,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7732&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7732_20260527F01_20260531_003204.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7732_20260527F01_20260621_231657.pdf",
     "fetchedAt": "2026-05-30T16:32:13+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 83,
     "ocrUsed": false,
@@ -27083,7 +27096,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:17:10+0000"
   },
   "7734": {
     "code": "7734",
@@ -27605,7 +27619,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7805&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7805_20260527F01_20260618_194135.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7805_20260527F01_20260621_231806.pdf",
     "fetchedAt": "2026-05-27T16:49:23+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -27618,7 +27632,7 @@
     "evotePickupPeriodText": "",
     "evotePickupLocation": "",
     "evotePickupDocuments": "",
-    "reparsedAt": "2026-06-18T11:42:06+0000"
+    "reparsedAt": "2026-06-21T15:18:34+0000"
   },
   "7818": {
     "code": "7818",
@@ -27864,7 +27878,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8272&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8272_20260526F01_20260618_194616.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8272_20260526F01_20260621_231848.pdf",
     "fetchedAt": "2026-05-30T16:56:15+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pymupdf",
@@ -27875,7 +27889,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T11:46:33+0000"
+    "reparsedAt": "2026-06-21T15:18:56+0000"
   },
   "8279": {
     "code": "8279",
@@ -29253,9 +29267,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1315&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1315_20260626F01_20260531_061848.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1315_20260626F01_20260621_231948.pdf",
     "fetchedAt": "2026-05-30T22:19:04+0000",
-    "cacheStatus": "hit",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
     "textScore": 75,
     "ocrUsed": true,
@@ -29263,7 +29277,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-21T15:20:05+0000"
   },
   "1325": {
     "code": "1325",
@@ -30626,7 +30641,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3689&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3689_20260527F01_20260619_013930.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3689_20260527F01_20260621_232035.pdf",
     "fetchedAt": "2026-05-31T05:15:50+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
@@ -30637,7 +30652,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T17:39:36+0000"
+    "reparsedAt": "2026-06-21T15:20:43+0000"
   },
   "3693": {
     "code": "3693",
@@ -30667,7 +30682,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3694&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3694_20260616F01_20260619_013952.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3694_20260616F01_20260621_232057.pdf",
     "fetchedAt": "2026-05-31T05:17:10+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -30678,7 +30693,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T17:40:08+0000"
+    "reparsedAt": "2026-06-21T15:21:14+0000"
   },
   "3702": {
     "code": "3702",
