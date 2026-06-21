@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T05:29:03+0000",
+  "generatedAt": "2026-06-21T06:49:58+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -4809,7 +4809,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1459_20260512F01_20260617_014008.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1459_20260512F01_20260621_143350.pdf"
         }
       ]
     },
@@ -5013,7 +5013,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1465_20260602F01_20260617_014256.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1465_20260602F01_20260621_143632.pdf"
         }
       ]
     },
@@ -5413,7 +5413,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1474_20260623F01_20260617_202146.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1474_20260623F01_20260621_143743.pdf"
         }
       ]
     },
@@ -5550,7 +5550,7 @@
       "noticeFilename": "2026_1477_20260526F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -5560,7 +5560,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1477_20260526F01_20260528_130418.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1477_20260526F01_20260621_143841.pdf"
         }
       ]
     },
@@ -6090,7 +6090,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1519_20260612F01_20260617_202255.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1519_20260612F01_20260621_144006.pdf"
         }
       ]
     },
@@ -6294,7 +6294,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1525_20260526F01_20260617_202421.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1525_20260526F01_20260621_144032.pdf"
         }
       ]
     },
@@ -7183,7 +7183,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1560_20260623F01_20260617_015500.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1560_20260623F01_20260621_144623.pdf"
         }
       ]
     },
@@ -7729,7 +7729,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1586_20260522F01_20260617_203005.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1586_20260522F01_20260621_144715.pdf"
         }
       ]
     },
@@ -7876,7 +7876,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1590_20260513F01_20260617_015932.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1590_20260513F01_20260621_144747.pdf"
         }
       ]
     },
@@ -8227,7 +8227,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1603_20260624F01_20260617_020815.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1603_20260624F01_20260621_144919.pdf"
         }
       ]
     },
@@ -31465,7 +31465,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3034_20260529F01_20260617_133810.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3034_20260529F01_20260621_133006.pdf"
         }
       ]
     },
@@ -32235,7 +32235,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3049_20260612F01_20260617_134036.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3049_20260612F01_20260621_133123.pdf"
         }
       ]
     },
@@ -33148,7 +33148,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3078_20260624F01_20260617_134225.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3078_20260624F01_20260621_133226.pdf"
         }
       ]
     },
@@ -35831,7 +35831,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3227_20260527F01_20260616_144203.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3227_20260527F01_20260621_133329.pdf"
         }
       ]
     },
@@ -36826,7 +36826,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3285_20260609F01_20260617_134857.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3285_20260609F01_20260621_133423.pdf"
         }
       ]
     },
@@ -39023,7 +39023,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3390_20260616F01_20260617_135214.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3390_20260616F01_20260621_133528.pdf"
         }
       ]
     },
@@ -39936,7 +39936,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3455_20260624F01_20260617_135237.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3455_20260624F01_20260621_133620.pdf"
         }
       ]
     },
@@ -40678,7 +40678,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3498_20260612F01_20260616_145746.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_3498_20260612F01_20260621_133715.pdf"
         }
       ]
     },
@@ -46739,7 +46739,7 @@
       "noticeFilename": "2026_4109_20260522F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -46757,7 +46757,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4109_20260522F01_20260517_185649.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4109_20260522F01_20260621_133815.pdf"
         }
       ]
     },
@@ -47018,7 +47018,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4119_20260522F01_20260617_141431.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4119_20260522F01_20260621_133906.pdf"
         }
       ]
     },
@@ -47222,7 +47222,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4126_20260611F01_20260617_141555.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4126_20260611F01_20260621_133935.pdf"
         }
       ]
     },
@@ -47377,7 +47377,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4129_20260616F01_20260617_141658.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4129_20260616F01_20260621_134038.pdf"
         }
       ]
     },
@@ -48062,7 +48062,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4157_20260528F01_20260617_141838.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4157_20260528F01_20260621_134140.pdf"
         }
       ]
     },
@@ -48168,7 +48168,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4161_20260623F01_20260617_141957.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4161_20260623F01_20260621_134221.pdf"
         }
       ]
     },
@@ -48661,7 +48661,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4173_20260616F01_20260617_142609.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4173_20260616F01_20260621_134412.pdf"
         }
       ]
     },
@@ -49779,7 +49779,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4417_20260616F01_20260617_143009.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4417_20260616F01_20260621_134534.pdf"
         }
       ]
     },
@@ -49828,7 +49828,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4419_20260528F01_20260617_143056.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4419_20260528F01_20260621_134601.pdf"
         }
       ]
     },
@@ -49877,7 +49877,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4420_20260526F01_20260617_143155.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4420_20260526F01_20260621_134721.pdf"
         }
       ]
     },
@@ -49975,7 +49975,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4430_20260522F01_20260617_143219.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4430_20260522F01_20260621_134740.pdf"
         }
       ]
     },
@@ -50073,7 +50073,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4433_20260526F01_20260616_152937.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4433_20260526F01_20260621_134833.pdf"
         }
       ]
     },
@@ -50822,7 +50822,7 @@
       "noticeFilename": "2026_4529_20260529F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -50832,7 +50832,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4529_20260529F01_20260523_011901.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4529_20260529F01_20260621_135012.pdf"
         }
       ]
     },
@@ -52288,7 +52288,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4568_20260618F01_20260616_195402.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4568_20260618F01_20260621_135134.pdf"
         }
       ]
     },
@@ -52327,7 +52327,7 @@
       "noticeFilename": "2026_4569_20260617F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -52337,7 +52337,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4569_20260617F01_20260523_032225.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4569_20260617F01_20260621_135414.pdf"
         }
       ]
     },
@@ -53023,7 +53023,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4706_20260611F01_20260617_145009.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4706_20260611F01_20260621_135433.pdf"
         }
       ]
     },
@@ -53121,7 +53121,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4711_20260624F01_20260617_145225.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4711_20260624F01_20260621_135524.pdf"
         }
       ]
     },
@@ -53341,7 +53341,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4721_20260612F01_20260617_145433.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4721_20260612F01_20260621_135549.pdf"
         }
       ]
     },
@@ -53390,7 +53390,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4722_20260525F01_20260617_145515.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4722_20260525F01_20260621_135646.pdf"
         }
       ]
     },
@@ -54287,7 +54287,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4760_20260605F01_20260617_150039.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4760_20260605F01_20260621_135926.pdf"
         }
       ]
     },
@@ -54434,7 +54434,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4766_20260529F01_20260617_150105.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4766_20260529F01_20260621_135944.pdf"
         }
       ]
     },
@@ -54679,7 +54679,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4772_20260518F01_20260617_150445.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4772_20260518F01_20260621_140145.pdf"
         }
       ]
     },
@@ -54834,7 +54834,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4807_20260526F01_20260617_150618.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4807_20260526F01_20260621_140216.pdf"
         }
       ]
     },
@@ -55152,7 +55152,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4908_20260624F01_20260616_200917.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4908_20260624F01_20260621_140250.pdf"
         }
       ]
     },
@@ -55739,7 +55739,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4931_20260527F01_20260616_201020.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4931_20260527F01_20260621_140311.pdf"
         }
       ]
     },
@@ -56049,7 +56049,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4942_20260525F01_20260616_201319.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4942_20260525F01_20260621_140333.pdf"
         }
       ]
     },
@@ -56147,7 +56147,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4946_20260527F01_20260616_201347.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4946_20260527F01_20260621_140440.pdf"
         }
       ]
     },
@@ -56196,7 +56196,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4949_20260525F01_20260616_201509.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4949_20260525F01_20260621_140509.pdf"
         }
       ]
     },
@@ -56245,7 +56245,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4950_20260525F01_20260616_201529.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4950_20260525F01_20260621_140558.pdf"
         }
       ]
     },
@@ -56791,7 +56791,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4968_20260528F01_20260616_201641.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4968_20260528F01_20260621_140704.pdf"
         }
       ]
     },
@@ -57549,7 +57549,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5007_20260618F01_20260616_201801.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5007_20260618F01_20260621_140744.pdf"
         }
       ]
     },
@@ -57867,7 +57867,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5016_20260609F01_20260617_193544.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5016_20260609F01_20260621_140916.pdf"
         }
       ]
     },
@@ -57916,7 +57916,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5201_20260616F01_20260617_193619.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5201_20260616F01_20260621_140944.pdf"
         }
       ]
     },
@@ -58177,7 +58177,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5209_20260526F01_20260616_202411.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5209_20260526F01_20260621_141050.pdf"
         }
       ]
     },
@@ -58332,7 +58332,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5212_20260617F01_20260616_202435.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5212_20260617F01_20260621_141140.pdf"
         }
       ]
     },
@@ -58952,7 +58952,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5243_20260611F01_20260616_202630.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5243_20260611F01_20260621_141222.pdf"
         }
       ]
     },
@@ -59001,7 +59001,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5244_20260527F01_20260616_202710.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5244_20260527F01_20260621_141331.pdf"
         }
       ]
     },
@@ -59270,7 +59270,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5269_20260617F01_20260616_202941.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5269_20260617F01_20260621_141433.pdf"
         }
       ]
     },
@@ -59295,26 +59295,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-08-07",
+      "evotePickupEndDate": "2026-08-11",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "下午4:30】至台新綜合證券(股)公司股務代理部",
+      "evotePickupDocuments": "0至16:30)至台新綜合證券(股ry)公司股務代理部領取。—3.持股未滿1,000股之股東,除股東親自出席股東會或以電子方式行使表決權者得領取外LotBRARERREET7UPRRARERRwanet:(1)持「身分證正本」並於開會通知書Plownesereake或蓋章。(2)持「身分證正本」並列印出台訕於臺灣集中保管結算所(股)公司「股東e服務」,點選「電子投票」網頁之「議案表決情形」頁面全頁。(3)請",
+      "evotePickupRule": "領取時間：請於115年8月7日至115年8月11日止；領取地點：下午4:30】至台新綜合證券(股)公司股務代理部；攜帶文件：0至16:30)至台新綜合證券(股ry)公司股務代理部領取。—3.持股未滿1,000股之股東,除股東親自出席股東會或以電子方式行使表決權者得領取外LotBRARERREET7UPRRARERRwanet:(1)持「身分證正本」並於開會通知書Plownesereake或蓋章。(2)持「身分證正本」並列印出台訕於臺灣集中保管結算所(股)公司「股東e服務」,點選「電子投票」網頁之「議案表決情形」頁面全頁。(3)請",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "",
+      "noticeSummary": "領取時間：請於115年8月7日至115年8月11日止；領取地點：下午4:30】至台新綜合證券(股)公司股務代理部；攜帶文件：0至16:30)至台新綜合證券(股ry)公司股務代理部領取。—3.持股未滿1,000股之股東,除股東親自出席股東會或以電子方式行使表決權者得領取外LotBRARERREET7UPRRARERRwanet:(1)持「身分證正本」並於開會通知書Plownesereake或蓋章。(2)持「身分證正本」並列印出台訕於臺灣集中保管結算所(股)公司「股東e服務」,點選「電子投票」網頁之「議案表決情形」頁面全頁。(3)請",
+      "noticeGiftSummary": "※一、股東會紀念品:全家禮物卡50元(紀念品不足時以等值商生、紀念品領取方式:(紀念品起不郵寄):1pivevernvettirsterrn4紀念品,請於115年4月24日起至115年5月18a日止【星期例假日除外】,持",
       "noticeFilename": "2026_5272_20260526F01.pdf",
       "noticeUploadedAt": "無",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeEvotePickupPeriodText": "請於115年8月7日至115年8月11日止",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -59327,7 +59327,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5272_20260526F01_20260521_010801.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5272_20260526F01_20260621_141513.pdf"
         }
       ]
     },
@@ -60449,7 +60449,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5324_20260528F01_20260617_194815.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5324_20260528F01_20260621_141616.pdf"
         }
       ]
     },
@@ -62887,7 +62887,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5490_20260616F01_20260617_195224.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5490_20260616F01_20260621_141644.pdf"
         }
       ]
     },
@@ -63250,7 +63250,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5515_20260529F01_20260617_195317.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5515_20260529F01_20260621_141742.pdf"
         }
       ]
     },
@@ -64815,7 +64815,7 @@
       "noticeFilename": "2026_5876_20260612F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-local",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -64825,7 +64825,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5876_20260612F01_20260521_011839.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_5876_20260612F01_20260621_141802.pdf"
         }
       ]
     },
@@ -65343,7 +65343,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6015_20260617F01_20260616_204658.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6015_20260617F01_20260621_141821.pdf"
         }
       ]
     },
@@ -66746,7 +66746,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6126_20260608F01_20260617_195650.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6126_20260608F01_20260621_141854.pdf"
         }
       ]
     },
@@ -69627,7 +69627,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6191_20260618F01_20260616_205700.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6191_20260618F01_20260621_142031.pdf"
         }
       ]
     },
@@ -74801,7 +74801,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6446_20260528F01_20260616_210628.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6446_20260528F01_20260621_142107.pdf"
         }
       ]
     },
@@ -74850,7 +74850,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6449_20260529F01_20260616_210655.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6449_20260529F01_20260621_142211.pdf"
         }
       ]
     },
@@ -91542,26 +91542,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-05-15",
+      "evotePickupEndDate": "2026-05-19",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "福邦證券股務代理部",
+      "evotePickupDocuments": "『身分證正本』並於領取紀念品簽章處簽名或蓋章，或持『身分證正本』並列印出「電子投票」平台之「議案表決情形」頁面全頁",
+      "evotePickupRule": "領取時間：自115年5月15日起至115年5月19日止；領取地點：福邦證券股務代理部；攜帶文件：『身分證正本』並於領取紀念品簽章處簽名或蓋章，或持『身分證正本』並列印出「電子投票」平台之「議案表決情形」頁面全頁",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "」※※※※※※※※※※徵求場所及人員簽章處：雷虎科技股份有限公司一一五年股東常會",
+      "noticeSummary": "領取時間：自115年5月15日起至115年5月19日止；領取地點：福邦證券股務代理部；攜帶文件：『身分證正本』並於領取紀念品簽章處簽名或蓋章，或持『身分證正本』並列印出「電子投票」平台之「議案表決情形」頁面全頁",
+      "noticeGiftSummary": "」※※※※※(cid:106)(cid:107)(cid:73)(cid:283)(cid:96)(cid:23)(cid:167)(cid:8)(cid:284)(cid:45)(cid:6)(cid:282)(cid:18)(cid:19)(cid:110)(cid:235)(cid:16)(cid:283)(cid:7)(cid:8)(cid:9)(cid:10)(cid:11)(cid:209)(cid:210)(cid:285)(cid:286)(cid:23)(cid:24)(cid:279)(cid:46)(cid:30)(cid:31)(cid:13)(cid:71)(cid:264)(cid:105)(cid:239)(cid:30)(cid:31)(cid:8)(cid:284)(cid:175)(cid:192)(cid:287)(cid:288)(cid:289)(cid:129)(cid:290)(cid:13)(cid:30)(cid:31)(cid:255)(cid:291)(cid:45)(cid:270)(cid:102)(cid:105)(cid:117)(cid:238)(cid:43)(cid:150)(cid:153)(cid:22)(cid:116)(cid:151)(cid:13)(cid:178)(cid:22)(cid:108)(cid:4)(cid:48)(cid:7)(cid:8)(cid:9)(cid:10)(cid:11)(cid:209)(cid:210)(cid:5)(cid:6)(cid:87)(cid:31)(cid:88)(cid:30)(cid:8)(cid:30)(cid:13)(cid:48)(cid:254)(cid:255)(cid:288)(cid:289)(cid:292)(cid:171)(cid:279)(cid:46)(cid:30)(cid:31)(cid:45)(cid:224)(cid:53)(cid:89)(cid:19)(cid:148)(cid:107)(cid:7)(cid:8)(cid:45)(cid:80)(cid:81)(cid:18)(cid:43)(cid:150)(cid:11)(cid:134)(cid:48)(cid:73)(cid:74)(cid:75)(cid:9)(cid:10)(cid:11)(cid:76)(cid:77)(cid:78)(cid:78)(cid:78)(cid:79)(cid:11)(cid:45)(cid:80)(cid:81)(cid:82)(cid:13)(cid:68)(cid:11)(cid:62)(cid:63)(cid:154)(cid:155)(cid:120)(cid:293)(cid:20)(cid:265)(cid:82)(cid:260)(cid:122)(cid:108)(cid:5)(cid:6)(cid:89)(cid:19)(cid:180)(cid:107)(cid:5)(cid:6)(cid:7)(cid:8)(cid:45)(cid:30)(cid:31)(cid:96)(cid:97)(cid:36)(cid:263)(cid:114)(cid:254)(cid:153)(cid:264)(cid:193)(cid:18)(cid:19)(cid:30)(cid:31)(cid:96)(cid:97)(cid:19)(cid:108)(cid:134)(cid:19)(cid:263)(cid:114)(cid:7)(cid:8)(cid:11)(cid:134)(cid:19)(cid:20)(cid:19)(cid:90)(cid:19)(cid:122)(cid:19)(cid:94)(cid:294)(cid:77)(cid:78)(cid:78)(cid:78)(cid:77)(cid:78)(cid:78)(cid:78)(cid:19)(cid:26)(cid:27)(cid:28)(cid:29)(cid:30)(cid:31)(cid:21)(cid:32)(cid:33)(cid:34)(cid:35)(cid:36)(cid:37)(cid:38)(cid:39)(cid:40)(cid:41)(cid:42)(cid:30)(cid:43)(cid:44)(cid:45)(cid:30)(cid:31)(cid:46)(cid:47)(cid:13)(cid:48)(cid:49)(cid:50)(cid:23)(cid:24)(cid:51)(cid:52)(cid:53)(cid:50)(cid:54)(cid:43)(cid:44)(cid:36)(cid:55)(cid:56)(cid:23)(cid:24)(cid:57)(cid:58)(cid:59)(cid:89)(cid:19)(cid:94)(cid:294)(cid:77)(cid:78)(cid:78)(cid:78)(cid:77)(cid:78)(cid:78)(cid:78)(cid:19)(cid:94)(cid:78)(cid:77)(cid:78)(cid:78)(cid:78)(cid:77)(cid:78)(cid:78)(cid:78)(cid:19)(cid:263)(cid:114)(cid:254)(cid:153)(cid:264)(cid:193)(cid:19)(cid:295)(cid:282)(cid:38)(cid:8)(cid:161)(cid:45)(cid:141)(cid:296)(cid:269)(cid:297)(cid:151)(cid:153)(cid:22)(cid:13)(cid:298)(cid:299)(cid:23)(cid:24)(cid:300)(cid:52)(cid:301)(cid:302)(cid:13)(cid:123)(cid:230)(cid:231)(cid:123)(cid:232)(cid:231)(cid:303)(cid:167)(cid:304)(cid:305)(cid:10)(cid:306)(cid:13)(cid:60)(cid:250)(cid:307)(cid:308)(cid:56)(cid:196)(cid:309)(cid:48)(cid:60)(cid:310)(cid:196)(cid:309)(cid:311)(cid:312)(cid:134)(cid:235)(cid:89)(cid:19)(cid:313)(cid:192)(cid:121)(cid:164)(cid:216)(cid:19)(cid:94)(cid:21)(cid:98)(cid:21)(cid:207)(cid:19)(cid:108)(cid:263)(cid:114)(cid:7)(cid:8)(cid:11)(cid:134)(cid:13)(cid:68)(cid:314)(cid:108)(cid:27)(cid:149)(cid:5)(cid:6)(cid:71)(cid:13)(cid:266)(cid:203)(cid:226)(cid:121)(cid:39)(cid:43)(cid:150)(cid:11)(cid:134)(cid:36)(cid:315)(cid:123)(cid:145)(cid:54)(cid:263)(cid:114)(cid:43)(cid:150)(cid:11)(cid:134)(cid:316)(cid:134)(cid:123)(cid:20)(cid:317)(cid:318)(cid:242)(cid:43)(cid:150)(cid:13)(cid:319)(cid:104)(cid:114)(cid:43)(cid:150)(cid:320)(cid:11)(cid:134)(cid:48)(cid:73)(cid:74)(cid:75)(cid:76)(cid:78)(cid:77)(cid:78)(cid:78)(cid:78)(cid:77)(cid:78)(cid:78)(cid:78)(cid:11)(cid:25)(cid:220)(cid:89)(cid:19)(cid:93)(cid:294)(cid:95)(cid:65)(cid:251)(cid:321)(cid:52)(cid:18)(cid:19)(cid:106)(cid:107)(cid:22)(cid:108)(cid:7)(cid:8)(cid:45)(cid:9)(cid:10)(cid:11)(cid:13)(cid:65)(cid:251)(cid:321)(cid:52)(cid:85)(cid:86)(cid:239)(cid:194)(cid:22)(cid:23)(cid:24)(cid:225)(cid:43)(cid:150)(cid:45)(cid:9)(cid:10)(cid:11)(cid:175)(cid:242)(cid:89)(cid:19)(cid:148)(cid:107)(cid:319)(cid:83)(cid:103)(cid:169)(cid:170)(cid:213)(cid:214)(cid:215)(cid:177)(cid:102)(cid:13)(cid:22)(cid:23)(cid:24)(cid:7)(cid:8)(cid:11)(cid:190)(cid:68)(cid:213)(cid:322)(cid:120)(cid:293)(cid:122)(cid:265)(cid:82)(cid:13)(cid:136)(cid:83)(cid:169)(cid:170)(cid:213)(cid:214)(cid:215)(cid:216)(cid:217)(cid:147)(cid:122)(cid:218)(cid:45)(cid:152)(cid:177)(cid:102)(cid:45)(cid:41)(cid:267)(cid:192)(cid:323)(cid:240)(cid:13)(cid:184)(cid:220)(cid:73)(cid:266)(cid:41)(cid:267)(cid:89)(cid:22)(cid:23)(cid:24)(cid:7)(cid:8)(cid:11)(cid:190)(cid:324)(cid:213)(cid:322)(cid:120)(cid:293)(cid:325)(cid:122)(cid:265)(cid:145)(cid:13)(cid:181)(cid:165)(cid:104)(cid:175)(cid:176)(cid:215)(cid:236)(cid:177)(cid:102)(cid:326)(cid:269)(cid:212)(cid:327)(cid:328)(cid:169)(cid:170)(cid:213)(cid:214)(cid:279)(cid:329)(cid:61)(cid:330)(cid:5)(cid:23)(cid:167)(cid:43)(cid:150)(cid:331)(cid:332)(cid:36)(cid:239)(cid:185)(cid:213)(cid:214)(cid:89)(cid:19)(cid:93)(cid:333)(cid:95)(cid:22)(cid:12)(cid:45)(cid:91)(cid:249)(cid:82)(cid:334)(cid:13)(cid:335)(cid:336)(cid:337)(cid:73)(cid:220)(cid:68)(cid:43)(cid:150)(cid:99)(cid:100)(cid:21)(cid:43)(cid:150)(cid:11)(cid:134)(cid:21)(cid:8)(cid:284)(cid:31)(cid:80)(cid:21)(cid:114)(cid:338)(cid:173)(cid:224)(cid:21)(cid:263)(cid:102)(cid:30)(cid:31)(cid:29)(cid:96)(cid:252)(cid:81)(cid:21)(cid:263)(cid:102)(cid:269)(cid:229)(cid:196)(cid:182)(cid:264)(cid:193)(cid:36)(cid:278)(cid:339)(cid:175)(cid:176)(cid:67)(cid:340)(cid:341)(cid:13)(cid:60)(cid:61)(cid:11)(cid:62)(cid:63)(cid:64)(cid:65)(cid:66)(cid:67)(cid:63)(cid:158)(cid:185)(cid:186)(cid:204)(cid:205)(cid:36)(cid:23)(cid:24)(cid:28)(cid:29)(cid:46)(cid:47)(cid:101)(cid:102)(cid:45)(cid:89)(cid:342)(cid:145)(cid:16)(cid:243)(cid:223)(cid:343)(cid:72)(cid:176)(cid:344)(cid:281)(cid:123)(cid:112)(cid:68)(cid:28)(cid:29)(cid:345)(cid:346)(cid:123)(cid:304)(cid:347)(cid:348)(cid:349)(cid:123)(cid:215)(cid:236)(cid:45)(cid:298)(cid:350)(cid:351)(cid:350)(cid:268)(cid:123)(cid:344)(cid:281)(cid:71)(cid:13)(cid:352)(cid:64)(cid:65)(cid:66)(cid:67)(cid:63)(cid:316)(cid:65)(cid:353)(cid:6)(cid:45)(cid:89)(cid:19)(cid:93)(cid:354)(cid:95)(cid:355)(cid:356)(cid:66)(cid:67)(cid:357)(cid:358)(cid:168)(cid:144)(cid:192)(cid:123)(cid:271)(cid:359)(cid:172)(cid:360)(cid:18)(cid:358)(cid:89)(cid:19)(cid:93)(cid:361)(cid:95)(cid:22)(cid:108)(cid:5)(cid:6)(cid:7)(cid:8)(cid:168)(cid:99)(cid:169)(cid:170)(cid:45)(cid:175)(cid:176)(cid:30)(cid:362)(cid:13)(cid:61)(cid:363)(cid:23)(cid:167)(cid:30)(cid:362)(cid:347)(cid:364)(cid:365)(cid:166)(cid:7)(cid:8)(cid:245)(cid:366)(cid:174)(cid:367)(cid:368)(cid:369)(cid:18)(cid:370)(cid:371)(cid:371)(cid:372)(cid:373)(cid:374)(cid:315)(cid:315)(cid:375)(cid:376)(cid:372)(cid:373)(cid:107)(cid:371)(cid:377)(cid:373)(cid:378)(cid:107)(cid:379)(cid:376)(cid:375)(cid:107)(cid:371)(cid:377)(cid:315)(cid:375)(cid:376)(cid:372)(cid:373)(cid:315)(cid:380)(cid:315)(cid:377)(cid:378)(cid:146)(cid:315)(cid:371)(cid:94)(cid:94)(cid:333)(cid:373)(cid:146)(cid:78)(cid:94)(cid:13)(cid:166)(cid:185)(cid:186)(cid:381)(cid:174)(cid:208)(cid:382)(cid:166)(cid:239)(cid:185)(cid:174)(cid:36)(cid:166)(cid:23)(cid:24)(cid:383)(cid:384)(cid:123)(cid:129)(cid:385)(cid:174)(cid:386)(cid:296)(cid:166)(cid:361)(cid:78)(cid:207)(cid:207)(cid:174)(cid:145)(cid:387)(cid:388)(cid:389)(cid:36)(cid:22)(cid:23)(cid:24)(cid:368)(cid:390)(cid:93)(cid:368)(cid:369)(cid:18)(cid:377)(cid:377)(cid:377)(cid:107)(cid:371)(cid:370)(cid:391)(cid:392)(cid:393)(cid:378)(cid:394)(cid:371)(cid:395)(cid:396)(cid:378)(cid:394)(cid:107)(cid:379)(cid:376)(cid:375)(cid:95)(cid:19)",
       "noticeFilename": "2026_8033_20260514F01.pdf",
       "noticeUploadedAt": "無",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeEvotePickupPeriodText": "自115年5月15日起至115年5月19日止",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -91574,7 +91574,7 @@
         },
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_8033_20260514F01_20260521_052402.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_8033_20260514F01_20260621_142244.pdf"
         }
       ]
     },
@@ -91794,7 +91794,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_8040_20260525F01_20260617_200613.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_8040_20260525F01_20260621_142418.pdf"
         }
       ]
     },
@@ -94053,7 +94053,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_8107_20260618F01_20260617_201035.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_8107_20260618F01_20260621_142614.pdf"
         }
       ]
     },
@@ -95317,7 +95317,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_8240_20260525F01_20260617_201141.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_8240_20260525F01_20260621_142655.pdf"
         }
       ]
     },
@@ -95413,7 +95413,7 @@
       "noticeFilename": "2026_8255_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -95423,7 +95423,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_8255_20260527F01_20260521_070947.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_8255_20260527F01_20260621_142756.pdf"
         }
       ]
     },
@@ -102342,7 +102342,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "SITEMAP",
+      "proxyPeriodText": "",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
