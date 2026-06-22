@@ -26,20 +26,100 @@ const resultSearchInput = document.getElementById("resultSearchInput");
 const filterTabs = [...document.querySelectorAll(".filter-tab")];
 
 let activeCodes = [];
+let activeNameHints = {};
 let lastResponse = null;
 let activeFilter = "all";
 let viewMode = "current";
 exportBtn.disabled = true;
 
-function extractCodes(raw) {
-  const normalized = raw
+function normalizeCodeInput(raw) {
+  return (raw || "")
     .replace(/[（［【「『]/g, "(")
     .replace(/[）］】」』]/g, ")")
     .replace(/[\u3000,，、；;]/g, " ");
+}
 
-  const bracketMatches = [...normalized.matchAll(/\((\d{3,6})\)/g)].map((match) => match[1]);
-  const plainMatches = [...normalized.matchAll(/\d{3,6}/g)].map((match) => match[0]);
-  return [...new Set([...bracketMatches, ...plainMatches])];
+function cleanCompanyNameCandidate(value) {
+  const cleaned = (value || "")
+    .split(/\s+/)
+    .pop()
+    ?.replace(/^[\s\-–—:：.。]+|[\s\-–—:：.。]+$/g, "")
+    .replace(/[()]/g, "")
+    .trim();
+  if (!cleaned || /^\d+$/.test(cleaned) || cleaned.length > 32) return "";
+  return cleaned;
+}
+
+function extractCodeEntries(raw) {
+  const normalized = normalizeCodeInput(raw);
+  const byCode = new Map();
+
+  function addEntry(code, name = "") {
+    if (!code) return;
+    const existing = byCode.get(code);
+    if (existing) {
+      if (!existing.name && name) existing.name = name;
+      return;
+    }
+    byCode.set(code, { code, name });
+  }
+
+  for (const match of normalized.matchAll(/\((\d{3,6})\)/g)) {
+    const before = normalized.slice(Math.max(0, match.index - 48), match.index);
+    const name = cleanCompanyNameCandidate(before.split(/[\n\r,，、；;]+/).pop());
+    addEntry(match[1], name);
+  }
+
+  for (const match of normalized.matchAll(/\d{3,6}/g)) {
+    addEntry(match[0]);
+  }
+
+  return [...byCode.values()];
+}
+
+function extractCodes(raw) {
+  return extractCodeEntries(raw).map((entry) => entry.code);
+}
+
+function codeNameHintsFromEntries(entries) {
+  return Object.fromEntries(entries.filter((entry) => entry.name).map((entry) => [entry.code, entry.name]));
+}
+
+function readInputCodes() {
+  const entries = extractCodeEntries(codesInput.value);
+  activeNameHints = codeNameHintsFromEntries(entries);
+  return entries.map((entry) => entry.code);
+}
+
+function encodedNameHintsQuery(codes = null) {
+  const scopedHints = codes
+    ? Object.fromEntries(codes.filter((code) => activeNameHints[code]).map((code) => [code, activeNameHints[code]]))
+    : activeNameHints;
+  if (!Object.keys(scopedHints).length) return "";
+  return `&names=${encodeURIComponent(JSON.stringify(scopedHints))}`;
+}
+
+function applyNameHint(item) {
+  if (!item) return item;
+  const hint = activeNameHints[item?.code || ""];
+  if (!hint || item.companyName) return item;
+  return { ...item, companyName: hint, inputCompanyName: hint };
+}
+
+function applyCompareNameHints(rows) {
+  return (rows || []).map((row) => {
+    const hint = activeNameHints[row.code];
+    const years = (row.years || []).map(applyNameHint);
+    return {
+      ...row,
+      companyName: row.companyName || hint || "",
+      years,
+    };
+  });
+}
+
+function watchlistText(codes, nameHints = {}) {
+  return codes.map((code) => (nameHints[code] ? `${nameHints[code]}(${code})` : code)).join("\n");
 }
 
 function compareYearsParam() {
@@ -58,7 +138,7 @@ function setViewMode(mode) {
 }
 
 function saveWatchlist(codes) {
-  localStorage.setItem(WATCHLIST_KEY, codes.join("\n"));
+  localStorage.setItem(WATCHLIST_KEY, watchlistText(codes, activeNameHints));
 }
 
 function loadWatchlist() {
@@ -568,13 +648,13 @@ async function lookupCompare(codes) {
 
   try {
     const response = await fetch(
-      `/api/compare?codes=${encodeURIComponent(codes.join(" "))}&years=${encodeURIComponent(compareYearsParam())}`,
+      `/api/compare?codes=${encodeURIComponent(codes.join(" "))}&years=${encodeURIComponent(compareYearsParam())}${encodedNameHintsQuery(codes)}`,
     );
     const payload = await response.json();
     if (!response.ok || !payload.ok) {
       throw new Error(payload.error || "三年度比較讀取失敗");
     }
-    lastResponse = { mode: "compare", requestedCodes: codes, results: payload.results || [] };
+    lastResponse = { mode: "compare", requestedCodes: codes, results: applyCompareNameHints(payload.results || []) };
     updatedAtText.textContent = new Date().toLocaleString("zh-TW");
     statusText.textContent = `已完成 ${lastResponse.results.length} 檔三年度比較。`;
     renderCompareResultSet(lastResponse.results);
@@ -615,18 +695,19 @@ async function lookup(codes) {
       statusText.textContent = `正在查詢 ${index + 1} / ${codes.length}：${code}`;
 
       try {
-        const response = await fetch(`/api/lookup?codes=${encodeURIComponent(code)}`);
+        const response = await fetch(`/api/lookup?codes=${encodeURIComponent(code)}${encodedNameHintsQuery([code])}`);
         const payload = await response.json();
         if (!response.ok || !payload.ok) {
           throw new Error(payload.error || "查詢失敗");
         }
         if (payload.results?.[0]) {
-          collected.push(payload.results[0]);
+          collected.push(applyNameHint(payload.results[0]));
         }
       } catch (error) {
         collected.push({
           code,
-          companyName: "",
+          companyName: activeNameHints[code] || "",
+          inputCompanyName: activeNameHints[code] || "",
           status: "partial",
           isPublished: false,
           souvenirName: "",
@@ -683,20 +764,20 @@ async function lookup(codes) {
 }
 
 lookupBtn.addEventListener("click", () => {
-  const codes = extractCodes(codesInput.value);
+  const codes = readInputCodes();
   lookup(codes);
 });
 
 currentModeBtn?.addEventListener("click", () => {
   setViewMode("current");
   if (lastResponse?.results) {
-    lookup(activeCodes.length ? activeCodes : extractCodes(codesInput.value));
+    lookup(activeCodes.length ? activeCodes : readInputCodes());
   }
 });
 
 compareModeBtn?.addEventListener("click", () => {
   setViewMode("compare");
-  const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
+  const codes = activeCodes.length ? activeCodes : readInputCodes();
   if (codes.length) {
     lookup(codes);
   }
@@ -729,12 +810,12 @@ resultSearchInput?.addEventListener("input", () => {
 });
 
 refreshBtn.addEventListener("click", () => {
-  const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
+  const codes = activeCodes.length ? activeCodes : readInputCodes();
   lookup(codes);
 });
 
 exportBtn.addEventListener("click", async () => {
-  const codes = activeCodes.length ? activeCodes : extractCodes(codesInput.value);
+  const codes = activeCodes.length ? activeCodes : readInputCodes();
   if (!codes.length) {
     statusText.textContent = "請先查詢資料後再下載 Excel";
     return;
@@ -744,6 +825,9 @@ exportBtn.addEventListener("click", async () => {
   statusText.textContent = isCompareExport ? "正在產生三年度比較 Excel..." : "正在產生 Excel...";
   try {
     const body = new URLSearchParams({ codes: codes.join(" ") });
+    if (Object.keys(activeNameHints).length) {
+      body.set("names", JSON.stringify(activeNameHints));
+    }
     if (isCompareExport) {
       body.set("mode", "compare");
       body.set("years", compareYearsParam());
@@ -791,7 +875,7 @@ exportBtn.addEventListener("click", async () => {
 });
 
 saveWatchlistBtn.addEventListener("click", () => {
-  const codes = extractCodes(codesInput.value);
+  const codes = readInputCodes();
   saveWatchlist(codes);
   statusText.textContent = `已儲存 ${codes.length} 筆 watchlist。`;
 });
@@ -822,7 +906,7 @@ function bootstrap() {
   if (saved) {
     codesInput.value = saved;
     updateCodeCounter();
-    const codes = extractCodes(saved);
+    const codes = readInputCodes();
     if (codes.length) {
       lookup(codes);
     }

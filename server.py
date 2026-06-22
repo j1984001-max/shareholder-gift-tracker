@@ -1829,8 +1829,133 @@ def clean_codes(raw: str) -> list[str]:
     return out
 
 
+def clean_name_hint(value: Any) -> str:
+    text = str(value or "").strip()
+    text = re.sub(r"^[\s\-–—:：.。]+|[\s\-–—:：.。]+$", "", text)
+    text = re.sub(r"[()（）]", "", text).strip()
+    if not text or text.isdigit() or len(text) > 32:
+        return ""
+    return text
+
+
+def parse_name_hints(raw: Any) -> dict[str, str]:
+    if not raw:
+        return {}
+    payload = raw
+    if isinstance(raw, str):
+        try:
+            payload = json.loads(raw)
+        except Exception:
+            payload = raw
+    hints: dict[str, str] = {}
+    if isinstance(payload, dict):
+        for code, name in payload.items():
+            code_text = str(code)
+            if re.fullmatch(r"\d{3,6}", code_text):
+                cleaned = clean_name_hint(name)
+                if cleaned:
+                    hints[code_text] = cleaned
+    elif isinstance(payload, list):
+        for entry in payload:
+            if isinstance(entry, dict):
+                code_text = str(entry.get("code", ""))
+                cleaned = clean_name_hint(entry.get("name", ""))
+                if re.fullmatch(r"\d{3,6}", code_text) and cleaned:
+                    hints[code_text] = cleaned
+    elif isinstance(payload, str):
+        normalized = (
+            payload.replace("（", "(")
+            .replace("）", ")")
+            .replace("［", "(")
+            .replace("］", ")")
+            .replace("【", "(")
+            .replace("】", ")")
+        )
+        for match in re.finditer(r"\((\d{3,6})\)", normalized):
+            before = normalized[max(0, match.start() - 48) : match.start()]
+            name = clean_name_hint(re.split(r"[\n\r,，、；;]+", before)[-1].split()[-1] if before.split() else "")
+            if name:
+                hints.setdefault(match.group(1), name)
+    return hints
+
+
+def apply_name_hints(results: list[dict[str, Any]], name_hints: dict[str, str]) -> list[dict[str, Any]]:
+    if not name_hints:
+        return results
+    for item in results:
+        code = str(item.get("code", ""))
+        hint = name_hints.get(code, "")
+        if hint and not item.get("companyName"):
+            item["companyName"] = hint
+            item["inputCompanyName"] = hint
+    return results
+
+
+def apply_name_hints_to_compare_rows(rows: list[dict[str, Any]], name_hints: dict[str, str]) -> list[dict[str, Any]]:
+    if not name_hints:
+        return rows
+    for row in rows:
+        code = str(row.get("code", ""))
+        hint = name_hints.get(code, "")
+        if hint and not row.get("companyName"):
+            row["companyName"] = hint
+            row["inputCompanyName"] = hint
+        for item in row.get("years", []):
+            if isinstance(item, dict) and hint and not item.get("companyName"):
+                item["companyName"] = hint
+                item["inputCompanyName"] = hint
+    return rows
+
+
 def source_link(label: str, url: str) -> dict[str, str]:
     return {"label": label, "url": url}
+
+
+def item_has_pickup_info(item: dict[str, Any]) -> bool:
+    return bool(
+        item.get("evotePickupStartDate")
+        or item.get("evotePickupEndDate")
+        or item.get("noticeEvotePickupPeriodText")
+        or item.get("evotePickupRule")
+    )
+
+
+def item_has_notice_info(item: dict[str, Any]) -> bool:
+    return bool(item.get("noticeFilename") or item.get("noticeSourceLabel") or item.get("noticeSummary"))
+
+
+def missing_data_reason(item: dict[str, Any]) -> str:
+    status = item.get("status", "")
+    has_notice = item_has_notice_info(item)
+    has_pickup = item_has_pickup_info(item)
+    note = item.get("notes", "")
+    mops_error = item.get("mopsError", "")
+    cache_status = item.get("noticeCacheStatus", "")
+
+    if status == "published":
+        if has_pickup:
+            return ""
+        if has_notice:
+            return "已公告紀念品，且已有通知書快取，但尚未解析出電子投票股東領取日期/地點。"
+        return "已公告紀念品，但尚未取得通知書或電子投票股東領取資訊。"
+
+    if status == "partial":
+        if has_pickup:
+            return "已有部分會議/通知書資料，但紀念品公告來源仍未完整。"
+        if has_notice:
+            return "已有部分會議/通知書資料，但尚未解析出電子投票股東領取資訊。"
+        return note or "只有部分資料，尚未補齊紀念品與通知書。"
+
+    if has_notice:
+        summary = item.get("noticeSummary", "") or item.get("noticeGiftSummary", "")
+        if summary:
+            return "紀念品來源未收錄；已有通知書摘要，請人工確認是否未發紀念品或解析仍不足。"
+        return "紀念品來源未收錄；已有通知書快取，但未解析出紀念品或電子投票領取資訊。"
+    if cache_status == "miss":
+        return "紀念品來源未收錄；MOPS/官方通知書查詢未命中。"
+    if mops_error:
+        return f"紀念品來源未收錄；通知書查詢錯誤：{mops_error}"
+    return note or "紀念品來源未收錄或今年尚未公告。"
 
 
 def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
@@ -1838,6 +1963,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
         "股票代號",
         "公司名稱",
         "狀態",
+        "查無/缺資料原因",
         "紀念品",
         "最後買進日",
         "股東會日期",
@@ -1863,6 +1989,7 @@ def build_export_rows(results: list[dict[str, Any]]) -> list[list[str]]:
             item.get("code", ""),
             item.get("companyName", ""),
             item.get("status", ""),
+            missing_data_reason(item),
             item.get("souvenirName", ""),
             item.get("lastBuyDate", "") or "",
             item.get("meetingDate", "") or "",
@@ -1891,6 +2018,7 @@ def export_row_values(item: dict[str, Any]) -> list[str]:
         item.get("code", ""),
         item.get("companyName", ""),
         item.get("status", ""),
+        missing_data_reason(item),
         item.get("souvenirName", ""),
         item.get("lastBuyDate", "") or "",
         item.get("meetingDate", "") or "",
@@ -1925,12 +2053,12 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
         cell.font = Font(bold=True)
         cell.alignment = Alignment(horizontal="center", vertical="center")
 
-    wrap_columns = {"D", "L", "N", "O", "P", "U", "V"}
+    wrap_columns = {"D", "E", "M", "O", "P", "Q", "R", "W"}
     widths = {
-        "A": 12, "B": 18, "C": 10, "D": 28, "E": 14, "F": 14, "G": 12,
-        "H": 14, "I": 14, "J": 14, "K": 14, "L": 24, "M": 12, "N": 24,
-        "O": 36, "P": 48, "Q": 56, "R": 12, "S": 22, "T": 18, "U": 10,
-        "V": 24,
+        "A": 12, "B": 18, "C": 10, "D": 38, "E": 28, "F": 14, "G": 14,
+        "H": 12, "I": 14, "J": 14, "K": 14, "L": 14, "M": 24, "N": 12,
+        "O": 24, "P": 36, "Q": 48, "R": 56, "S": 12, "T": 22, "U": 18,
+        "V": 10, "W": 24,
     }
     for column, width in widths.items():
         worksheet.column_dimensions[column].width = width
@@ -1951,6 +2079,7 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
 
     year_fields = [
         ("狀態", "status"),
+        ("查無/缺資料原因", "_missingReason"),
         ("紀念品", "souvenirName"),
         ("最後買進日", "lastBuyDate"),
         ("股東會日期", "meetingDate"),
@@ -1983,7 +2112,9 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
         for year in years:
             item = history_by_year.get(year, {})
             for _, field in year_fields:
-                if field == "noticeSummary":
+                if field == "_missingReason":
+                    values.append(missing_data_reason(item))
+                elif field == "noticeSummary":
                     values.append(item.get("noticeSummary", "") or item.get("noticeGiftSummary", ""))
                 elif field == "transferAgentName":
                     values.append(item.get("transferAgentName", "") or item.get("transferAgentShort", ""))
@@ -2002,7 +2133,7 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
         column_letter = column_cells[0].column_letter
         worksheet.column_dimensions[column_letter].width = 18
 
-    wide_wrap_labels = {"領取地點", "攜帶資料", "領取資訊", "通知書摘要", "期間原文"}
+    wide_wrap_labels = {"原因", "領取地點", "攜帶資料", "領取資訊", "通知書摘要", "期間原文"}
     for row in worksheet.iter_rows(min_row=2):
         for cell in row:
             header_value = str(worksheet.cell(row=1, column=cell.column).value or "")
@@ -2021,16 +2152,16 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
         cell.alignment = Alignment(horizontal="center", vertical="center")
     detail_sheet.freeze_panes = "A2"
     detail_widths = {
-        "A": 10, "B": 12, "C": 18, "D": 10, "E": 28, "F": 14, "G": 14,
-        "H": 12, "I": 14, "J": 14, "K": 14, "L": 14, "M": 24, "N": 12,
-        "O": 24, "P": 36, "Q": 48, "R": 56, "S": 12, "T": 22, "U": 18,
-        "V": 10, "W": 24,
+        "A": 10, "B": 12, "C": 18, "D": 10, "E": 38, "F": 28, "G": 14,
+        "H": 14, "I": 12, "J": 14, "K": 14, "L": 14, "M": 14, "N": 24,
+        "O": 12, "P": 24, "Q": 36, "R": 48, "S": 56, "T": 12, "U": 22,
+        "V": 18, "W": 10, "X": 24,
     }
     for column, width in detail_widths.items():
         detail_sheet.column_dimensions[column].width = width
     for row in detail_sheet.iter_rows(min_row=2):
         for cell in row:
-            cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in {"M", "O", "P", "Q", "R", "W"})
+            cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in {"E", "F", "N", "P", "Q", "R", "S", "X"})
 
     output = io.BytesIO()
     workbook.save(output)
@@ -2377,20 +2508,23 @@ class AppHandler(SimpleHTTPRequestHandler):
             query = urllib.parse.parse_qs(parsed.query)
             raw_codes = query.get("codes", [""])[0]
             raw_years = query.get("years", [""])[0]
-            self.handle_lookup(raw_codes, raw_years)
+            raw_names = query.get("names", [""])[0]
+            self.handle_lookup(raw_codes, raw_years, raw_names=raw_names)
             return
         if parsed.path == "/api/compare":
             query = urllib.parse.parse_qs(parsed.query)
             raw_codes = query.get("codes", [""])[0]
             raw_years = query.get("years", [""])[0]
-            self.handle_compare(raw_codes, raw_years)
+            raw_names = query.get("names", [""])[0]
+            self.handle_compare(raw_codes, raw_years, raw_names=raw_names)
             return
         if parsed.path == "/api/export.xlsx":
             query = urllib.parse.parse_qs(parsed.query)
             raw_codes = query.get("codes", [""])[0]
             raw_years = query.get("years", [""])[0]
             mode = query.get("mode", [""])[0]
-            self.handle_export(raw_codes, raw_years=raw_years, mode=mode)
+            raw_names = query.get("names", [""])[0]
+            self.handle_export(raw_codes, raw_years=raw_years, mode=mode, raw_names=raw_names)
             return
         if parsed.path == "/api/health":
             json_response(
@@ -2429,7 +2563,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             self.path = "/index.html"
         super().do_GET()
 
-    def handle_lookup(self, raw_codes: str, raw_years: str = "") -> None:
+    def handle_lookup(self, raw_codes: str, raw_years: str = "", raw_names: Any = "") -> None:
         codes = clean_codes(raw_codes)
         if not codes:
             json_response(
@@ -2447,6 +2581,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             record_requested_codes(codes)
             roc_years = parse_roc_years(raw_years)
             results, source_stats, metadata = build_lookup_results(codes, roc_year=roc_years[0])
+            apply_name_hints(results, parse_name_hints(raw_names))
             json_response(
                 self,
                 {
@@ -2470,7 +2605,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                 status=502,
             )
 
-    def handle_compare(self, raw_codes: str, raw_years: str = "") -> None:
+    def handle_compare(self, raw_codes: str, raw_years: str = "", raw_names: Any = "") -> None:
         codes = clean_codes(raw_codes)
         if not codes:
             json_response(
@@ -2488,6 +2623,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             record_requested_codes(codes)
             years = parse_roc_years(raw_years) if raw_years else DEFAULT_COMPARE_ROC_YEARS
             results, metadata = build_compare_results(codes, years)
+            apply_name_hints_to_compare_rows(results, parse_name_hints(raw_names))
             json_response(
                 self,
                 {
@@ -2509,7 +2645,7 @@ class AppHandler(SimpleHTTPRequestHandler):
                 status=502,
             )
 
-    def handle_export(self, raw_codes: str, raw_years: str = "", mode: str = "") -> None:
+    def handle_export(self, raw_codes: str, raw_years: str = "", mode: str = "", raw_names: Any = "") -> None:
         codes = clean_codes(raw_codes)
         if not codes:
             json_response(
@@ -2520,14 +2656,17 @@ class AppHandler(SimpleHTTPRequestHandler):
             return
         try:
             export_mode = (mode or "").lower()
+            name_hints = parse_name_hints(raw_names)
             if export_mode == "compare":
                 years = parse_roc_years(raw_years) if raw_years else DEFAULT_COMPARE_ROC_YEARS
                 compare_rows, _ = build_compare_results(codes, years)
+                apply_name_hints_to_compare_rows(compare_rows, name_hints)
                 body = build_compare_export_xlsx(compare_rows, years)
                 year_part = "-".join(str(year) for year in years)
                 filename = f"shareholder-gifts-compare-{year_part}-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
             else:
                 results, _, _ = build_lookup_results(codes)
+                apply_name_hints(results, name_hints)
                 body = build_export_xlsx(results)
                 filename = f"shareholder-gifts-{time.strftime('%Y%m%d-%H%M%S')}.xlsx"
             self.send_response(200)
@@ -2554,6 +2693,7 @@ class AppHandler(SimpleHTTPRequestHandler):
         codes: list[str] = []
         mode = ""
         raw_years = ""
+        raw_names: Any = ""
         if "application/json" in content_type:
             try:
                 payload = json.loads(raw_body.decode("utf-8")) if raw_body else {}
@@ -2563,6 +2703,7 @@ class AppHandler(SimpleHTTPRequestHandler):
             codes = clean_codes(" ".join(str(code) for code in payload.get("codes", [])))
             mode = str(payload.get("mode", ""))
             raw_years = str(payload.get("years", ""))
+            raw_names = payload.get("names", "")
         else:
             try:
                 parsed = urllib.parse.parse_qs(raw_body.decode("utf-8"))
@@ -2573,7 +2714,8 @@ class AppHandler(SimpleHTTPRequestHandler):
             codes = clean_codes(raw_codes)
             mode = parsed.get("mode", [""])[0]
             raw_years = parsed.get("years", [""])[0]
-        self.handle_export(",".join(codes), raw_years=raw_years, mode=mode)
+            raw_names = parsed.get("names", [""])[0]
+        self.handle_export(",".join(codes), raw_years=raw_years, mode=mode, raw_names=raw_names)
 
 
 def main() -> None:
