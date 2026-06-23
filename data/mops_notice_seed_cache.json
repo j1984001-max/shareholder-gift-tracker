@@ -33493,9 +33493,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6961&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6961_20260527F01_20260601_004233.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6961_20260527F01_20260623_075437.pdf",
     "fetchedAt": "2026-05-31T16:42:42+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 83,
     "ocrUsed": false,
@@ -33503,7 +33503,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-22T23:54:45+0000"
   },
   "6962": {
     "code": "6962",
@@ -33743,9 +33744,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7402&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7402_20260612F01_20260601_004920.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7402_20260612F01_20260623_075525.pdf",
     "fetchedAt": "2026-05-31T16:49:30+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 173,
     "ocrUsed": false,
@@ -33753,7 +33754,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-22T23:55:35+0000"
   },
   "7547": {
     "code": "7547",
@@ -34236,9 +34238,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8069&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8069_20260527F01_20260601_012035.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8069_20260527F01_20260623_075545.pdf",
     "fetchedAt": "2026-05-31T17:21:29+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "ocr-tesseract",
     "textScore": 155,
     "ocrUsed": true,
@@ -34246,7 +34248,8 @@
     "evotePickupRule": "2.以視訊出席、電子投票(上網投票成功且無重複委託者)領取方式:請於115年7月830日至115年8月3日上午9時至下午4時止(例假日除外),持「身分證正本」至本公司股務代理機構(台北市中正區重慶南路一段2號1樓忠孝西路側門)領取股東會念品,逾期不再發放,非以電子方式行使表決權之股東,恕不發放紀念品。3.親自出席股東會:請攜帶本通知書並於",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-22T23:56:32+0000"
   },
   "8070": {
     "code": "8070",
@@ -34769,9 +34772,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2812&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_2812_20260527F01_20260601_063128.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_2812_20260527F01_20260623_075646.pdf",
     "fetchedAt": "2026-05-31T22:31:36+0000",
-    "cacheStatus": "hit",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 173,
     "ocrUsed": false,
@@ -34779,7 +34782,8 @@
     "evotePickupRule": "4、股東會紀念品發放原則：(1)持股未滿1,000股之股東，除股東親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。(2)持股滿1,000股不克出席且未電子投票者，請憑本通知書",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-22T23:56:54+0000"
   },
   "2816": {
     "code": "2816",
@@ -34893,7 +34897,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2849&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_2849_20260624F01_20260615_232057.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_2849_20260624F01_20260623_075812.pdf",
     "fetchedAt": "2026-05-31T22:34:50+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -34904,7 +34908,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T15:21:16+0000"
+    "reparsedAt": "2026-06-22T23:58:34+0000"
   },
   "2850": {
     "code": "2850",
@@ -35058,9 +35062,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3228&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3228_20260611F01_20260601_064408.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3228_20260611F01_20260623_075847.pdf",
     "fetchedAt": "2026-05-31T22:44:16+0000",
-    "cacheStatus": "hit",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 155,
     "ocrUsed": false,
@@ -35068,7 +35072,8 @@
     "evotePickupRule": "會網址https://free.sfi.org.tw或利用語音專線(02)2361-1818股票代號：3228查詢。四、持股未滿1,000股之股東，除股東本人親自出席股東會或以電子方式行使表決權者得領取外，本公司將不予發放紀念品。五、親自出席股東會請攜帶本通知書並於",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-22T23:58:55+0000"
   },
   "3232": {
     "code": "3232",
@@ -35512,7 +35517,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3570&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3570_20260522F01_20260615_234021.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3570_20260522F01_20260623_080030.pdf",
     "fetchedAt": "2026-05-31T23:06:13+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -35523,7 +35528,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T15:40:40+0000"
+    "reparsedAt": "2026-06-23T00:01:14+0000"
   },
   "3577": {
     "code": "3577",
@@ -35533,7 +35538,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3577&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3577_20260617F01_20260615_234054.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3577_20260617F01_20260623_080133.pdf",
     "fetchedAt": "2026-05-31T23:06:45+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -35544,7 +35549,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T15:41:13+0000"
+    "reparsedAt": "2026-06-23T00:02:02+0000"
   },
   "3581": {
     "code": "3581",
@@ -35595,7 +35600,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3594&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3594_20260629F01_20260615_234326.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3594_20260629F01_20260623_080234.pdf",
     "fetchedAt": "2026-05-31T23:13:17+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
@@ -35606,7 +35611,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T15:43:35+0000"
+    "reparsedAt": "2026-06-23T00:02:45+0000"
   },
   "3628": {
     "code": "3628",
@@ -35760,9 +35765,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4977&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_4977_20260608F01_20260601_132425.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_4977_20260608F01_20260623_080647.pdf",
     "fetchedAt": "2026-06-01T05:25:40+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 155,
     "ocrUsed": false,
@@ -35770,7 +35775,8 @@
     "evotePickupRule": "p.ctbcbank.com/cts/index.jsp)或利用客服語音專線(02)6636-5566按股票代號：4977查詢。三、紀念品發放原則：除親自出席股東會或採電子投票之股東外，持股未滿1,000股之股東，將不予發放紀念品，且紀念品於開會當天會議結束前會場發放。四、採電子投票之股東，紀念品領取方式：(一)資格條件：限已於115年5月9日至6月5日完成電子投票之股東。(二)紀念品領取方式：1.登記紀念品e領取：(發送電子禮物卡簡訊)(1)發送對象：115年5月9日至6月5日完成股東會紀念品線上登記e領取之股東。(登記平台：請掃描右方QRCode)。(2)發送日期：115年7月9日發送電子禮物卡簡訊至股東登記之手機。補發期間同領取期間(自115年7月9日起至7月13日止，每日9:00至17:00，例假日除外)，逾時恕不補發。2.未採紀念品e領取(臨櫃領取)：(1)攜帶文件：股東會出席通知書或身分證明文件。(2)領取期間及地點：自115年7月9日起至7月13日止(每日9:00至17:00，例假日除外)至中國信託商業銀行代理部(台北市中正區懷寧街70號)領取，恕不郵寄及補發",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-23T00:07:57+0000"
   },
   "4987": {
     "code": "4987",
@@ -36194,7 +36200,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6139&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6139_20260522F01_20260616_000232.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6139_20260522F01_20260623_080807.pdf",
     "fetchedAt": "2026-06-01T05:45:25+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -36205,7 +36211,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T16:02:51+0000"
+    "reparsedAt": "2026-06-23T00:08:24+0000"
   },
   "6141": {
     "code": "6141",
