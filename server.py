@@ -1338,6 +1338,7 @@ def extract_pickup_location(source_hint: str, place_text: str, rule_text: str, t
     def clean_location(value: str) -> str:
         cleaned = value.strip("：:，,。 ")
         cleaned = re.sub(r"^(?:\d{2,3}年)?\d{1,2}月\d{1,2}日(?:\([^)]*\))?至", "", cleaned)
+        cleaned = re.sub(r"^[^，。；]{0,40}\)至", "", cleaned)
         return cleaned.strip("：:，,。 ")
 
     match = re.search(
@@ -1409,6 +1410,10 @@ def extract_pickup_documents(rule_text: str) -> str:
     if match:
         return clean_pickup_documents_text(match.group(1))
 
+    match = re.search(r"(?:請)?攜帶以下文件(?:二擇一|擇一)?[：:]?(.{2,500}?)(?:，?於\d{2,3}年|於\d{2,3}年|至[^。；]{0,120}(?:領取|換領)|$)", rule)
+    if match:
+        return clean_pickup_documents_text(f"以下文件二擇一：{match.group(1)}")
+
     match = re.search(r"(?:請)?攜帶下列文件(?:辦理)?[：:]?(.{2,500}?)(?:，?並?(?:自|於)\d{2,3}年|(?:自|於)\d{2,3}年|至[^。；]{0,120}(?:領取|換領)|$)", rule)
     if match:
         return clean_pickup_documents_text(match.group(1))
@@ -1448,6 +1453,9 @@ def extract_pickup_documents(rule_text: str) -> str:
 
     if "身分證明文件" in compact and "股東會出席通知書" in compact:
         return "股東會出席通知書或身分證明文件"
+
+    if "持相關證明文件" in compact or "持相關證明文件至" in compact:
+        return "相關證明文件"
 
     if any(keyword in compact for keyword in ("身分證", "戶口名簿", "健保卡", "駕照", "出席通知書", "議案表決情形")):
         return clean_pickup_documents_text(rule)
@@ -1502,7 +1510,11 @@ def normalize_evote_rule(
 ) -> str:
     cleaned = strip_notice_noise(rule_text)
     generic_locations = {"會場", "自辦", "公司", "本公司"}
-    has_explicit_pickup = has_evote_pickup_evidence(cleaned)
+    # `strip_notice_noise` intentionally cuts noisy mailer/ticket tails, but
+    # some notices place the strongest e-vote pickup evidence in that area.
+    # Accept evidence from either the cleaned snippet or the parser-selected
+    # original snippet, then keep the output structured via period/location/docs.
+    has_explicit_pickup = has_evote_pickup_evidence(cleaned) or has_evote_pickup_evidence(rule_text)
     if not has_explicit_pickup:
         return ""
     if not period_text and not documents and location in generic_locations:
@@ -1627,6 +1639,52 @@ def compose_notice_summary(
     return trim_notice_summary(fallback_summary)
 
 
+def merge_notice_cache_into_record(record: dict[str, Any], cached_notice: dict[str, Any] | None) -> dict[str, Any]:
+    if not isinstance(cached_notice, dict):
+        return record
+
+    field_map = {
+        "filename": "noticeFilename",
+        "uploadedAt": "noticeUploadedAt",
+        "cacheStatus": "noticeCacheStatus",
+        "sourceLabel": "noticeSourceLabel",
+        "sourceType": "noticeSourceType",
+        "giftSummary": "noticeGiftSummary",
+        "evotePickupRule": "evotePickupRule",
+        "evotePickupStartDate": "evotePickupStartDate",
+        "evotePickupEndDate": "evotePickupEndDate",
+        "evotePickupPeriodText": "noticeEvotePickupPeriodText",
+        "evotePickupLocation": "evotePickupLocation",
+        "evotePickupDocuments": "evotePickupDocuments",
+    }
+    for cache_key, record_key in field_map.items():
+        cache_value = cached_notice.get(cache_key)
+        if cache_value and not record.get(record_key):
+            record[record_key] = cache_value
+
+    has_cached_pickup = bool(
+        cached_notice.get("evotePickupRule")
+        or cached_notice.get("evotePickupStartDate")
+        or cached_notice.get("evotePickupEndDate")
+        or cached_notice.get("evotePickupPeriodText")
+    )
+    if has_cached_pickup and not record.get("evotePickupSource"):
+        record["evotePickupSource"] = cached_notice.get("sourceLabel") or "開會通知書"
+    if cached_notice.get("filename") or cached_notice.get("pdfUrl"):
+        record["mopsAttempted"] = True
+
+    pdf_url = cached_notice.get("pdfUrl")
+    if pdf_url:
+        sources = record.get("sources")
+        if not isinstance(sources, list):
+            sources = []
+        if not any(isinstance(source, dict) and source.get("url") == pdf_url for source in sources):
+            sources.append(source_link(cached_notice.get("sourceLabel") or "開會通知書", pdf_url))
+        record["sources"] = sources
+
+    return record
+
+
 def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
     raw_evote_pickup_rule = record.get("evotePickupRule", "")
     evote_pickup_place = record.get("evotePickupPlace", "")
@@ -1689,6 +1747,8 @@ def enrich_record_notice_fields(record: dict[str, Any]) -> dict[str, Any]:
     )
     if not notice_summary and has_structured_snapshot_rule:
         notice_summary = trim_notice_summary(record.get("noticeSummary", "") or evote_pickup_rule)
+    if not notice_summary and evote_pickup_rule and period_text:
+        notice_summary = trim_notice_summary(evote_pickup_rule)
 
     record["evotePickupRule"] = evote_pickup_rule
     record["evotePickupLocation"] = evote_pickup_location
@@ -2241,10 +2301,13 @@ def build_lookup_results(
 
     results_map: dict[str, dict[str, Any]] = {}
     missing_codes: list[str] = []
+    notice_cache = load_notice_cache() if use_snapshot else {}
     for code in codes:
         record = snapshot_records.get(code) if use_snapshot else None
         if isinstance(record, dict):
-            results_map[code] = enrich_record_notice_fields(dict(record))
+            cached_notice = notice_cache_lookup(notice_cache, code, normalized_year)
+            merged_record = merge_notice_cache_into_record(dict(record), cached_notice)
+            results_map[code] = enrich_record_notice_fields(merged_record)
         else:
             missing_codes.append(code)
 
