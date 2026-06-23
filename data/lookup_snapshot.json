@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T17:26:35+0000",
+  "generatedAt": "2026-06-23T20:38:33+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -102326,7 +102326,7 @@
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "",
+      "proxyPeriodText": "SITEMAP",
       "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
