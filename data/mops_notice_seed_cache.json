@@ -21408,7 +21408,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3231&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3231_20260529F01_20260618_075809.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3231_20260529F01_20260625_074854.pdf",
     "fetchedAt": "2026-05-29T10:36:46+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -21419,7 +21419,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-17T23:59:04+0000"
+    "reparsedAt": "2026-06-24T23:49:15+0000"
   },
   "3252": {
     "code": "3252",
