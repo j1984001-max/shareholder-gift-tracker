@@ -551,7 +551,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1240&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1240_20260622F01_20260616_080615.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1240_20260622F01_20260624_232953.pdf",
     "fetchedAt": "2026-05-27T23:19:14+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -564,7 +564,7 @@
     "evotePickupPeriodText": "",
     "evotePickupLocation": "",
     "evotePickupDocuments": "",
-    "reparsedAt": "2026-06-16T00:06:32+0000"
+    "reparsedAt": "2026-06-24T15:30:08+0000"
   },
   "1256": {
     "code": "1256",
@@ -595,7 +595,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1259&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1259_20260522F01_20260616_080749.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1259_20260522F01_20260624_233021.pdf",
     "fetchedAt": "2026-05-27T23:20:15+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
@@ -608,7 +608,7 @@
     "evotePickupPeriodText": "",
     "evotePickupLocation": "",
     "evotePickupDocuments": "",
-    "reparsedAt": "2026-06-16T00:07:59+0000"
+    "reparsedAt": "2026-06-24T15:30:30+0000"
   },
   "1264": {
     "code": "1264",
@@ -1123,7 +1123,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1339&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1339_20260529F01_20260616_082307.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1339_20260529F01_20260624_233110.pdf",
     "fetchedAt": "2026-05-22T21:13:28+0000",
     "cacheStatus": "reparsed-refreshed",
     "giftSummary": "",
@@ -1134,7 +1134,7 @@
     "textEngine": "pypdf",
     "textScore": 91,
     "ocrUsed": false,
-    "reparsedAt": "2026-06-16T00:23:14+0000",
+    "reparsedAt": "2026-06-24T15:31:16+0000",
     "rocYear": 115,
     "year": 2026
   },
@@ -2087,7 +2087,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1522&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1522_20260617F01_20260616_085244.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1522_20260617F01_20260624_233300.pdf",
     "fetchedAt": "2026-05-23T05:13:55+0000",
     "cacheStatus": "reparsed-refreshed",
     "giftSummary": "",
@@ -2098,7 +2098,7 @@
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
-    "reparsedAt": "2026-06-16T00:53:06+0000",
+    "reparsedAt": "2026-06-24T15:33:22+0000",
     "rocYear": 115,
     "year": 2026
   },
@@ -2282,18 +2282,18 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1605&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1605_20260522F01_20260515_232529.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1605_20260522F01_20260624_233335.pdf",
     "fetchedAt": "2026-05-15T15:25:34+0000",
-    "cacheStatus": "hit",
-    "giftSummary": "",
+    "cacheStatus": "reparsed-refreshed",
+    "giftSummary": "(3)不出席僅欲領取紀念品之股東:股東持股不限股數。A.領取時間:115年5月25日至5月26日共二日,上午9:00至下午4:30。B.領取地點:臺北市內湖區行善路398號9樓°〔.應繳交文件開會通知書或出示身分證明文件影本。(4)親自出席股東會之股東:於當天會議結束前至會場領取。REESUBRES,恕不採郵寄方式,股東會後恕五年amie會委託書一一五年五月二十二日",
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "textEngine": "pypdf",
-    "textScore": 35,
-    "ocrUsed": false,
-    "reparsedAt": "2026-05-28T18:55:37+0800",
+    "textEngine": "combined-ocr",
+    "textScore": 87,
+    "ocrUsed": true,
+    "reparsedAt": "2026-06-24T15:33:54+0000",
     "rocYear": 115,
     "year": 2026
   },
@@ -40880,7 +40880,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8930&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8930_20260529F01_20260616_072211.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8930_20260529F01_20260624_232347.pdf",
     "fetchedAt": "2026-06-04T16:19:32+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
@@ -40891,7 +40891,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T23:22:18+0000"
+    "reparsedAt": "2026-06-24T15:23:56+0000"
   },
   "8935": {
     "code": "8935",
@@ -41067,7 +41067,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=9110&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_9110_20260629F01_20260616_072927.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_9110_20260629F01_20260624_232410.pdf",
     "fetchedAt": "2026-06-04T16:28:01+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
@@ -41078,7 +41078,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T23:30:16+0000"
+    "reparsedAt": "2026-06-24T15:24:56+0000"
   },
   "9136": {
     "code": "9136",
@@ -41751,7 +41751,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3265&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3265_20260528F01_20260616_075252.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3265_20260528F01_20260624_232716.pdf",
     "fetchedAt": "2026-06-05T04:53:19+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
@@ -41762,7 +41762,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T23:53:10+0000"
+    "reparsedAt": "2026-06-24T15:27:34+0000"
   },
   "9906": {
     "code": "9906",
