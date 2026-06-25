@@ -28261,14 +28261,14 @@
     "rocYear": 115,
     "year": 2026,
     "filename": "2026_8423_20260605F01.pdf",
-    "parserVersion": 5,
+    "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=8423&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8423_20260605F01_20260528_045322.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_8423_20260605F01_20260625_175808.pdf",
     "fetchedAt": "2026-05-27T20:53:42+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "ocr-tesseract",
-    "textScore": 118,
+    "textScore": 58,
     "ocrUsed": true,
     "giftSummary": "",
     "evotePickupRule": "",
@@ -28276,7 +28276,8 @@
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
     "evotePickupLocation": "",
-    "evotePickupDocuments": ""
+    "evotePickupDocuments": "",
+    "reparsedAt": "2026-06-25T09:58:29+0000"
   },
   "8424": {
     "code": "8424",
