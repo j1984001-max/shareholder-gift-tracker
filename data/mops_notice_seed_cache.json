@@ -7285,7 +7285,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4166&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_4166_20260616F01_20260617_142312.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_4166_20260616F01_20260627_042307.pdf",
     "fetchedAt": "2026-05-23T00:17:24+0800",
     "cacheStatus": "reparsed-refreshed",
     "giftSummary": "",
@@ -7296,7 +7296,7 @@
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
-    "reparsedAt": "2026-06-17T06:23:32+0000",
+    "reparsedAt": "2026-06-26T20:23:22+0000",
     "rocYear": 115,
     "year": 2026
   },
