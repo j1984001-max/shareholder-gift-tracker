@@ -23552,7 +23552,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6177&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6177_20260616F01_20260618_134523.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6177_20260616F01_20260627_153943.pdf",
     "fetchedAt": "2026-05-26T22:45:36+0000",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pdfminer",
@@ -23565,7 +23565,7 @@
     "evotePickupPeriodText": "",
     "evotePickupLocation": "",
     "evotePickupDocuments": "",
-    "reparsedAt": "2026-06-18T05:45:37+0000"
+    "reparsedAt": "2026-06-27T07:39:49+0000"
   },
   "6179": {
     "code": "6179",
