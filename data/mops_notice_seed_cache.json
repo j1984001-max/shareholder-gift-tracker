@@ -26666,9 +26666,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6874&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6874_20260527F01_20260530_223947.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6874_20260527F01_20260627_183604.pdf",
     "fetchedAt": "2026-05-30T14:39:56+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pymupdf",
     "textScore": 95,
     "ocrUsed": false,
@@ -26676,7 +26676,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-27T10:36:12+0000"
   },
   "6875": {
     "code": "6875",

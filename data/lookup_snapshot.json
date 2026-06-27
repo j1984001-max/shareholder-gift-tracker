@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T09:16:44+0000",
+  "generatedAt": "2026-06-27T10:37:56+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -85022,7 +85022,7 @@
       "noticeFilename": "2026_6874_20260527F01.pdf",
       "noticeUploadedAt": "無",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
@@ -85032,7 +85032,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6874_20260527F01_20260530_223947.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_6874_20260527F01_20260627_183604.pdf"
         }
       ]
     },
