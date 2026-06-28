@@ -26771,9 +26771,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7610&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7610_20260526F01_20260530_224156.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7610_20260526F01_20260629_074659.pdf",
     "fetchedAt": "2026-05-30T14:42:05+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
     "textScore": 83,
     "ocrUsed": false,
@@ -26781,7 +26781,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-28T23:47:09+0000"
   },
   "7631": {
     "code": "7631",
@@ -27130,9 +27131,9 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7734&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7734_20260617F01_20260531_003227.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7734_20260617F01_20260629_074720.pdf",
     "fetchedAt": "2026-05-30T16:32:43+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-refreshed",
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
@@ -27140,7 +27141,8 @@
     "evotePickupRule": "",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-06-28T23:47:36+0000"
   },
   "7736": {
     "code": "7736",
