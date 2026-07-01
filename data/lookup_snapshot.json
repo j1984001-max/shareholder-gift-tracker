@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-01T15:20:28+0000",
+  "generatedAt": "2026-07-01T17:01:16+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
     "wespai": 756,
     "idealLabs": 0,
-    "honsec": 7
+    "honsec": 6
   },
   "records": {
     "1101": {
@@ -1848,7 +1848,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_1304_20260529F01_20260616_081341.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_1304_20260529F01_20260702_010037.pdf"
         }
       ]
     },
@@ -10884,17 +10884,17 @@
       "reelection": "董",
       "needVote": null,
       "fractionalOk": null,
-      "evoteStartDate": "2026-05-30",
-      "evoteEndDate": "2026-06-26",
+      "evoteStartDate": null,
+      "evoteEndDate": null,
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
-      "evotePickupPlace": "股務",
+      "evotePickupPlace": "",
       "evotePickupLocation": "",
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
-      "proxyPeriodText": "115/05/29 ~ 115/06/22",
-      "agentDistributionPeriodText": "-",
+      "proxyPeriodText": "",
+      "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
       "noticeFilename": "2026_1786_20260629F01.pdf",
@@ -10915,10 +10915,6 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1786&year=115&mtype=F&"
-        },
-        {
-          "label": "宏遠股代",
-          "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
         },
         {
           "label": "開會通知書",
@@ -50551,7 +50547,7 @@
       "sources": [
         {
           "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_4513_20260625F01_20260616_040314.pdf"
+          "url": "https://doc.twse.com.tw/pdf/2026_4513_20260625F01_20260702_005910.pdf"
         }
       ]
     },

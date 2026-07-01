@@ -750,7 +750,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=1304&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1304_20260529F01_20260616_081341.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_1304_20260529F01_20260702_010037.pdf",
     "fetchedAt": "2026-05-15T07:56:34+0800",
     "cacheStatus": "reparsed-refreshed",
     "giftSummary": "",
@@ -763,7 +763,7 @@
     "textEngine": "combined-ocr",
     "textScore": 75,
     "ocrUsed": true,
-    "reparsedAt": "2026-06-16T00:13:59+0000",
+    "reparsedAt": "2026-07-01T17:00:56+0000",
     "rocYear": 115,
     "year": 2026
   },
@@ -39804,7 +39804,7 @@
     "parserVersion": 7,
     "uploadedAt": "無",
     "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=4513&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_4513_20260625F01_20260616_040314.pdf",
+    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_4513_20260625F01_20260702_005910.pdf",
     "fetchedAt": "2026-06-04T18:16:19+0800",
     "cacheStatus": "reparsed-refreshed",
     "textEngine": "pypdf",
@@ -39815,7 +39815,7 @@
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
     "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-15T20:03:40+0000"
+    "reparsedAt": "2026-07-01T16:59:18+0000"
   },
   "4540": {
     "code": "4540",
