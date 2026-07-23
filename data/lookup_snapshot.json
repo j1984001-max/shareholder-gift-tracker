@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-23T09:04:47+0000",
+  "generatedAt": "2026-07-23T10:52:33+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
     "wespai": 756,
     "idealLabs": 0,
-    "honsec": 1
+    "honsec": 0
   },
   "records": {
     "1101": {
@@ -31407,28 +31407,28 @@
       "reelection": "無",
       "needVote": null,
       "fractionalOk": null,
-      "evoteStartDate": "2026-04-29",
-      "evoteEndDate": "2026-05-26",
-      "evotePickupStartDate": "2026-06-12",
-      "evotePickupEndDate": "2026-11-30",
+      "evoteStartDate": null,
+      "evoteEndDate": null,
+      "evotePickupStartDate": null,
+      "evotePickupEndDate": null,
       "evotePickupPlace": "",
-      "evotePickupLocation": "功能列「電子投票」→公司「ｅＧｉｆｔ專區」進入",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "領取時間：2026-06-12 至 2026-11-30；領取地點：功能列「電子投票」→公司「ｅＧｉｆｔ專區」進入",
-      "meetingDistributionRule": "１、親自出席股東會者，不限股數，發放至會議結束止。２、 委託他人代領者限１０００股（含）以上。",
-      "proxyPeriodText": "115/04/28 ~ 115/05/21",
-      "agentDistributionPeriodText": "-",
-      "noticeSummary": "領取時間：2026-06-12 至 2026-11-30；領取地點：功能列「電子投票」→公司「ｅＧｉｆｔ專區」進入",
+      "evotePickupLocation": "功能列「電子投id票」~-「公司eGift專區」,即可查詢",
+      "evotePickupDocuments": "股1,000股以上之股東,持",
+      "evotePickupRule": "領取地點：功能列「電子投id票」~-「公司eGift專區」,即可查詢；攜帶文件：股1,000股以上之股東,持",
+      "meetingDistributionRule": "",
+      "proxyPeriodText": "",
+      "agentDistributionPeriodText": "",
+      "noticeSummary": "領取地點：功能列「電子投id票」~-「公司eGift專區」,即可查詢；攜帶文件：股1,000股以上之股東,持",
       "noticeGiftSummary": "",
       "noticeFilename": "2026_3034_20260529F01.pdf",
       "noticeUploadedAt": "無",
-      "noticeEvotePickupPeriodText": "2026-06-12 至 2026-11-30",
+      "noticeEvotePickupPeriodText": "",
       "noticeCacheStatus": "reparsed-refreshed",
       "noticeSourceLabel": "公開資訊觀測站通知書",
       "noticeSourceType": "mops",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "宏遠股代",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -31438,10 +31438,6 @@
         {
           "label": "官方開會資料",
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3034&year=115&mtype=F&"
-        },
-        {
-          "label": "宏遠股代",
-          "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
         },
         {
           "label": "開會通知書",
