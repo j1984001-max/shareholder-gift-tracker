@@ -161,11 +161,16 @@ def clean_pickup_documents_text(value: str) -> str:
     cleaned = normalize_text(value or "").strip("：:，,。 ")
     if not cleaned:
         return ""
-    cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
-    cleaned = re.sub(r"[）)]?\s*[，,]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
-    cleaned = re.sub(r"[）)]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
-    cleaned = re.sub(r"[）)]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
-    return cleaned.strip("：:，,。 )）")
+    cleaned = re.sub(r"\s*[，,]?\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
+    cleaned = re.sub(r"\s*[，,]?\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
+    cleaned = re.sub(r"\s*(?:自|於)\d{2,3}年.*$", "", cleaned)
+    cleaned = re.sub(r"\s*(?:自|於)\d{1,3}/\d{1,2}/\d{1,2}.*$", "", cleaned)
+    cleaned = cleaned.strip("：:，,。 ")
+    for left, right in (("(", ")"), ("（", "）"), ("「", "」"), ("『", "』")):
+        diff = cleaned.count(left) - cleaned.count(right)
+        if 0 < diff <= 2:
+            cleaned += right * diff
+    return cleaned
 
 
 def strip_notice_noise(text: str) -> str:
@@ -2113,6 +2118,8 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
         cell.font = Font(bold=True)
         cell.alignment = Alignment(horizontal="center", vertical="center")
 
+    worksheet.freeze_panes = "A2"
+    worksheet.auto_filter.ref = worksheet.dimensions
     wrap_columns = {"D", "E", "M", "O", "P", "Q", "R", "W"}
     widths = {
         "A": 12, "B": 18, "C": 10, "D": 38, "E": 28, "F": 14, "G": 14,
@@ -2126,6 +2133,8 @@ def build_export_xlsx(results: list[dict[str, Any]]) -> bytes:
     for row in worksheet.iter_rows(min_row=2):
         for cell in row:
             cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in wrap_columns)
+            if isinstance(cell.value, date):
+                cell.number_format = "yyyy-mm-dd"
 
     output = io.BytesIO()
     workbook.save(output)
@@ -2187,6 +2196,7 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
         cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
 
     worksheet.freeze_panes = "C2"
+    worksheet.auto_filter.ref = worksheet.dimensions
     worksheet.column_dimensions["A"].width = 12
     worksheet.column_dimensions["B"].width = 18
     for column_cells in worksheet.iter_cols(min_col=3, max_col=worksheet.max_column):
@@ -2199,6 +2209,8 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
             header_value = str(worksheet.cell(row=1, column=cell.column).value or "")
             should_wrap = any(label in header_value for label in wide_wrap_labels)
             cell.alignment = Alignment(vertical="top", wrap_text=should_wrap)
+            if isinstance(cell.value, date):
+                cell.number_format = "yyyy-mm-dd"
 
     detail_sheet = workbook.create_sheet("年度明細")
     detail_header = ["年度", *build_export_rows([])[0]]
@@ -2211,6 +2223,7 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
         cell.font = Font(bold=True)
         cell.alignment = Alignment(horizontal="center", vertical="center")
     detail_sheet.freeze_panes = "A2"
+    detail_sheet.auto_filter.ref = detail_sheet.dimensions
     detail_widths = {
         "A": 10, "B": 12, "C": 18, "D": 10, "E": 38, "F": 28, "G": 14,
         "H": 14, "I": 12, "J": 14, "K": 14, "L": 14, "M": 14, "N": 24,
@@ -2222,6 +2235,8 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
     for row in detail_sheet.iter_rows(min_row=2):
         for cell in row:
             cell.alignment = Alignment(vertical="top", wrap_text=cell.column_letter in {"E", "F", "N", "P", "Q", "R", "S", "X"})
+            if isinstance(cell.value, date):
+                cell.number_format = "yyyy-mm-dd"
 
     output = io.BytesIO()
     workbook.save(output)
@@ -2231,7 +2246,13 @@ def build_compare_export_xlsx(compare_rows: list[dict[str, Any]], years: list[in
 def excel_safe_value(value: Any) -> Any:
     if not isinstance(value, str):
         return value
-    return EXCEL_ILLEGAL_CHAR_RE.sub("", value)[:32767]
+    cleaned = EXCEL_ILLEGAL_CHAR_RE.sub("", value)[:32767]
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", cleaned):
+        try:
+            return date.fromisoformat(cleaned)
+        except ValueError:
+            return cleaned
+    return cleaned
 
 
 def empty_record(code: str, note: str = "") -> dict[str, Any]:
