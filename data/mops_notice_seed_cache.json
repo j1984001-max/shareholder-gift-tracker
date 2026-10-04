@@ -35212,15 +35212,15 @@
   },
   "3325": {
     "code": "3325",
-    "rocYear": 115,
-    "year": 2026,
-    "filename": "2026_3325_20260630F01.pdf",
+    "filename": "2026.pdf",
     "parserVersion": 7,
-    "uploadedAt": "無",
-    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3325&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3325_20260630F01_20260624_203650.pdf",
-    "fetchedAt": "2026-05-31T22:50:10+0000",
-    "cacheStatus": "reparsed-refreshed",
+    "uploadedAt": "",
+    "queryUrl": "https://www.casing.com.tw/file/download/1308/2026.pdf",
+    "pdfUrl": "https://www.casing.com.tw/file/download/1308/2026.pdf",
+    "fetchedAt": "2026-10-04T06:52:01+0000",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "旭品官網開會通知書",
     "textEngine": "pdfminer",
     "textScore": 173,
     "ocrUsed": false,
@@ -35228,8 +35228,7 @@
     "evotePickupRule": "或以電子方式行使表決權得領取外，本公司將不予發放紀念品。三、委託",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-24T12:36:58+0000"
+    "evotePickupPeriodText": ""
   },
   "3339": {
     "code": "3339",
