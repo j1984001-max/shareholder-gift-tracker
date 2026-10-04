@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T06:54:26+0000",
+  "generatedAt": "2026-10-04T13:24:19+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -41094,12 +41094,12 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "領取地點：會場；攜帶文件：股東『身分證正本』【未滿14歲(100年次及其後出生)之股東可憑『戶口名簿』正本】",
       "noticeGiftSummary": "一、股東親自出席者，不得以另一部份股權委託他人代理，委託書與出席簽到卡均簽名或蓋章者，視為親自出席；但委託書由股東交付",
-      "noticeFilename": "2026_3518_20260609F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "2026年開會通知書.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "柏騰官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
@@ -41114,8 +41114,8 @@
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3518&year=115&mtype=F&"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3518_20260609F01_20260617_135631.pdf"
+          "label": "柏騰官網開會通知書",
+          "url": "https://www.pttech.com.tw/wp-content/uploads/2026/06/2026%E5%B9%B4%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf"
         }
       ]
     },
