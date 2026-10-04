@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T18:22:10+0000",
+  "generatedAt": "2026-10-04T19:22:45+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -25064,12 +25064,12 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "領取地點：自辦；攜帶文件：本開會通知單於兌換紀念品簽收處簽名或蓋章，並於上述日期、時間、地點領取紀念品。1.股東接受他人徵求委託書前，應請",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_2616_20260618F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "山隆-115年股東會開會通知-中文.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "山隆官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
@@ -25084,8 +25084,8 @@
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=2616&year=115&mtype=F&"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_2616_20260618F01_20260616_141525.pdf"
+          "label": "山隆官網開會通知書",
+          "url": "https://w3.slc.com.tw/files/2026/2026%E8%91%A3%E4%BA%8B%E6%9C%83/%E5%B1%B1%E9%9A%86-115%E5%B9%B4%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5-%E4%B8%AD%E6%96%87.pdf"
         }
       ]
     },
