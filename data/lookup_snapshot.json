@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T01:17:20+0000",
+  "generatedAt": "2026-10-05T06:38:31+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -31420,12 +31420,12 @@
       "agentDistributionPeriodText": "-",
       "noticeSummary": "領取時間：2026-06-12 至 2026-11-30；領取地點：功能列「電子投票」→公司「ｅＧｉｆｔ專區」進入",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_3034_20260529F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "_2026MeetingNotice_26042411_569.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "2026-06-12 至 2026-11-30",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "聯詠官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "宏遠股代",
@@ -31444,8 +31444,8 @@
           "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3034_20260529F01_20260621_133006.pdf"
+          "label": "聯詠官網開會通知書",
+          "url": "https://www.novatek.com.tw/upload/website/_2026MeetingNotice_26042411_569.pdf"
         }
       ]
     },
@@ -33103,12 +33103,12 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_3078_20260624F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "1_O057-Z269-6112_僑威科技開會通知(中文)-FINAL-0521上傳.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "僑威官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
@@ -33123,8 +33123,8 @@
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3078&year=115&mtype=F&"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3078_20260624F01_20260621_133226.pdf"
+          "label": "僑威官網開會通知書",
+          "url": "https://www.cwt.com.tw/uploads/images/7-1shareholder/7-1-2shareholders-meeting/2026/1_O057-Z269-6112_%E5%83%91%E5%A8%81%E7%A7%91%E6%8A%80%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%28%E4%B8%AD%E6%96%87%29-FINAL-0521%E4%B8%8A%E5%82%B3.pdf"
         }
       ]
     },
