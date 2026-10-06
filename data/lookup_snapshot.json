@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-06T09:25:21+0000",
+  "generatedAt": "2026-10-06T16:44:45+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
     "wespai": 756,
     "idealLabs": 0,
-    "honsec": 2
+    "honsec": 3
   },
   "records": {
     "1101": {
@@ -35938,26 +35938,26 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2025-05-27",
+      "evotePickupEndDate": "2025-06-19",
       "evotePickupPlace": "",
-      "evotePickupLocation": "",
-      "evotePickupDocuments": "",
-      "evotePickupRule": "",
+      "evotePickupLocation": "台新證券股務代理部(台北市建國北路一段96號B1、1樓)",
+      "evotePickupDocuments": "身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁",
+      "evotePickupRule": "領取時間：114/05/27~114/06/19；領取地點：台新證券股務代理部(台北市建國北路一段96號B1、1樓)；攜帶文件：身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "",
-      "noticeGiftSummary": "!一、紀念品和名稱:[8及還才選會員十]錦明實業股份有限公司|持股未滿1,00股之股東,除股東親自出席股東會或",
-      "noticeFilename": "2026_3230_20260626F01.pdf",
-      "noticeUploadedAt": "無",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeSummary": "領取時間：114/05/27~114/06/19；領取地點：台新證券股務代理部(台北市建國北路一段96號B1、1樓)；攜帶文件：身分證明文件、股東會出席簽到卡、或列印之電子投票「議案表決情形」全頁",
+      "noticeGiftSummary": "",
+      "noticeFilename": "114年度開會通知書.pdf",
+      "noticeUploadedAt": "",
+      "noticeEvotePickupPeriodText": "114/05/27~114/06/19",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "錦明官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
-      "evotePickupSource": "",
+      "evotePickupSource": "開會通知書",
       "notes": "",
       "sources": [
         {
@@ -35969,8 +35969,8 @@
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3230&year=115&mtype=F&"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_3230_20260626F01_20260618_075706.pdf"
+          "label": "錦明官網開會通知書",
+          "url": "https://jmg.com.tw/wp-content/uploads/2026/07/114%E5%B9%B4%E5%BA%A6%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf"
         }
       ]
     },
