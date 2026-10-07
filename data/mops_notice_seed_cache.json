@@ -33966,15 +33966,15 @@
   },
   "7811": {
     "code": "7811",
-    "rocYear": 115,
-    "year": 2026,
-    "filename": "2026_7811_20260624F01.pdf",
+    "filename": "115_notice.pdf",
     "parserVersion": 7,
-    "uploadedAt": "無",
-    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=7811&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_7811_20260624F01_20260620_021150.pdf",
-    "fetchedAt": "2026-05-31T17:05:50+0000",
-    "cacheStatus": "reparsed-refreshed",
+    "uploadedAt": "",
+    "queryUrl": "https://www.minson.com.tw/SRC/images/demo/115_notice.pdf",
+    "pdfUrl": "https://www.minson.com.tw/SRC/images/demo/115_notice.pdf",
+    "fetchedAt": "2026-10-07T21:00:51+0000",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "民盛官網開會通知書",
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
@@ -33982,8 +33982,7 @@
     "evotePickupRule": "2.解第四HERE,beeae:會聯後,最遲開會五日前送達本公司股務代理人台新綜合證八、本次股東會股東得以電子方式行使表決權'行使期間為:自115年5月23日至115年6月21日止,請逕登入臺灣集中保管結算所股份有限公司「股東e服務/電子投票」同說明投票。【[網址:https://stockservices.tdcc.comtw】九攜帶身分證明文件以備查驗。aokaeethes=※本次股東常會無發放紀念品民感應用企業股份有限公司董10494602HX8846-300BWisa!;oles#meeUkeeeleMeGeRX區BieMfdrtde+ps五qos<peReledeRELA聯(請貼郵票)aAbi指派書茲指派君擔任本公司之法人人代表,出席”貴公司一一五年六月二十四日股東常會,依法行使一切股東權利。此至民盛應用企業股份有限公司法人股東蓋章:中華民國115年月a",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-19T18:12:10+0000"
+    "evotePickupPeriodText": ""
   },
   "7828": {
     "code": "7828",
