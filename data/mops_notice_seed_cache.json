@@ -36629,15 +36629,15 @@
   },
   "6219": {
     "code": "6219",
-    "rocYear": 115,
-    "year": 2026,
-    "filename": "2026_6219_20260529F01.pdf",
+    "filename": "1150424-上傳檔-開會通知書.pdf",
     "parserVersion": 7,
-    "uploadedAt": "無",
-    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=6219&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_6219_20260529F01_20260625_210749.pdf",
-    "fetchedAt": "2026-06-01T06:10:16+0000",
-    "cacheStatus": "reparsed-refreshed",
+    "uploadedAt": "",
+    "queryUrl": "https://www.fwgroup.com.tw/main/wp-content/uploads/2026/06/1150424-%E4%B8%8A%E5%82%B3%E6%AA%94-%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
+    "pdfUrl": "https://www.fwgroup.com.tw/main/wp-content/uploads/2026/06/1150424-%E4%B8%8A%E5%82%B3%E6%AA%94-%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
+    "fetchedAt": "2026-10-08T19:31:35+0000",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "富旺官網開會通知書",
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
@@ -36645,8 +36645,7 @@
     "evotePickupRule": "詢,可直接鍵入(網址:https://free,.sf1\"輸入查詢條件即可之統計驗證機構為台新綜合證券股份有限公司股務代:上公告外出填妥代理人相關資料及簽名或蓋章股務代理部或蓋章後,於會議當日攜至代理人台新綜合七、本次股東會股東得以電子方式行使表決權,行使期間為:自115年4月29日至115年5月26日止,請逕登入臺灣集中保管結算所股份有限公司「股東e服務/電子投票」,依相關說明投票。【網址:https://stockservices.tdcc.com.tw]«八、參加股東會者請攜帶身分證明文件以備查驗。九、敬請查照辦理為荷。至貴股東(請貼郵票)此※本次股東常會無發放紀念品富旺國際開發股份有限公司董事會104946SURAT46-300RRWTEfonHYSIMOREaemAmeeeeYY7OEROMKAERRSTMELAS生ws&‘e“x表££&©中RBN(4)we«=Owe&xxats5Sore,oresoraanPat茲指派擔任本公司之法人代表,出席”貴公司一一五年五月二十九日股東常會,依法行使一切股東權利。此至富旺國際開發股份有限公司法人股東蓋章:中華民國115年“月日",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-25T13:08:04+0000"
+    "evotePickupPeriodText": ""
   },
   "6229": {
     "code": "6229",
