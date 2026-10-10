@@ -22471,15 +22471,15 @@
   },
   "5381": {
     "code": "5381",
-    "rocYear": 115,
-    "year": 2026,
-    "filename": "2026_5381_20260626F01.pdf",
+    "filename": "20260616_064227_2026_5381_20260626F01_20260616_144202.pdf",
     "parserVersion": 7,
-    "uploadedAt": "無",
-    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=5381&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_5381_20260626F01_20260618_082732.pdf",
-    "fetchedAt": "2026-05-26T20:31:01+0000",
-    "cacheStatus": "reparsed-refreshed",
+    "uploadedAt": "",
+    "queryUrl": "https://spe-group.com.tw/static/uploads/meetings/20260616_064227_2026_5381_20260626F01_20260616_144202.pdf",
+    "pdfUrl": "https://spe-group.com.tw/static/uploads/meetings/20260616_064227_2026_5381_20260626F01_20260616_144202.pdf",
+    "fetchedAt": "2026-10-10T10:33:58+0000",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "光譜官網開會通知書",
     "textEngine": "pypdf",
     "textScore": 183,
     "ocrUsed": false,
@@ -22487,8 +22487,7 @@
     "evotePickupRule": "2.領取方式請詳內頁※紀念品領取須知一、紀念品種類：統一超50元商品卡(紀念品不足時得以等值商品替代)二、紀念品發放原則：持股未滿1,000股股東（含委託他人領取者），不予發放（惟親自出席或以電子方式行使表決權者除外）。三、紀念品發放方式：1.委託",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-18T00:27:41+0000"
+    "evotePickupPeriodText": ""
   },
   "5386": {
     "code": "5386",

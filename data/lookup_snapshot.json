@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T06:23:21+0000",
+  "generatedAt": "2026-10-10T10:39:34+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -61069,12 +61069,12 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "一、紀念品種類：統一超50元商品卡(紀念品不足時得以等值商品替代)二、紀念品發放原則：持股未滿1,000股股東（含委託他人領取者），不予發放（惟親自出席或",
-      "noticeFilename": "2026_5381_20260626F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "20260616_064227_2026_5381_20260626F01_20260616_144202.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "光譜官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
@@ -61089,8 +61089,8 @@
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=5381&year=115&mtype=F&"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5381_20260626F01_20260618_082732.pdf"
+          "label": "光譜官網開會通知書",
+          "url": "https://spe-group.com.tw/static/uploads/meetings/20260616_064227_2026_5381_20260626F01_20260616_144202.pdf"
         }
       ]
     },
