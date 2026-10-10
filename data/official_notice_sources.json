@@ -214,9 +214,21 @@
       "sourceType": "company_pdf"
     }
   ],
+  "8081": [
+    {
+      "url": "https://www.gmt.com.tw/upload/investor_document_ftp/115%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
+      "label": "致新官網開會通知書",
+      "sourceType": "company_pdf"
+    }
+  ],
   "8096": [
     {
       "url": "https://www.coasiaelec.com/wp-content/uploads/2026/01/3.%20114%E5%B9%B4%E8%82%A1%E6%9D%B1%E5%B8%B8%E6%9C%83%E9%96%8B%E6%9C%83%E9%9B%BB%E5%AD%90%E9%80%9A%E7%9F%A5%E6%9B%B8%28%E4%B8%8A%E5%82%B3%29_2025.4.22.pdf",
+      "label": "擎亞官網開會通知書",
+      "sourceType": "company_pdf"
+    },
+    {
+      "url": "https://www.coasiaelec.com/wp-content/uploads/mangboard/2026/07/09/115%E5%B9%B4%E8%82%A1%E6%9D%B1%E5%B8%B8%E6%9C%83%E9%96%8B%E6%9C%83%E9%9B%BB%E5%AD%90%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
       "label": "擎亞官網開會通知書",
       "sourceType": "company_pdf"
     }

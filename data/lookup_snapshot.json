@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T18:51:06+0000",
+  "generatedAt": "2026-10-10T22:39:24+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -92953,20 +92953,20 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "攜帶文件：(繳交印鑑卡),請洽台新綜合證券股份有限公司股務代合論券股份有限Sree,‘董事7名(含獨RAZ>hI,‘om.tw)還至公開次附出席簽到卡及委託書各乙份,如書上簽名或蓋章,並填妥代理人丰證券股份有限公司股務代:九、本次股東會股東得以電子方式行使表決權,行使期間為",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_8081_20260611F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "115股東會開會通知書.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "致新官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
       "sources": [
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_8081_20260611F01_20260622_075825.pdf"
+          "label": "致新官網開會通知書",
+          "url": "https://www.gmt.com.tw/upload/investor_document_ftp/115%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf"
         }
       ]
     },
@@ -93521,21 +93521,21 @@
       "fractionalOk": null,
       "evoteStartDate": null,
       "evoteEndDate": null,
-      "evotePickupStartDate": null,
-      "evotePickupEndDate": null,
+      "evotePickupStartDate": "2026-07-09",
+      "evotePickupEndDate": "2026-07-13",
       "evotePickupPlace": "",
       "evotePickupLocation": "群益金鼎證券股份有限公司股務代理部",
       "evotePickupDocuments": "攜帶電子投票「議案表決情形」、股東會出席通知書、身分證或其他足資證明股東身份之文件影本(如健保卡或駕照)等擇一皆可",
-      "evotePickupRule": "領取地點：群益金鼎證券股份有限公司股務代理部；攜帶文件：攜帶電子投票「議案表決情形」、股東會出席通知書、身分證或其他足資證明股東身份之文件影本(如健保卡或駕照)等擇一皆可",
+      "evotePickupRule": "領取時間：請自115年7月9日起至115年7月13日止；領取地點：群益金鼎證券股份有限公司股務代理部；攜帶文件：攜帶電子投票「議案表決情形」、股東會出席通知書、身分證或其他足資證明股東身份之文件影本(如健保卡或駕照)等擇一皆可",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
       "agentDistributionPeriodText": "",
-      "noticeSummary": "領取地點：群益金鼎證券股份有限公司股務代理部；攜帶文件：攜帶電子投票「議案表決情形」、股東會出席通知書、身分證或其他足資證明股東身份之文件影本(如健保卡或駕照)等擇一皆可",
-      "noticeGiftSummary": "※正面2.indd二十萬元，檢舉電話：︵○二︶二五四七三七三三。保結算所檢舉，經查證屬實者，最高給予檢舉獎金二、發現違法取得及使用委託書，可檢附具體事證向集一、禁止交付現金或其他利益之價購委託書行為",
-      "noticeFilename": "3. 114年股東常會開會電子通知書(上傳)_2025.4.22.pdf",
+      "noticeSummary": "領取時間：請自115年7月9日起至115年7月13日止；領取地點：群益金鼎證券股份有限公司股務代理部；攜帶文件：攜帶電子投票「議案表決情形」、股東會出席通知書、身分證或其他足資證明股東身份之文件影本(如健保卡或駕照)等擇一皆可",
+      "noticeGiftSummary": "※正面2.indd二十萬元，檢舉電話：︵○二︶二五四七三七三三。保結算所檢舉，經查證屬實者，最高給予檢舉獎金二、發現違法取得及使用委託書，可檢附具體事證向集一、禁止交付現金或其他利益之價購委託書行為。持有股數身分證字號或統一編號姓名或名稱股東戶號委託書住址",
+      "noticeFilename": "115年股東常會開會電子通知書.pdf",
       "noticeUploadedAt": "",
-      "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeEvotePickupPeriodText": "請自115年7月9日起至115年7月13日止",
+      "noticeCacheStatus": "miss",
       "noticeSourceLabel": "擎亞官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -93553,7 +93553,7 @@
         },
         {
           "label": "擎亞官網開會通知書",
-          "url": "https://www.coasiaelec.com/wp-content/uploads/2026/01/3.%20114%E5%B9%B4%E8%82%A1%E6%9D%B1%E5%B8%B8%E6%9C%83%E9%96%8B%E6%9C%83%E9%9B%BB%E5%AD%90%E9%80%9A%E7%9F%A5%E6%9B%B8%28%E4%B8%8A%E5%82%B3%29_2025.4.22.pdf"
+          "url": "https://www.coasiaelec.com/wp-content/uploads/mangboard/2026/07/09/115%E5%B9%B4%E8%82%A1%E6%9D%B1%E5%B8%B8%E6%9C%83%E9%96%8B%E6%9C%83%E9%9B%BB%E5%AD%90%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf"
         }
       ]
     },
