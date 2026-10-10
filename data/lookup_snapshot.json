@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T13:03:22+0000",
+  "generatedAt": "2026-10-10T18:04:49+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -69330,10 +69330,10 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "investor_2026042422370407.pdf",
+      "noticeFilename": "investor_2026100811241407.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "hit",
+      "noticeCacheStatus": "miss",
       "noticeSourceLabel": "萬潤官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -69343,7 +69343,7 @@
       "sources": [
         {
           "label": "萬潤官網開會通知書",
-          "url": "https://www.allring-tech.com.tw/Upload/202604/investor_2026042422370407.pdf"
+          "url": "https://www.allring-tech.com.tw/Upload/202610/investor_2026100811241407.pdf"
         }
       ]
     },
