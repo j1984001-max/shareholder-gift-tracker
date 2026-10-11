@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T23:50:03+0000",
+  "generatedAt": "2026-10-11T06:48:53+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -83272,20 +83272,20 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "攜帶文件：始報到時間為公積發放1元)。列舉於召集通知外,其主要內容,請還綜合證券股份有限公:aces附出席簽到卡及委託書各乙份,如書上簽名或蓋章,並填妥代理人丰\"於會議當日攜至股務代理人台新綜合證券股份有限公司股務代理部九、本次股東會股東得以電子方式行使表決權,行使期間為",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_6792_20260528F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "115-詠業科技開會通知書-中文-3.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
       "noticeCacheStatus": "miss",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeSourceLabel": "詠業官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
       "sources": [
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6792_20260528F01_20260601_201448.pdf"
+          "label": "詠業官網開會通知書",
+          "url": "https://www.unictron.com/wp-content/uploads/2026/05/115-%E8%A9%A0%E6%A5%AD%E7%A7%91%E6%8A%80%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8-%E4%B8%AD%E6%96%87-3.pdf"
         }
       ]
     },
