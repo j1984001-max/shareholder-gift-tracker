@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T06:48:53+0000",
+  "generatedAt": "2026-10-11T13:58:44+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -59723,12 +59723,12 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_5289_20260527F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "Meeting_Notice_20260528.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "宜鼎官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
@@ -59743,8 +59743,8 @@
           "url": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=5289&year=115&mtype=F&"
         },
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_5289_20260527F01_20260616_203413.pdf"
+          "label": "宜鼎官網開會通知書",
+          "url": "https://www.innodisk.com/upload/file/Meeting_Notice_20260528.pdf"
         }
       ]
     },
