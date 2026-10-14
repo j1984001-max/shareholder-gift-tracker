@@ -35005,15 +35005,15 @@
   },
   "3209": {
     "code": "3209",
-    "rocYear": 115,
-    "year": 2026,
-    "filename": "2026_3209_20260612F01.pdf",
+    "filename": "1150512股東會開會通知書.pdf",
     "parserVersion": 7,
-    "uploadedAt": "無",
-    "queryUrl": "https://doc.twse.com.tw/server-java/t57sb01?step=1&colorchg=1&co_id=3209&year=115&mtype=F&",
-    "pdfUrl": "https://doc.twse.com.tw/pdf/2026_3209_20260612F01_20260621_021208.pdf",
-    "fetchedAt": "2026-05-31T22:40:01+0000",
-    "cacheStatus": "reparsed-refreshed",
+    "uploadedAt": "",
+    "queryUrl": "https://www.alltek.com/wp-content/uploads/2026/06/1150512%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
+    "pdfUrl": "https://www.alltek.com/wp-content/uploads/2026/06/1150512%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
+    "fetchedAt": "2026-10-14T19:44:08+0000",
+    "cacheStatus": "miss",
+    "sourceType": "company_pdf",
+    "sourceLabel": "全科官網開會通知書",
     "textEngine": "pdfminer",
     "textScore": 95,
     "ocrUsed": false,
@@ -35021,8 +35021,7 @@
     "evotePickupRule": "請股東多加利用「股東e服務」電子投票行使表決權※紀念品領取方式請詳背面",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": "",
-    "reparsedAt": "2026-06-20T18:12:17+0000"
+    "evotePickupPeriodText": ""
   },
   "3224": {
     "code": "3224",
