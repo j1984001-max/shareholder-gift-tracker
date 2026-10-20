@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-20T15:05:09+0000",
+  "generatedAt": "2026-10-20T17:32:02+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
     "wespai": 756,
     "idealLabs": 0,
-    "honsec": 3
+    "honsec": 6
   },
   "records": {
     "1101": {
@@ -29704,12 +29704,12 @@
       "code": "2945",
       "rocYear": 115,
       "year": 2026,
-      "companyName": "",
-      "status": "unpublished",
+      "companyName": "三商家購股份有限公司",
+      "status": "partial",
       "isPublished": false,
       "souvenirName": "",
       "meetingDate": null,
-      "lastBuyDate": null,
+      "lastBuyDate": "2026-10-15",
       "meetingCity": "",
       "priceText": "",
       "transferAgentName": "",
@@ -29719,17 +29719,17 @@
       "reelection": "",
       "needVote": null,
       "fractionalOk": null,
-      "evoteStartDate": null,
-      "evoteEndDate": null,
+      "evoteStartDate": "2026-11-03",
+      "evoteEndDate": "2026-11-15",
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
-      "evotePickupPlace": "",
+      "evotePickupPlace": "不發",
       "evotePickupLocation": "",
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
-      "agentDistributionPeriodText": "",
+      "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
       "noticeFilename": "2026_2945_20260529F01.pdf",
@@ -29741,8 +29741,12 @@
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
-      "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
+      "notes": "",
       "sources": [
+        {
+          "label": "宏遠股代",
+          "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
+        },
         {
           "label": "開會通知書",
           "url": "https://doc.twse.com.tw/pdf/2026_2945_20260529F01_20260621_091819.pdf"
