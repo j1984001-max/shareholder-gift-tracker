@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-05T12:44:39+0000",
+  "generatedAt": "2026-11-05T20:47:54+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
     "wespai": 756,
     "idealLabs": 0,
-    "honsec": 7
+    "honsec": 8
   },
   "records": {
     "1101": {
@@ -11122,12 +11122,12 @@
       "code": "1799",
       "rocYear": 115,
       "year": 2026,
-      "companyName": "",
-      "status": "unpublished",
+      "companyName": "易威生醫科技股份有限公司",
+      "status": "partial",
       "isPublished": false,
       "souvenirName": "",
       "meetingDate": null,
-      "lastBuyDate": null,
+      "lastBuyDate": "2026-11-19",
       "meetingCity": "",
       "priceText": "",
       "transferAgentName": "",
@@ -11137,17 +11137,17 @@
       "reelection": "",
       "needVote": null,
       "fractionalOk": null,
-      "evoteStartDate": null,
-      "evoteEndDate": null,
+      "evoteStartDate": "2026-12-08",
+      "evoteEndDate": "2026-12-20",
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
-      "evotePickupPlace": "",
+      "evotePickupPlace": "不發",
       "evotePickupLocation": "",
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
-      "agentDistributionPeriodText": "",
+      "agentDistributionPeriodText": "-",
       "noticeSummary": "",
       "noticeGiftSummary": "",
       "noticeFilename": "2026_1799_20260422F01.pdf",
@@ -11159,8 +11159,12 @@
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
-      "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
+      "notes": "",
       "sources": [
+        {
+          "label": "宏遠股代",
+          "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
+        },
         {
           "label": "開會通知書",
           "url": "https://doc.twse.com.tw/pdf/2026_1799_20260422F01_20260621_182402.pdf"
