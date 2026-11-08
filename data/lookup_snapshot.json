@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T23:57:39+0000",
+  "generatedAt": "2026-11-08T07:04:26+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -81770,20 +81770,20 @@
       "agentDistributionPeriodText": "",
       "noticeSummary": "攜帶文件：(網址:https://free.sf1org.tw),輸入查詢條件即可:本公司:之統計驗證機構為台新綜合證券股份有限公司股務代、除於公開函奉3\"如決定親自出會場報到理人出席理人相關資料及簽.證券股份股務代理部八、本次股東會股東得以電子方式行使表決權,行使期間為",
       "noticeGiftSummary": "",
-      "noticeFilename": "2026_6728_20260522F01.pdf",
-      "noticeUploadedAt": "無",
+      "noticeFilename": "2026_6728_20260522F01_開會通知書-中文版.pdf",
+      "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-refreshed",
-      "noticeSourceLabel": "公開資訊觀測站通知書",
-      "noticeSourceType": "mops",
+      "noticeCacheStatus": "miss",
+      "noticeSourceLabel": "上洋官網開會通知書",
+      "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "開會通知書",
       "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
       "sources": [
         {
-          "label": "開會通知書",
-          "url": "https://doc.twse.com.tw/pdf/2026_6728_20260522F01_20260625_211357.pdf"
+          "label": "上洋官網開會通知書",
+          "url": "http://www.upyoung.com.tw/userfiles/upyoung/files/2026_6728_20260522F01_%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8-%E4%B8%AD%E6%96%87%E7%89%88.pdf"
         }
       ]
     },
