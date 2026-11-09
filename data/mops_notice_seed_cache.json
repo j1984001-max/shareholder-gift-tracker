@@ -12048,17 +12048,20 @@
     "queryUrl": "https://www.gmt.com.tw/upload/investor_document_ftp/115%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
     "pdfUrl": "https://www.gmt.com.tw/upload/investor_document_ftp/115%E8%82%A1%E6%9D%B1%E6%9C%83%E9%96%8B%E6%9C%83%E9%80%9A%E7%9F%A5%E6%9B%B8.pdf",
     "fetchedAt": "2026-11-08T13:45:34+0000",
-    "cacheStatus": "miss",
+    "cacheStatus": "reparsed-text-cache",
     "sourceType": "company_pdf",
     "sourceLabel": "致新官網開會通知書",
     "textEngine": "combined-ocr",
     "textScore": 83,
     "ocrUsed": true,
     "giftSummary": "",
-    "evotePickupRule": "(繳交印鑑卡),請洽台新綜合證券股份有限公司股務代合論券股份有限Sree,‘董事7名(含獨RAZ>hI,‘om.tw)還至公開次附出席簽到卡及委託書各乙份,如書上簽名或蓋章,並填妥代理人丰證券股份有限公司股務代:九、本次股東會股東得以電子方式行使表決權,行使期間為:自115年5月12日至115年6月8日止,請逕登入臺灣集中保管結算所股份有限公司「股東e服務/電子投票」,依相關說明投票。【網址:https://stockservices.tdec.com.tw]°十、參加股東會者請攜帶身分證明文件以備查驗。十一、敬請查照辦理為荷。此至※本次股東常會無發放紀念品貴股東致新科技股份有限公司董事會104946{O32ACHR46-3003me@RFERRSELTBLAYQeeReeeRawRELA~*-“x=要加©4RBNO(®).€we«=O一tax神atsors之擔任本公司之法人代表,出席”貴公司一一五年六月十一日股東常會。依法行使一切股東權利。此致致新科技股份有限公司法人股東蓋章:Ww;oraanPat中華民國115年月",
+    "evotePickupRule": "(繳交印鑑卡),請洽台新綜合證券股份有限公司股務代合論券股份有限Sree,‘董事7名(含獨RAZ>hI,‘om.tw)還至公開次附出席簽到卡及委託書各乙份,如書上簽名或蓋章,並填妥代理人丰證券股份有限公司股務代:九、本次股東會股東得以電子方式行使表決權,行使期間為:自115年5月12日至115年6月8日止,請逕登入臺灣集中保管結算所股份有限公司「股東e服務/電子投票」,依相關說明投票。【網址:https://stockservices.tdec.com.tw]°十、參加股東會者請攜帶身分證明文件以備查驗。十一、敬請查照辦理為荷。此至※本次股東常會無發放紀念品貴股東致新科技股份有限公司董事會104946{O32ACHR46-3003me@RFERRSELTBLAYQeeReeeRawRELA~*-“x=要加©4RBNO(®).€we«=O一tax神ats5ors之BABIR擔任本公司之法人代表,出席”貴公司一一五年六月十一日股東常會。依法行使一切股東權利。此致致新科技股份有限公司法人股東蓋章:Ww;oraanPat中華民國115年月",
     "evotePickupStartDate": null,
     "evotePickupEndDate": null,
-    "evotePickupPeriodText": ""
+    "evotePickupPeriodText": "",
+    "reparsedAt": "2026-11-09T19:07:25+0000",
+    "rocYear": 115,
+    "year": 2026
   },
   "8085": {
     "code": "8085",
