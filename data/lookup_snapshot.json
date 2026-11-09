@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T20:27:03+0000",
+  "generatedAt": "2026-11-09T00:02:11+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -70866,7 +70866,7 @@
       "noticeFilename": "1150424-上傳檔-開會通知書.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "富旺官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
