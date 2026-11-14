@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T02:16:05+0000",
+  "generatedAt": "2026-11-14T02:41:27+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -83283,7 +83283,7 @@
       "noticeFilename": "115-詠業科技開會通知書-中文-3.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "詠業官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
