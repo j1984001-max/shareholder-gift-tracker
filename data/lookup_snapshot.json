@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T17:07:05+0000",
+  "generatedAt": "2026-11-17T22:39:23+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -33114,7 +33114,7 @@
       "noticeFilename": "1_O057-Z269-6112_僑威科技開會通知(中文)-FINAL-0521上傳.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "僑威官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
