@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-18T13:27:06+0000",
+  "generatedAt": "2026-11-18T21:27:51+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
     "wespai": 756,
     "idealLabs": 0,
-    "honsec": 5
+    "honsec": 4
   },
   "records": {
     "1101": {
@@ -29708,12 +29708,12 @@
       "code": "2945",
       "rocYear": 115,
       "year": 2026,
-      "companyName": "三商家購股份有限公司",
-      "status": "partial",
+      "companyName": "",
+      "status": "unpublished",
       "isPublished": false,
       "souvenirName": "",
       "meetingDate": null,
-      "lastBuyDate": "2026-10-15",
+      "lastBuyDate": null,
       "meetingCity": "",
       "priceText": "",
       "transferAgentName": "",
@@ -29723,17 +29723,17 @@
       "reelection": "",
       "needVote": null,
       "fractionalOk": null,
-      "evoteStartDate": "2026-11-03",
-      "evoteEndDate": "2026-11-15",
+      "evoteStartDate": null,
+      "evoteEndDate": null,
       "evotePickupStartDate": null,
       "evotePickupEndDate": null,
-      "evotePickupPlace": "不發",
+      "evotePickupPlace": "",
       "evotePickupLocation": "",
       "evotePickupDocuments": "",
       "evotePickupRule": "",
       "meetingDistributionRule": "",
       "proxyPeriodText": "",
-      "agentDistributionPeriodText": "-",
+      "agentDistributionPeriodText": "",
       "noticeSummary": "",
       "noticeGiftSummary": "",
       "noticeFilename": "2026_2945_20260529F01.pdf",
@@ -29745,12 +29745,8 @@
       "mopsAttempted": true,
       "mopsError": "",
       "evotePickupSource": "",
-      "notes": "",
+      "notes": "目前在整合來源中尚未看到該年度紀念品公告，建議保留 watchlist 持續追蹤。",
       "sources": [
-        {
-          "label": "宏遠股代",
-          "url": "https://srd.honsec.com.tw/stock/souvenir.aspx"
-        },
         {
           "label": "開會通知書",
           "url": "https://doc.twse.com.tw/pdf/2026_2945_20260529F01_20260621_091819.pdf"
@@ -92964,7 +92960,7 @@
       "noticeFilename": "115股東會開會通知書.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "reparsed-text-cache",
+      "noticeCacheStatus": "miss",
       "noticeSourceLabel": "致新官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
