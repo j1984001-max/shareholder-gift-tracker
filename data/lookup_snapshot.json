@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T03:24:05+0000",
+  "generatedAt": "2026-11-19T03:51:45+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -90685,7 +90685,7 @@
       "noticeFilename": "115_notice.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "民盛官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
