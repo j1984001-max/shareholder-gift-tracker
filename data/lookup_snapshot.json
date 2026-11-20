@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T03:03:52+0000",
+  "generatedAt": "2026-11-20T03:43:52+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -92960,7 +92960,7 @@
       "noticeFilename": "115股東會開會通知書.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "致新官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
