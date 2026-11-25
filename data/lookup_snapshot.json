@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T00:38:13+0000",
+  "generatedAt": "2026-11-25T01:04:29+0000",
   "rocYear": 115,
   "year": 2026,
   "sourceStats": {
@@ -70862,7 +70862,7 @@
       "noticeFilename": "1150424-上傳檔-開會通知書.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "富旺官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -83279,7 +83279,7 @@
       "noticeFilename": "115-詠業科技開會通知書-中文-3.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "詠業官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
@@ -90685,7 +90685,7 @@
       "noticeFilename": "115_notice.pdf",
       "noticeUploadedAt": "",
       "noticeEvotePickupPeriodText": "",
-      "noticeCacheStatus": "miss",
+      "noticeCacheStatus": "reparsed-text-cache",
       "noticeSourceLabel": "民盛官網開會通知書",
       "noticeSourceType": "company_pdf",
       "mopsAttempted": true,
